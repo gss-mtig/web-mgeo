@@ -4,6 +4,13 @@ Materiales para el curso sobre Programació web del Màster en Geoinformació de
 
 Temario:
 
+* Introducción al desarrollo Web
+    * Ciclo petición/respuesta
+    * Front-End y Back-End
+    * ¿Qué hacen HTML/CSS/JS?
+    * 
+
+
 # [https://gss-mtig.github.io/web-mgeo/](https://gss-mtig.github.io/web-mgeo/)
 
 
