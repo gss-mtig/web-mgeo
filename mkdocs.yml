@@ -1,0 +1,23 @@
+site_name: Programació web
+site_url: https://gss-mtig.github.io/web-mgeo/
+site_description: Programació web
+site_author: web-mgeo
+theme:
+  name: 'material'
+  language: 'es'
+  highlightjs: true
+
+markdown_extensions:
+  - codehilite:
+      linenums: True
+  - admonition
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - footnotes
+repo_url: "https://github.com/gss-mtig/web-mgeo"
+
+nav:
+- Home: index.md
+
+plugins:
+    - search
