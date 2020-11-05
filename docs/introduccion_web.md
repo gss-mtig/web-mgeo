@@ -43,11 +43,25 @@ Todas estas capas pueden residir en un único ordenador, si bien lo más usual e
 
 ## ¿Qué hacen HTML/CSS/JS?
 
+### The White Cat Danced
+
+![The White Cat Danced](https://media.giphy.com/media/cHqUlvvPvperS/source.gif "The White Cat Danced")
+
+<del>The</del>
+
+*White* = **CSS** - adjetivos/estilo
+
+*Cat* = **HTML** - sustantivos/estructura
+
+*Danced* = **JS** - verbos/acciones
+
 ### HTML
 
 **HTML**, siglas en inglés de *HyperText Markup Language* (‘lenguaje de marcas de hipertexto’), hace referencia al lenguaje de marcado para la elaboración de páginas web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, videos, juegos, entre otros.
 
 HTML es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas. [^5]
+
+"Hipertexto" se refiere a enlaces que conectan páginas web entre sí, ya sea dentro de un único sitio web o entre sitios web. Los enlaces son un aspecto fundamental de la Web. [^6]
 
 ### CSS o Hojas de estilo en cascada
 
@@ -55,7 +69,7 @@ HTML es un lenguaje de marcado que nos permite indicar la estructura de nuestro 
 
 CSS está diseñado principalmente para marcar la separación del contenido del documento y la forma de presentación de este, características tales como las capas o layouts, los colores y las fuentes. 
 
-La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas con un sistema llamado de cascada, de modo que las prioridades son calculadas y asignadas a las reglas, así que los resultados son predecibles. [^6]
+La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas con un sistema llamado de cascada, de modo que las prioridades son calculadas y asignadas a las reglas, así que los resultados son predecibles. [^7]
 
 ### JS (JavaScript)
 
@@ -66,11 +80,11 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
 !!! note
     Java y JavaScript tienen semánticas y propósitos diferentes. 
 
-Todos los navegadores modernos interpretan el código JavaScript integrado en las páginas web. Para interactuar con una página web se provee al lenguaje JavaScript de una implementación del *Document Object Model* (DOM). [^7]
+Todos los navegadores modernos interpretan el código JavaScript integrado en las páginas web. Para interactuar con una página web se provee al lenguaje JavaScript de una implementación del *Document Object Model* (DOM). [^8]
 
 #### Document Object Model (DOM)
 
-**Document Object Model** o **DOM** ('Modelo de Objetos del Documento' o 'Modelo en Objetos para la Representación de Documentos') es esencialmente una interfaz de plataforma que proporciona un conjunto estándar de objetos para representar documentos HTML, XHTML y XML, un modelo estándar sobre cómo pueden combinarse dichos objetos, y una interfaz estándar para acceder a ellos y manipularlos. A través del DOM, los programas pueden acceder y modificar el contenido, estructura y estilo de los documentos HTML y XML, que es para lo que se diseñó principalmente. [^8]
+**Document Object Model** o **DOM** ('Modelo de Objetos del Documento' o 'Modelo en Objetos para la Representación de Documentos') es esencialmente una interfaz de plataforma que proporciona un conjunto estándar de objetos para representar documentos HTML, XHTML y XML, un modelo estándar sobre cómo pueden combinarse dichos objetos, y una interfaz estándar para acceder a ellos y manipularlos. A través del DOM, los programas pueden acceder y modificar el contenido, estructura y estilo de los documentos HTML y XML, que es para lo que se diseñó principalmente. [^9]
 
 ## Referencias 
 
@@ -79,6 +93,7 @@ Todos los navegadores modernos interpretan el código JavaScript integrado en la
 [^3]: https://es.wikipedia.org/wiki/Front_end_y_back_end
 [^4]: https://es.wikipedia.org/wiki/Programaci%C3%B3n_por_capas
 [^5]: https://es.wikipedia.org/wiki/HTML
-[^6]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
-[^7]: https://es.wikipedia.org/wiki/JavaScript
-[^8]: https://es.wikipedia.org/wiki/Document_Object_Model
+[^6]: https://developer.mozilla.org/es/docs/Web/HTML
+[^7]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
+[^8]: https://es.wikipedia.org/wiki/JavaScript
+[^9]: https://es.wikipedia.org/wiki/Document_Object_Model

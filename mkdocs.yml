@@ -19,6 +19,7 @@ repo_url: "https://github.com/gss-mtig/web-mgeo"
 nav:
 - Home: index.md
 - Introducción al desarrollo Web: introduccion_web.md
+- HTML: html.md
 
 plugins:
     - search

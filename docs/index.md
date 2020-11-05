@@ -8,7 +8,6 @@ Temario:
     * Ciclo petición/respuesta
     * Front-End y Back-End
     * ¿Qué hacen HTML/CSS/JS?
-    * 
 
 
 # [https://gss-mtig.github.io/web-mgeo/](https://gss-mtig.github.io/web-mgeo/)
