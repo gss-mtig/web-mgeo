@@ -96,10 +96,10 @@ No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de 
 Los dos siguientes fragmentos de código son equivalentes:
 
 ```html
-<p>Los perros son tontos.</p>
+<p>Máster Oficial en Geoinformación.</p>
 
-<p>Los    perros        son
-         tontos.</p>
+<p>Máster    Oficial        en
+         Geoinformación.</p>
 ```
 
 ### Caracteres especiales en HTML
@@ -110,11 +110,11 @@ Haces esto con referencias de caracteres. Estos son códigos especiales que repr
 
 | Caracter literal | Equivalente de referencia de caracteres |
 |------------------|-----------------------------------------|
-| <                | `&lt;`                                    |
-| >                | `&gt;`                                    |
-| "                | `&quot;`                                  |
-| '                | `&apos;`                                  |
-| &                | `&amp;`                                   |
+| <                | `&lt;`                                  |
+| >                | `&gt;`                                  |
+| "                | `&quot;`                                |
+| '                | `&apos;`                                |
+| &                | `&amp;`                                 |
 
 ### Comentarios HTML
 
@@ -128,7 +128,22 @@ Para convertir en un comentario una sección de contenido de tu archivo HTML, de
 <!-- <p>¡Yo sí!</p> -->
 ```
 
-https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en
+### Idioma principal
+
+Merece la pena mencionar que puedes especificar el idioma de tu página. Esto se puede hacer añadiendo el atributo lang a la etiqueta de apertura del HTML. Para definir el idioma se usa el estándar [ISO_639-1](https://es.wikipedia.org/wiki/ISO_639-1)
+
+Esto resulta útil en muchos sentidos. Los motores de búsqueda indizarán tu documento HTML de modo más efectivo si estableces el idioma, y resulta útil para que las personas con discapacidad visual que utilizan los lectores de pantalla.
+
+Ejemplo
+```html
+<html lang="es">
+```
+
+También puedes establecer que las subsecciones de tu documento se reconozcan en diferentes idiomas. Por ejemplo, podemos establecer que nuestra sección de japonés se reconozca como japonés, de la siguiente manera:
+
+```html
+<p>Ejemplo Japonés: <span lang="ja">ご飯が熱い。</span>.</p>
+```
 
 ## Referencias
 
