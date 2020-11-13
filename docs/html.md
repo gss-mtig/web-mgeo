@@ -145,6 +145,57 @@ También puedes establecer que las subsecciones de tu documento se reconozcan en
 <p>Ejemplo Japonés: <span lang="ja">ご飯が熱い。</span>.</p>
 ```
 
+### Elementos de bloque vs elementos de línea
+
+Un elemento de *línea* es aquel que ocupa el espacio mínimo necesario en horizontal, y permite que otro elemento se coloque a su lado. En cambio un elemento de *bloque*, ocupa todo el ancho disponible y no permite que otro elemento se coloque a su lado (aunque tenga lugar suficiente).
+
+Ejemplo de elementos de linea
+
+```html
+<span>hola </span>
+<span>estamos</span>
+<span>en línea</span>
+```
+
+Produce la siguiente salida
+
+<span>hola </span>
+<span>estamos</span>
+<span>en línea</span>
+
+Ejemplo de elementos de bloque
+
+```html
+<div>hola </div><div>no estamos</div><div>en línea</div>
+```
+
+Produce la siguiente salida
+
+<div>hola </div><div>no estamos</div><div>en línea</div>
+
+## Mi primera página
+
+1. Crear una carpeta llamada **web-mgeo**
+
+2. Crear un archivo llamado **index.html** dentro de la carpeta *web-mgeo*
+
+3. Abrir el archivo con el editor de texto y escribir lo siguiente
+
+``` html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi calculadora geodésica</title>
+</head>
+<body>
+    Mi calculadora geodésica
+</body>
+</html>
+```
+
+4. Abrir la página en el navegador y ver el resultado
+
 ## Referencias
 
 [^1]: https://es.wikipedia.org/wiki/HTML
