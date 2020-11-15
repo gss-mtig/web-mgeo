@@ -708,6 +708,176 @@ Ejemplos
 
 <label>Click me <input type="text" id="Name" name="Name" /></label>
 
+1. Modificar el *index.html* para agregar un formulario en nuestra página. Primero crear un par de controles `<select>` para seleccionar el sistema de referencia
+
+    ``` html hl_lines="17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            <div>
+                <label for="origen">Sistema de referencia de origen</label>
+                <select id="origen">
+                    <option value="EPSG:4326">EPSG:4326</option> 
+                    <option value="EPSG:3857">EPSG:3857</option>
+                    <option value="EPSG:25831">EPSG:25831</option>
+                    <option value="EPSG:23031">EPSG:23031</option>
+                </select>
+
+                <label for="destino">Sistema de referencia de destino</label>
+                <select id="destino">
+                    <option value="EPSG:4326">EPSG:4326</option> 
+                    <option value="EPSG:3857">EPSG:3857</option>
+                    <option value="EPSG:25831">EPSG:25831</option>
+                    <option value="EPSG:23031">EPSG:23031</option>
+                </select>
+            </div>
+            <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+     </html>
+    ```
+
+2. Crear un par de campos para introducir las coordenadas de origen
+
+    ``` html hl_lines="33 34 35 36 37 38"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            <div>
+                <label for="origen">Sistema de referencia de origen</label>
+                <select id="origen">
+                    <option value="EPSG:4326">EPSG:4326</option> 
+                    <option value="EPSG:3857">EPSG:3857</option>
+                    <option value="EPSG:25831">EPSG:25831</option>
+                    <option value="EPSG:23031">EPSG:23031</option>
+                </select>
+
+                <label for="destino">Sistema de referencia de destino</label>
+                <select id="destino">
+                    <option value="EPSG:4326">EPSG:4326</option> 
+                    <option value="EPSG:3857">EPSG:3857</option>
+                    <option value="EPSG:25831">EPSG:25831</option>
+                    <option value="EPSG:23031">EPSG:23031</option>
+                </select>
+                
+                <label for="lat">Latitud</label>
+                <input type="text" id="lat">
+
+                <label for="lng">Longitud</label>
+                <input type="text" id="lng">
+            </div>
+            <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+    </html>
+    ```
+
+3. Crear un botón para hacer la transformación
+    
+    ``` html hl_lines="39 40"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            <div>
+                <label for="origen">Sistema de referencia de origen</label>
+                <select id="origen">
+                    <option value="EPSG:4326">EPSG:4326</option> 
+                    <option value="EPSG:3857">EPSG:3857</option>
+                    <option value="EPSG:25831">EPSG:25831</option>
+                    <option value="EPSG:23031">EPSG:23031</option>
+                </select>
+
+                <label for="destino">Sistema de referencia de destino</label>
+                <select id="destino">
+                    <option value="EPSG:4326">EPSG:4326</option> 
+                    <option value="EPSG:3857">EPSG:3857</option>
+                    <option value="EPSG:25831">EPSG:25831</option>
+                    <option value="EPSG:23031">EPSG:23031</option>
+                </select>
+                
+                <label for="lat">Latitud</label>
+                <input type="text" id="lat">
+
+                <label for="lng">Longitud</label>
+                <input type="text" id="lng">
+                
+                <button>Transformar coordenadas</button>
+            </div>
+            <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+    </html>
+    ```
+
+4. Guardar y recargar la página para ver que aparece el formulario.
+
+### Tablas
+
+
+
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/head
