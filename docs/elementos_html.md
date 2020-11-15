@@ -450,7 +450,7 @@ Ejemplo
 ```
 <a href="https://www.mozilla.org/es-ES/">la página de inicio de Mozilla</a>
 
-Otro atributo que es recomendable agregar a los enlaces el el *title*. El título contiene información adicional sobre el enlace. El título se mostrará al pasar el ratón sobre el texto del enlace.
+Otro atributo que es recomendable agregar a los enlaces es el *title*. El título contiene información adicional sobre el enlace. El título se mostrará al pasar el ratón sobre el texto del enlace.
 
 El atributo **target** es muy útil ya que en donde desplegar la URL enlazada. Por defecto si no se especifica los enlaces se abren en la ventana o pestaña actual. Los valores mas usados para este atributo son:
 
@@ -467,6 +467,246 @@ Ejemplo
 <a href="https://www.mozilla.org/es-ES/" title="El mejor lugar para encontrar más información acerca de la misión de Mozilla y cómo contribuir" target="_blank" rel="noopener noreferrer">la página de inicio de Mozilla</a>
 ```
 <a href="https://www.mozilla.org/es-ES/" title="El mejor lugar para encontrar más información acerca de la misión de Mozilla y cómo contribuir"  target="_blank" rel="noopener noreferrer">la página de inicio de Mozilla</a>
+
+1. Modificar el *index.html* para agregar enlaces al listado de sistemas de referencia
+
+    ``` html hl_lines="17"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header><h1>Mi calculadora geodésica</h1></header>
+        <main>
+            Aqui irá mi calculadora
+             <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+     </html>
+    ```
+
+2. Guardar y recargar la página para observar que aparece un enlace en el primer elemento del listado de sistemas de referencia.
+
+!!! question "Ejercicio 0,5 pt"
+    * Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente 
+
+### Imagenes y multimedia
+
+HTML soporta varios recursos multimedia como imágenes, audio, y video. En nuestro caso explicaremos únicamente las imágenes ya que son el elemento multimedia más utilizado.
+
+El elemento de imagen `<img>` representa una imagen en el documento.
+
+Una imagen se crea usando un elemento `<img>`. Donde le daremos un atributo **src** que contendrá la dirección web donde está ubicada la imagen.
+
+Ejemplo 
+
+``` html
+<img src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
+```
+<img src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
+
+Un atributo que es recomendable agregar a las imágenes es el *alt*. Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.
+
+Otros atributos comunes son el *height* (altura) y el *width* (ancho) para definir las dimensiones de la imagen.
+
+``` html
+<img alt="Proyecciones geográficas" width="200" height="100" src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
+```
+
+<img alt="Proyecciones geográficas" width="200" height="100" src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
+
+1. Modificar el *index.html* para agregar una imagen en el header de nuestra página.
+
+    ``` html hl_lines="12 13 14 15"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            Aqui irá mi calculadora
+             <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+     </html>
+    ```
+
+2. Guardar y recargar la página para ver que aparece la imagen del logo de la UAB en nuestra página.
+
+### Formularios
+
+HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar información al sitio Web o a una aplicación.
+
+El elemento form `<form>` representa una sección de un documento que contiene un formaulario con controles interactivos que permiten a un usuario enviar información a un servidor web. Es el contenedor del resto de elementos que forman el formulario.
+
+Sus principales atributos son:
+
+* **action**: la URL a donde se va a enviar la información del formulario
+* **metod**: el método que el navegador usa para enviar el formulario. Sus valores posible son:
+    * *post*: los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
+    * *get*: los datos del formulario son adjuntados a la URI del atributo *action* , con un '?' como separador, y la URI resultante es enviada al servidor.
+* **enctype**: cuando el valor del atributo **method** es *post*, este atributo es el tipo MIME del contenido que es usado para enviar el formulario al servidor. Sus valores más usados son:
+    * *application/x-www-form-urlencoded*: El valor por defecto si un atributo no está especificado.
+    * *multipart/form-data*: Usar este valor si se está enviando un archivo dentro del formulario
+
+A continuación veremos algunos de los elementos (o campos) más usados en los formularios
+
+#### input
+
+El elemento `<input>` se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario. Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control. Este elemento es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.
+
+Los principales atributos de este elemento son:
+
+* **type**: define el tipo de control a mostrar. Su valor predeterminado es *text*, si no se especifica este atributo. Los valores más frecuentes son:
+    * *checkbox*: Casilla de selección. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado.
+    * *color*: Control para espicificar un color.
+    * *date*: Control para introducir una fecha (año, mes y día, sin tiempo).
+    * *datetime-local*: Control para introducir fecha y hora, sin zona horaria específica.
+    * *email*: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse.
+    * *file*: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo accept para definir los tipos de archivo que el control podrá seleccionar
+    * *hidden*: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
+    * *number*: Control para introducir un número
+    * *password*: Control cuyo valor permanece oculto.
+    * *radio*: Botón radio. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo name están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez
+    * *submit*: Botón que envía el formulario.
+    * *text*: Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.
+    * *url*: Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse
+* **disabled**: indica que el control no está disponible para interacción
+* **name**: indica el nombre del control, el cual es enviado con los datos del formulario
+* **placeholder** indica una pista para el usuario sobre lo que puede introducir en el control.
+* **value**: indica el valor inicial del control
+
+Ejemplos de algunos controles
+
+``` html
+<form action="">
+    <input type="text" name="nombre">
+    <input type="email" name="correo" placeholder="introduce tu email">
+    <input type="hidden" name="oculto">
+    <input type="password" name="clave" placeholder="introduce tu contraseña">
+    <input type="radio" name="sexo" value="M">
+    <input type="radio" name="sexo" value="F">
+    <input type="checkbox" name="condiciones">
+</form>
+```
+
+<form action="">
+    <input type="text" name="nombre">
+    <input type="email" name="correo" placeholder="introduce tu email">
+    <input type="hidden" name="oculto">
+    <input type="password" name="clave" placeholder="introduce tu contraseña">
+    <input type="radio" name="sexo" value="M">
+    <input type="radio" name="sexo" value="F">
+    <input type="checkbox" name="condiciones">
+</form>
+
+#### textarea
+
+El elemento `<textarea>` representa un control para la edición mutilínea de texto sin formato. Para los entradas de texto de una sola línea ya tenemos el `<input type="text">`.
+
+Sus principales atributos son:
+
+* **cols**: indica la anchura visible del control de texto, en caracteres de anchura media. Si está definido debe ser positivo. Si no, por defecto, el valor es 20.
+* **rows**: indica el número de líneas visibles en el control
+* **maxlength**: indica el número máximo de caracteres que el usuario puede insertar. Si no está especificado entonces el usuario puede insertar un número ilimitado de caracteres.
+* **disabled**: indica que el control no está disponible para interacción
+* **name**: indica el nombre del control, el cual es enviado con los datos del formulario
+* **placeholder** indica una pista para el usuario sobre lo que puede introducir en el control.
+
+!!! note
+    Este campo no tiene un atributo value
+
+Ejemplo
+
+``` html
+<textarea name="textarea" rows="10" cols="50">Escribe algo largo aquí</textarea>
+```
+
+<textarea name="textarea" rows="10" cols="50">Escribe algo largo aquí</textarea>
+
+#### select
+
+El elemento select `<select>` representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos `<option>`, los cuales pueden ser agrupados por elementos `<optgroup>`.
+
+Ejemplo
+
+``` html
+<select name="select">
+  <option value="value1">Value 1</option> 
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
+</select>
+```
+
+<select name="select">
+  <option value="value1">Value 1</option> 
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
+</select>
+
+#### button
+
+La etiqueta `<button>` representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar.
+
+El atributo **type** se puede usar para indicar el tipo de botón. Esto se usa principalmente cuando se utiliza dentro de un formulario. Sus valores pueden ser: *button*, *submit* o *reset*
+
+Ejemplo
+
+``` html
+<button name="button">Click me</button>
+```
+
+#### label
+
+El elemento `<label>` representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo *for*, o ubicando el control dentro del elemento label.
+
+Ejemplos
+
+``` html
+<!-- Un simple ejemplo de un label con el atributo for -->
+<label for="Name">Click me</label>
+<input type="text" id="Name" name="Name" />
+
+<!-- Aun mas simple -->
+<label>Click me <input type="text" id="Name" name="Name" /></label>
+```
+
+<label for="Name">Click me</label>
+<input type="text" id="Name" name="Name" />
+
+<label>Click me <input type="text" id="Name" name="Name" /></label>
 
 ## Referencias
 
