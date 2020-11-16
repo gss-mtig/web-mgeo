@@ -565,6 +565,9 @@ Otros atributos comunes son el *height* (altura) y el *width* (ancho) para defin
 
 2. Guardar y recargar la página para ver que aparece la imagen del logo de la UAB en nuestra página.
 
+!!! question "Ejercicio 1 pt"
+    * Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web https://www.uab.cat/es/ y que se abra en una pestaña/ventana nueva.
+
 ### Formularios
 
 HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar información al sitio Web o a una aplicación.
@@ -876,6 +879,135 @@ Ejemplos
 
 ### Tablas
 
+El elemento `<table>` se usa para representar datos en dos o mas dimensiones. Permite organizar los datos en filas y columnas.  
+
+En documentos HTML una tabla puede ser considerada, como un grupo de filas donde cada una contiene a un grupo de celdas.
+
+Como muchas otras estructuras de HTML, las tablas son construidas utilizando elementos. En particular, una tabla básica puede ser declarada usando tres elementos, `<table>` (el contenedor principal), `<tr>` (representando a las filas contenedoras de las celdas) y `<td>` (representando a las celdas) [^4]
+
+Ejemplo
+
+``` html
+<table>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+```
+
+<table>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+
+Conjuntamente con los elementos básicos de la tabla existen otros tipos de elementos que permiten hacer tablas más avanzadas. A continuación veremos algunos de ellos.
+
+* El elemento `<th>` es un tipo especial de celda y se usa para los encabezados.
+* El elemento `<caption>` de ser insertado justo después de la etiquete de apertura de la tabla y antes que todos los demás elementos. Se usa para definir el título de la tabla.
+
+
+Ejemplo
+
+``` html
+<table>
+  <caption>Titulo de la tabla</caption>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+    <th>Encabezado 3</th>
+  </tr>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+```
+
+<table>
+  <caption>Titulo de la tabla</caption>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+    <th>Encabezado 3</th>
+  </tr>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+
+La unificación de celdas es un mecanismo mediante el cual se pueden combinar o fusionar dos o más celdas adyacentes en una tabla. Este efecto puede lograrse utilizando los atributos **colspan**, para unificación horizontal, y **rowspan**, para unificación vertical. Estos atributos pueden tomar un valor entero mayor a cero, que representa el número de celdas que participarán en la unificación.
+
+Ejemplo
+
+``` html
+<table>
+  <caption>Titulo de la tabla</caption>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+    <th>Encabezado 3</th>
+  </tr>
+  <tr>
+    <td>Celda 1</td>
+    <td colspan="2">Celda 2 y 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+```
+
+<table>
+  <caption>Titulo de la tabla</caption>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+    <th>Encabezado 3</th>
+  </tr>
+  <tr>
+    <td>Celda 1</td>
+    <td colspan="2">Celda 2 y 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+
+También existen 3 elementos que pueden ayudar a organizar la información presentada en una tabla permitiendo una agrupación semántica de filas. Éstos son: `<thead>` para agrupar las filas que presentan infromación de encabezado; `<tfoot>` para contener a las filas que representan un pie o resumen; y `<tbody>` para representar un bloque de filas que consiste en un cuerpo de datos. Estos grupos temáticos son meramente semánticos, y se debe evitar su uso para temas de estilo.
+
+De igual forma existe un elemento `<colgroup>` para hacer agrupaciones semánticas de columnas.
 
 
 ## Referencias
@@ -883,3 +1015,4 @@ Ejemplos
 [^1]: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/head
 [^2]: https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en
 [^3]: https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag
+[^4]: https://www.htmlquick.com/es/tutorials/tables.html
