@@ -21,6 +21,7 @@ nav:
 - Introducción al desarrollo Web: introduccion_web.md
 - HTML: html.md
 - Elementos HTML: elementos_html.md
+- CSS: css.md
 
 plugins:
     - search
