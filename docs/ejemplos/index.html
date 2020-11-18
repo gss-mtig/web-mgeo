@@ -15,29 +15,43 @@
     </header>
     <main>
         <div>
-            <label for="origen">Sistema de referencia de origen</label>
-            <select id="origen">
-                <option value="EPSG:4326">EPSG:4326</option> 
-                <option value="EPSG:3857">EPSG:3857</option>
-                <option value="EPSG:25831">EPSG:25831</option>
-                <option value="EPSG:23031">EPSG:23031</option>
-            </select>
-
-            <label for="destino">Sistema de referencia de destino</label>
-            <select id="destino">
-                <option value="EPSG:4326">EPSG:4326</option> 
-                <option value="EPSG:3857">EPSG:3857</option>
-                <option value="EPSG:25831">EPSG:25831</option>
-                <option value="EPSG:23031">EPSG:23031</option>
-            </select>
-
-            <label for="lat">Latitud</label>
-            <input type="text" id="lat">
-
-            <label for="lng">Longitud</label>
-            <input type="text" id="lng">
-
-            <button>Transformar coordenadas</button>
+            <table>
+                <tr>
+                    <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                    <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <select id="origen">
+                            <option value="EPSG:4326">EPSG:4326</option> 
+                            <option value="EPSG:3857">EPSG:3857</option>
+                            <option value="EPSG:25831">EPSG:25831</option>
+                            <option value="EPSG:23031">EPSG:23031</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <select id="destino">
+                            <option value="EPSG:4326">EPSG:4326</option> 
+                            <option value="EPSG:3857">EPSG:3857</option>
+                            <option value="EPSG:25831">EPSG:25831</option>
+                            <option value="EPSG:23031">EPSG:23031</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lat">Latitud</label></td>
+                    <td><label for="lng">Longitud</label></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="lat"></td>
+                    <td><input type="text" id="lng"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><button>Transformar coordenadas</button></td>
+                </tr>
+            </table>
         </div>
         <aside>
             <ul>
