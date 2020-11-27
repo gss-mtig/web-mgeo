@@ -22,6 +22,7 @@ nav:
 - HTML: html.md
 - Elementos HTML: elementos_html.md
 - CSS: css.md
+- CSS el modelo de caja: css_bbox.md
 
 plugins:
     - search
