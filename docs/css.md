@@ -6,6 +6,151 @@ CSS es el segundo lenguaje más básico y esencial para crear páginas web. El p
 
 *CSS* está formado por un conjunto de reglas que te permite aplicar estilos de manera selectiva a elementos en documentos HTML. Por ejemplo, para seleccionar todos los elementos de párrafo en una página HTML y volver el texto dentro de ellos de color rojo.
 
+## Uso de estilos en HTML
+
+En HTML existen tres métodos para agregar información de estilo a un documento.
+
+### El atributo style
+
+El uso del atributo *style* es la forma más fácil y directa de aplicar declaraciones de estilo a un elemento. Este atributo puede tener como contenido, cualquier número de declaraciones de estilo, separadas unas de otras por un punto y coma (";"). Como style es un atributo global, puede ser usado en cualquier elemento de HTML.
+
+Ejemplo
+
+``` html
+<p style="background-color: gray;">Este texto tiene el estilo <b style="color: white; text-decoration: underline;">definido</b> por atributo</p>
+```
+<p style="background-color: gray;">Este texto tiene el estilo <b style="color: white; text-decoration: underline;">definido</b> por atributo</p>
+
+A pesar de toda su simplicidad e inmediatez, el uso de este método rompe de alguna manera uno de los principales beneficios de CSS: la posibilidad de crear declaraciones de estilo que pueden ser reutilizadas en tantos elementos como sea posible, algo que se traduce en flexibilidad y portabilidad.
+
+### El elemento style
+
+El elemento `<style>` es un contenedor para declaraciones de estilo. Dentro de este elemento podemos arrojar cualquier número de declaraciones de reglas de estilo. Este elemento sólo puede ser declarado en la sección del encabezado (`<head>`) del documento.
+
+Ejemplo
+
+``` html
+<head>
+  <title>Hombre de negro</title>
+  <style>
+    h1 {
+      background-color: gray;
+      margin: 0;
+    }
+ 
+    p {
+      background-color: black;
+      color: white;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi color favorito</h1>
+  <p>¿Te atreverías a adivinar cuál es mi color favorito?</p>
+</body>
+```
+
+Ahora, con este método podemos compartir declaraciones entre los muchos elementos presentes en una misma página. Pero, ¿es posible compartir declaraciones de estilo entre muchos documentos?
+
+### Archivos externos
+
+La ventaja de utilizar un archivo externo para almacenar información de estilo reside en la posibilidad de compartir ese archivo entre un gran número de documentos. Cuando un documento es cargado, el navegador detecta la referencia al archivo de hojas de estilo, cargando y aplicando los estilos como si fueran parte del documento.
+
+Un archivo externo de hojas de estilo puede ser insertando en el documento con el elemento `<link>`, teniendo el valor "text/css" en el atributo *type*, y el URI del archivo de hojas de estilo en el atributo *href*. Ten presente que, como style, este elemento solo puede estar ubicado en el bloque de encabezado (`<head>`) del documento.
+
+Ejemplo
+
+``` html
+<head>
+  <title>Hombre de negro</title>
+  <link type="text/css" href="estilos.css">
+</head>
+<body>
+  <h1>Mi color favorito</h1>
+  <p>¿Te atreverías a adivinar cuál es mi color favorito?</p>
+</body>
+```
+
+1. Crear una carpeta llamada **css** dentro de la carpeta *web-mgeo*
+
+2. Crear un archivo llamado **estilos.css** dentro de la carpeta *css*
+
+3. Modificar el *index.html* para agregar una hoja de estilo externa a nuestra calculadora
+
+	``` html hl_lines="9"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link type="text/css" href="css/estilos.css" rel="stylesheet">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                        <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <select id="origen">
+                                <option value="EPSG:4326">EPSG:4326</option> 
+                                <option value="EPSG:3857">EPSG:3857</option>
+                                <option value="EPSG:25831">EPSG:25831</option>
+                                <option value="EPSG:23031">EPSG:23031</option>
+                            </select>
+                        </td>
+                        <td colspan="2">
+                            <select id="destino">
+                                <option value="EPSG:4326">EPSG:4326</option> 
+                                <option value="EPSG:3857">EPSG:3857</option>
+                                <option value="EPSG:25831">EPSG:25831</option>
+                                <option value="EPSG:23031">EPSG:23031</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lat">Latitud</label></td>
+                        <td><label for="lng">Longitud</label></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="lat"></td>
+                        <td><input type="text" id="lng"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button>Transformar coordenadas</button></td>
+                    </tr>
+                </table>
+            </div>
+            <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+    </html>
+    ```
+
+4. Guardar el archivo.
+
 ## Anatomía de una regla CSS
 
 * **Selector**: es el elemento con el que comienza la regla y selecciona el(los) elemento(s) a dar estilo.
@@ -521,6 +666,22 @@ body {
 }
 ```
 
+1. Modificar el archivo **estilos.css** para agregar las variables de los colores principales que usaremos en nuestra calculadora. Abrir el archivo con el editor de texto y escribir lo siguiente
+
+	``` css
+	:root {
+		--light-blue: #8ecae6ff;
+		--blue-green: #219ebcff;
+		--prussian-blue: #023047ff;
+		--honey-yellow: #ffb703ff;
+		--orange: #fb8500ff;
+	}
+	```
+
+2. Guardar el archivo
+
+Paleta de colores sacada de https://coolors.co/palettes/trending
+
 ## Fuentes
 
 Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse generalmente en dos categorías:
@@ -627,6 +788,255 @@ Los navegadores admiten diferentes formatos de tipos de letra, por lo que necesi
 Generalmente las fuentes no son de uso gratuito. Debes pagar por ellas y/o respetar otras condiciones de licencia, como acreditar al creador del tipo de letra en el código (o en tu sitio web)
 
 Puedes obtener fuentes en diversos sitios como por ejemplo: https://fonts.google.com/ o https://fontlibrary.org/
+
+1. Modificar el archivo **index.html** para agregar la fuente Roboto de google fonts.
+
+	``` html hl_lines="9 10"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link type="text/css" href="css/estilos.css" rel="stylesheet">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                        <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <select id="origen">
+                                <option value="EPSG:4326">EPSG:4326</option> 
+                                <option value="EPSG:3857">EPSG:3857</option>
+                                <option value="EPSG:25831">EPSG:25831</option>
+                                <option value="EPSG:23031">EPSG:23031</option>
+                            </select>
+                        </td>
+                        <td colspan="2">
+                            <select id="destino">
+                                <option value="EPSG:4326">EPSG:4326</option> 
+                                <option value="EPSG:3857">EPSG:3857</option>
+                                <option value="EPSG:25831">EPSG:25831</option>
+                                <option value="EPSG:23031">EPSG:23031</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lat">Latitud</label></td>
+                        <td><label for="lng">Longitud</label></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="lat"></td>
+                        <td><input type="text" id="lng"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button>Transformar coordenadas</button></td>
+                    </tr>
+                </table>
+            </div>
+            <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+    </html>
+    ```
+
+2. Modificar el archivo **estilos.css** para aplicar la fuente a todo nuestro documento
+
+	``` css hl_lines="9 10 11"
+	:root {
+		--light-blue: #8ecae6ff;
+		--blue-green: #219ebcff;
+		--prussian-blue: #023047ff;
+		--honey-yellow: #ffb703ff;
+		--orange: #fb8500ff;
+	}
+
+	html {
+		font-family: "Roboto", sans-serif;
+	}
+	```
+
+3. Guardar el archivo y recargar la página en nuestro navegador para observar el cambio de tipo de letra.
+
+4. Modificar el archivo **estilos.css** para aplicar algunos estilos a nuestros elementos
+
+	``` css hl_lines="13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+	:root {
+		--light-blue: #8ecae6ff;
+		--blue-green: #219ebcff;
+		--prussian-blue: #023047ff;
+		--honey-yellow: #ffb703ff;
+		--orange: #fb8500ff;
+	}
+
+	html {
+		font-family: "Roboto", sans-serif;
+	}
+
+	header {
+		background-color: var(--light-blue);
+	}
+
+	header > h1 {
+		color: var(--prussian-blue);
+	}
+
+	footer {
+		color: var(--blue-green);
+	}
+
+	#origen, #destino {
+		color: var(--orange);
+	}
+
+	aside > ul > li {
+		color: var(--honey-yellow);
+	}
+	```
+
+5. Guardar el archivo y recargar la página en nuestro navegador para ver los cambios de colores en nuestra página.
+
+6. Modificar el archivo **index.html** para agregar un class al botón
+
+	``` html hl_lines="55"
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="[VUESTRO NOMBRE]">
+        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link type="text/css" href="css/estilos.css" rel="stylesheet">
+        <title>Mi calculadora geodésica</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <h1>Mi calculadora geodésica</h1>
+        </header>
+        <main>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                        <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <select id="origen">
+                                <option value="EPSG:4326">EPSG:4326</option> 
+                                <option value="EPSG:3857">EPSG:3857</option>
+                                <option value="EPSG:25831">EPSG:25831</option>
+                                <option value="EPSG:23031">EPSG:23031</option>
+                            </select>
+                        </td>
+                        <td colspan="2">
+                            <select id="destino">
+                                <option value="EPSG:4326">EPSG:4326</option> 
+                                <option value="EPSG:3857">EPSG:3857</option>
+                                <option value="EPSG:25831">EPSG:25831</option>
+                                <option value="EPSG:23031">EPSG:23031</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lat">Latitud</label></td>
+                        <td><label for="lng">Longitud</label></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="lat"></td>
+                        <td><input type="text" id="lng"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                    </tr>
+                </table>
+            </div>
+            <aside>
+                <ul>
+                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                    <li>EPSG:3857</li>
+                    <li>EPSG:25831</li>
+                    <li>EPSG:23031</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+    </body>
+    </html>
+    ```
+
+7. Modificar el archivo **estilos.css** para aplicar estilo al botón
+
+	``` css hl_lines="33 34 35 36"
+	:root {
+		--light-blue: #8ecae6ff;
+		--blue-green: #219ebcff;
+		--prussian-blue: #023047ff;
+		--honey-yellow: #ffb703ff;
+		--orange: #fb8500ff;
+	}
+
+	html {
+		font-family: "Roboto", sans-serif;
+	}
+
+	header {
+		background-color: var(--light-blue);
+	}
+
+	header > h1 {
+		color: var(--prussian-blue);
+	}
+
+	footer {
+		color: var(--blue-green);
+	}
+
+	#origen, #destino {
+		color: var(--orange);
+	}
+
+	aside > ul > li {
+		color: var(--honey-yellow);
+	}
+
+	.btn-tranformar {
+		background-color: var(--orange);
+		color: var(--prussian-blue);
+	} 
+	```
+
+8. Guardar el archivo y recargar la página en nuestro navegador para ver el cambio de estilo en el botón.
 
 ## Referencias
 

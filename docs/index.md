@@ -16,7 +16,6 @@ Temario:
 ## Autores
 
 * Wladimir Szczerban (alias Bolo) *@bolosig*, [geostarter](http://betaportal.icgc.cat) (ICGC)
-* Ignacio Ferrero (Departamento de Geografía UAB)
 
 !!! note "Condiciones de reutilización de estos apuntes"
 
@@ -34,3 +33,5 @@ Temario:
     * CompartirIgual — Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
     
     * No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.
+
+    Muchos de los contenidos son obtenidos y/o adaptados de los contenidos de https://developer.mozilla.org/es/docs/Learn que se distribuyen bajo licenca Mozilla Contributors is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).

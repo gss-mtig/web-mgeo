@@ -194,7 +194,7 @@ Produce la siguiente salida
 </html>
 ```
 
-4. Abrir la página en el navegador y ver el resultado
+4. Guardar el archivo y abrir la página en el navegador para ver el resultado
 
 ## Referencias
 

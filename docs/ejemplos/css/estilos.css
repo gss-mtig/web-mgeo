@@ -1,0 +1,36 @@
+:root {
+    --light-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --honey-yellow: #ffb703ff;
+    --orange: #fb8500ff;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: var(--light-blue);
+}
+
+header > h1 {
+    color: var(--prussian-blue);
+}
+
+footer {
+    color: var(--blue-green);
+}
+
+#origen, #destino {
+    color: var(--orange);
+}
+
+aside > ul > li {
+    color: var(--honey-yellow);
+}
+
+.btn-tranformar {
+    background-color: var(--orange);
+    color: var(--prussian-blue);
+} 
