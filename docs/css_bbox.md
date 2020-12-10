@@ -174,6 +174,129 @@ Si deseas cortar el contenido (ocultar el desbordamiento) cuando se desborda, pu
 
 ## Fondos
 
+La propiedad **background** de CSS es una propiedad abreviada de una serie de propiedades de fondo que vamos a ver a continuación. Si descubres una propiedad de fondo compleja en una hoja de estilo, puede parecer un poco difícil de entender porque pueden estarse pasando muchos valores a la vez.
+
+Ejemplo
+
+``` css
+.box { 
+  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat, url(big-star.png) center no-repeat, rebeccapurple; 
+} 
+```
+
+Demos un vistazo a las diferentes cosas que puedes hacer con los fondos en CSS, a partir de observar las propiedades de fondo individuales.
+
+### Colores de fondo
+
+La propiedad **background-color** define el color de fondo de cualquier elemento en CSS. La propiedad admite cualquier color válido. Un color de fondo se extiende por debajo del contenido y el relleno del elemento.
+
+Ejemplo
+
+``` css
+.box {
+  background-color: #567895;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+}
+span {
+  background-color: rgba(255,255,255,.5);
+}
+```
+
+``` html
+<div class="box">
+  <h2>Titulo con color de fondo</h2>
+  <p>Cambiar el <span>color</span> de fondo.</p>
+</div>
+```
+
+### Imágenes de fondo
+
+La propiedad **background-image** permite visualizar una imagen de fondo en un elemento. De forma predeterminada, si la imagen es mas grande que la caja que la contiene no se reduce para ajustarse a la caja, por lo que solo vemos una parte de esta, mientras que una imagen mas pequeña que la caja que la contiene aparece repetida en forma de mosaico hasta llenar la caja.
+
+``` css
+.box {
+  width: 200px;
+  height: 60px;
+} 
+
+.a {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg);
+}
+
+.b {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+}
+```
+
+``` html
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
+
+#### Controlar el comportamiento de la imagen de fondo
+
+La propiedad **background-repeat** se usa para controlar el comportamiento de tipo mosaico de las imágenes. Los valores disponibles son:
+
+* **no-repeat**: evita que el fondo se repita.
+* **repeat-x**: repite horizontalmente.
+* **repeat-y**: repite verticalmente.
+* **repeat**: es el valor por defecto; repite en ambas direcciones.
+
+``` css
+.b {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+  background-repeat: no-repeat;
+}
+```
+
+#### Dimensionar la imagen de fondo
+
+La propiedad **background-size**, que puede tomar valores de longitud o porcentaje, para ajustar el tamaño de la imagen para que quepa dentro del fondo.
+
+También puedes utilizar palabras clave:
+
+* **cover**: el navegador agrandará la imagen lo suficientemente grande como para que esta cubra por completo el área de la caja sin que pierda su relación de aspecto. En este caso, es probable que parte de la imagen quede fuera de la caja.
+* **contain**: el navegador adecuará el tamaño de la imagen para que quepa dentro de la caja. En este caso, pueden quedar huecos a ambos lados o en la parte superior e inferior de la imagen si la relación de aspecto de la imagen es diferente de la de la caja.
+
+``` css
+.a {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg);
+  background-size: cover;
+}
+```
+
+#### Posicionar la imagen de fondo
+
+La propiedad **background-position** te permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es (0,0) valor por defecto, y la caja se coloca sobre los ejes horizontal (x) y vertical (y).
+
+Como valores puedes usar palabras clave como *top* y *right* y también longitudes y porcentajes o una combinación de ambos
+
+``` css
+.b {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+  background-repeat: no-repeat;
+  background-position: center 20px;
+}
+```
+
+Por último, también puedes usar una sintaxis de 4 valores para indicar una distancia desde ciertos bordes del cuadro: la unidad de longitud en este caso es un desplazamiento del valor que la precede. Entonces, en el CSS siguiente, colocamos el fondo a 20 px desde la parte superior y a 10 px desde la derecha
+
+``` css
+.b {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+  background-repeat: no-repeat;
+  background-position: top 20px right 10px;
+}
+```
+
+
+
 https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes
 
 ## Referencias
