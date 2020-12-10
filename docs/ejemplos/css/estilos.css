@@ -24,6 +24,8 @@ body {
 
 header {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: var(--light-blue);
 }
 
@@ -32,6 +34,7 @@ header > h1 {
 }
 
 footer {
+    text-align: center;
     color: var(--blue-green);
 }
 

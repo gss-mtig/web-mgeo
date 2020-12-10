@@ -354,6 +354,11 @@ Para ver más detalle del modelo de Grid visitar https://developer.mozilla.org/e
     ```
 5. Guardar y recargar la página para ver los cambios.
 
+!!! question "Ejercicio 1.5 pt"
+    1. Modificar el estilo del elemento header para que el texto del titulo quede alineado verticalmente en el centro de su contenedor 0.5 pt. Ayuda usar la propiedad *align-items*
+    2. Modificar el estlio del elemento header para que la imagen y el titulo queden distribuidos de igual forma detro de su contenedor 0.5 pt. Ayuda usar la propiedad *justify-content*
+    3. Centrar horizontalmente el texto del elemento footer 0.5 pt.
+
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout
