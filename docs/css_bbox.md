@@ -295,18 +295,45 @@ Por último, también puedes usar una sintaxis de 4 valores para indicar una dis
 }
 ```
 
+#### Múltiples imágenes de fondo
 
+También es posible poner múltiples imágenes de fondo: puedes especificar múltiples valores **background-image** para un solo atributo, separados cada uno por una coma.
 
-https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes
+Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los fondos se superponen con la última imagen de fondo que hay en la parte inferior de la lista, y cada imagen anterior se apila encima de la que sigue en el código.
+
+Las otras propiedades **background-\*** también pueden tener valores múltiples separados por comas, de la misma manera que *background-image*
+
+``` css
+background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-repeat: no-repeat, repeat-x, repeat;
+background-position: 10px 20px,  top right;
+```
+
+Ejemplo 
+
+``` css
+.b {
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png), url(https://mdn.github.io/css-examples/learn/backgrounds-borders/big-star.png);
+   background-repeat: no-repeat, repeat-x;
+  background-position: top 20px right 10px, center center;
+}
+```
+
+#### Degradados de fondo
+
+Un degradado, cuando se usa para un fondo, actúa como una imagen y también se establece usando la propiedad **background-image**.
+
+``` css
+.a {
+  background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+}
+
+.b {
+  background-image: radial-gradient(circle, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+  background-size: 100px 50px;
+}
+```
 
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja
-
-[^1]: https://developer.mozilla.org/es/docs/Web/CSS
-
-
-https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Contenido_desbordado
-https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout
-https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks
-
