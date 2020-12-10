@@ -156,6 +156,53 @@ El redondeo de esquinas en una caja se logra mediante el uso de la propiedad **b
 }
 ```
 
+1. Modificar el archivo **estilos.css** para agregar un borde al elemento aside
+
+    ``` css hl_lines="29 30 31"
+    :root {
+        --light-blue: #8ecae6ff;
+        --blue-green: #219ebcff;
+        --prussian-blue: #023047ff;
+        --honey-yellow: #ffb703ff;
+        --orange: #fb8500ff;
+    }
+
+    html {
+        font-family: "Roboto", sans-serif;
+    }
+
+    header {
+        background-color: var(--light-blue);
+    }
+
+    header > h1 {
+        color: var(--prussian-blue);
+    }
+
+    footer {
+        color: var(--blue-green);
+    }
+
+    #origen, #destino {
+        color: var(--orange);
+    }
+
+    aside {
+        border-left: 2px solid var(--prussian-blue);
+    }
+
+    aside > ul > li {
+        color: var(--honey-yellow);
+    }
+
+    .btn-tranformar {
+        background-color: var(--orange);
+        color: var(--prussian-blue);
+    }
+    ```
+
+2. Guardar y recargar la página para ver los cambios.
+
 ### Relleno
 
 El relleno se encuentra entre el borde y el área de contenido. A diferencia de los márgenes, el relleno no puede tomar valores negativos, por lo que el valor debe ser 0 o positivo. Cualquier fondo aplicado a tu elemento se mostrará detrás del área de relleno y, generalmente, se usa para mantener el contenido alejado del borde.

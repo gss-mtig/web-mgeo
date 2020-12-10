@@ -10,7 +10,20 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
+    display: flex;
     background-color: var(--light-blue);
 }
 
@@ -22,8 +35,23 @@ footer {
     color: var(--blue-green);
 }
 
+main {
+    display: flex;
+    flex: auto;
+}
+
+main > div {
+    flex: auto;
+}
+
 #origen, #destino {
     color: var(--orange);
+}
+
+aside {
+    min-width: 150px;
+    flex: 1;
+    border-left: 2px solid var(--prussian-blue);
 }
 
 aside > ul > li {
