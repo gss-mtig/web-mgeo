@@ -1,4 +1,4 @@
-# CSS
+# CSS - Cascading Style Sheets - Hojas de Estilo en Cascada
 
 Hojas de Estilo en Cascada (del inglés **C**ascading **S**tyle **S**heets) o **CSS** es el lenguaje de estilos utilizado para describir la presentación de documentos HTML. CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios. CSS es uno de los lenguajes base de la Open Web y posee una especificación estandarizada por parte del W3C. [^1]
 

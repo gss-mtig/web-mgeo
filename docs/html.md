@@ -1,4 +1,4 @@
-# HTML
+# HTML - HyperText Markup Language - Lenguaje de Marcas de Hipertexto
 
 **HTML** es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas. [^1]
 

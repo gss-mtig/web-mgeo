@@ -24,6 +24,7 @@ nav:
 - CSS: css.md
 - CSS el modelo de caja: css_bbox.md
 - CSS diseño: css_diseno.md
+- JS: js.md
 
 plugins:
     - search

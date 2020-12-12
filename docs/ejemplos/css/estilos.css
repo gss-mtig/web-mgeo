@@ -57,8 +57,13 @@ aside {
     border-left: 2px solid var(--prussian-blue);
 }
 
+aside a {
+    text-decoration: none;
+}
+
 aside > ul > li {
     color: var(--honey-yellow);
+    list-style-type: none;
 }
 
 .btn-tranformar {
