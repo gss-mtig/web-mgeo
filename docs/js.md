@@ -401,12 +401,135 @@ no ${2 * a + b}.`;
 
 En lineas generales es recomentable usar plantillas literales en lugar de la concatenación de cadenas de caracteres.
 
+### Matrices o Arreglos
 
+Las matrices **Array** son una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada.
 
-https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Arrays
+Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas. Puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz.
+
+``` js
+let compra = ["pan", "leche", "queso", "hummus", "noodles"];
+let sequence = [1, 1, 2, 3, 5, 8, 13];
+let random = ["tree", 795, [0, 1, 2]];
+```
+
+#### Acceder y modificar elementos de la matriz
+
+Se puede acceder a elementos individuales en la matriz mediante la notación de corchetes, indicando la posición del elemento que se quiera acceder
+
+!!! warning
+
+    Las posiciones dentro de las matrices se comienzan a contar desde 0. El primer elementos de la matriz tiene la posición 0. 
+
+``` js
+let compra = ["pan", "leche", "jamón", "hummus", "noodles"];
+let pan = compra[0];
+let charcuteria = compra[2];
+```
+
+Puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor.
+
+``` js
+let compra = ["pan", "leche", "jamón", "hummus", "noodles"];
+compra[0] = "tomates";
+```
+
+Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes.
+
+``` js
+let random = ["tree", 795, [0, 3, 2]];
+let tres = random[2][1];
+```
+
+## Funciones
+
+En términos generales, una función es un "subprograma" que puede ser llamado por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado cuerpo de la función. Se pueden pasar valores a una función, y la función puede devolver un valor. [^4]
+
+En JavaScript, las funciones son objetos de primera clase, es decir, son objetos y se pueden manipular y transmitir al igual que cualquier otro objeto. Concretamente son objetos **Function**.
+
+JavaScript tiene integradas varias funciones de nivel superior como por ejemplo parseInt(), decodeURI(), etc.
+
+### Declaracion de una función
+
+Una definición de función (también denominada declaración de función o expresión de función) consta de la palabra clave function, seguida de:
+
+* El nombre de la función.
+* Una lista de parámetros o argumentos de la función, entre paréntesis y separados por comas.
+* Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }.
+
+``` js
+function suma(a, b) {
+    return a + b;
+}
+```
+
+En el ejemplo anterior tenemos a la función *suma* que toma 2 parámetros *a* y *b* y devuelve un valor con la suma de *a+b*. La instrucción **return** especifica el valor devuelto por la función.
+
+Las funciones también se pueden crear mediante una **expresión function**. Esta función puede ser anónima; no tiene por qué tener un nombre. Por ejemplo, la función *suma* se podría haber definido como:
+
+``` js
+const suma = function(a, b) {
+    return a + b;
+}
+```
+
+Las *expresión function* son convenientes cuando se pasa una función como argumento a otra función.
+
+### Parámetros de una función
+
+Existe una variable "especial" llamada **arguments** que es similar a una matriz. Esta variable guarda todos los argumentos de la función. 
+
+``` js
+const suma = function(a, b) {
+    let parametroB = arguments[1]; 
+}
+```
+
+Usando el objeto *arguments*, puedes llamar a una función con más argumentos de los que formalmente declara aceptar. Esto suele ser útil si no sabes de antemano cuántos argumentos se pasarán a la función.
+
+### Parámetros predeterminados
+
+En el pasado (pre ES6), la estrategia general para establecer valores predeterminados era probar los valores de los parámetros en el cuerpo de la función y asignar un valor si eran **undefined**.
+
+Con parámetros predeterminados, ya no es necesaria una verificación manual en el cuerpo de la función. Simplemente puedes poner un valor predeterminado para algún parámetro en el encabezado de la función.
+
+``` js
+const suma = function(a, b = 2) {
+    return a + b;
+}
+```
+
+### Parámetros rest
+
+La sintaxis del parámetro rest (resto de parámetros) nos permite representar un número indefinido de argumentos como una matriz. Para ello ponemos tres puntos antes del nombre del parámetro
+
+``` js
+const suma = function(a, ...masParametros) {
+    ...
+    ...
+}
+suma(1, 2, 4, 7); //en este caso ...masParametros sería igual a [2, 4, 7]
+```
+
+### Funciones flecha
+
+Dos factores influyeron en la introducción de las funciones flecha son: funciones más cortas y no vinculantes de *this*.
+
+Hasta las funciones flecha, cada nueva función definía su propio valor *this*, lo que causaba algunos problemas. Para más detalles sobre funciones flecha https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions y https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/
+
+``` js
+const suma = (a, b) => {
+    return a + b;
+}
+
+const resta = (a, b) => a - b;
+
+const cuadrado = a => a * a;
+```
 
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Web/JavaScript
 [^2]: https://desarrolloweb.com/articulos/507.php
 [^3]: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
+[^4]: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones
