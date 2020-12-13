@@ -331,7 +331,7 @@ let soyVerdadero = true;
 
 ### Cadena de caracteres
 
-Javascript sólo tiene un tipo de datos para guardar texto y en el se pueden introducir cualquier número de caracteres. Un texto puede estar compuesto de números, letras y cualquier otro tipo de caracteres y signos. Los textos se escriben entre comillas, dobles o simples.
+Javascript sólo tiene un tipo de datos para guardar texto **string** y en el se pueden introducir cualquier número de caracteres. Un texto puede estar compuesto de números, letras y cualquier otro tipo de caracteres y signos. Los textos se escriben entre comillas, dobles o simples.
 
 Todo lo que se coloca entre comillas es tratado como una cadena de caracteres independientemente de lo que coloquemos en el interior de las comillas. Por ejemplo, en una variable de texto podemos guardar números y en ese caso tenemos que tener en cuenta que las variables de tipo texto y las numéricas no son la misma cosa y mientras que las de numéricas nos sirven para hacer cálculos matemáticos las de texto no. 
 
@@ -339,6 +339,8 @@ Todo lo que se coloca entre comillas es tratado como una cadena de caracteres in
 let soyTexto = "500";
 let yoTambienTexto = "Hola soy un texto compuesto por 41 letras";
 ```
+
+#### Caracteres especiales
 
 Hay una serie de caracteres especiales que sirven para expresar en una cadena de texto determinados controles como puede ser un salto de línea o un tabulador. Estos son los caracteres de escape y se escriben con una notación especial que comienza por una contra barra (una barra inclinada al revés de la normal '') y luego se coloca el código del carácter a mostrar.
 
@@ -349,9 +351,57 @@ let textoComillas = "Hola soy un \"texto con comillas\"";
 let saltoDeLinea = "Soy texto en \n 2 líneas";
 ```
 
+#### Concatenar cadenas
 
-https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Strings
-https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods
+Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Puedes unir texto con variables ya sean de texto o numéricas.
+
+``` js
+let one = 'Hola, ';
+let two = 'como estás?';
+let joined = one + two;
+let miEdad = 45;
+let miNombre = "Carlos";
+let esMiEdad = "Me llamo " + miNombre + " y tengo " + miEdad + " años.";
+let myFecha = "19" + "67"; //resultado "1967"
+```
+
+#### Plantillas literales
+
+Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres. Las plantillas literales se delimitan con el caracter de comillas o tildes invertidas (` `) (grave accent), en lugar de las comillas sencillas o dobles.
+
+Las plantillas de cadena de caracteres pueden contener marcadores, identificados por el signo de dólar y envueltos en llaves (**${expresión}**). Las expresiones contenidas en los marcadores, junto con el texto entre ellas, son enviados como argumentos a una función. La función por defecto sencillamente concatena las partes para formar una única cadena de caracteres. Para más información sobre plantilla etiquetadas, anidadas, etc. ver [template_strings](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings) [^3] 
+
+``` js
+let expresion = "literales";
+let cadena = `texto de cadena de caracteres ${expresion} texto adicional`;
+```
+
+Los caracteres de fin de línea encontrados forman parte de la plantilla literal. Utilizando cadenas de caracteres normales, sería necesario utilizar la siguiente sintaxes para producir cadenas de más de una línea:
+
+``` js
+let multiLinea = 'línea 1 de cadena de texto\n' +
+'línea 2 de cadena de texto');
+```
+
+Utilizando plantillas literales, se puede obtener el mismo resultado de la siguiente forma:
+
+``` js
+let multiLinea = `línea 1 de la cadena de texto
+línea 2 de la cadena de texto`);
+```
+
+Se pueden insetar expresiones dentro de cadenas de caracteres normales como por ejemplo:
+
+``` js
+let a = 5;
+let b = 10;
+let repuesta = `Quince es ${a + b} y
+no ${2 * a + b}.`;
+```
+
+En lineas generales es recomentable usar plantillas literales en lugar de la concatenación de cadenas de caracteres.
+
+
 
 https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Arrays
 
@@ -359,3 +409,4 @@ https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Arrays
 
 [^1]: https://developer.mozilla.org/es/docs/Web/JavaScript
 [^2]: https://desarrolloweb.com/articulos/507.php
+[^3]: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
