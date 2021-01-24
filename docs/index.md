@@ -8,6 +8,24 @@ Temario:
     * Ciclo petición/respuesta
     * Front-End y Back-End
     * ¿Qué hacen HTML/CSS/JS?
+* HTML
+    * Elementos
+    * Anatomía de un HTML
+    * Mi primera página
+* CSS
+    * Use de estilos en HTML
+    * Tipos de selectores
+    * Modelo de cajas
+    * Diseño
+* JS
+    * ¿Qué podemos haer con JavaScript en el navegador?
+    * Variables
+    * Funciones
+    * Estructuras de control
+    * Objetos
+    * API del DOM
+    * Programación asíncrona
+    * JavaScript en el servidor
 
 
 # [https://gss-mtig.github.io/web-mgeo/](https://gss-mtig.github.io/web-mgeo/)
