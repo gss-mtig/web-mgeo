@@ -25,6 +25,11 @@ nav:
 - CSS el modelo de caja: css_bbox.md
 - CSS diseño: css_diseno.md
 - JS: js.md
+- JS estructuras de control: js_estructuras.md
+- JS objetos: js_objetos.md
+- JS dom: js_dom.md
+- JS async: js_async.md
+- JS en el servidor: js_servidor.md
 
 plugins:
     - search

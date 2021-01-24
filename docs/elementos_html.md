@@ -1077,12 +1077,12 @@ De igual forma existe un elemento `<colgroup>` para hacer agrupaciones semántic
 
 2. Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.
 
-!!! question "Ejercicio 3 pt"
+!!! question "Ejercicio 2.5 pt"
     1. Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente **0.5 pt**.
     2. Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web https://www.uab.cat/es/ y que se abra en una pestaña/ventana nueva. **0.5 pt**.
     3. Agregar un elemento `<label>` con el texto **Respuesta** en la celda que está junto a las celdas con las etiquetas *Latitud* y *Longiud* **0.5 pt**.
     4. Agregar un elemento `<textarea>` en la celda que está junto a las celdas de los input de *lat* y *lng* **0.5 pt**.
-    5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de *transformar coordenadas* **1 pt**.
+    5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de *transformar coordenadas* **0,5 pt**.
 
 ## Referencias
 

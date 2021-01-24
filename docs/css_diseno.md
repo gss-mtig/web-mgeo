@@ -354,13 +354,13 @@ Para ver más detalle del modelo de Grid visitar https://developer.mozilla.org/e
     ```
 5. Guardar y recargar la página para ver los cambios.
 
-!!! question "Ejercicio 3.5 pt"
+!!! question "Ejercicio 3 pt"
     1. Agregar un class al botón *Enviar resultado* creado en el ejercicio anterior y dar estilo al botón. **0.5 pt**.
     2. Centrar horizontalmente el texto del elemento footer **0.5 pt**.
     3. Eliminar el subrayado de los enlaces del listado de definiciciones de los diferentes EPSG **0.5 pt**.
     4. Modificar el estilo del elemento header para que el texto del titulo quede alineado verticalmente en el centro de su contenedor **0.5 pt**. Ayuda usar la propiedad *align-items*
     5. Modificar el estlio del elemento header para que la imagen y el titulo queden distribuidos de igual forma detro de su contenedor **0.5 pt**. Ayuda usar la propiedad *justify-content*
-    6. Modificar el estilo de la tabla para que los elementos se vean más ordenados dentro de la página. Algunas ideas: centrar la tabla, dar mas espacio entre los elementos, agregar un estilo de borde para separar los elementos de la columna de origen de los de la columna de destino, etc. **1 pt**.
+    6. Modificar el estilo de la tabla para que los elementos se vean más ordenados dentro de la página. Algunas ideas: centrar la tabla, dar mas espacio entre los elementos, agregar un estilo de borde para separar los elementos de la columna de origen de los de la columna de destino, etc. **0.5 pt**.
 
 ## Referencias
 

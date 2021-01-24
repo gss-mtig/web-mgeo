@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link type="text/css" href="css/estilos.css" rel="stylesheet">
     <title>Mi calculadora geodésica</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.3/proj4.min.js" integrity="sha512-TzmbpBIqcR0TyAdg+zJJfpbTeKVj24n+U3vvlP3yBDTOs26ELhrzA+TacRmMAuflTY8tU3zVwbCyfvM3QH58lA==" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -50,10 +52,11 @@
                 <tr>
                     <td><input type="text" id="lat"></td>
                     <td><input type="text" id="lng"></td>
-                    <td colspan="2"></td>
+                    <td colspan="2"><div id="respuesta"></div></td>
                 </tr>
                 <tr>
-                    <td colspan="4"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                    <td colspan="2"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                    <td colspan="2"><button class="btn-guardar">Guardar transformación</button></td>
                 </tr>
             </table>
         </div>

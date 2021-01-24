@@ -118,7 +118,7 @@ Todos los scripts con el atributo defer se cargarán en el orden en que aparecen
 * Si tus scripts se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza **async**.
 * Si tus scripts necesitan esperar a ser procesados y dependen de otros scripts y/o del DOM en su lugar, cárgalos usando **defer** y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
 
-A Continuación vamos a agregar un archivo JavaScript (de momento vacío - sin código) a nuestra calculadora
+A continuación vamos a agregar un archivo JavaScript (de momento vacío - sin código) a nuestra calculadora
 
 1. Crear una carpeta llamada **js** dentro de la carpeta *web-mgeo*
 
