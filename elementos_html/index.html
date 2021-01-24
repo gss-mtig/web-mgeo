@@ -1,0 +1,2105 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Programació web">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/elementos_html/">
+      
+      
+        <meta name="author" content="web-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Elementos HTML - Programació web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elementos-html" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Programació web
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Elementos HTML
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Programació web
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
+      Introducción al desarrollo Web
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../html/" title="HTML" class="md-nav__link">
+      HTML
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Elementos HTML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Elementos HTML" class="md-nav__link md-nav__link--active">
+      Elementos HTML
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    head
+  </a>
+  
+    <nav class="md-nav" aria-label="head">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadatos" class="md-nav__link">
+    metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codificacion-de-caracteres" class="md-nav__link">
+    Codificación de caracteres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autor" class="md-nav__link">
+    Autor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    Descripción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport" class="md-nav__link">
+    Viewport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-sociales" class="md-nav__link">
+    Redes sociales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favicon" class="md-nav__link">
+    favicon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carga-de-css-y-javascript" class="md-nav__link">
+    Carga de CSS y JavaScript
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-estructura-contenedores-o-envolturas" class="md-nav__link">
+    Elementos de "estructura", "contenedores" o "envolturas"
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos de "estructura", "contenedores" o "envolturas"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementos-semanticos" class="md-nav__link">
+    Elementos semánticos
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos semánticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aside" class="md-nav__link">
+    aside
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-no-semanticos" class="md-nav__link">
+    Elementos no semánticos
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos no semánticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    div
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#span" class="md-nav__link">
+    span
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dar-estructura-a-nuestra-pagina" class="md-nav__link">
+    Dar estructura a nuestra página
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-elementos-importantes" class="md-nav__link">
+    Otros elementos importantes
+  </a>
+  
+    <nav class="md-nav" aria-label="Otros elementos importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezado-o-titulo-hx" class="md-nav__link">
+    Encabezado o título &lt;h[X]&gt;
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    Listas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enfasis-cursiva-negrita-subrayado" class="md-nav__link">
+    Énfasis, Cursiva, negrita, subrayado...
+  </a>
+  
+    <nav class="md-nav" aria-label="Énfasis, Cursiva, negrita, subrayado...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#negrita" class="md-nav__link">
+    Negrita
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cursiva" class="md-nav__link">
+    Cursiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subrayado" class="md-nav__link">
+    Subrayado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipervinculos-o-enlaces" class="md-nav__link">
+    Hipervínculos o enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-y-multimedia" class="md-nav__link">
+    Imagenes y multimedia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formularios" class="md-nav__link">
+    Formularios
+  </a>
+  
+    <nav class="md-nav" aria-label="Formularios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textarea" class="md-nav__link">
+    textarea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    button
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    Tablas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css/" title="CSS" class="md-nav__link">
+      CSS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css_bbox/" title="CSS el modelo de caja" class="md-nav__link">
+      CSS el modelo de caja
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css_diseno/" title="CSS diseño" class="md-nav__link">
+      CSS diseño
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js/" title="JS" class="md-nav__link">
+      JS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
+      JS estructuras de control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
+      JS objetos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_dom/" title="JS dom" class="md-nav__link">
+      JS dom
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_async/" title="JS async" class="md-nav__link">
+      JS async
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
+      JS en el servidor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    head
+  </a>
+  
+    <nav class="md-nav" aria-label="head">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadatos" class="md-nav__link">
+    metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codificacion-de-caracteres" class="md-nav__link">
+    Codificación de caracteres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autor" class="md-nav__link">
+    Autor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    Descripción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport" class="md-nav__link">
+    Viewport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-sociales" class="md-nav__link">
+    Redes sociales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favicon" class="md-nav__link">
+    favicon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carga-de-css-y-javascript" class="md-nav__link">
+    Carga de CSS y JavaScript
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-estructura-contenedores-o-envolturas" class="md-nav__link">
+    Elementos de "estructura", "contenedores" o "envolturas"
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos de "estructura", "contenedores" o "envolturas"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementos-semanticos" class="md-nav__link">
+    Elementos semánticos
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos semánticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aside" class="md-nav__link">
+    aside
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-no-semanticos" class="md-nav__link">
+    Elementos no semánticos
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos no semánticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    div
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#span" class="md-nav__link">
+    span
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dar-estructura-a-nuestra-pagina" class="md-nav__link">
+    Dar estructura a nuestra página
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-elementos-importantes" class="md-nav__link">
+    Otros elementos importantes
+  </a>
+  
+    <nav class="md-nav" aria-label="Otros elementos importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encabezado-o-titulo-hx" class="md-nav__link">
+    Encabezado o título &lt;h[X]&gt;
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    Listas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enfasis-cursiva-negrita-subrayado" class="md-nav__link">
+    Énfasis, Cursiva, negrita, subrayado...
+  </a>
+  
+    <nav class="md-nav" aria-label="Énfasis, Cursiva, negrita, subrayado...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#negrita" class="md-nav__link">
+    Negrita
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cursiva" class="md-nav__link">
+    Cursiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subrayado" class="md-nav__link">
+    Subrayado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipervinculos-o-enlaces" class="md-nav__link">
+    Hipervínculos o enlaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-y-multimedia" class="md-nav__link">
+    Imagenes y multimedia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formularios" class="md-nav__link">
+    Formularios
+  </a>
+  
+    <nav class="md-nav" aria-label="Formularios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textarea" class="md-nav__link">
+    textarea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    button
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    Tablas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/elementos_html.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="elementos-html">Elementos HTML</h1>
+<h2 id="head">head</h2>
+<p>El elemento HTML <strong><code>&lt;head&gt;</code></strong> provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Es la <strong>cabecera</strong> y actua como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más.</p>
+<p>Algunos elementos que deberían estar presentes en la cabecera </p>
+<h3 id="title">title</h3>
+<p>El elemento <strong><code>&lt;title&gt;</code></strong> se usa para poner el título a la página. Es lo que aparece en la barra del navegador</p>
+<h3 id="metadatos">metadatos</h3>
+<p>Los metadatos son los datos que describen la página. HTML tiene una forma "oficial" para introducir metadatos y para ello se usa el elemento <strong><code>&lt;meta&gt;</code></strong>. Hay muchos tipos diferentes de <code>&lt;meta&gt;</code> que se pueden incluir en el <code>&lt;head&gt;</code> de una página.</p>
+<p>A continuación veremos algunos de los <code>&lt;meta&gt;</code> más usados</p>
+<h4 id="codificacion-de-caracteres">Codificación de caracteres</h4>
+<p>Especifica especifica la codificación de caracteres del documento, esto quiere decir el conjuto de carácteres que se pueden usar en la página. Esto es muy útil e importante para representar correctamente caracteres especiales como los acentos u caracteres de otros idioma. Por ejemplo japonés </p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="autor">Autor</h4>
+<p>Especificar un autor resulta ventajoso por diversos motivos: es útil saber quién escribió la página para poder ponerte en contacto con el autor si tienes preguntas sobre el contenido. Algunos sistemas de gestión de contenido tienen herramientas para extraer automáticamente la información del autor de la página y ponerla a disposición para tales fines. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Pepe Perez&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="descripcion">Descripción</h4>
+<p>Especificar una descripción que incluya palabras clave relacionadas con el contenido de tu página resulta útil porque tiene el potencial de hacer que la página aparezca más arriba en las búsquedas relevantes que efectúan los motores de búsqueda. Mejora el SEO</p>
+<p><strong>SEO</strong> (Search Engine Optimization) también conocido como posicionamiento web, es el proceso de hacer un sitio web más visible en los resultados de búsqueda o mejorar el ranking de búsqueda.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;El área de aprendizaje de MDN pretende</span>
+<span class="s">proporcionar a los recién llegados a la web todo lo que deben</span>
+<span class="s">saber para empezar a desarrollar páginas web y aplicaciones web.&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="viewport">Viewport</h4>
+<p>El viewport del navegador es el área de la ventana en donde el contenido web está visible. Generalmente no es del mismo tamaño que la página renderizada, en donde se brindan barras de desplazamiento para que el usuario pueda acceder a todo el contenido.</p>
+<p>Dispositivos con pantallas angostas (p.e. móviles) muestran la página en una ventana virtual o viewport, que es usualmente más ancho que la pantalla y la comprimen de manera que pueda verse completa. El usuario podrá recorrerla y hacer zoom para ver diferentes áreas de la página. Por ejemplo, si una pantalla móvil tiene un ancho 640px, las páginas pueden ser procesadas con un viewport de 980px, y después comprimidas para que entren en 640px.</p>
+<p>Esto se hace porque muchas páginas no están optimizadas para dispositivos móviles y se quiebran (o, al menos, se ven mal) cuando son procesadas a un ancho de viewport pequeño. El viewport virtual es una forma de resolver el problema de sitios no optimizados para móviles, logrando que se vean mejor. <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>El uso del viewport fácilita el diseño <em>responsive</em> de las páginas. </p>
+<p>La propiedad <strong>width</strong> controla el tamaño del viewport. Puede definirse con un número en pixeles como <em>width=600</em> o con un valor especial <strong>device-width</strong> que es el equivalente al ancho de la pantalla en píxeles CSS en una escala de 100%. </p>
+<p>La propiedad <strong>initial-scale</strong> controla el nivel de zoom cuando la página se carga por primera vez.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="redes-sociales">Redes sociales</h4>
+<p><a href="https://ogp.me/">Open Graph Data</a> es un protocolo de metadatos que Facebook inventó para proveer metadatos más ricos para los sitios web. Un efecto de esto es que cuando desde Facebook enlazas a una paágina, el enlace aparece con una imagen y una descripción, lo que resulta en una experiencia más enriquecedora para los usuarios.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;The Mozilla Developer Network (MDN) proporciona información</span>
+<span class="s">sobre tecnologías Open Web, incluidas HTML, CSS y APIs para ambos sitios web</span>
+<span class="s">y aplicaciones HTML5. También documenta productos Mozilla, como el sistema operativo Firefox.&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Mozilla Developer Network&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Twitter también tiene sus metadatos propios, las <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards">Twitter Cards</a>, que tienen un efecto similar cuando la URL del sitio se muestra en twitter.com.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;twitter:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Mozilla Developer Network&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="favicon">favicon</h3>
+<p>Para enriquecer un poco más el diseño de tu sitio puedes añadir en tus metadatos referencias a iconos personalizados, que se mostrarán en determinados contextos. El más común de ellos es el <strong>favicon</strong> (abreviatura de <em>favorite icon</em> —icono favorito, referido al uso que se le da en las listas de favoritos o de marcadores (bookmarks).</p>
+<p>El humilde favicon ha existido durante muchos años. Es el primer icono de este tipo: un icono cuadrado de 16 píxeles que se utiliza en varios lugares. Es posible que veas (según el navegador) favicons que se muestran en la pestaña del navegador que contiene cada página abierta y junto a las páginas marcadas en el panel de marcadores.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;favicon.ico&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="carga-de-css-y-javascript">Carga de CSS y JavaScript</h3>
+<p>Prácticamente todos los sitios web usan CSS para darles un buen aspecto y JavaScript para añadir funcionalidades interactivas, como reproductores de vídeo, mapas, juegos y demás. La manera más habitual de añadir CSS y JavaScript a una página web es con los elementos <code>&lt;link&gt;</code> y el elemento <code>&lt;script&gt;</code>, respectivamente.</p>
+<p>El elemento <code>&lt;link&gt;</code> siempre debe ir dentro del <code>&lt;header&gt;</code> de tu documento. Este toma dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;my-css-file.css&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>El elemento <code>&lt;script&gt;</code> también debería ir en el head, y debería incluir un atributo <em>src</em> con la ruta al JavaScript que quieres cargar, y <em>defer</em>, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página por ejemplo poner el elemento <code>&lt;script&gt;</code> al final del body.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;my-js-file.js&quot;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h2 id="elementos-de-estructura-contenedores-o-envolturas">Elementos de "estructura", "contenedores" o "envolturas"</h2>
+<p>Si bien la mayoría de los elementos del html se pueden anidar, exisiten algunos elementos que se usan para estructurar las distintas áereas de la página. Existen alungunos elementos que tienen un significado semántico basado en su funcionalidad como por ejemplo <code>&lt;footer&gt;</code> que presentan sin ambigüedad los diferentes contenidos y otros elementos no-semánticos que tienen un uso generalista como por ejemplo <code>&lt;div&gt;</code>  </p>
+<h3 id="elementos-semanticos">Elementos semánticos</h3>
+<p>El contenído semántico permite que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como <em>encontrar el menú de navegación</em>, o <em>encontrar el contenido principal</em>. </p>
+<h4 id="body">body</h4>
+<p>El elemento <code>&lt;body&gt;</code> contiene todo el contenido que se quiere mostrar en la página y por lo tanto sólo puede haber uno en cada página.</p>
+<h4 id="header">header</h4>
+<p>El elemento <code>&lt;header&gt;</code> representa un contenido introductorio del contenedor en el que se aloja. Si este es <em>hijo</em> de un elemento <code>&lt;body&gt;</code>, se convertirá en el encabezado principal del sitio web, pero si es hijo de un elemento <code>&lt;article&gt;</code> o un elemento <code>&lt;section&gt;</code>, entonces simplemente será el encabezado particular de cada sección.</p>
+<p>Al igual que ocurre con el <em>footer</em>, se suelen utilizar únicamente como la cabecera y pie de una página (<em>body</em>) pero no se les da un uso habitual y debido en los <em>article</em> o <em>section</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>No confundir con el elemento <code>&lt;head&gt;</code> ni con títulos y encabezados</p>
+</div>
+<h4 id="footer">footer</h4>
+<p>El elemento <code>&lt;footer&gt;</code> representa el contenido al pie de su elemento superior. Generalmente se usa como pie de página. </p>
+<p>En general el footer incluye información del autor, enlaces a documentos relacionados, contacto, copyright y similares.</p>
+<h4 id="nav">nav</h4>
+<p>El elemento <code>&lt;nav&gt;</code> o menú de navegación contiene la funcionalidad de navegación principal de la página. Contiene enlaces a otras páginas o zonas de la página. </p>
+<p>Hay que tener en cuenta que no debería ser un listado de elementos, sino una zona de navegación. Esto significa que no todos los enlaces de una página han de encontrarse dentro de este elemento.</p>
+<h4 id="main">main</h4>
+<p>El elemento <code>&lt;main&gt;</code> representa el contenido principal de la página. Utilizaremos <code>&lt;main&gt;</code> solamente una vez para cada página y lo situaremos directamente dentro del elemento <code>&lt;body&gt;</code>. Es mejor que no lo anidemos en otros elementos.</p>
+<p>Dentro del <em>main</em> encontraremos varias subsecciones (además de la barra lateral <code>&lt;aside&gt;</code>) representadas por los elementos <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, y <code>&lt;div&gt;</code>.</p>
+<h4 id="aside">aside</h4>
+<p>El elemento <code>&lt;aside&gt;</code> o barra lateral incluye contenido que no está directamente relacionado con el contenido principal, pero que puede aportar información adicional relacionada indirectamente con él (resúmenes, enlaces relacionados, etc.). A menudo se coloca dentro de <code>&lt;main&gt;</code></p>
+<h3 id="elementos-no-semanticos">Elementos no semánticos</h3>
+<h4 id="div">div</h4>
+<p>El elemento <code>&lt;div&gt;</code> es un elemento de bloque y que se utiliza cuando no se tenemos un elementos semántico en el que indicar el contenido o en el caso de que no se quiera dar ningún significado concreto. Es él elemento <strong>comodín</strong> por exelencia.</p>
+<h4 id="span">span</h4>
+<p>El elemento <code>&lt;span&gt;</code> es un elemento de linea (que se utiliza en el interior de una línea) y que al igual que el *<em>div</em> se utiliza cuando no se tenemos un elementos semántico en el que indicar el contenido o en el caso de que no se quiera dar ningún significado específico.</p>
+<p>Se usa frecuentemente para dar estilo a un texto dentro de una línea. Por ejemplo</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Tengo un perro <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:green&quot;</span><span class="p">&gt;</span>verde<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> que tiene los ojos <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:blue&quot;</span><span class="p">&gt;</span>azules<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> 
+</code></pre></div>
+<p>Tengo un perro <span style="color:green">verde</span> que tiene los ojos <span style="color:blue">azules</span></p> </p>
+<h3 id="dar-estructura-a-nuestra-pagina">Dar estructura a nuestra página</h3>
+<p>En el cápitulo anterior crearmos una página web sencilla con la estructura mínima donde solo aparecía el texto "Mi calculadora geodésica". Modificaremos la página y le daremos una mejor estructura.</p>
+<ol>
+<li>
+<p>Abrir en el editor de texto el archivo <strong>index.html</strong> que se encuentra en la carpeta <em>web-mgeo</em></p>
+</li>
+<li>
+<p>Agregar el autor y la descripción en el <strong>head</strong>. Para ello escribir lo siguiente</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    Mi calculadora geodésica
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar el viewport para que la página sea "<em>responsive</em>". </p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    Mi calculadora geodésica
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar el favicon de la página</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    Mi calculadora geodésica
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página, veremos que aprece nuestro favicon en la pestaña del navegador pero que el resto de nuestra página sigue igual. Esto es debido a que como ya hemos mencionado los metadatos de la página no son visibles.</p>
+</li>
+<li>
+<p>Agregar el header y footer a la pagina. Para ello escribimos lo siguiente en nuestro archivo <em>index.html</em></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página, veremos que nuestro texto no ha cambiado y que aparece el texto del <em>footer</em>. Esto es debido a que los elementos header y footer dan contexto semántico pero no aplicán ningún estilo. </p>
+</li>
+<li>
+<p>Crear el elemento principal de la página</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span class="hll">        Aqui irá mi calculadora
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para ver el contenido del elemento principal</p>
+</li>
+</ol>
+<h2 id="otros-elementos-importantes">Otros elementos importantes</h2>
+<h3 id="encabezado-o-titulo-hx">Encabezado o título <code>&lt;h[X]&gt;</code></h3>
+<p>Hay seis elementos de encabezado: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code> y <code>&lt;h6&gt;</code>. Se usan para establecer los niveles de contenido de la página. Por ejemplo el <code>&lt;h1&gt;</code> representa el título principal, <code>&lt;h2&gt;</code> sería un subtítulo y así sucesivamente. </p>
+<p>Preferiblemente se debe usar un solo <code>&lt;h1&gt;</code> por página. Y se debe procuarar no usar más de tres niveles por página.</p>
+<p>El uso de los encabezados favorece al <strong>SEO</strong> de las páginas. Los motores de búsqueda que indexan tu página consideran el contenido de los títulos como palabras clave importantes e influyen en la puntuación de búsqueda de la página.</p>
+<ol>
+<li>
+<p>Modificar el <em>index.html</em> para agregar el titulo</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        Aqui irá mi calculadora
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para ver como ha cambiado el estilo del título de la página</p>
+</li>
+</ol>
+<h3 id="listas">Listas</h3>
+<p>Existen dos elementos para definir las lista dependiendo de si es una lista ordenada o no ordenada. Las listas no ordenadas se usan para marcar listas de artículos cuyo orden no es importante. Ejemplo la lista de compras. Por el contrario las listas ordenadas son aquellas en las que el orden de los elementos <strong>sí</strong> importa. Ejemplo una lista de instrucciones para seguir.</p>
+<p>Ambos elementos funcionan de igual forma lo que cambias es el elemento principal que define o delimita la lista. Para las listas ordenadas se usa el elemento <code>&lt;ol&gt;</code> y para los no ordenadas el <code>&lt;ul&gt;</code>.</p>
+<p>Para indicar cada item de la lista se usa el elemento <code>&lt;li&gt;</code></p>
+<p>Se pueden crear listas anidadas, para tener subelementos. En las listas anidadas se pueden combinar los tipos de lista.</p>
+<p>Ejemplo de lista ordenada</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Conduce hasta el final de la calle<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Gira a la derecha<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Sigue derecho por las dos primeras glorietas<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Gira a la izquierda en la tercer glorieta<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>El colegio está a tu derecha, 300 metros más adelante<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<ol>
+  <li>Conduce hasta el final de la calle</li>
+  <li>Gira a la derecha</li>
+  <li>Sigue derecho por las dos primeras glorietas</li>
+  <li>Gira a la izquierda en la tercer glorieta</li>
+  <li>El colegio está a tu derecha, 300 metros más adelante</li>
+</ol>
+
+<p>Ejemplo de lista no ordenada con lista ordenada anidada </p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>leche<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>hummus<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>ajo<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>limón<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>pimiento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>huevos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>pan<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<ul>
+  <li>leche</li>
+  <li>hummus</li>
+  <ol>
+      <li>ajo</li>
+      <li>limón</li>
+      <li>pimiento</li>
+  </ol>
+  <li>huevos</li>
+  <li>pan</li>
+</ul>
+
+<ol>
+<li>
+<p>Modificar el <em>index.html</em> para agregar un listado (no ordenado) de sistemas de referencia. Este listado lo crearemos en un barra lateral <code>&lt;aside&gt;</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        Aqui irá mi calculadora
+<span class="hll">         <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para observar que aparece nuestro listado de sistemas de referencia.</p>
+</li>
+</ol>
+<h3 id="enfasis-cursiva-negrita-subrayado">Énfasis, Cursiva, negrita, subrayado...</h3>
+<p>En el lenguaje humano, a menudo enfatizamos ciertas palabras para alterar el significado de una frase, y a menudo queremos destacar ciertas palabras como importantes o diferentes en algún sentido. HTML nos dota de diversos elementos semánticos que nos permiten destacar contenido textual con tales efectos, y en esta sección veremos los más comunes.</p>
+<h4 id="negrita">Negrita</h4>
+<p>Para el texto en negrita, use las etiquetas <code>&lt;strong&gt;</code> o <code>&lt;b&gt;</code>. La diferencia es semántica, <code>&lt;strong&gt;</code> se utiliza para indicar que el texto es fundamental o semánticamente importante para el texto circundante, mientras que <code>&lt;b&gt;</code> no indica tal importancia y simplemente representa texto que debe estar en negrita.</p>
+<h4 id="cursiva">Cursiva</h4>
+<p>Para poner el texto en cursiva, use las etiquetas <code>&lt;em&gt;</code> o <code>&lt;i&gt;</code>. Al igual que en las negritas la diferencia es semántica. <code>&lt;em&gt;</code> se utiliza para indicar que el texto debe tener un énfasis adicional que se debe resaltar, mientras que <code>&lt;i&gt;</code> simplemente representa el texto que se debe diferenciar del texto normal que lo rodea. </p>
+<h4 id="subrayado">Subrayado</h4>
+<p>El elemento <code>&lt;u&gt;</code> se usa para representar una anotación no textual no articulada (No es un hipervínculo). Se usa para transmitir el significado que tradicionalmente conlleva el subrayado: nombres propios, errores ortográficos...</p>
+<h3 id="hipervinculos-o-enlaces">Hipervínculos o enlaces</h3>
+<p>Los enlaces <code>&lt;a&gt;</code> son elementos verdaderamente importantes son los que hacen que la web sea <strong>web</strong>.</p>
+<p>Un enlace se crea incluyendo el texto o cualquier otro contenido que queramos convertir en un enlace usando un elemento <code>&lt;a&gt;</code>. Donde le daremos un atributo <strong>href</strong> que contendrá la dirección web hacia dónde queremos que apunte el enlace.</p>
+<p>Ejemplo</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.mozilla.org/es-ES/&quot;</span><span class="p">&gt;</span>la página de inicio de Mozilla<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<a href="https://www.mozilla.org/es-ES/">la página de inicio de Mozilla</a></p>
+<p>Otro atributo que es recomendable agregar a los enlaces es el <em>title</em>. El título contiene información adicional sobre el enlace. El título se mostrará al pasar el ratón sobre el texto del enlace.</p>
+<p>El atributo <strong>target</strong> es muy útil ya que en donde desplegar la URL enlazada. Por defecto si no se especifica los enlaces se abren en la ventana o pestaña actual. Los valores mas usados para este atributo son:</p>
+<ul>
+<li><strong>_self</strong>: Carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.</li>
+<li><strong>_blank</strong>: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.</li>
+<li><strong>_parent</strong>: Carga la URL en el contexto de navegación padre (parent) del actual. Si no existe el padre, este se comporta del mismo modo que <em>_self</em>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cuando se utiliza <strong>target</strong>, considera agregar rel="noopener noreferrer" para evitar el uso de la API window.opener.</p>
+</div>
+<p>Ejemplo</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.mozilla.org/es-ES/&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;El mejor lugar para encontrar más información acerca de la misión de Mozilla y cómo contribuir&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>la página de inicio de Mozilla<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<a href="https://www.mozilla.org/es-ES/" title="El mejor lugar para encontrar más información acerca de la misión de Mozilla y cómo contribuir"  target="_blank" rel="noopener noreferrer">la página de inicio de Mozilla</a></p>
+<ol>
+<li>
+<p>Modificar el <em>index.html</em> para agregar enlaces al listado de sistemas de referencia</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        Aqui irá mi calculadora
+         <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="hll">                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para observar que aparece un enlace en el primer elemento del listado de sistemas de referencia.</p>
+</li>
+</ol>
+<h3 id="imagenes-y-multimedia">Imagenes y multimedia</h3>
+<p>HTML soporta varios recursos multimedia como imágenes, audio, y video. En nuestro caso explicaremos únicamente las imágenes ya que son el elemento multimedia más utilizado.</p>
+<p>El elemento de imagen <code>&lt;img&gt;</code> representa una imagen en el documento.</p>
+<p>Una imagen se crea usando un elemento <code>&lt;img&gt;</code>. Donde le daremos un atributo <strong>src</strong> que contendrá la dirección web donde está ubicada la imagen.</p>
+<p>Ejemplo </p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<img src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" /></p>
+<p>Un atributo que es recomendable agregar a las imágenes es el <em>alt</em>. Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.</p>
+<p>Otros atributos comunes son el <em>height</em> (altura) y el <em>width</em> (ancho) para definir las dimensiones de la imagen.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Proyecciones geográficas&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+
+<p><img alt="Proyecciones geográficas" width="200" height="100" src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" /></p>
+<ol>
+<li>
+<p>Modificar el <em>index.html</em> para agregar una imagen en el header de nuestra página.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        Aqui irá mi calculadora
+         <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para ver que aparece la imagen del logo de la UAB en nuestra página.</p>
+</li>
+</ol>
+<h3 id="formularios">Formularios</h3>
+<p>HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar información al sitio Web o a una aplicación.</p>
+<p>El elemento form <code>&lt;form&gt;</code> representa una sección de un documento que contiene un formaulario con controles interactivos que permiten a un usuario enviar información a un servidor web. Es el contenedor del resto de elementos que forman el formulario.</p>
+<p>Sus principales atributos son:</p>
+<ul>
+<li><strong>action</strong>: la URL a donde se va a enviar la información del formulario</li>
+<li><strong>metod</strong>: el método que el navegador usa para enviar el formulario. Sus valores posible son:<ul>
+<li><em>post</em>: los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.</li>
+<li><em>get</em>: los datos del formulario son adjuntados a la URI del atributo <em>action</em> , con un '?' como separador, y la URI resultante es enviada al servidor.</li>
+</ul>
+</li>
+<li><strong>enctype</strong>: cuando el valor del atributo <strong>method</strong> es <em>post</em>, este atributo es el tipo MIME del contenido que es usado para enviar el formulario al servidor. Sus valores más usados son:<ul>
+<li><em>application/x-www-form-urlencoded</em>: El valor por defecto si un atributo no está especificado.</li>
+<li><em>multipart/form-data</em>: Usar este valor si se está enviando un archivo dentro del formulario</li>
+</ul>
+</li>
+</ul>
+<p>A continuación veremos algunos de los elementos (o campos) más usados en los formularios</p>
+<h4 id="input">input</h4>
+<p>El elemento <code>&lt;input&gt;</code> se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario. Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control. Este elemento es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.</p>
+<p>Los principales atributos de este elemento son:</p>
+<ul>
+<li><strong>type</strong>: define el tipo de control a mostrar. Su valor predeterminado es <em>text</em>, si no se especifica este atributo. Los valores más frecuentes son:<ul>
+<li><em>checkbox</em>: Casilla de selección. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado.</li>
+<li><em>color</em>: Control para espicificar un color.</li>
+<li><em>date</em>: Control para introducir una fecha (año, mes y día, sin tiempo).</li>
+<li><em>datetime-local</em>: Control para introducir fecha y hora, sin zona horaria específica.</li>
+<li><em>email</em>: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse.</li>
+<li><em>file</em>: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo accept para definir los tipos de archivo que el control podrá seleccionar</li>
+<li><em>hidden</em>: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.</li>
+<li><em>number</em>: Control para introducir un número</li>
+<li><em>password</em>: Control cuyo valor permanece oculto.</li>
+<li><em>radio</em>: Botón radio. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo name están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez</li>
+<li><em>submit</em>: Botón que envía el formulario.</li>
+<li><em>text</em>: Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.</li>
+<li><em>url</em>: Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse</li>
+</ul>
+</li>
+<li><strong>disabled</strong>: indica que el control no está disponible para interacción</li>
+<li><strong>name</strong>: indica el nombre del control, el cual es enviado con los datos del formulario</li>
+<li><strong>placeholder</strong> indica una pista para el usuario sobre lo que puede introducir en el control.</li>
+<li><strong>value</strong>: indica el valor inicial del control</li>
+</ul>
+<p>Ejemplos de algunos controles</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;correo&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;introduce tu email&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;oculto&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;clave&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;introduce tu contraseña&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;sexo&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;M&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;sexo&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;F&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;condiciones&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<form action="">
+    <input type="text" name="nombre">
+    <input type="email" name="correo" placeholder="introduce tu email">
+    <input type="hidden" name="oculto">
+    <input type="password" name="clave" placeholder="introduce tu contraseña">
+    <input type="radio" name="sexo" value="M">
+    <input type="radio" name="sexo" value="F">
+    <input type="checkbox" name="condiciones">
+</form>
+
+<h4 id="textarea">textarea</h4>
+<p>El elemento <code>&lt;textarea&gt;</code> representa un control para la edición mutilínea de texto sin formato. Para los entradas de texto de una sola línea ya tenemos el <code>&lt;input type="text"&gt;</code>.</p>
+<p>Sus principales atributos son:</p>
+<ul>
+<li><strong>cols</strong>: indica la anchura visible del control de texto, en caracteres de anchura media. Si está definido debe ser positivo. Si no, por defecto, el valor es 20.</li>
+<li><strong>rows</strong>: indica el número de líneas visibles en el control</li>
+<li><strong>maxlength</strong>: indica el número máximo de caracteres que el usuario puede insertar. Si no está especificado entonces el usuario puede insertar un número ilimitado de caracteres.</li>
+<li><strong>disabled</strong>: indica que el control no está disponible para interacción</li>
+<li><strong>name</strong>: indica el nombre del control, el cual es enviado con los datos del formulario</li>
+<li><strong>placeholder</strong> indica una pista para el usuario sobre lo que puede introducir en el control.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Este campo no tiene un atributo value</p>
+</div>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;textarea&quot;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&quot;50&quot;</span><span class="p">&gt;</span>Escribe algo largo aquí<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><textarea name="textarea" rows="10" cols="50">Escribe algo largo aquí</textarea></p>
+<h4 id="select">select</h4>
+<p>El elemento select <code>&lt;select&gt;</code> representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos <code>&lt;option&gt;</code>, los cuales pueden ser agrupados por elementos <code>&lt;optgroup&gt;</code>.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;select&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;value1&quot;</span><span class="p">&gt;</span>Value 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;value2&quot;</span> <span class="na">selected</span><span class="p">&gt;</span>Value 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;value3&quot;</span><span class="p">&gt;</span>Value 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><select name="select">
+  <option value="value1">Value 1</option> 
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
+</select></p>
+<h4 id="button">button</h4>
+<p>La etiqueta <code>&lt;button&gt;</code> representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar.</p>
+<p>El atributo <strong>type</strong> se puede usar para indicar el tipo de botón. Esto se usa principalmente cuando se utiliza dentro de un formulario. Sus valores pueden ser: <em>button</em>, <em>submit</em> o <em>reset</em></p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Click me<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="label">label</h4>
+<p>El elemento <code>&lt;label&gt;</code> representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo <em>for</em>, o ubicando el control dentro del elemento label.</p>
+<p>Ejemplos</p>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- Un simple ejemplo de un label con el atributo for --&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;Name&quot;</span><span class="p">&gt;</span>Click me<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Name&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Name&quot;</span> <span class="p">/&gt;</span>
+
+<span class="c">&lt;!-- Aun mas simple --&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Click me <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Name&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Name&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><label for="Name">Click me</label>
+<input type="text" id="Name" name="Name" /></p>
+<p><label>Click me <input type="text" id="Name" name="Name" /></label></p>
+<ol>
+<li>
+<p>Modificar el <em>index.html</em> para agregar un formulario en nuestra página. Primero crear un par de controles <code>&lt;select&gt;</code> para seleccionar el sistema de referencia</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="hll">        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>Sistema de referencia de origen<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span><span class="hll">
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>Sistema de referencia de destino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span>        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Crear un par de campos para introducir las coordenadas de origen</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>Sistema de referencia de origen<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>Sistema de referencia de destino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<span class="hll">
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;</span>Latitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;</span>Longitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;</span>
+</span>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Crear un botón para hacer la transformación</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>Sistema de referencia de origen<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>Sistema de referencia de destino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;</span>Latitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;</span>Longitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;</span>
+<span class="hll">
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Transformar coordenadas<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para ver que aparece el formulario.</p>
+</li>
+</ol>
+<h3 id="tablas">Tablas</h3>
+<p>El elemento <code>&lt;table&gt;</code> se usa para representar datos en dos o mas dimensiones. Permite organizar los datos en filas y columnas.  </p>
+<p>En documentos HTML una tabla puede ser considerada, como un grupo de filas donde cada una contiene a un grupo de celdas.</p>
+<p>Como muchas otras estructuras de HTML, las tablas son construidas utilizando elementos. En particular, una tabla básica puede ser declarada usando tres elementos, <code>&lt;table&gt;</code> (el contenedor principal), <code>&lt;tr&gt;</code> (representando a las filas contenedoras de las celdas) y <code>&lt;td&gt;</code> (representando a las celdas) <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<table>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+
+<p>Conjuntamente con los elementos básicos de la tabla existen otros tipos de elementos que permiten hacer tablas más avanzadas. A continuación veremos algunos de ellos.</p>
+<ul>
+<li>El elemento <code>&lt;th&gt;</code> es un tipo especial de celda y se usa para los encabezados.</li>
+<li>El elemento <code>&lt;caption&gt;</code> de ser insertado justo después de la etiquete de apertura de la tabla y antes que todos los demás elementos. Se usa para definir el título de la tabla.</li>
+</ul>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>Titulo de la tabla<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Encabezado 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Encabezado 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Encabezado 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<table>
+  <caption>Titulo de la tabla</caption>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+    <th>Encabezado 3</th>
+  </tr>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+
+<p>La unificación de celdas es un mecanismo mediante el cual se pueden combinar o fusionar dos o más celdas adyacentes en una tabla. Este efecto puede lograrse utilizando los atributos <strong>colspan</strong>, para unificación horizontal, y <strong>rowspan</strong>, para unificación vertical. Estos atributos pueden tomar un valor entero mayor a cero, que representa el número de celdas que participarán en la unificación.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>Titulo de la tabla<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Encabezado 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Encabezado 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Encabezado 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>Celda 2 y 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Celda 6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<table>
+  <caption>Titulo de la tabla</caption>
+  <tr>
+    <th>Encabezado 1</th>
+    <th>Encabezado 2</th>
+    <th>Encabezado 3</th>
+  </tr>
+  <tr>
+    <td>Celda 1</td>
+    <td colspan="2">Celda 2 y 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+</table>
+
+<p>También existen 3 elementos que pueden ayudar a organizar la información presentada en una tabla permitiendo una agrupación semántica de filas. Éstos son: <code>&lt;thead&gt;</code> para agrupar las filas que presentan infromación de encabezado; <code>&lt;tfoot&gt;</code> para contener a las filas que representan un pie o resumen; y <code>&lt;tbody&gt;</code> para representar un bloque de filas que consiste en un cuerpo de datos. Estos grupos temáticos son meramente semánticos, y se debe evitar su uso para temas de estilo.</p>
+<p>De igual forma existe un elemento <code>&lt;colgroup&gt;</code> para hacer agrupaciones semánticas de columnas.</p>
+<ol>
+<li>
+<p>Modificar el <em>index.html</em> para agregar una tabla para ordenar los campos del formulario en nuestra página.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="hll">            <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>Sistema de referencia de origen<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>Sistema de referencia de destino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                        <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                        <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                        <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span class="hll">                        <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;</span>Latitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;</span>Longitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;4&quot;</span><span class="p">&gt;&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Transformar coordenadas<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2.5 pt</p>
+<ol>
+<li>Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente <strong>0.5 pt</strong>.</li>
+<li>Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web <a href="https://www.uab.cat/es/">https://www.uab.cat/es/</a> y que se abra en una pestaña/ventana nueva. <strong>0.5 pt</strong>.</li>
+<li>Agregar un elemento <code>&lt;label&gt;</code> con el texto <strong>Respuesta</strong> en la celda que está junto a las celdas con las etiquetas <em>Latitud</em> y <em>Longiud</em> <strong>0.5 pt</strong>.</li>
+<li>Agregar un elemento <code>&lt;textarea&gt;</code> en la celda que está junto a las celdas de los input de <em>lat</em> y <em>lng</em> <strong>0.5 pt</strong>.</li>
+<li>Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de <em>transformar coordenadas</em> <strong>0,5 pt</strong>.</li>
+</ol>
+</div>
+<h2 id="referencias">Referencias</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/head">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/head</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en">https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag">https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://www.htmlquick.com/es/tutorials/tables.html">https://www.htmlquick.com/es/tutorials/tables.html</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../html/" title="HTML" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                HTML
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../css/" title="CSS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                CSS
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

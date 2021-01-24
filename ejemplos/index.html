@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="[VUESTRO NOMBRE]">
+    <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link type="text/css" href="css/estilos.css" rel="stylesheet">
+    <title>Mi calculadora geodésica</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.3/proj4.min.js" integrity="sha512-TzmbpBIqcR0TyAdg+zJJfpbTeKVj24n+U3vvlP3yBDTOs26ELhrzA+TacRmMAuflTY8tU3zVwbCyfvM3QH58lA==" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+        <h1>Mi calculadora geodésica</h1>
+    </header>
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                    <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <select id="origen">
+                            <option value="EPSG:4326">EPSG:4326</option> 
+                            <option value="EPSG:3857">EPSG:3857</option>
+                            <option value="EPSG:25831">EPSG:25831</option>
+                            <option value="EPSG:23031">EPSG:23031</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <select id="destino">
+                            <option value="EPSG:4326">EPSG:4326</option> 
+                            <option value="EPSG:3857">EPSG:3857</option>
+                            <option value="EPSG:25831">EPSG:25831</option>
+                            <option value="EPSG:23031">EPSG:23031</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lat">Latitud</label></td>
+                    <td><label for="lng">Longitud</label></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="lat"></td>
+                    <td><input type="text" id="lng"></td>
+                    <td colspan="2"><div id="respuesta"></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                    <td colspan="2"><button class="btn-guardar">Guardar transformación</button></td>
+                </tr>
+            </table>
+        </div>
+        <aside>
+            <ul>
+                <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                <li>EPSG:3857</li>
+                <li>EPSG:25831</li>
+                <li>EPSG:23031</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+</body>
+</html>

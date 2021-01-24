@@ -1,0 +1,930 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Programació web">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/css_diseno/">
+      
+      
+        <meta name="author" content="web-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>CSS diseño - Programació web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diseno-css" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Programació web
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              CSS diseño
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Programació web
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
+      Introducción al desarrollo Web
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../html/" title="HTML" class="md-nav__link">
+      HTML
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../elementos_html/" title="Elementos HTML" class="md-nav__link">
+      Elementos HTML
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css/" title="CSS" class="md-nav__link">
+      CSS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css_bbox/" title="CSS el modelo de caja" class="md-nav__link">
+      CSS el modelo de caja
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CSS diseño
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="CSS diseño" class="md-nav__link md-nav__link--active">
+      CSS diseño
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normal-flow" class="md-nav__link">
+    Normal flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posicionamiento" class="md-nav__link">
+    Posicionamiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floats" class="md-nav__link">
+    Floats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    Flexbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grids" class="md-nav__link">
+    Grids
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maquetar-nuestra-calculadora-usando-flexbox" class="md-nav__link">
+    Maquetar nuestra calculadora usando flexbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js/" title="JS" class="md-nav__link">
+      JS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
+      JS estructuras de control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
+      JS objetos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_dom/" title="JS dom" class="md-nav__link">
+      JS dom
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_async/" title="JS async" class="md-nav__link">
+      JS async
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
+      JS en el servidor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normal-flow" class="md-nav__link">
+    Normal flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posicionamiento" class="md-nav__link">
+    Posicionamiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floats" class="md-nav__link">
+    Floats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    Flexbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grids" class="md-nav__link">
+    Grids
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maquetar-nuestra-calculadora-usando-flexbox" class="md-nav__link">
+    Maquetar nuestra calculadora usando flexbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/css_diseno.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="diseno-css">Diseño CSS</h1>
+<p>Hasta el momneto hemos visto los fundamentos básicos de CSS: cómo dar estilo al texto, cómo manipular las cajas que incluyen tu contenido, etc. Ahora vamos a explorar cómo colocar tus cajas en el lugar que elijas con respecto a la ventana principal y el resto de cajas.</p>
+<p>En CSS existen diferentes técnicas básicas de maquetación que veremos a continuación</p>
+<h2 id="normal-flow">Normal flow</h2>
+<p>Los elementos en las páginas web se presentan de acuerdo con el flujo normal, hasta que hacemos algo que cambie eso.</p>
+<p>En primer lugar, se toma de las cajas de cada uno de los elementos el contenido, luego se añade cualquier área de relleno, borde y margen alrededor de ellas; es el modelo de cajas que hemos visto antes.</p>
+<p>De manera predeterminada, el contenido de un elemento de nivel de bloque es el 100% del ancho de su elemento padre y su altura viene determinada por su contenido. Los elementos en línea tienen su altura y anchura determinados por su contenido.</p>
+<h2 id="posicionamiento">Posicionamiento</h2>
+<p>El posicionamiento permite sacar elementos del flujo normal del diseño del documento, y hacer que se comporten de manera distinta, por ejemplo sentarse encima de otro o permanecer en el mismo lugar dentro de la ventana navegador. Veremos los diferentes valores <strong>position</strong>, y como usarlos.</p>
+<ul>
+<li><strong>Posicionamiento normal o estático</strong> (<em>position: static;</em>): se trata del posicionamiento que utilizan los navegadores si no se indica lo contrario.</li>
+<li>
+<p><strong>Posicionamiento relativo</strong> (<em>position: relative;</em>): variante del posicionamiento normal que consiste en posicionar una caja según el posicionamiento normal y después desplazarla respecto de su posición original.</p>
+<p><img alt="Posicionamiento relativo" src="../img/relative.gif" title="Posicionamiento relativo" /></p>
+</li>
+<li>
+<p><strong>Posicionamiento absoluto</strong> (<em>position: absolute;</em>): la posición de una caja se establece de forma absoluta respecto de su elemento contenedor y el resto de elementos de la página ignoran la nueva posición del elemento.</p>
+<p><img alt="Posicionamiento absoluto" src="../img/absolute.gif" title="Posicionamiento absoluto" /></p>
+</li>
+<li>
+<p><strong>Posicionamiento fijo</strong> (<em>position: fixed;</em>): variante del posicionamiento absoluto que convierte una caja en un elemento inamovible, de forma que su posición en la pantalla siempre es la misma independientemente del resto de elementos e independientemente de si el usuario sube o baja la página en la ventana del navegador.</p>
+</li>
+</ul>
+<p>La propiedad position sólo indica cómo se posiciona una caja, pero no la desplaza.</p>
+<p>Normalmente, cuando se posiciona una caja también es necesario desplazarla respecto de su posición original o respecto de otro origen de coordenadas. CSS define cuatro propiedades llamadas <em>top</em>, <em>right</em>, <em>bottom</em> y <em>left</em> para controlar el desplazamiento de las cajas posicionadas.</p>
+<h2 id="floats">Floats</h2>
+<p>La propiedad <strong>float</strong> fue introducida para permitir a los desarrolladores implementar diseños sencillos que incluyeran una imagen flotando dentro de una columna de texto, con el texto envolviendo la parte izquierda o derecha de la imagen. El tipo de cosa que encuentras habitualmente en el diseño de un periódico. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Pero los desarrolladores web pronto se dieron cuenta de que podían flotar cualquier cosa, no solo imágenes, por lo que su uso se extendió.</p>
+<p>Los elementos flotantes han sido usados comúnmente para crear diseños web completos con múltiples columnas situadas unas al lado de las otras (el comportamiento por defecto sería que las columnas se situaran unas debajo de las otras, en el mismo orden en el que aparecen en el código fuente). Ahora hay disponibles técnicas más modernas y mejores, que exploraremos más adelante en este módulo, por lo que el uso de float de este modo debería contemplarse como una técnica anticuada.</p>
+<p>La siguiente imagen muestra el resultado de posicionar de forma flotante hacia la derecha la caja 1: <strong>float: right;</strong></p>
+<p><img alt="Posicionamiento flotante derecha" src="../img/float_derecha.gif" title="Posicionamiento flotante derecha" /></p>
+<p>La siguiente imagen muestra el resultado de posicionar de forma flotante hacia la izquierda la caja 1: <strong>float: left;</strong>. Vemos que la caja 1 tapa a la caja 2.</p>
+<p><img alt="Posicionamiento flotante izquierda" src="../img/float_izquierda.gif" title="Posicionamiento flotante izquierda" /></p>
+<p>La siguiente imagen muestra el resultado de posicionar de forma flotante hacia la izquierda todas las cajas: <strong>float: left;</strong></p>
+<p><img alt="Posicionamiento flotante" src="../img/float_all.gif" title="Posicionamiento flotante" /></p>
+<h2 id="flexbox">Flexbox</h2>
+<p><strong>Flexbox</strong> es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños.</p>
+<p>Durante mucho tiempo, las únicas herramientas fiables con compatibilidad cruzada entre navegadores disponibles para crear diseños CSS fueron cosas como la flotación y el posicionamiento. Están bien y funcionan, pero de alguna manera también limitan bastante y frustran.</p>
+<p>Con tales herramientas resulta difícil, si no imposible, lograr obtener en cualquier forma conveniente y flexible un diseño de página sencillo con unos requisitos como los siguientes:</p>
+<ul>
+<li>Centrar verticalmente un bloque de contenido dentro de su elemento padre.</li>
+<li>Hacer que todos los elementos secundarios de un contenedor ocupen una cantidad igual del ancho/alto disponible, independientemente del ancho/alto que haya disponible.</li>
+<li>Hacer que todas las columnas en una compaginación en columnas múltiples adopten la misma altura incluso si contienen cantidades diferentes de contenido.</li>
+</ul>
+<p>Para seleccionar qué elementos se van a presentar como cajas flexibles establecemos un valor especial de <em>display</em> en el elemento padre de los elementos que deseas editar.</p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="nt">section</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Esto hace que el elemento <code>&lt;section&gt;</code> se convierta en contenedor flex, y sus hijos en elementos flexibles.</p>
+<p>Para ver más detalles del modelo Flexbox pueden visitar <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox">https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox</a> y <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+<h2 id="grids">Grids</h2>
+<p>La compaginación en cuadrícula con CSS es un método de diseño de páginas web en dos dimensiones. Te permite distribuir el contenido en filas y columnas, y tiene muchas características que facilitan la creación de diseños complejos.</p>
+<p>Una cuadrícula es un conjunto de líneas horizontales y verticales que crean un patrón sobre el que podemos alinear nuestros elementos de diseño. Las cuadrículas nos ayudan a crear diseños de página en que los elementos no saltan ni cambian de ancho cuando nos movemos de una página a otra, y así proporcionan a nuestras páginas web un aspecto más coherente.</p>
+<p>Una cuadrícula en general tiene columnas, filas y luego espacios entre cada fila y cada columna, conocidos comúnmente como canales.</p>
+<p>Para definir una cuadrícula utilizamos el valor <strong>grid</strong> de la propiedad <em>display</em>. Al igual que con el método Flexbox, esto activa la compaginación de cuadrícula y todos los elementos que son hijos directos del contenedor se convierten en elementos de cuadrícula.</p>
+<p>A diferencia del método Flexbox, los elementos no se ven diferentes inmediatamente. La declaración <strong>display: grid;</strong> te proporciona una cuadrícula de una sola columna, por lo que tus elementos continúan mostrándose uno debajo del otro, como lo hacen en el flujo normal.</p>
+<p>Para ver algo que se parezca más a una cuadrícula, necesitamos añadir columnas a la cuadrícula. Para ello usamos el <strong>grid-template-columns</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Para ver más detalle del modelo de Grid visitar <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Grids">https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Grids</a> y <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></p>
+<h2 id="maquetar-nuestra-calculadora-usando-flexbox">Maquetar nuestra calculadora usando flexbox</h2>
+<ol>
+<li>
+<p>Modificar el archivo <strong>estilo.css</strong> para agregar el modelo de flexbox</p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+    <span class="err">--</span><span class="n">light-blue</span><span class="p">:</span> <span class="mh">#8ecae6</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">blue-green</span><span class="p">:</span> <span class="mh">#219ebc</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">prussian-blue</span><span class="p">:</span> <span class="mh">#023047</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">honey-yellow</span><span class="p">:</span> <span class="mh">#ffb703</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">orange</span><span class="p">:</span> <span class="mh">#fb8500</span><span class="n">ff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Roboto&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class="hll">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class="hll">    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class="hll">    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class="hll"><span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll"><span class="nt">body</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span><span class="hll">    <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+</span><span class="hll"><span class="p">}</span>
+</span>
+<span class="nt">header</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="o">&gt;</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="o">-</span><span class="kc">green</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">origen</span><span class="o">,</span> <span class="p">#</span><span class="nn">destino</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">border-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">honey</span><span class="o">-</span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-tranformar</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Modificar el estilo del elemento header para que el titulo aparezca junto a la imagen</p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+    <span class="err">--</span><span class="n">light-blue</span><span class="p">:</span> <span class="mh">#8ecae6</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">blue-green</span><span class="p">:</span> <span class="mh">#219ebc</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">prussian-blue</span><span class="p">:</span> <span class="mh">#023047</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">honey-yellow</span><span class="p">:</span> <span class="mh">#ffb703</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">orange</span><span class="p">:</span> <span class="mh">#fb8500</span><span class="n">ff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Roboto&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="p">{</span>
+<span class="hll">    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span>    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="o">&gt;</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="o">-</span><span class="kc">green</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">origen</span><span class="o">,</span> <span class="p">#</span><span class="nn">destino</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">border-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">honey</span><span class="o">-</span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-tranformar</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar el estilo al elemento main</p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+    <span class="err">--</span><span class="n">light-blue</span><span class="p">:</span> <span class="mh">#8ecae6</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">blue-green</span><span class="p">:</span> <span class="mh">#219ebc</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">prussian-blue</span><span class="p">:</span> <span class="mh">#023047</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">honey-yellow</span><span class="p">:</span> <span class="mh">#ffb703</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">orange</span><span class="p">:</span> <span class="mh">#fb8500</span><span class="n">ff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Roboto&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="o">&gt;</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="o">-</span><span class="kc">green</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="nt">main</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span><span class="hll">    <span class="k">flex</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span><span class="hll"><span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll"><span class="nt">main</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">flex</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span><span class="hll"><span class="p">}</span>
+</span>
+<span class="p">#</span><span class="nn">origen</span><span class="o">,</span> <span class="p">#</span><span class="nn">destino</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">border-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">honey</span><span class="o">-</span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-tranformar</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Modificar el elemento aside para que aparezca junto al main</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+    <span class="err">--</span><span class="n">light-blue</span><span class="p">:</span> <span class="mh">#8ecae6</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">blue-green</span><span class="p">:</span> <span class="mh">#219ebc</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">prussian-blue</span><span class="p">:</span> <span class="mh">#023047</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">honey-yellow</span><span class="p">:</span> <span class="mh">#ffb703</span><span class="n">ff</span><span class="p">;</span>
+    <span class="err">--</span><span class="n">orange</span><span class="p">:</span> <span class="mh">#fb8500</span><span class="n">ff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Roboto&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="o">&gt;</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="o">-</span><span class="kc">green</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">main</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">flex</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">main</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+    <span class="k">flex</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">origen</span><span class="o">,</span> <span class="p">#</span><span class="nn">destino</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="p">{</span>
+<span class="hll">    <span class="k">min-width</span><span class="p">:</span> <span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="hll">    <span class="k">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span>    <span class="k">border-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">honey</span><span class="o">-</span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-tranformar</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+5. Guardar y recargar la página para ver los cambios.</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3 pt</p>
+<ol>
+<li>Agregar un class al botón <em>Enviar resultado</em> creado en el ejercicio anterior y dar estilo al botón. <strong>0.5 pt</strong>.</li>
+<li>Centrar horizontalmente el texto del elemento footer <strong>0.5 pt</strong>.</li>
+<li>Eliminar el subrayado de los enlaces del listado de definiciciones de los diferentes EPSG <strong>0.5 pt</strong>.</li>
+<li>Modificar el estilo del elemento header para que el texto del titulo quede alineado verticalmente en el centro de su contenedor <strong>0.5 pt</strong>. Ayuda usar la propiedad <em>align-items</em></li>
+<li>Modificar el estlio del elemento header para que la imagen y el titulo queden distribuidos de igual forma detro de su contenedor <strong>0.5 pt</strong>. Ayuda usar la propiedad <em>justify-content</em></li>
+<li>Modificar el estilo de la tabla para que los elementos se vean más ordenados dentro de la página. Algunas ideas: centrar la tabla, dar mas espacio entre los elementos, agregar un estilo de borde para separar los elementos de la columna de origen de los de la columna de destino, etc. <strong>0.5 pt</strong>.</li>
+</ol>
+</div>
+<h2 id="referencias">Referencias</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout">https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../css_bbox/" title="CSS el modelo de caja" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                CSS el modelo de caja
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../js/" title="JS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                JS
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

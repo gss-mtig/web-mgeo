@@ -1,0 +1,1384 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Programació web">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js/">
+      
+      
+        <meta name="author" content="web-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>JS - Programació web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#js-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Programació web
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              JS
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Programació web
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
+      Introducción al desarrollo Web
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../html/" title="HTML" class="md-nav__link">
+      HTML
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../elementos_html/" title="Elementos HTML" class="md-nav__link">
+      Elementos HTML
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css/" title="CSS" class="md-nav__link">
+      CSS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css_bbox/" title="CSS el modelo de caja" class="md-nav__link">
+      CSS el modelo de caja
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../css_diseno/" title="CSS diseño" class="md-nav__link">
+      CSS diseño
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        JS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="JS" class="md-nav__link md-nav__link--active">
+      JS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-podemos-hacer-con-javascript-en-el-navegador" class="md-nav__link">
+    ¿Qué podemos hacer con JavaScript en el navegador?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-agregas-javascript-a-tu-pagina" class="md-nav__link">
+    ¿Cómo agregas JavaScript a tu página?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo agregas JavaScript a tu página?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript-interno" class="md-nav__link">
+    JavaScript interno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-externo" class="md-nav__link">
+    JavaScript externo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estategias-para-la-carga-de-scripts" class="md-nav__link">
+    Estategias para la carga de scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    Comentarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mayusculas-y-minusculas" class="md-nav__link">
+    Mayúsculas y minúsculas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separacion-de-instrucciones" class="md-nav__link">
+    Separación de instrucciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-globales-y-locales" class="md-nav__link">
+    Variables globales y locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-var-y-let" class="md-nav__link">
+    Diferencia entre var y let
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    Constantes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    Tipos de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numerico" class="md-nav__link">
+    Numérico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boleano" class="md-nav__link">
+    Boleano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadena-de-caracteres" class="md-nav__link">
+    Cadena de caracteres
+  </a>
+  
+    <nav class="md-nav" aria-label="Cadena de caracteres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteres-especiales" class="md-nav__link">
+    Caracteres especiales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenar-cadenas" class="md-nav__link">
+    Concatenar cadenas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas-literales" class="md-nav__link">
+    Plantillas literales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrices-o-arreglos" class="md-nav__link">
+    Matrices o Arreglos
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrices o Arreglos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceder-y-modificar-elementos-de-la-matriz" class="md-nav__link">
+    Acceder y modificar elementos de la matriz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    Funciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-una-funcion" class="md-nav__link">
+    Declaracion de una función
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-de-una-funcion" class="md-nav__link">
+    Parámetros de una función
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-predeterminados" class="md-nav__link">
+    Parámetros predeterminados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-rest" class="md-nav__link">
+    Parámetros rest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-flecha" class="md-nav__link">
+    Funciones flecha
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
+      JS estructuras de control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
+      JS objetos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_dom/" title="JS dom" class="md-nav__link">
+      JS dom
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_async/" title="JS async" class="md-nav__link">
+      JS async
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
+      JS en el servidor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-podemos-hacer-con-javascript-en-el-navegador" class="md-nav__link">
+    ¿Qué podemos hacer con JavaScript en el navegador?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-agregas-javascript-a-tu-pagina" class="md-nav__link">
+    ¿Cómo agregas JavaScript a tu página?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo agregas JavaScript a tu página?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript-interno" class="md-nav__link">
+    JavaScript interno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-externo" class="md-nav__link">
+    JavaScript externo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estategias-para-la-carga-de-scripts" class="md-nav__link">
+    Estategias para la carga de scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    Comentarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mayusculas-y-minusculas" class="md-nav__link">
+    Mayúsculas y minúsculas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separacion-de-instrucciones" class="md-nav__link">
+    Separación de instrucciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-globales-y-locales" class="md-nav__link">
+    Variables globales y locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-var-y-let" class="md-nav__link">
+    Diferencia entre var y let
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    Constantes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    Tipos de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numerico" class="md-nav__link">
+    Numérico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boleano" class="md-nav__link">
+    Boleano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadena-de-caracteres" class="md-nav__link">
+    Cadena de caracteres
+  </a>
+  
+    <nav class="md-nav" aria-label="Cadena de caracteres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteres-especiales" class="md-nav__link">
+    Caracteres especiales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenar-cadenas" class="md-nav__link">
+    Concatenar cadenas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas-literales" class="md-nav__link">
+    Plantillas literales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrices-o-arreglos" class="md-nav__link">
+    Matrices o Arreglos
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrices o Arreglos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceder-y-modificar-elementos-de-la-matriz" class="md-nav__link">
+    Acceder y modificar elementos de la matriz
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    Funciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-una-funcion" class="md-nav__link">
+    Declaracion de una función
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-de-una-funcion" class="md-nav__link">
+    Parámetros de una función
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-predeterminados" class="md-nav__link">
+    Parámetros predeterminados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-rest" class="md-nav__link">
+    Parámetros rest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-flecha" class="md-nav__link">
+    Funciones flecha
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/js.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="js-javascript">JS - JavaScript</h1>
+<p><strong>JavaScript (JS)</strong> es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat. JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>El estándar para JavaScript es ECMAScript. En 2015, ECMA International publico la sexta versión principal de ECMAScript, que oficialmente se llama ECMAScript 2015, y que inicialmente se denominó ECMAScript 6 o ES6. Desde entonces, los estándares ECMAScript están en ciclos de lanzamiento anuales. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>ECMAScript y JavaScript, a efectos prácticos son lo mismo</li>
+<li>La versión tradicional de JavaScript soportada por todos los navegadores, incluso los de hace 10 0 15 años, es ECMAScript 5.</li>
+<li>El gran cambio en el lenguaje se produjo con ECMAScript 2015 (que alguna gente llama ES6 aunque no es su nombre oficial).</li>
+<li>Sus números de versión que no coinciden con su nombre oficial. Por ejemplo la versión 7 ES7 su nombre oficial es ECMAScript 2016.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>No confundas <strong>JavaScript</strong> con el lenguaje de programación <strong>Java</strong>. Son dos lenguajes de programación que tienen sintaxis, semántica y usos muy diferentes.</p>
+</div>
+<h2 id="que-podemos-hacer-con-javascript-en-el-navegador">¿Qué podemos hacer con JavaScript en el navegador?</h2>
+<ul>
+<li>Almacenar valores útiles dentro de variables.</li>
+<li>Operaciones sobre fragmentos de texto, números, etc.</li>
+<li>Ejecutar código en respuesta a ciertos eventos que ocurren en una página web. Por ejemplo cuándo se hace click sobre un botón.</li>
+<li>Usar las APIs del navegador. Principalmente la API del DOM (Document Object Model) que te permite manipular HTML y CSS, crear, eliminar y cambiar el HTML, aplicar dinámicamente nuevos estilos a tu página, etc.</li>
+<li>Usar APIS de terceros. Por ejemplo la API de Google Maps, la API de Twitter, etc.</li>
+</ul>
+<p>Las API (interfaces de programación de aplicaciones) son conjuntos de bloques de construcción de código listos para usar que permiten a un desarrollador implementar programas que de otro modo serían difíciles o imposibles de implementar. Hacen lo mismo para la programación que los kits de muebles prefabricados para la construcción de viviendas — es mucho más fácil tomar paneles precortados y atornillarlos para hacer una estantería que elaborar el diseño tú mismo, que ir y encontrar la madera correcta, cortar todos los paneles del tamaño y la forma correctos, buscar los tornillos del tamaño correcto y luego júntalos para hacer una estantería.</p>
+<p>Un uso muy común de JavaScript es modificar dinámicamente HTML y CSS para actualizar una interfaz de usuario, a través de la API del modelo de objetos del documento. Hay que tener en cuenta que el código de tus documentos web generalmente se cargan y ejecutan en el orden en que aparece en la página. Si JavaScript se carga e intenta ejecutarse antes de que se hayan cargado el HTML y el CSS al que afecta, pueden producirse errores, igualmente se produciran errores si queremos llamar a una API de terceros antes de cargarla. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cuando el navegador encuentra un bloque de JavaScript, generalmente lo ejecuta en orden, de arriba a abajo. Esto significa que debes tener cuidado con el orden en el que colocas las cosas.</p>
+</div>
+<h2 id="como-agregas-javascript-a-tu-pagina">¿Cómo agregas JavaScript a tu página?</h2>
+<p>JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos <code>&lt;link&gt;</code> para aplicar hojas de estilo externas y elementos <code>&lt;style&gt;</code> para aplicar hojas de estilo internas a HTML, JavaScript solo necesita el elemento <code>&lt;script&gt;</code> tanto para la carga de JavaScript externo como el interno.</p>
+<p>Otra diferencia con respecto al CSS que se debe agregar en el <strong><code>&lt;head&gt;</code></strong> es que los elementos <code>&lt;script&gt;</code> se pueden agregar en cualquier parte de nuestra página ya sea dentro del <code>&lt;head&gt;</code> o del <code>&lt;body&gt;</code>. Por norma general se agrega en el <em>head</em> al final de todo justo antes de la etiqueta de cierre <code>&lt;/head&gt;</code>, esto es despues de las declaraciones de estilo y/o al final del elemento <em>body</em> despues de todo nuestro codigo html justo antes de la etiqueta de cierre <code>&lt;/body&gt;</code>.   </p>
+<h3 id="javascript-interno">JavaScript interno</h3>
+<p>Es el método de ejecutar scripts más básico. En este caso se incluyen las instrucciones de código dentro de la etiqueta <code>&lt;script&gt;</code>. Cuando el navegador lee la página y encuentra un script va interpretando las líneas de código y las va ejecutando una después de otra.</p>
+<p>Ejemplo </p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo ejecución directa<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Página con Javascript<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Esta página tiene un cuadro de diálogo, que se mostrará nada más el navegador la procese.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="hll">      <span class="kd">var</span> <span class="nx">personas</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</span><span class="hll">      <span class="kd">var</span> <span class="nx">importeEntradas</span> <span class="o">=</span> <span class="mf">9.50</span><span class="p">;</span>
+</span><span class="hll">      <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Necesitas &#39;</span> <span class="o">+</span> <span class="nx">personas</span> <span class="o">*</span> <span class="nx">importeEntradas</span> <span class="o">+</span> <span class="s1">&#39; euros para que entren todos al cine&#39;</span><span class="p">);</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cuando el usuario pulse aceptar en el cuadro de diálogo, el navegador mostrará la página completa.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>En este ejemplo vemos como la ejecución del código bloquea la cargar de la página.</p>
+<h3 id="javascript-externo">JavaScript externo</h3>
+<p>La ventaja de utilizar un archivo externo de JavaScript reside en la posibilidad de compartir ese archivo entre un gran número de documentos. Cuando un documento es cargado, el navegador detecta la referencia al archivo JavaScript y lo carga como si fueran parte del documento.</p>
+<p>Un archivo externo de código puede ser insertando en el documento con el elemento <code>&lt;script&gt;</code>, teniendo el valor "text/javascript" en el atributo <em>type</em> (esto no es obligatorio en versiones modernas pero su uso es muy común), y el URI del archivo JavaScript en el atributo <em>src</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;archivo_externo.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="estategias-para-la-carga-de-scripts">Estategias para la carga de scripts</h3>
+<p>Hay una serie de problemas relacionados con la carga de los scripts en el momento adecuado. Un problema común es que todo el HTML de una página se carga en el orden en que aparece. Si estás utilizando JavaScript para manipular elementos en la página, tu código no funcionará si el JavaScript se carga y procesa antes que el HTML que estás intentando haga algo.</p>
+<p>Como vimos en el ejemplo anterior la ejecución del código Js bloquea la cargar de la página. Por ejemplo si ponemos el JavaScript en el <em>head</em> el código se carga y se ejecuta en el encabezado del documento, antes de analizar el cuerpo HTML, por lo que podríamos causar un error si intentamos acceder a algún elemento del HTML.</p>
+<p>Una solución pasada de moda (aunque se suele seguir usando) a este problema solía ser colocar tu elemento script justo en la parte inferior del cuerpo (por ejemplo, justo antes de la etiqueta </body>), para que se cargara después de haber procesado todo el HTML. El problema con esta solución es que la carga/procesamiento del script está completamente bloqueado hasta que se haya cargado el DOM HTML. En sitios muy grandes con mucho JavaScript, esto puede causar un importante problema de rendimiento y ralentizar tu sitio.</p>
+<p>En realidad, hay dos formas "modernas" que podemos usar para evitar el problema del bloqueo de script: <strong>async</strong> y <strong>defer</strong></p>
+<p>Los scripts cargados con el atributo async (ve más abajo) descargarán el script sin bloquear el renderizado de la página y lo ejecutará tan pronto como el script se termine de descargar. No tienes garantía de que los scripts se ejecuten en un orden específico, solo que no detendrán la visualización del resto de la página. Es mejor usar async cuando los scripts de la página se ejecutan de forma independiente y no dependen de ningún otro script de la página.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vendor/jquery.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/script2.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/script3.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Usando <strong>async</strong> no puedes confiar en el orden en que se cargarán los scripts. jquery.js se puede cargar antes o después de script2.js y script3.js y si este es el caso, cualquier función en esos scripts depende de jquery producirá un error porque jquery no se ha cargado en el momento en que se ejecute el script.</p>
+<p>Los scripts cargados con el atributo <strong>defer</strong> se ejecutarán en el orden en que aparecen en la página y los ejecutará tan pronto como se descarguen el script y el contenido.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vendor/jquery.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/script2.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/script3.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Todos los scripts con el atributo defer se cargarán en el orden en que aparecen en la página. Entonces, en el segundo ejemplo, podemos estar seguros de que jquery.js se cargará antes que script2.js y script3.js y que script2.js se cargará antes de script3.js. No se ejecutarán hasta que se haya cargado todo el contenido de la página, lo cual es útil si tus scripts dependen de que el DOM esté en su lugar (por ejemplo, modifican uno o más elementos de la página).</p>
+<ul>
+<li><strong>async</strong> y <strong>defer</strong> indican al navegador que descargue los scripts en un hilo separado, mientras que el resto de la página (el DOM, etc.) se descarga, por lo que los scripts no bloquean la carga de la página.</li>
+<li>Si tus scripts se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza <strong>async</strong>.</li>
+<li>Si tus scripts necesitan esperar a ser procesados y dependen de otros scripts y/o del DOM en su lugar, cárgalos usando <strong>defer</strong> y coloca tus elementos <code>&lt;script&gt;</code> correspondientes en el orden que desees que el navegador los ejecute.</li>
+</ul>
+<p>A continuación vamos a agregar un archivo JavaScript (de momento vacío - sin código) a nuestra calculadora</p>
+<ol>
+<li>
+<p>Crear una carpeta llamada <strong>js</strong> dentro de la carpeta <em>web-mgeo</em></p>
+</li>
+<li>
+<p>Crear un archivo llamado <strong>script.js</strong> dentro de la carpeta <em>js</em></p>
+</li>
+<li>
+<p>Modificar el <em>index.html</em> para agregar una JavaScript externo a nuestra calculadora</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[VUESTRO NOMBRE]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;preconnect&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.gstatic.com&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&amp;display=swap&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/estilos.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/script.js&quot;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>Sistema de referencia de origen<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>Sistema de referencia de destino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;origen&quot;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;destino&quot;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:4326&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span> 
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:3857&quot;</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:25831&quot;</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;EPSG:23031&quot;</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;</span>Latitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;</span>Longitud<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lat&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lng&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;4&quot;</span><span class="p">&gt;&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-tranformar&quot;</span><span class="p">&gt;</span>Transformar coordenadas<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://epsg.io/4326&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>EPSG:4326<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:3857<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:25831<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>EPSG:23031<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>©Copyright 2020 de nadie. Ningún derecho reservado.<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Guardar el archivo index.html</p>
+</li>
+</ol>
+<h2 id="comentarios">Comentarios</h2>
+<p>Al igual que con HTML y CSS, es posible escribir comentarios en tu código JavaScript que el navegador ignorará y que existen simplemente para proporcionar instrucciones a tus compañeros desarrolladores sobre cómo funciona el código (y a ti, si regresas a tu código después de seis meses y no puedes recordar lo que hiciste). Los comentarios son muy útiles y deberías utilizarlos con frecuencia, especialmente para aplicaciones grandes. Hay dos tipos:</p>
+<ul>
+<li>
+<p>Un comentario de una sola línea se escribe después de una doble barra inclinada (//)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// soy un comentario</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Un comentario de varias líneas se escribe entre las cadenas /<em> y </em>/</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Yo también soy</span>
+<span class="cm">un comentario</span>
+<span class="cm">de varias </span>
+<span class="cm">líneas</span>
+<span class="cm">*/</span>
+</code></pre></div>
+
+</li>
+</ul>
+<h2 id="mayusculas-y-minusculas">Mayúsculas y minúsculas</h2>
+<p>En Javascript se han de respetar las mayúsculas y las minúsculas. Si nos equivocamos al utilizarlas el navegador responderá con un mensaje de error, ya sea de sintaxis o de referencia indefinida. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Por ejemplo, no es lo mismo la función alert() que la función Alert(). La primera muestra un texto en una caja de diálogo y la segunda (con la primera A mayúscula) simplemente no existe, a no ser que la definamos nosotros. Como se puede comprobar, para que la función la reconozca JavaScript, se tiene que escribir toda en minúscula. Otro claro ejemplo lo veremos cuando tratemos con variables, puesto que los nombres que damos a las variables también son sensibles a las mayúsculas y minúsculas.</p>
+<h2 id="separacion-de-instrucciones">Separación de instrucciones</h2>
+<p>Las distintas instrucciones que contienen nuestros scripts se han de separar convenientemente para que el navegador no indique los correspondientes errores de sintaxis. Javascript tiene dos maneras de separar instrucciones. La primera es a través del carácter punto y coma (;) y la segunda es a través de un salto de línea.</p>
+<p>Por esta razón Las sentencias Javascript no necesitan acabar en punto y coma a no ser que coloquemos dos instrucciones en la misma línea. No es una mala idea (principalmente cuando se está comenzando), acostumbrarse a utilizar el punto y coma después de cada instrucción.</p>
+<h2 id="variables">Variables</h2>
+<p>Una variable es un contenedor para un valor, como un número que podríamos usar en una suma, o una cadena que podríamos usar como parte de una oración. Pero una cosa especial acerca de las variables es que los valores que contienen pueden cambiar. Las variables pueden contener casi cualquier cosa, no solo cadenas y números. Las variables también pueden contener datos complejos e incluso funciones completas.</p>
+<p>Para usar una variable, primero debes crearla — precisamente, a esto lo llamamos <em>declarar la variable</em>. Para hacerlo, escribimos la palabra clave <strong>var</strong> o <strong>let</strong> seguida del nombre con el que deseas llamar a tu variable.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">miNombre</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">miEdad</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Una vez que hayas declarado una variable, la puedes <em>iniciar</em> con un valor. Para ello, escribe el nombre de la variable, seguido de un signo igual (=), seguido del valor que deseas darle.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">miNombre</span> <span class="o">=</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">;</span>
+<span class="nx">miEdad</span> <span class="o">=</span> <span class="mi">39</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Puedes declarar e iniciar una variable al mismo tiempo. Esto es lo que harás la mayor parte del tiempo, ya que es más rápido que realizar las dos acciones en dos líneas separadas.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">miCoche</span> <span class="o">=</span> <span class="s2">&quot;Toyota&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>JavaScript es un "lenguaje tipado dinámicamente", lo cual significa que, a diferencia de otros lenguajes, no es necesario especificar qué tipo de datos contendrá una variable (números, cadenas, matrices, etc.).</p>
+<p>Por ejemplo, si declaras una variable y le das un valor entre comillas, el navegador trata a la variable como una cadena (string), pero en cualquier momento se puede asignar otro valor.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">miVariable</span> <span class="o">=</span> <span class="s2">&quot;Toyota&quot;</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="p">...</span>
+<span class="p">...</span>
+<span class="nx">miVariable</span> <span class="o">=</span> <span class="mi">400</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Se le llama ámbito de las variables al lugar donde estas están disponibles. Por lo general, cuando declaramos una variable hacemos que esté disponible en el lugar donde se ha declarado. </p>
+<h3 id="variables-globales-y-locales">Variables globales y locales</h3>
+<p>Las variables <strong>globales</strong> son las que están declaradas en el ámbito más amplio posible, que en Javascript es una página web. Son accesibles desde cualquier lugar de la página, es decir, desde el script donde se han declarado y todos los demás scripts de la página.</p>
+<p>También podremos declarar variables en lugares más acotados, como por ejemplo una función. A estas variables les llamaremos locales. Cuando se declaren variables locales sólo podremos acceder a ellas dentro del lugar donde se ha declarado, es decir, si la habíamos declarado en una función solo podremos acceder a ella cuando estemos en esa función. En general, son ámbitos locales cualquier lugar acotado por llaves.</p>
+<p>No hay problema en declarar una variable local con el mismo nombre que una global (aunque no es buena idea repetir nombres de variables), en este caso la variable global será visible desde toda la página, excepto en el ámbito donde está declarada la variable local ya que en este sitio ese nombre de variable está ocupado por la local.</p>
+<h3 id="diferencia-entre-var-y-let">Diferencia entre var y let</h3>
+<p>Cuando se creó JavaScript por primera vez, solo existía <strong>var</strong> que funciona bien en la mayoría de los casos, pero tiene algunos problemas en la forma en que trabaja. En versiones modernas de JavaScript ES6 se crea la nueva palabra clave <strong>let</strong> que funciona de manera algo diferente a <em>var</em> y soluciona los problemas que esta presenta.</p>
+<p>Algunas diferencias</p>
+<ul>
+<li>La elevación (hoisting). Si usas <em>var</em> puedes declara la variable de iniciarla. Con <em>let</em> esto no funciona y da un error.</li>
+<li>Cuando usas <em>var</em>, puedes declarar la misma variable tantas veces como desees, pero con <em>let</em> no puedes.</li>
+<li>El scope (alcance) de la declaración. Con <em>var</em> puedes terminar creando variables globales y reasignando valores sin darte cuenta.</li>
+</ul>
+<p>El uso de <em>let</em> mantendrá tus funciones limpias y claras. Se dice que <em>let</em> es el nuevo <em>var</em> por lo tanto a partir de ES6 no hay razones para usar var.</p>
+<h2 id="constantes">Constantes</h2>
+<p>Muchos lenguajes de programación tienen el concepto de una constante — un valor que, una vez declarado no se puede cambiar. Hay muchas razones por las que querrías hacer esto, desde la seguridad (si un script de un tercero cambia dichos valores, podría causar problemas) hasta la depuración y la comprensión del código (es más difícil cambiar accidentalmente valores que no se deben cambiar y estropear cosas claras).</p>
+<p>En los primeros días de JavaScript, las constantes no existían. En JavaScript moderno ES6, tenemos la palabra clave <strong>const</strong>, que nos permite almacenar valores que nunca se pueden cambiar; funciona exactamente de la misma manera que <em>let</em>, excepto que a <em>const</em> no le puedes dar un nuevo valor.</p>
+<p>Si intentamos asignar un nuevo valor a una variable <em>const</em> nos daría el siguiente error: "Error Message : Uncaught TypeError: Assignment to constant variable.".</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">miCoche</span> <span class="o">=</span> <span class="s2">&quot;Toyota&quot;</span><span class="p">;</span>
+<span class="nx">miCoche</span> <span class="o">=</span> <span class="s2">&quot;Seat&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Que no se puedan reasignar valores no significa que sean inmutables. Si el valor de una variable constante es «algo» mutable, como un <strong>array</strong> o un <strong>objeto</strong>, se pueden cambiar los valores de sus elementos.</p>
+</div>
+<h2 id="tipos-de-datos">Tipos de datos</h2>
+<h3 id="numerico">Numérico</h3>
+<p>Sólo existe un tipo de datos numérico, al contrario que ocurre en la mayoría de los lenguajes más conocidos. Todos los números son por tanto del tipo numérico, independientemente de la precisión que tengan o si son números reales o enteros.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">miEdad</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="boleano">Boleano</h3>
+<p>El tipo bolean, <em>boolean</em> en inglés, sirve para guardar un si o un no o dicho de otro modo, un verdadero o un falso. Se utiliza para realizar operaciones lógicas, generalmente para realizar acciones si el contenido de una variable es verdadero (<strong>true</strong>) o falso (<strong>false</strong>). </p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">soyVerdadero</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="cadena-de-caracteres">Cadena de caracteres</h3>
+<p>Javascript sólo tiene un tipo de datos para guardar texto <strong>string</strong> y en el se pueden introducir cualquier número de caracteres. Un texto puede estar compuesto de números, letras y cualquier otro tipo de caracteres y signos. Los textos se escriben entre comillas, dobles o simples.</p>
+<p>Todo lo que se coloca entre comillas es tratado como una cadena de caracteres independientemente de lo que coloquemos en el interior de las comillas. Por ejemplo, en una variable de texto podemos guardar números y en ese caso tenemos que tener en cuenta que las variables de tipo texto y las numéricas no son la misma cosa y mientras que las de numéricas nos sirven para hacer cálculos matemáticos las de texto no. </p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">soyTexto</span> <span class="o">=</span> <span class="s2">&quot;500&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">yoTambienTexto</span> <span class="o">=</span> <span class="s2">&quot;Hola soy un texto compuesto por 41 letras&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+<h4 id="caracteres-especiales">Caracteres especiales</h4>
+<p>Hay una serie de caracteres especiales que sirven para expresar en una cadena de texto determinados controles como puede ser un salto de línea o un tabulador. Estos son los caracteres de escape y se escriben con una notación especial que comienza por una contra barra (una barra inclinada al revés de la normal '') y luego se coloca el código del carácter a mostrar.</p>
+<p>Un carácter muy común es el salto de línea, que se consigue escribiendo <strong>\n</strong>. Otro carácter muy habitual es colocar unas comillas <strong>\"</strong>, pues si colocamos unas comillas sin su carácter especial nos cerrarían las comillas que colocamos para iniciar la cadena de caracteres.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">textoComillas</span> <span class="o">=</span> <span class="s2">&quot;Hola soy un \&quot;texto con comillas\&quot;&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">saltoDeLinea</span> <span class="o">=</span> <span class="s2">&quot;Soy texto en \n 2 líneas&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+<h4 id="concatenar-cadenas">Concatenar cadenas</h4>
+<p>Para unir cadenas en JavaScript el símbolo de más (+), el mismo operador que usamos para sumar números, pero en este contexto hace algo diferente. Puedes unir texto con variables ya sean de texto o numéricas.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">one</span> <span class="o">=</span> <span class="s1">&#39;Hola, &#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">two</span> <span class="o">=</span> <span class="s1">&#39;como estás?&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">joined</span> <span class="o">=</span> <span class="nx">one</span> <span class="o">+</span> <span class="nx">two</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">miEdad</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">miNombre</span> <span class="o">=</span> <span class="s2">&quot;Carlos&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">esMiEdad</span> <span class="o">=</span> <span class="s2">&quot;Me llamo &quot;</span> <span class="o">+</span> <span class="nx">miNombre</span> <span class="o">+</span> <span class="s2">&quot; y tengo &quot;</span> <span class="o">+</span> <span class="nx">miEdad</span> <span class="o">+</span> <span class="s2">&quot; años.&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">myFecha</span> <span class="o">=</span> <span class="s2">&quot;19&quot;</span> <span class="o">+</span> <span class="s2">&quot;67&quot;</span><span class="p">;</span> <span class="c1">//resultado &quot;1967&quot;</span>
+</code></pre></div>
+
+<h4 id="plantillas-literales">Plantillas literales</h4>
+<p>Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres. Las plantillas literales se delimitan con el caracter de comillas o tildes invertidas (<code></code>) (grave accent), en lugar de las comillas sencillas o dobles.</p>
+<p>Las plantillas de cadena de caracteres pueden contener marcadores, identificados por el signo de dólar y envueltos en llaves (<strong>${expresión}</strong>). Las expresiones contenidas en los marcadores, junto con el texto entre ellas, son enviados como argumentos a una función. La función por defecto sencillamente concatena las partes para formar una única cadena de caracteres. Para más información sobre plantilla etiquetadas, anidadas, etc. ver <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">template_strings</a> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> </p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">expresion</span> <span class="o">=</span> <span class="s2">&quot;literales&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">cadena</span> <span class="o">=</span> <span class="sb">`texto de cadena de caracteres </span><span class="si">${</span><span class="nx">expresion</span><span class="si">}</span><span class="sb"> texto adicional`</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Los caracteres de fin de línea encontrados forman parte de la plantilla literal. Utilizando cadenas de caracteres normales, sería necesario utilizar la siguiente sintaxes para producir cadenas de más de una línea:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">multiLinea</span> <span class="o">=</span> <span class="s1">&#39;línea 1 de cadena de texto\n&#39;</span> <span class="o">+</span>
+<span class="s1">&#39;línea 2 de cadena de texto&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Utilizando plantillas literales, se puede obtener el mismo resultado de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">multiLinea</span> <span class="o">=</span> <span class="sb">`línea 1 de la cadena de texto</span>
+<span class="sb">línea 2 de la cadena de texto`</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Se pueden insetar expresiones dentro de cadenas de caracteres normales como por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">repuesta</span> <span class="o">=</span> <span class="sb">`Quince es </span><span class="si">${</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="si">}</span><span class="sb"> y</span>
+<span class="sb">no </span><span class="si">${</span><span class="mi">2</span> <span class="o">*</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+</code></pre></div>
+
+<p>En lineas generales es recomentable usar plantillas literales en lugar de la concatenación de cadenas de caracteres.</p>
+<h3 id="matrices-o-arreglos">Matrices o Arreglos</h3>
+<p>Las matrices <strong>Array</strong> son una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada.</p>
+<p>Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas. Puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">compra</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pan&quot;</span><span class="p">,</span> <span class="s2">&quot;leche&quot;</span><span class="p">,</span> <span class="s2">&quot;queso&quot;</span><span class="p">,</span> <span class="s2">&quot;hummus&quot;</span><span class="p">,</span> <span class="s2">&quot;noodles&quot;</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">random</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tree&quot;</span><span class="p">,</span> <span class="mi">795</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]];</span>
+</code></pre></div>
+
+<h4 id="acceder-y-modificar-elementos-de-la-matriz">Acceder y modificar elementos de la matriz</h4>
+<p>Se puede acceder a elementos individuales en la matriz mediante la notación de corchetes, indicando la posición del elemento que se quiera acceder</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Las posiciones dentro de las matrices se comienzan a contar desde 0. El primer elementos de la matriz tiene la posición 0. </p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">compra</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pan&quot;</span><span class="p">,</span> <span class="s2">&quot;leche&quot;</span><span class="p">,</span> <span class="s2">&quot;jamón&quot;</span><span class="p">,</span> <span class="s2">&quot;hummus&quot;</span><span class="p">,</span> <span class="s2">&quot;noodles&quot;</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">pan</span> <span class="o">=</span> <span class="nx">compra</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">charcuteria</span> <span class="o">=</span> <span class="nx">compra</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</code></pre></div>
+
+<p>Puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">compra</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pan&quot;</span><span class="p">,</span> <span class="s2">&quot;leche&quot;</span><span class="p">,</span> <span class="s2">&quot;jamón&quot;</span><span class="p">,</span> <span class="s2">&quot;hummus&quot;</span><span class="p">,</span> <span class="s2">&quot;noodles&quot;</span><span class="p">];</span>
+<span class="nx">compra</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;tomates&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">random</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tree&quot;</span><span class="p">,</span> <span class="mi">795</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]];</span>
+<span class="kd">let</span> <span class="nx">tres</span> <span class="o">=</span> <span class="nx">random</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+</code></pre></div>
+
+<h2 id="funciones">Funciones</h2>
+<p>En términos generales, una función es un "subprograma" que puede ser llamado por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado cuerpo de la función. Se pueden pasar valores a una función, y la función puede devolver un valor. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>En JavaScript, las funciones son objetos de primera clase, es decir, son objetos y se pueden manipular y transmitir al igual que cualquier otro objeto. Concretamente son objetos <strong>Function</strong>.</p>
+<p>JavaScript tiene integradas varias funciones de nivel superior como por ejemplo parseInt(), decodeURI(), etc.</p>
+<h3 id="declaracion-de-una-funcion">Declaracion de una función</h3>
+<p>Una definición de función (también denominada declaración de función o expresión de función) consta de la palabra clave function, seguida de:</p>
+<ul>
+<li>El nombre de la función.</li>
+<li>Una lista de parámetros o argumentos de la función, entre paréntesis y separados por comas.</li>
+<li>Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">suma</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>En el ejemplo anterior tenemos a la función <em>suma</em> que toma 2 parámetros <em>a</em> y <em>b</em> y devuelve un valor con la suma de <em>a+b</em>. La instrucción <strong>return</strong> especifica el valor devuelto por la función.</p>
+<p>Las funciones también se pueden crear mediante una <strong>expresión function</strong>. Esta función puede ser anónima; no tiene por qué tener un nombre. Por ejemplo, la función <em>suma</em> se podría haber definido como:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">suma</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Las <em>expresión function</em> son convenientes cuando se pasa una función como argumento a otra función.</p>
+<h3 id="parametros-de-una-funcion">Parámetros de una función</h3>
+<p>Existe una variable "especial" llamada <strong>arguments</strong> que es similar a una matriz. Esta variable guarda todos los argumentos de la función. </p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">suma</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">parametroB</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span> 
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Usando el objeto <em>arguments</em>, puedes llamar a una función con más argumentos de los que formalmente declara aceptar. Esto suele ser útil si no sabes de antemano cuántos argumentos se pasarán a la función.</p>
+<h3 id="parametros-predeterminados">Parámetros predeterminados</h3>
+<p>En el pasado (pre ES6), la estrategia general para establecer valores predeterminados era probar los valores de los parámetros en el cuerpo de la función y asignar un valor si eran <strong>undefined</strong>.</p>
+<p>Con parámetros predeterminados, ya no es necesaria una verificación manual en el cuerpo de la función. Simplemente puedes poner un valor predeterminado para algún parámetro en el encabezado de la función.</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">suma</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="parametros-rest">Parámetros rest</h3>
+<p>La sintaxis del parámetro rest (resto de parámetros) nos permite representar un número indefinido de argumentos como una matriz. Para ello ponemos tres puntos antes del nombre del parámetro</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">suma</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">masParametros</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+<span class="nx">suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">//en este caso ...masParametros sería igual a [2, 4, 7]</span>
+</code></pre></div>
+
+<h3 id="funciones-flecha">Funciones flecha</h3>
+<p>Dos factores influyeron en la introducción de las funciones flecha son: funciones más cortas y no vinculantes de <em>this</em>.</p>
+<p>Hasta las funciones flecha, cada nueva función definía su propio valor <em>this</em>, lo que causaba algunos problemas. Para más detalles sobre funciones flecha <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions</a> y <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/</a></p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">suma</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">resta</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">cuadrado</span> <span class="o">=</span> <span class="nx">a</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">a</span><span class="p">;</span>
+</code></pre></div>
+
+<h2 id="referencias">Referencias</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">https://developer.mozilla.org/es/docs/Web/JavaScript</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://desarrolloweb.com/articulos/507.php">https://desarrolloweb.com/articulos/507.php</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../css_diseno/" title="CSS diseño" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                CSS diseño
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../js_estructuras/" title="JS estructuras de control" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                JS estructuras de control
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
