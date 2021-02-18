@@ -48,14 +48,13 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
     ``` sql
     CREATE TABLE public.transformacion
     (
-        srs_origen character varying(5) COLLATE pg_catalog."default" NOT NULL,
-        x_origen numeric NOT NULL,
-        y_origen numeric NOT NULL,
-        srs_destino character varying(5) COLLATE pg_catalog."default" NOT NULL,
-        x_destino numeric NOT NULL,
-        y_destino numeric NOT NULL,
-        id integer NOT NULL DEFAULT nextval('transformacion_id_seq'::regclass),
-        CONSTRAINT transformacion_pkey PRIMARY KEY (id)
+    srs_origen character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    x_origen numeric NOT NULL,
+    y_origen numeric NOT NULL,
+    srs_destino character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    x_destino numeric NOT NULL,
+    y_destino numeric NOT NULL,
+    id SERIAL PRIMARY KEY NOT NULL
     )
     ```
 
