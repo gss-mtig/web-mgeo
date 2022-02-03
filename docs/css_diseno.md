@@ -77,6 +77,8 @@ Esto hace que el elemento `<section>` se convierta en contenedor flex, y sus hij
 
 Para ver más detalles del modelo Flexbox pueden visitar https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox y https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+También podéis practicar los estilos de flexbox con este juego https://flexboxfroggy.com/ 
+
 ## Grids
 
 La compaginación en cuadrícula con CSS es un método de diseño de páginas web en dos dimensiones. Te permite distribuir el contenido en filas y columnas, y tiene muchas características que facilitan la creación de diseños complejos.
@@ -99,6 +101,8 @@ Para ver algo que se parezca más a una cuadrícula, necesitamos añadir columna
 ```
 
 Para ver más detalle del modelo de Grid visitar https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Grids y https://css-tricks.com/snippets/css/complete-guide-grid/
+
+También podéis practicar los estilos de Grid con este juego https://cssgridgarden.com/
 
 ## Maquetar nuestra calculadora usando flexbox
 
@@ -361,6 +365,9 @@ Para ver más detalle del modelo de Grid visitar https://developer.mozilla.org/e
     4. Modificar el estilo del elemento header para que el texto del titulo quede alineado verticalmente en el centro de su contenedor **0.5 pt**. Ayuda usar la propiedad *align-items*
     5. Modificar el estlio del elemento header para que la imagen y el titulo queden distribuidos de igual forma detro de su contenedor **0.5 pt**. Ayuda usar la propiedad *justify-content*
     6. Modificar el estilo de la tabla para que los elementos se vean más ordenados dentro de la página. Algunas ideas: centrar la tabla, dar mas espacio entre los elementos, agregar un estilo de borde para separar los elementos de la columna de origen de los de la columna de destino, etc. **0.5 pt**.
+
+    El resultado debe ser algo como esto
+    ![Calculadora con estilo](img/calculadora-css.png "Calculadora con estilo")
 
 ## Referencias
 

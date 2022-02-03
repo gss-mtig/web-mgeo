@@ -288,7 +288,7 @@ Cuando se creó JavaScript por primera vez, solo existía **var** que funciona b
 
 Algunas diferencias
 
-* La elevación (hoisting). Si usas *var* puedes declara la variable de iniciarla. Con *let* esto no funciona y da un error.
+* La elevación (hoisting). Si usas *var* puedes acceder a la variable andes de declararla. Con *let* esto no funciona y da un error.
 * Cuando usas *var*, puedes declarar la misma variable tantas veces como desees, pero con *let* no puedes.
 * El scope (alcance) de la declaración. Con *var* puedes terminar creando variables globales y reasignando valores sin darte cuenta.
 
@@ -310,6 +310,12 @@ miCoche = "Seat";
 !!! note
 
     Que no se puedan reasignar valores no significa que sean inmutables. Si el valor de una variable constante es «algo» mutable, como un **array** o un **objeto**, se pueden cambiar los valores de sus elementos.
+
+    ``` js
+    const coches = ["Toyota", "Seat"];
+    coches[2] = "Fiat"; // es valido
+    coches = ["Mercedes", "BMW"]; // da error
+    ```
 
 ## Tipos de datos
 

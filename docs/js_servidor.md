@@ -46,16 +46,22 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 6. Crear la base de datos, en PostgreSQL crear una nueva base de datos llamada **node_ejemplo** (o usar una existente). Dentro de esa base de datos crear una tabla llamada **tranformacion**. Esta tabla debe contener 6 columnas: srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino. Las columnas de srs deben ser de tipo texto y el resto de tipo numérico
 
     ``` sql
+    CREATE SEQUENCE transformacion_id_seq;
+
     CREATE TABLE public.transformacion
     (
-    srs_origen character varying(5) COLLATE pg_catalog."default" NOT NULL,
-    x_origen numeric NOT NULL,
-    y_origen numeric NOT NULL,
-    srs_destino character varying(5) COLLATE pg_catalog."default" NOT NULL,
-    x_destino numeric NOT NULL,
-    y_destino numeric NOT NULL,
-    id SERIAL PRIMARY KEY NOT NULL
-    )
+        srs_origen character varying(5) COLLATE pg_catalog."default" NOT NULL,
+        x_origen numeric NOT NULL,
+        y_origen numeric NOT NULL,
+        srs_destino character varying(5) COLLATE pg_catalog."default" NOT NULL,
+        x_destino numeric NOT NULL,
+        y_destino numeric NOT NULL,
+        id integer NOT NULL DEFAULT nextval('transformacion_id_seq'::regclass),
+        CONSTRAINT transformacion_pkey PRIMARY KEY (id)
+    );
+
+    ALTER SEQUENCE transformacion_id_seq
+    OWNED BY transformacion.id;
     ```
 
 7. Instalar el node-postgres una librería de Node.js que nos permite conectar con bases de datos de PostgreSQL
@@ -70,10 +76,10 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
     const { Pool } = require("pg");
 
     const config = {    
-        user: '[TU_USUARIO]',
+        user: 'TU_USUARIO',
         host: 'localhost',
         database: 'node_ejemplo',
-        password: '[TU_CONTRASEÑA]',
+        password: 'TU_CONTRASEÑA',
         port: 5432,
     };
 
@@ -117,7 +123,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
     });
     ```
 
-11. Crear el router para procesar las peticiones. Crear una carpeta llamada **routes** dentro de la carpeta *servidor*. Dentro de la carpeta *routes crear un archivo llamado **api.js** y escribir lo siguiente
+11. Crear el router para procesar las peticiones. Crear una carpeta llamada **routes** dentro de la carpeta *servidor*. Dentro de la carpeta *routes* crear un archivo llamado **api.js** y escribir lo siguiente:
 
     ``` js
     const Router = require("express").Router;
@@ -224,7 +230,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 
 16. Conectar nuestra API con la base de datos. Modificar el archivo *api.js* 
 
-    ``` js hl_lines="11 18 25"
+    ``` js hl_lines="3 11 18 25"
     const Router = require("express").Router;
 
     const TransformacionesService = require("../services/transformaciones");
@@ -399,6 +405,9 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
     1. Agregar a la calculadora un botón para recuperar todas las transformaciones que están en la base de datos y agregar un elemento para mostrar los registros de la base de datos. **0.5 pt**
     2. Agregar un campo donde el usuarios pueda poner un id y recuperar el registro de la base de datos con dicho id. Agregar un elemento para mostrar el registro obtenido. **0.25 pt**   
     3. Implementar algunas mejoras a la calculadora, ya sean tanto de estilo, como de funcionalidad **1.25 pt**
+
+    El resultado debe ser algo como esto
+    ![Calculadora resultado servidor](img/calculadora-servidor.png "Calculadora resultado servidor")
 
 ## Referencias
 

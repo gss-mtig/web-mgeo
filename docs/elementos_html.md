@@ -110,7 +110,7 @@ Ejemplo
 
 Prácticamente todos los sitios web usan CSS para darles un buen aspecto y JavaScript para añadir funcionalidades interactivas, como reproductores de vídeo, mapas, juegos y demás. La manera más habitual de añadir CSS y JavaScript a una página web es con los elementos `<link>` y el elemento `<script>`, respectivamente.
 
-El elemento `<link>` siempre debe ir dentro del `<header>` de tu documento. Este toma dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo.
+El elemento `<link>` siempre debe ir dentro del `<head>` de tu documento. Este toma dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo.
 
 Ejemplo
 
@@ -541,7 +541,7 @@ Otros atributos comunes son el *height* (altura) y el *width* (ancho) para defin
     </head>
     <body>
         <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+            <img src="https://www.uab.cat/servlet/BlobServer?blobtable=Imatge&blobcol=urlimg&blobheader=image/png&blobkey=id&blobwhere=1345709314986&blobnocache=true" alt="UAB" style="height: 100px;">
             <h1>Mi calculadora geodésica</h1>
         </header>
         <main>
@@ -1083,6 +1083,9 @@ De igual forma existe un elemento `<colgroup>` para hacer agrupaciones semántic
     3. Agregar un elemento `<label>` con el texto **Respuesta** en la celda que está junto a las celdas con las etiquetas *Latitud* y *Longiud* **0.5 pt**.
     4. Agregar un elemento `<textarea>` en la celda que está junto a las celdas de los input de *lat* y *lng* **0.5 pt**.
     5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de *transformar coordenadas* **0,5 pt**.
+
+    El resultado debe ser algo como esto
+    ![Calculadora sin estilo](img/calculadora_html.png "Calculadora sin estilo")
 
 ## Referencias
 

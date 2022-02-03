@@ -603,6 +603,9 @@ A continuación vamos a modificar nuestro archivo **script.js** que se encuentra
 	4. Validar que el SRS de origen no sea igual al SRS de destino. En el caso de ser iguales mostrar un mensaje al usuario. El mensaje de error se debe mostrar en un nuevo div. En el caso de ser diferentes ocultar el div con el mensaje de error. **0.5 pt**
 	5. Agregar a la tabla un nuevo campo en la columna de origin del tipo textarea donde el usuario podra poner multiples coordenadas de origen separadas por **";"** (punto y comar) por Ejemplo *45.34,1.25;41.78,2.456*. Al presionar el botón de transformar coordenadas validar si el nuevo campo tiene valores tambien realizar la transformación de estos valores y retornarlos en la respuesta. **0.5 pt**
 
+	El resultado debe ser algo como esto
+    ![Calculadora con funcionalidad](img/calculadora-js.png "Calculadora con funcionalidad")
+
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n
