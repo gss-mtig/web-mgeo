@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="es" class="no-js">
   <head>
@@ -11,13 +9,14 @@
         <meta name="description" content="Programació web">
       
       
-        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/elementos_html/">
-      
       
         <meta name="author" content="web-mgeo">
       
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/elementos_html/">
+      
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
     
     
       
@@ -25,16 +24,20 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -46,7 +49,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,46 +73,53 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Cabecera">
-    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Programació web
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Elementos HTML
             
           </span>
         </div>
+      </div>
+    </div>
+    <div class="md-header__options">
       
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -111,7 +127,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -121,12 +137,12 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -139,8 +155,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -148,15 +162,21 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Programació web
@@ -164,10 +184,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -181,36 +201,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
-      Introducción al desarrollo Web
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../html/" title="HTML" class="md-nav__link">
-      HTML
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -218,25 +217,57 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion_web/" class="md-nav__link">
+        Introducción al desarrollo Web
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Elementos HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Elementos HTML
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Elementos HTML" class="md-nav__link md-nav__link--active">
-      Elementos HTML
-    </a>
-    
+      </a>
       
+        
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
@@ -247,7 +278,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#head" class="md-nav__link">
@@ -573,116 +604,144 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../css/" title="CSS" class="md-nav__link">
-      CSS
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css_bbox/" title="CSS el modelo de caja" class="md-nav__link">
-      CSS el modelo de caja
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../css_diseno/" title="CSS diseño" class="md-nav__link">
-      CSS diseño
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js/" title="JS" class="md-nav__link">
-      JS
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_bbox/" class="md-nav__link">
+        CSS el modelo de caja
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
-      JS estructuras de control
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
-      JS objetos
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_diseno/" class="md-nav__link">
+        CSS diseño
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_dom/" title="JS dom" class="md-nav__link">
-      JS dom
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_async/" title="JS async" class="md-nav__link">
-      JS async
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        JS
+      </a>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_estructuras/" class="md-nav__link">
+        JS estructuras de control
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
-      JS en el servidor
-    </a>
-  </li>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_objetos/" class="md-nav__link">
+        JS objetos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_dom/" class="md-nav__link">
+        JS dom
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_async/" class="md-nav__link">
+        JS async
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_servidor/" class="md-nav__link">
+        JS en el servidor
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -692,7 +751,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -706,7 +766,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#head" class="md-nav__link">
@@ -1037,16 +1097,13 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                   <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/elementos_html.md" title="Editar esta página" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-                
-                
-                  
                 
                 
                 <h1 id="elementos-html">Elementos HTML</h1>
@@ -1064,13 +1121,11 @@
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h4 id="autor">Autor</h4>
 <p>Especificar un autor resulta ventajoso por diversos motivos: es útil saber quién escribió la página para poder ponerte en contacto con el autor si tienes preguntas sobre el contenido. Algunos sistemas de gestión de contenido tienen herramientas para extraer automáticamente la información del autor de la página y ponerla a disposición para tales fines. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Pepe Perez&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h4 id="descripcion">Descripción</h4>
 <p>Especificar una descripción que incluya palabras clave relacionadas con el contenido de tu página resulta útil porque tiene el potencial de hacer que la página aparezca más arriba en las búsquedas relevantes que efectúan los motores de búsqueda. Mejora el SEO</p>
 <p><strong>SEO</strong> (Search Engine Optimization) también conocido como posicionamiento web, es el proceso de hacer un sitio web más visible en los resultados de búsqueda o mejorar el ranking de búsqueda.</p>
@@ -1079,7 +1134,6 @@
 <span class="s">proporcionar a los recién llegados a la web todo lo que deben</span>
 <span class="s">saber para empezar a desarrollar páginas web y aplicaciones web.&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h4 id="viewport">Viewport</h4>
 <p>El viewport del navegador es el área de la ventana en donde el contenido web está visible. Generalmente no es del mismo tamaño que la página renderizada, en donde se brindan barras de desplazamiento para que el usuario pueda acceder a todo el contenido.</p>
 <p>Dispositivos con pantallas angostas (p.e. móviles) muestran la página en una ventana virtual o viewport, que es usualmente más ancho que la pantalla y la comprimen de manera que pueda verse completa. El usuario podrá recorrerla y hacer zoom para ver diferentes áreas de la página. Por ejemplo, si una pantalla móvil tiene un ancho 640px, las páginas pueden ser procesadas con un viewport de 980px, y después comprimidas para que entren en 640px.</p>
@@ -1090,7 +1144,6 @@
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h4 id="redes-sociales">Redes sociales</h4>
 <p><a href="https://ogp.me/">Open Graph Data</a> es un protocolo de metadatos que Facebook inventó para proveer metadatos más ricos para los sitios web. Un efecto de esto es que cuando desde Facebook enlazas a una paágina, el enlace aparece con una imagen y una descripción, lo que resulta en una experiencia más enriquecedora para los usuarios.</p>
 <p>Ejemplo</p>
@@ -1100,31 +1153,26 @@
 <span class="s">y aplicaciones HTML5. También documenta productos Mozilla, como el sistema operativo Firefox.&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Mozilla Developer Network&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Twitter también tiene sus metadatos propios, las <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards">Twitter Cards</a>, que tienen un efecto similar cuando la URL del sitio se muestra en twitter.com.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;twitter:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Mozilla Developer Network&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h3 id="favicon">favicon</h3>
 <p>Para enriquecer un poco más el diseño de tu sitio puedes añadir en tus metadatos referencias a iconos personalizados, que se mostrarán en determinados contextos. El más común de ellos es el <strong>favicon</strong> (abreviatura de <em>favorite icon</em> —icono favorito, referido al uso que se le da en las listas de favoritos o de marcadores (bookmarks).</p>
 <p>El humilde favicon ha existido durante muchos años. Es el primer icono de este tipo: un icono cuadrado de 16 píxeles que se utiliza en varios lugares. Es posible que veas (según el navegador) favicons que se muestran en la pestaña del navegador que contiene cada página abierta y junto a las páginas marcadas en el panel de marcadores.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;favicon.ico&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h3 id="carga-de-css-y-javascript">Carga de CSS y JavaScript</h3>
 <p>Prácticamente todos los sitios web usan CSS para darles un buen aspecto y JavaScript para añadir funcionalidades interactivas, como reproductores de vídeo, mapas, juegos y demás. La manera más habitual de añadir CSS y JavaScript a una página web es con los elementos <code>&lt;link&gt;</code> y el elemento <code>&lt;script&gt;</code>, respectivamente.</p>
-<p>El elemento <code>&lt;link&gt;</code> siempre debe ir dentro del <code>&lt;header&gt;</code> de tu documento. Este toma dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo.</p>
+<p>El elemento <code>&lt;link&gt;</code> siempre debe ir dentro del <code>&lt;head&gt;</code> de tu documento. Este toma dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;my-css-file.css&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>El elemento <code>&lt;script&gt;</code> también debería ir en el head, y debería incluir un atributo <em>src</em> con la ruta al JavaScript que quieres cargar, y <em>defer</em>, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página por ejemplo poner el elemento <code>&lt;script&gt;</code> al final del body.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;my-js-file.js&quot;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h2 id="elementos-de-estructura-contenedores-o-envolturas">Elementos de "estructura", "contenedores" o "envolturas"</h2>
 <p>Si bien la mayoría de los elementos del html se pueden anidar, exisiten algunos elementos que se usan para estructurar las distintas áereas de la página. Existen alungunos elementos que tienen un significado semántico basado en su funcionalidad como por ejemplo <code>&lt;footer&gt;</code> que presentan sin ambigüedad los diferentes contenidos y otros elementos no-semánticos que tienen un uso generalista como por ejemplo <code>&lt;div&gt;</code>  </p>
 <h3 id="elementos-semanticos">Elementos semánticos</h3>
@@ -1155,9 +1203,10 @@
 <h4 id="span">span</h4>
 <p>El elemento <code>&lt;span&gt;</code> es un elemento de linea (que se utiliza en el interior de una línea) y que al igual que el *<em>div</em> se utiliza cuando no se tenemos un elementos semántico en el que indicar el contenido o en el caso de que no se quiera dar ningún significado específico.</p>
 <p>Se usa frecuentemente para dar estilo a un texto dentro de una línea. Por ejemplo</p>
-<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Tengo un perro <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:green&quot;</span><span class="p">&gt;</span>verde<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> que tiene los ojos <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:blue&quot;</span><span class="p">&gt;</span>azules<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> 
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Tengo un perro <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:green&quot;</span><span class="p">&gt;</span>verde<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> que tiene los ojos <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:blue&quot;</span><span class="p">&gt;</span>azules<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> 
 </code></pre></div>
-<p>Tengo un perro <span style="color:green">verde</span> que tiene los ojos <span style="color:blue">azules</span></p> </p>
+<p>Tengo un perro <span style="color:green">verde</span> que tiene los ojos <span style="color:blue">azules</span></p>
+
 <h3 id="dar-estructura-a-nuestra-pagina">Dar estructura a nuestra página</h3>
 <p>En el cápitulo anterior crearmos una página web sencilla con la estructura mínima donde solo aparecía el texto "Mi calculadora geodésica". Modificaremos la página y le daremos una mejor estructura.</p>
 <ol>
@@ -1179,7 +1228,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Agregar el viewport para que la página sea "<em>responsive</em>". </p>
@@ -1197,7 +1245,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Agregar el favicon de la página</p>
@@ -1216,7 +1263,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página, veremos que aprece nuestro favicon en la pestaña del navegador pero que el resto de nuestra página sigue igual. Esto es debido a que como ya hemos mencionado los metadatos de la página no son visibles.</p>
@@ -1239,7 +1285,6 @@
 </span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página, veremos que nuestro texto no ha cambiado y que aparece el texto del <em>footer</em>. Esto es debido a que los elementos header y footer dan contexto semántico pero no aplicán ningún estilo. </p>
@@ -1265,7 +1310,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para ver el contenido del elemento principal</p>
@@ -1298,7 +1342,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para ver como ha cambiado el estilo del título de la página</p>
@@ -1318,7 +1361,6 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>El colegio está a tu derecha, 300 metros más adelante<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <ol>
   <li>Conduce hasta el final de la calle</li>
   <li>Gira a la derecha</li>
@@ -1340,7 +1382,6 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>pan<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <ul>
   <li>leche</li>
   <li>hummus</li>
@@ -1383,7 +1424,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para observar que aparece nuestro listado de sistemas de referencia.</p>
@@ -1449,7 +1489,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para observar que aparece un enlace en el primer elemento del listado de sistemas de referencia.</p>
@@ -1467,7 +1506,6 @@
 <p>Otros atributos comunes son el <em>height</em> (altura) y el <em>width</em> (ancho) para definir las dimensiones de la imagen.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Proyecciones geográficas&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 <p><img alt="Proyecciones geográficas" width="200" height="100" src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" /></p>
 <ol>
 <li>
@@ -1484,7 +1522,7 @@
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="hll">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-</span><span class="hll">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/Imatge/635/883/logop.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.uab.cat/servlet/BlobServer?blobtable=Imatge&amp;blobcol=urlimg&amp;blobheader=image/png&amp;blobkey=id&amp;blobwhere=1345709314986&amp;blobnocache=true&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;UAB&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height: 100px;&quot;</span><span class="p">&gt;</span>
 </span><span class="hll">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi calculadora geodésica<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span><span class="hll">    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 </span>    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
@@ -1502,7 +1540,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para ver que aparece la imagen del logo de la UAB en nuestra página.</p>
@@ -1562,7 +1599,6 @@
     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;condiciones&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <form action="">
     <input type="text" name="nombre">
     <input type="email" name="correo" placeholder="introduce tu email">
@@ -1591,8 +1627,8 @@
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;textarea&quot;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&quot;50&quot;</span><span class="p">&gt;</span>Escribe algo largo aquí<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
 </code></pre></div>
+<textarea name="textarea" rows="10" cols="50">Escribe algo largo aquí</textarea>
 
-<p><textarea name="textarea" rows="10" cols="50">Escribe algo largo aquí</textarea></p>
 <h4 id="select">select</h4>
 <p>El elemento select <code>&lt;select&gt;</code> representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos <code>&lt;option&gt;</code>, los cuales pueden ser agrupados por elementos <code>&lt;optgroup&gt;</code>.</p>
 <p>Ejemplo</p>
@@ -1602,19 +1638,18 @@
   <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;value3&quot;</span><span class="p">&gt;</span>Value 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><select name="select">
-  <option value="value1">Value 1</option> 
-  <option value="value2" selected>Value 2</option>
-  <option value="value3">Value 3</option>
-</select></p>
+<br />
+<option value="value1">Value 1</option></p>
+<option value="value2" selected>Value 2</option>
+<option value="value3">Value 3</option>
+<p></select></p>
 <h4 id="button">button</h4>
 <p>La etiqueta <code>&lt;button&gt;</code> representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar.</p>
 <p>El atributo <strong>type</strong> se puede usar para indicar el tipo de botón. Esto se usa principalmente cuando se utiliza dentro de un formulario. Sus valores pueden ser: <em>button</em>, <em>submit</em> o <em>reset</em></p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Click me<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h4 id="label">label</h4>
 <p>El elemento <code>&lt;label&gt;</code> representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo <em>for</em>, o ubicando el control dentro del elemento label.</p>
 <p>Ejemplos</p>
@@ -1625,7 +1660,6 @@
 <span class="c">&lt;!-- Aun mas simple --&gt;</span>
 <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Click me <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Name&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Name&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><label for="Name">Click me</label>
 <input type="text" id="Name" name="Name" /></p>
 <p><label>Click me <input type="text" id="Name" name="Name" /></label></p>
@@ -1678,7 +1712,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Crear un par de campos para introducir las coordenadas de origen</p>
@@ -1734,7 +1767,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Crear un botón para hacer la transformación</p>
@@ -1792,7 +1824,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para ver que aparece el formulario.</p>
@@ -1816,7 +1847,6 @@
   <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <table>
   <tr>
     <td>Celda 1</td>
@@ -1855,7 +1885,6 @@
   <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <table>
   <caption>Titulo de la tabla</caption>
   <tr>
@@ -1895,7 +1924,6 @@
   <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <table>
   <caption>Titulo de la tabla</caption>
   <tr>
@@ -1987,7 +2015,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.</p>
@@ -2002,6 +2029,8 @@
 <li>Agregar un elemento <code>&lt;textarea&gt;</code> en la celda que está junto a las celdas de los input de <em>lat</em> y <em>lng</em> <strong>0.5 pt</strong>.</li>
 <li>Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de <em>transformar coordenadas</em> <strong>0,5 pt</strong>.</li>
 </ol>
+<p>El resultado debe ser algo como esto
+<img alt="Calculadora sin estilo" src="../img/calculadora_html.png" title="Calculadora sin estilo" /></p>
 </div>
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
@@ -2036,40 +2065,38 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
-        
-          <a href="../html/" title="HTML" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        <a href="../html/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              HTML
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                HTML
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../css/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              CSS
             </div>
-          </a>
-        
-        
-          <a href="../css/" title="CSS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Siguiente
-                </span>
-                CSS
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2086,19 +2113,13 @@
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
       
     
   </body>

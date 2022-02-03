@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="es" class="no-js">
   <head>
@@ -11,13 +9,14 @@
         <meta name="description" content="Programació web">
       
       
-        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js_async/">
-      
       
         <meta name="author" content="web-mgeo">
       
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js_async/">
+      
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
     
     
       
@@ -25,16 +24,20 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -46,7 +49,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,46 +73,53 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Cabecera">
-    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Programació web
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               JS async
             
           </span>
         </div>
+      </div>
+    </div>
+    <div class="md-header__options">
       
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -111,7 +127,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -121,12 +137,12 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -139,8 +155,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -148,15 +162,21 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Programació web
@@ -164,10 +184,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -181,132 +201,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
-      Introducción al desarrollo Web
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../html/" title="HTML" class="md-nav__link">
-      HTML
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../elementos_html/" title="Elementos HTML" class="md-nav__link">
-      Elementos HTML
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css/" title="CSS" class="md-nav__link">
-      CSS
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css_bbox/" title="CSS el modelo de caja" class="md-nav__link">
-      CSS el modelo de caja
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css_diseno/" title="CSS diseño" class="md-nav__link">
-      CSS diseño
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js/" title="JS" class="md-nav__link">
-      JS
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
-      JS estructuras de control
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
-      JS objetos
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_dom/" title="JS dom" class="md-nav__link">
-      JS dom
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -314,25 +217,177 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion_web/" class="md-nav__link">
+        Introducción al desarrollo Web
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elementos_html/" class="md-nav__link">
+        Elementos HTML
+      </a>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_bbox/" class="md-nav__link">
+        CSS el modelo de caja
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_diseno/" class="md-nav__link">
+        CSS diseño
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        JS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_estructuras/" class="md-nav__link">
+        JS estructuras de control
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_objetos/" class="md-nav__link">
+        JS objetos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_dom/" class="md-nav__link">
+        JS dom
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JS async
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         JS async
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="JS async" class="md-nav__link md-nav__link--active">
-      JS async
-    </a>
-    
+      </a>
       
+        
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
@@ -343,7 +398,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#patrones-asincronos-en-js" class="md-nav__link">
@@ -469,20 +524,24 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
-      JS en el servidor
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_servidor/" class="md-nav__link">
+        JS en el servidor
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -492,7 +551,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -506,7 +566,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#patrones-asincronos-en-js" class="md-nav__link">
@@ -637,16 +697,13 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                   <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/js_async.md" title="Editar esta página" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-                
-                
-                  
                 
                 
                 <h1 id="programacion-asincrona-con-js">Programación asíncrona con JS</h1>
@@ -663,7 +720,7 @@
 
   <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, Mr. Universe!&#39;</span><span class="p">);</span>
-  <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mf">2000</span><span class="p">);</span>
 
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Despues&quot;</span><span class="p">);</span>
 
@@ -671,7 +728,6 @@
 
 <span class="nx">myGreeting</span><span class="p">();</span>
 </code></pre></div>
-
 <h2 id="patrones-asincronos-en-js">Patrones asíncronos en JS</h2>
 <h3 id="callbacks">Callbacks</h3>
 <p>Los <strong>callbacks</strong> son la pieza clave para que Javascript pueda funcionar de forma asíncrona. De hecho, el resto de patrones asíncronos en Javascript está basado en callbacks de un modo u otro, simplemente cambian la sintaxis para trabajar con ellos más cómodamente.</p>
@@ -679,16 +735,15 @@
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola Mundo con retraso!&quot;</span><span class="p">);</span>
-<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="p">},</span> <span class="mf">1000</span><span class="p">)</span>
 
 <span class="c1">//También podemos pasar una variable que contenga una función</span>
-<span class="kr">const</span> <span class="nx">myCallback</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola Mundo con retraso!&quot;</span><span class="p">);</span>
-<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">myCallback</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">myCallback</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola Mundo con retraso!&quot;</span><span class="p">);</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">myCallback</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Otro ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">saludo</span> <span class="o">=</span> <span class="sb">`Hola </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">saludo</span> <span class="o">=</span> <span class="sb">`Hola </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
     <span class="nx">callback</span><span class="p">(</span><span class="nx">saludo</span><span class="p">);</span> 
 <span class="p">}</span>
 
@@ -696,7 +751,6 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <h4 id="callback-hell">Callback Hell</h4>
 <p>Los callbacks también pueden lanzar a su vez llamadas asíncronas, asi que pueden anidarse tanto como se desee. Inconveniente, podemos acabar con código como este:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
@@ -708,32 +762,31 @@
       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Etapa 4 completada&quot;</span><span class="p">);</span>
         <span class="c1">// Podríamos continuar hasta el infinito...</span>
-      <span class="p">},</span> <span class="mi">4000</span><span class="p">);</span>
-    <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
-  <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
-<span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+      <span class="p">},</span> <span class="mf">4000</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mf">2000</span><span class="p">);</span>
+<span class="p">},</span> <span class="mf">1000</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Éste es uno de los inconvenientes clásicos de los callbacks, además de la indentación, resta legibilidad, dificulta su mantenimiento y añade complejidad ciclomática. Al <strong>Callback Hell</strong> también se le conoce como <em>Pyramid of Doom</em> o <em>Hadouken</em>.</p>
 <p>Es muy común caer en el Callback Hell cuando tenemos que usar valores calculados previamente por diferentes funciones asíncronas.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">comprarTaquito</span><span class="p">(</span><span class="nx">taquitosActuales</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-  <span class="kr">const</span> <span class="nx">taquitos</span> <span class="o">=</span> <span class="nx">taquitosActuales</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="kd">const</span> <span class="nx">taquitos</span> <span class="o">=</span> <span class="nx">taquitosActuales</span> <span class="o">+</span> <span class="mf">1</span>
   <span class="nx">callback</span><span class="p">(</span><span class="nx">taquitos</span><span class="p">)</span> 
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">comprarTresTaquitos</span><span class="p">(</span><span class="nx">taquitosActuales</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-  <span class="kr">const</span> <span class="nx">taquitos</span> <span class="o">=</span> <span class="nx">taquitosActuales</span> <span class="o">+</span> <span class="mi">3</span>
+  <span class="kd">const</span> <span class="nx">taquitos</span> <span class="o">=</span> <span class="nx">taquitosActuales</span> <span class="o">+</span> <span class="mf">3</span>
   <span class="nx">callback</span><span class="p">(</span><span class="nx">taquitos</span><span class="p">)</span> 
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">comprarCincoTaquitos</span><span class="p">(</span><span class="nx">taquitosActuales</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
-  <span class="kr">const</span> <span class="nx">taquitos</span> <span class="o">=</span> <span class="nx">taquitosActuales</span> <span class="o">+</span> <span class="mi">5</span>
+  <span class="kd">const</span> <span class="nx">taquitos</span> <span class="o">=</span> <span class="nx">taquitosActuales</span> <span class="o">+</span> <span class="mf">5</span>
   <span class="nx">callback</span><span class="p">(</span><span class="nx">taquitos</span><span class="p">)</span> 
 <span class="p">}</span>
 
 <span class="c1">// no tengo taquitos :( </span>
-<span class="kd">let</span> <span class="nx">tacos</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kd">let</span> <span class="nx">tacos</span> <span class="o">=</span> <span class="mf">0</span>
 
 <span class="c1">//compro 1 taco</span>
 <span class="nx">comprarTaquito</span><span class="p">(</span><span class="nx">tacos</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">primeraCompra</span><span class="p">){</span>
@@ -748,12 +801,11 @@
   <span class="p">})</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <h3 id="promises">Promises</h3>
 <p>Una <strong>promise</strong> (promesa) es un aobjeto que representa el resultado de una operación asíncrona, como comentamos anteriormente las promesas se basan en <em>callbacks</em> pero mejora la sintaxis. Cuando llamamos a una función implementada con este patrón, dicha función nos retornará inmediatamente una promesa como garantía de que la operación asíncrona finalizara en algún momento, ya sea con éxito o con un fallo. </p>
 <p>Una vez tenemos la promesa debemos usar un pas de callback: uno para el caso en el que todo va bien (resolución de la promesa <strong>resolve</strong>) y otro para el caso en el que hay un fallo (rechazo de la promesa <strong>reject</strong>).</p>
 <p>Sintaxis</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// codigo</span>
   <span class="k">if</span> <span class="p">(</span><span class="cm">/*si todo sale bien*/</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">resolve</span><span class="p">(</span><span class="s2">&quot;Promesa resuelta&quot;</span><span class="p">);</span>
@@ -763,16 +815,15 @@
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
 
     <span class="nx">setTimeout</span><span class="p">(</span>
-        <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">number</span> <span class="o">&gt;</span> <span class="mi">5</span>
+        <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">number</span> <span class="o">&gt;</span> <span class="mf">5</span>
             <span class="o">?</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>
             <span class="o">:</span> <span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Menor a 5&#39;</span><span class="p">)),</span>
-        <span class="mi">1000</span>
+        <span class="mf">1000</span>
     <span class="p">);</span>
 <span class="p">});</span>
 
@@ -780,7 +831,6 @@
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">number</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">))</span>
     <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Una característica interesante de las promesas es que pueden ser encadenadas. Esto es posible gracias a que la llamada .then() también devuelve una promesa. Esta nueva promesa devuelta será resuelta con el valor que retorne el callback de resolución original (el que hemos pasado al primer then()). Con esto evitamos el Callback Hell.</p>
 <p>Para evitar verbosidad, podemos encadenar las promesas de un modo mas corto, empleando el método .catch(rejectCallback) para catpurar cualquier rechazo que ocurra en cualesquiera de las promesas encadenadas. Solo se necesita una única sentencia catch() al final de una cadena de promesas.</p>
 <p>Ejemplo</p>
@@ -792,9 +842,8 @@
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Fetch completado, página mostrada despues de </span><span class="si">${</span><span class="nx">result</span><span class="si">}</span><span class="sb">`</span><span class="p">))</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Error capturado:  </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
 </code></pre></div>
-
 <p>La plantilla típica para crear funciones asíncronas usando promesas es la siguiente:</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">myAsyncFunction</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">myAsyncFunction</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
     <span class="c1">// Carga de la promesa (normalmente tareas asíncronas).</span>
@@ -807,12 +856,11 @@
   <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">checkServer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">checkServer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> 
     <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="sb">`Estado del Servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span> <span class="o">?</span> <span class="s2">&quot;OK&quot;</span> <span class="o">:</span> <span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">))</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="sb">`Estado del Servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mf">200</span> <span class="o">?</span> <span class="s2">&quot;OK&quot;</span> <span class="o">:</span> <span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">))</span>
       <span class="p">.</span><span class="k">catch</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">reject</span><span class="p">(</span><span class="sb">`Error al localizar URL`</span><span class="p">));</span>
   <span class="p">});</span>
 <span class="p">}</span>
@@ -821,15 +869,14 @@
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Es muy frecuente consumir más de una promesa a la vez y habitualmente es deseable que se ejecuten en paralelo. Es decir, lanzamos varias tareas asíncronas al mismo tiempo y recogemos sus correspondientes promesas a la espera de que una, o todas, se resuelvan. Para estos casos contamos con dos herramientas de composición de gran utilidad: Promise.all() y Promise.race().</p>
 <h4 id="promiseall">Promise.all()</h4>
 <p><strong>Promise.all()</strong> acepta un array de promesas y devuelve una nueva promesa cuya resolución se completará con éxito una vez que todas las promesas originales se hayan resuelto satisfactoriamente, o en caso de fallo, será rechazada en cuanto una de las promesas originales sea rechazada. Esta promesa compuesta, además, nos devolverá un array con los resultados de cada una de las promesas originales.</p>
 <p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="mi">1337</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">p3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="mf">1337</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">p3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 
 <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">,</span> <span class="nx">p3</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">values</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -838,15 +885,14 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">reason</span><span class="p">)</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <h4 id="promiserace">Promise.race()</h4>
 <p><strong>Promise.race()</strong> es similar con la diferencia será resuelta tan pronto como se resuelva alguna de las promesas originales, ya sea con éxito o fallo. De ahí el nombre del método, es una competición, la primera en terminar gana.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;uno&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mf">500</span><span class="p">,</span> <span class="s2">&quot;uno&quot;</span><span class="p">);</span>
 <span class="p">});</span>
-<span class="kr">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;dos&quot;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="s2">&quot;dos&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 
 <span class="nb">Promise</span><span class="p">.</span><span class="nx">race</span><span class="p">([</span><span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">]).</span><span class="nx">then</span><span class="p">(</span> <span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -856,40 +902,36 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">reason</span><span class="p">)</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <h3 id="async-await">Async / Await</h3>
 <p>Las promesas supusieron un gran salto en Javascript al introducir una mejora sustancial sobre los callbacks y un manejo más elegante de nuestras tareas asíncronas. Sin embargo, también pueden llegar a ser tediosas. Las funciones <strong>async</strong> y la palabra clave <strong>await</strong> surgieron para simplificar el manejo de las promesas. Son puro azúcar para hacer las promesas más amigables, escribir código más sencillo, reducir el anidamiento y mejorar la trazabilidad al depurar. Pero recuerda, async \ await y las promesas son lo mismo en el fondo.</p>
 <p>La palabra clave <strong>async</strong> declara una función como asíncrona e indica que una promesa será automáticamente devuelta, se añade a las funciones para decirles que devuelvan una promesa en lugar de devolver directamente el valor.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="nx">async</span> <span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;Hello&quot;</span> <span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;Hello&quot;</span> <span class="p">};</span>
 
 <span class="nx">hello</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">));</span>
 </code></pre></div>
-
 <p>La ventaja real de las funciones asincronas aparecen cuando las combinas con la palabra clave <strong>await</strong>, el <em>await</em> debe ser usado siempre dentro de una función declarada como async. </p>
 <p><em>await</em> esperará automáticamente (de forma asíncrona y no bloqueante) a que una promesa se resuelva. <em>await</em> puede ser puesta frente a cualquier funcion async basada en una promesa para pausar tu codigo en esa linea hasta que se cumpla la promesa, entonces retorna el valor resultante. Mientras tanto, otro código que puede estar esperando una oportunidad para ejecutarse, puede hacerlo.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">checkServerWithSugar</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-  <span class="k">return</span> <span class="sb">`Estado del Servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span> <span class="o">?</span> <span class="s2">&quot;OK&quot;</span> <span class="o">:</span> <span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">checkServerWithSugar</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+  <span class="k">return</span> <span class="sb">`Estado del Servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mf">200</span> <span class="o">?</span> <span class="s2">&quot;OK&quot;</span> <span class="o">:</span> <span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nx">checkServerWithSugar</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
 </code></pre></div>
-
 <h4 id="manejo-de-errores">Manejo de errores</h4>
 <p>Si una promesa gestionada por await es rechazada o un error se dispara dentro de la función declarada como async, la promesa que automáticamente devuelve la función async también será rechazada. En este caso, podemos encadenar un .catch() para notificar el error</p>
 <div class="highlight"><pre><span></span><code><span class="nx">checkServerWithSugar</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Error Capturado Fuera de la función async: </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Pero si necesitáramos gestionar estos erroes internamente, en la propia función async, deberemos envolver nuestro código con un try / catch del siguiente modo</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">checkServerWithSugar</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">checkServerWithSugar</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-    <span class="k">return</span> <span class="sb">`Estado del servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span> <span class="o">?</span> <span class="s2">&quot;OK&quot;</span> <span class="o">:</span> <span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+    <span class="k">return</span> <span class="sb">`Estado del servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mf">200</span> <span class="o">?</span> <span class="s2">&quot;OK&quot;</span> <span class="o">:</span> <span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
   <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">throw</span> <span class="sb">`Manejo intero del error. Error original: </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
   <span class="p">}</span>
@@ -899,57 +941,53 @@
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Error Capturado Fuera de la función async: </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
 </code></pre></div>
-
 <h4 id="multiples-awaits">Multiples awaits</h4>
 <p>Presta mucha atención cuando trabajes con múltiples promesas con el operador await. La mayoría de las veces querrás evitar apilar sentencias await, a menos que una dependa de la otra. Apilar múltiples await es equivalente a lanzar una promesa cuando la anterior haya sido resuelta. Es decir, ejecutar las promesas encadenadamente, de forma secuencial. Y esto no siempre es lo deseable.</p>
 <p>Ejemplo de llamadas en serie (el segundo await tiene que esperar a que termine el primero)</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">delay</span> <span class="o">=</span> <span class="nx">time</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolveCallback</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolveCallback</span><span class="p">,</span> <span class="nx">time</span><span class="p">));</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">delay</span> <span class="o">=</span> <span class="nx">time</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolveCallback</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolveCallback</span><span class="p">,</span> <span class="nx">time</span><span class="p">));</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">wait</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
-  <span class="nx">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">wait</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span>
+  <span class="k">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span>
   <span class="k">return</span> <span class="s2">&quot;Ha transcurrido, como mínimo, 1 segundo.&quot;</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="nx">wait</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Sin embargo, podemos hacer una espera en paralelo del siguiente modo:</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">delay</span> <span class="o">=</span> <span class="nx">time</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolveCallback</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolveCallback</span><span class="p">,</span> <span class="nx">time</span><span class="p">));</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">delay</span> <span class="o">=</span> <span class="nx">time</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolveCallback</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolveCallback</span><span class="p">,</span> <span class="nx">time</span><span class="p">));</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">wait</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">d1</span> <span class="o">=</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">d2</span> <span class="o">=</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
-  <span class="nx">await</span> <span class="nx">d1</span><span class="p">;</span>
-  <span class="nx">await</span> <span class="nx">d2</span><span class="p">;</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">wait</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">d1</span> <span class="o">=</span> <span class="nx">delay</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">d2</span> <span class="o">=</span> <span class="nx">delay</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span>
+  <span class="k">await</span> <span class="nx">d1</span><span class="p">;</span>
+  <span class="k">await</span> <span class="nx">d2</span><span class="p">;</span>
   <span class="k">return</span> <span class="s2">&quot;Ha transcurrido, como mínimo, 500ms.&quot;</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="nx">wait</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Ejemplo de usar el valor de un await en la siguente función</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;uno&quot;</span><span class="p">);</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mf">500</span><span class="p">,</span> <span class="s2">&quot;uno&quot;</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">}</span>
 
-<span class="kr">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">texto</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">texto</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">texto</span><span class="si">}</span><span class="sb">, dos`</span><span class="p">);</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">texto</span><span class="si">}</span><span class="sb">, dos`</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">}</span>
 
-<span class="nx">async</span> <span class="kd">function</span> <span class="nx">contarEnTexto</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">p1</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">p2</span><span class="p">(</span><span class="nx">t1</span><span class="p">);</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">contarEnTexto</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">t1</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">p1</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">t2</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">p2</span><span class="p">(</span><span class="nx">t1</span><span class="p">);</span>
   <span class="k">return</span> <span class="nx">t2</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nx">contarEnTexto</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
 </code></pre></div>
-
 <p>Podemos ver un ejemplo de como usarlo en una clase <a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Async_await#asyncawait_class_methods">https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Async_await#asyncawait_class_methods</a></p>
 <h3 id="fetch">fetch</h3>
 <p>En algunos ejemplos anteriores hemos usado la función fetch. Ahora veremos con más detalles para que se usa y su funcionamiento.</p>
@@ -972,7 +1010,6 @@
         <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
     <span class="p">});</span>
 </code></pre></div>
-
 <h4 id="opciones-de-la-peticion">Opciones de la petición</h4>
 <p>A la función <em>fetch(url, options)</em> se le pasa por parámetro la url de la petición y, de forma opcional, un objeto options con opciones de la petición HTTP. En este objeto de opciones podemos definir varios detalles:</p>
 <p>Los valores más usados son:</p>
@@ -997,7 +1034,7 @@
         <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
             <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
         <span class="p">},</span>
-        <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">}),</span>
+        <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="o">:</span> <span class="mf">2</span><span class="p">}),</span>
         <span class="nx">cache</span><span class="o">:</span> <span class="s1">&#39;no-cache&#39;</span>
     <span class="p">})</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
@@ -1010,7 +1047,6 @@
         <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
     <span class="p">});</span>
 </code></pre></div>
-
 <h4 id="propieadades-de-la-respuesta">Propieadades de la respuesta</h4>
 <p>En la función que pasamos a then() vamos a recibir un objeto <strong>Response</strong>. Este objeto contiene la respuesta que hace el servidor y dispone de una serie de propiedades con los valores de esa respuesta y métodos que pueden resultarnos útiles al implementar nuestro código.</p>
 <p>Por el lado de las propiedades, tenemos las siguientes:</p>
@@ -1054,7 +1090,6 @@
         <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
     <span class="p">});</span>
 </code></pre></div>
-
 <p>Es muy común usar las arrow function con el fetch</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/ip&#39;</span><span class="p">)</span>
@@ -1067,14 +1102,13 @@
         <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
     <span class="p">});</span>
 </code></pre></div>
-
 <p>También lo podemos usar con async/await</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span>
     <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;WARN&quot;</span><span class="p">,</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
   <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -1085,7 +1119,6 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
 <hr />
@@ -1125,40 +1158,38 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
-        
-          <a href="../js_dom/" title="JS dom" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        <a href="../js_dom/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              JS dom
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                JS dom
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../js_servidor/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              JS en el servidor
             </div>
-          </a>
-        
-        
-          <a href="../js_servidor/" title="JS en el servidor" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Siguiente
-                </span>
-                JS en el servidor
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1175,19 +1206,13 @@
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
       
     
   </body>

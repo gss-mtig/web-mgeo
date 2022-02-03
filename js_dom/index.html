@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="es" class="no-js">
   <head>
@@ -11,13 +9,14 @@
         <meta name="description" content="Programació web">
       
       
-        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js_dom/">
-      
       
         <meta name="author" content="web-mgeo">
       
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js_dom/">
+      
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
     
     
       
@@ -25,16 +24,20 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -46,7 +49,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,46 +73,53 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Cabecera">
-    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Programació web
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               JS dom
             
           </span>
         </div>
+      </div>
+    </div>
+    <div class="md-header__options">
       
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -111,7 +127,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -121,12 +137,12 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -139,8 +155,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -148,15 +162,21 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Programació web
@@ -164,10 +184,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -181,120 +201,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
-      Introducción al desarrollo Web
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../html/" title="HTML" class="md-nav__link">
-      HTML
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../elementos_html/" title="Elementos HTML" class="md-nav__link">
-      Elementos HTML
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css/" title="CSS" class="md-nav__link">
-      CSS
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css_bbox/" title="CSS el modelo de caja" class="md-nav__link">
-      CSS el modelo de caja
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css_diseno/" title="CSS diseño" class="md-nav__link">
-      CSS diseño
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js/" title="JS" class="md-nav__link">
-      JS
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
-      JS estructuras de control
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
-      JS objetos
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -302,25 +217,162 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion_web/" class="md-nav__link">
+        Introducción al desarrollo Web
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elementos_html/" class="md-nav__link">
+        Elementos HTML
+      </a>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_bbox/" class="md-nav__link">
+        CSS el modelo de caja
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_diseno/" class="md-nav__link">
+        CSS diseño
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        JS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_estructuras/" class="md-nav__link">
+        JS estructuras de control
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_objetos/" class="md-nav__link">
+        JS objetos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JS dom
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         JS dom
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="JS dom" class="md-nav__link md-nav__link--active">
-      JS dom
-    </a>
-    
+      </a>
       
+        
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
@@ -331,7 +383,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#interfaces-esenciales-en-el-dom" class="md-nav__link">
@@ -453,32 +505,39 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_async/" title="JS async" class="md-nav__link">
-      JS async
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_async/" class="md-nav__link">
+        JS async
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
-      JS en el servidor
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_servidor/" class="md-nav__link">
+        JS en el servidor
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -488,7 +547,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -502,7 +562,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#interfaces-esenciales-en-el-dom" class="md-nav__link">
@@ -629,16 +689,13 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                   <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/js_dom.md" title="Editar esta página" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-                
-                
-                  
                 
                 
                 <h1 id="api-del-dom">API del DOM</h1>
@@ -664,7 +721,6 @@
 <span class="c1">// Devuelve una lista de elementos que cumplen con la selección (notación como en CSS)</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;div.note, div.alert&#39;</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Una vez tenemos un elemento seleccionado podemos acceder a sus padres/hijos</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;someid&#39;</span><span class="p">);</span>
 <span class="c1">// Obtener los hijos de un elemento</span>
@@ -673,13 +729,11 @@
 <span class="c1">// Su nodo padre</span>
 <span class="kd">var</span> <span class="nx">padre</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">;</span>
 </code></pre></div>
-
 <h2 id="crear-nuevos-elementos">Crear nuevos elementos</h2>
 <p>Para crear elementos llamamos a <strong>createElement</strong> con el nombre del elemento</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">nuevoH1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">nuevoParrafo</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Para añadir texto a los elementos podemos usar el método createTextNode o también podemos asignar directamente el valor a la propiedad innerHTML</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">nuevoH1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">nuevoParrafo</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
@@ -689,7 +743,6 @@
 <span class="nx">nuevoH1</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">textoH1</span><span class="p">);</span>
 <span class="nx">nuevoParrafo</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;lorem ipsum...&#39;</span><span class="p">;</span>
 </code></pre></div>
-
 <div class="admonition nota">
 <p class="admonition-title">Nota</p>
 <p>Crear un elemento con el createElement no agrega directamente el elemento en nuestra página. Para ello debemos agregarlo a algún otro elemento con el médoto appendChild</p>
@@ -715,7 +768,6 @@
 <span class="c1">// Devuelve true si el elemento contiene esa clase</span>
 <span class="nx">cabecera</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
 </code></pre></div>
-
 <h2 id="manipular-el-estilo">Manipular el estilo</h2>
 <p>Podemos agregar estilos en linea directamente a los elementos</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Tomamos un elemento</span>
@@ -727,7 +779,6 @@
 <span class="nx">cabecera</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="s1">&#39;250px&#39;</span><span class="p">;</span>
 <span class="nx">cabecera</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">textAlign</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">;</span>
 </code></pre></div>
-
 <h2 id="eventos">Eventos</h2>
 <p>Hay tres formas de registrar gestores de eventos para un elemento. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
 <h3 id="atributo-html">Atributo HTML</h3>
@@ -735,26 +786,22 @@
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;alert(&#39;Hello world!&#39;)&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h3 id="propiedades-del-elemento">Propiedades del elemento</h3>
 <p>El problema con este método es que solo se puede establecer un gestor por elemento y por evento.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Se supone que myButton es un elemento de botón</span>
 <span class="nx">myButton</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">);};</span>
 </code></pre></div>
-
 <h3 id="addeventlistener">addEventListener</h3>
 <p>Este es el método que debemos usar preferiblemente en lugar de los otros 2 métodos</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Se supone que myButton es un elemento de botón</span>
 <span class="nx">myButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">);},</span> <span class="kc">false</span><span class="p">);</span>
 </code></pre></div>
-
 <p>La sintaxis más usada es la siguiente <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Se supone que target es un elemento</span>
 <span class="nx">target</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">tipo</span><span class="p">,</span> <span class="nx">funcion</span> <span class="nx">listener</span> <span class="p">[,</span> <span class="nx">opciones</span><span class="p">]</span> <span class="p">);</span>
 </code></pre></div>
-
 <p>Donde <em>tipo</em> es una cadena que representa un tipo de evento a escuchar. Algunos de los eventos más comunes son <em>click</em>, <em>load</em>, <em>change</em>, <em>keypress</em>. Para ver un listado de los eventos ir a <a href="https://developer.mozilla.org/es/docs/Web/Events">https://developer.mozilla.org/es/docs/Web/Events</a></p>
 <p>Donde <em>funcion listener</em> es una función que recibe como parámetro un evento. Si queremos pasar parámetros a la función del listener, debes utilizar funciones anónimas.</p>
 <p>Donde <em>opciones</em> es opcional y puede servir para indicar el <em>useCapture</em> indica que el usuario desea iniciar en evento en la captura o tambíen para especificar las características del evento. </p>
@@ -771,26 +818,22 @@
   <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">modifyText</span><span class="p">(</span><span class="s2">&quot;four&quot;</span><span class="p">)},</span> <span class="kc">false</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="removeeventlistener">removeEventListener</h2>
 <p>Si queremos quitar un evento previamente registrado debemos usar el método <strong>removeEventListener</strong>. La sintaxis es igual a la del <em>addEventListener</em></p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Se supone que myButton es un elemento de botón</span>
 <span class="nx">myButton</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">);},</span> <span class="kc">false</span><span class="p">);</span>
 </code></pre></div>
-
 <h2 id="dispatchevent">dispatchEvent</h2>
 <p>Lanza un evento en el sistema de eventos. El evento está sujeto al mismo comportamiento y capacidades que si fuera un evento de lanzamiento directo.</p>
 <p>La sintaxis es la siguiente</p>
 <div class="highlight"><pre><span></span><code><span class="nx">element</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Event es un objeto de tipo evento.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Se supone que myButton es un elemento de botón</span>
 <span class="nx">myButton</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">Event</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">));</span>
 </code></pre></div>
-
 <h2 id="eventos-personalizados">Eventos personalizados</h2>
 <p>Podemos crear eventos personalizados usando el constructor <strong>Event</strong>.</p>
 <p>Ejemplo</p>
@@ -802,17 +845,15 @@
 <span class="c1">// Disparar event.</span>
 <span class="nx">elem</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
 </code></pre></div>
-
 <h2 id="propagacion-de-eventos">Propagación de eventos</h2>
 <p>Cuando hay dos elementos superpuestos, y ambos tienen asociadas acciones para responder a un mismo evento, surge la duda de en qué orden se ejecutan las acciones. Por defecto el evento se va propagando desde el elemento más interno hacia afuera, hasta alcanzar el elemento más externo (fase <strong>bubble</strong>). Si queremos realizar alguna acción durante las dos fases anteriores deberemos declararlo del siguiente modo: <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Se supone que myButton es un elemento de botón</span>
 <span class="nx">myButton</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">);},</span> <span class="kc">true</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span> 
-<span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#dataSender&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span> 
+<span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#dataSender&#39;</span><span class="p">);</span>
 <span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> 
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;body clicked&#39;</span><span class="p">);</span>
 <span class="p">});</span>
@@ -826,15 +867,14 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;button clicked 2&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p><img alt="Propagación de eventos" src="../img/js_event_capture.png" title="Propagación de eventos" /></p>
 <h3 id="detener-la-propagacion">Detener la propagación</h3>
 <p>En el caso de que queramos detener la propagación del evento en algún punto determinado del DOM podremos emplear los métodos <strong>event.stopPropagation()</strong> o <strong>event.stopImmediatePropagation()</strong></p>
 <p>El <strong>event.stopPropagation()</strong> evita que el evento "suba en burbuja" pero si permite que se ejecuten más eventos asociados a ese elemento.</p>
 <p>Ejemplo. En este caso se ejecutarian el <em>button clicked</em> y el <em>button clicked 2</em></p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span> 
-<span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#dataSender&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span> 
+<span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#dataSender&#39;</span><span class="p">);</span>
 <span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> 
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;body clicked&#39;</span><span class="p">);</span>
 <span class="p">});</span>
@@ -849,12 +889,11 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;button clicked 2&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p>Sin embargo si queremos prevenir que se ejecuten otros eventos asociados al mismo elemento podemos emplear el método <strong>event.stopImmediatePropagation()</strong>.</p>
 <p>Ejemplo. En este caso sólo se ejecutarian el <em>button clicked</em></p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span> 
-<span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#dataSender&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span> 
+<span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#dataSender&#39;</span><span class="p">);</span>
 <span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> 
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;body clicked&#39;</span><span class="p">);</span>
 <span class="p">});</span>
@@ -869,72 +908,67 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;button clicked 2&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p>Otro método común es el <strong>event.preventDefault()</strong> que se usa para evitar que el navegador ejecute el comportamiento por defecto del evento recibido. El caso más común es en los elementos de enlaces <code>&lt;a&gt;</code> cuando queremos usarlos como botones en vez de como enlaces.</p>
 <p>Ejemplo. Prevenir que el navegador vaya hacia la url del enlace cuando el usuario haga click sobre él</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myLink&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myLink&#39;</span><span class="p">);</span>
 <span class="nx">link</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
   <span class="c1">// do something cool</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p>A continuación vamos a modificar nuestro archivo <strong>script.js</strong> que se encuentra dentro de la carpeta <em>js</em> para agregar alguna funcionalidad a nuestra calculadora</p>
 <ol>
 <li>
 <p>Agregar un evento click al botón de tranformar coordenadas</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Crear una función para transformar coordenadas</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="hll"><span class="kr">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="hll"><span class="kd">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span><span class="hll">
 </span><span class="hll">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Tranformar la coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> del </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> al </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 </span><span class="hll">
 </span><span class="hll"><span class="p">}</span>
 </span></code></pre></div>
-
 </li>
 <li>
 <p>Llamar a la función <em>transformarCoordenadas</em> cuando se hace click en el botón</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
-<span class="hll">    <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="s2">&quot;EPSG:25831&quot;</span><span class="p">);</span>
+<span class="hll">    <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="s2">&quot;EPSG:25831&quot;</span><span class="p">);</span>
 </span><span class="p">});</span>
 
-<span class="kr">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Tranformar la coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> del </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> al </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 
 <span class="p">}</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Leer el valor del sistema de referencia de origen seleccionado</p>
-<p><div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<p><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
-<span class="hll">    <span class="kr">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-</span><span class="hll">    <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:25831&quot;</span><span class="p">);</span>
+<span class="hll">    <span class="kd">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+</span><span class="hll">    <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:25831&quot;</span><span class="p">);</span>
 </span><span class="p">});</span>
 
-<span class="kr">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Tranformar la coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> del </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> al </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 
@@ -1013,26 +1047,24 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Mostrar la repuesta de la transformación</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:25831&quot;</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:25831&quot;</span><span class="p">);</span>
 <span class="hll">    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;respuesta&quot;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">coordTransformada</span><span class="p">;</span>
 </span><span class="p">});</span>
 
-<span class="kr">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
 <span class="hll">    <span class="k">return</span> <span class="sb">`Tranformar la coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> del </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> al </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 </span>
 <span class="p">}</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar los archivos modificados y recargar la página. Al presionar el botón de <em>Transformar coordenadas</em> debemos ver que nos aparece el texto con el valor del SRS de origen seleccionado.</p>
@@ -1112,28 +1144,26 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Utilizar la librería de proj4 para transformar coordenadas al EPSG:3857</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="hll">    <span class="kr">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:3857&quot;</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="hll">    <span class="kd">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:3857&quot;</span><span class="p">);</span>
 </span>    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;respuesta&quot;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">coordTransformada</span><span class="p">;</span>
 <span class="p">});</span>
 
-<span class="kr">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
-<span class="hll">    <span class="kr">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">proj4</span><span class="p">(</span><span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">,</span> <span class="p">[</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">lat</span><span class="p">]);</span>
+<span class="hll">    <span class="kd">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">proj4</span><span class="p">(</span><span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">,</span> <span class="p">[</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">lat</span><span class="p">]);</span>
 </span>
-<span class="hll">    <span class="k">return</span> <span class="sb">`La coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> corresponde a la coordenada </span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb"> `</span><span class="p">;</span>
+<span class="hll">    <span class="k">return</span> <span class="sb">`La coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> corresponde a la coordenada </span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb"> `</span><span class="p">;</span>
 </span>
 <span class="p">}</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Recargar la página y seleccionar como origen el EPSG:4326 y presionar el botón de Transformar coordenadas. Nos debe aparecer el texto con la coordenada transformada. Si seleccionamos otro SRS de origen nos dará un error. Esto es debido a la librería proj4 no tiene definidos todos los SRS.</p>
@@ -1146,24 +1176,23 @@
 <p>Definir un nuevo SRS. Para encontrar la definición de un SRS podemos ir a <a href="https://epsg.io/">https://epsg.io/</a> y buscar el SRS que queremos definir (Ej. <a href="https://epsg.io/25831">https://epsg.io/25831</a>). Vamos al apartado de <strong>Export</strong> de la página y seleccionamos la opción de Proj4js. Copiamos el texto y lo agregamos a nuestra aplicación.</p>
 <div class="highlight"><pre><span></span><code><span class="hll"><span class="nx">proj4</span><span class="p">.</span><span class="nx">defs</span><span class="p">(</span><span class="s2">&quot;EPSG:25831&quot;</span><span class="p">,</span><span class="s2">&quot;+proj=utm +zone=31 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs&quot;</span><span class="p">);</span>
 </span>
-<span class="kr">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">btnTransformar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.btn-tranformar&quot;</span><span class="p">);</span>
 
 <span class="nx">btnTransformar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Transformar coordenadas&quot;</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:3857&quot;</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">srs_origen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;origen&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">transformarCoordenadas</span><span class="p">(</span><span class="mf">41.5</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">srs_origen</span><span class="p">,</span> <span class="s2">&quot;EPSG:3857&quot;</span><span class="p">);</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;respuesta&quot;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">coordTransformada</span><span class="p">;</span>
 <span class="p">});</span>
 
-<span class="kr">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">transformarCoordenadas</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">lon</span><span class="p">,</span> <span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
-    <span class="kr">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">proj4</span><span class="p">(</span><span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">,</span> <span class="p">[</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">lat</span><span class="p">]);</span>
+    <span class="kd">const</span> <span class="nx">coordTransformada</span> <span class="o">=</span> <span class="nx">proj4</span><span class="p">(</span><span class="nx">epsg_in</span><span class="p">,</span> <span class="nx">epsg_out</span><span class="p">,</span> <span class="p">[</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">lat</span><span class="p">]);</span>
 
-    <span class="k">return</span> <span class="sb">`La coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> corresponde a la coordenada </span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb"> `</span><span class="p">;</span>
+    <span class="k">return</span> <span class="sb">`La coordenada </span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_in</span><span class="si">}</span><span class="sb"> corresponde a la coordenada </span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">coordTransformada</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="si">}</span><span class="sb"> en </span><span class="si">${</span><span class="nx">epsg_out</span><span class="si">}</span><span class="sb"> `</span><span class="p">;</span>
 
 <span class="p">}</span>
 </code></pre></div>
-
 </li>
 </ol>
 <div class="admonition question">
@@ -1175,6 +1204,8 @@
 <li>Validar que el SRS de origen no sea igual al SRS de destino. En el caso de ser iguales mostrar un mensaje al usuario. El mensaje de error se debe mostrar en un nuevo div. En el caso de ser diferentes ocultar el div con el mensaje de error. <strong>0.5 pt</strong></li>
 <li>Agregar a la tabla un nuevo campo en la columna de origin del tipo textarea donde el usuario podra poner multiples coordenadas de origen separadas por <strong>";"</strong> (punto y comar) por Ejemplo <em>45.34,1.25;41.78,2.456</em>. Al presionar el botón de transformar coordenadas validar si el nuevo campo tiene valores tambien realizar la transformación de estos valores y retornarlos en la respuesta. <strong>0.5 pt</strong></li>
 </ol>
+<p>El resultado debe ser algo como esto
+<img alt="Calculadora con funcionalidad" src="../img/calculadora-js.png" title="Calculadora con funcionalidad" /></p>
 </div>
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
@@ -1212,40 +1243,38 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
-        
-          <a href="../js_objetos/" title="JS objetos" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        <a href="../js_objetos/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              JS objetos
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                JS objetos
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../js_async/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              JS async
             </div>
-          </a>
-        
-        
-          <a href="../js_async/" title="JS async" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Siguiente
-                </span>
-                JS async
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1262,19 +1291,13 @@
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
       
     
   </body>

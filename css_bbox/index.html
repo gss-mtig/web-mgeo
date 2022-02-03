@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="es" class="no-js">
   <head>
@@ -11,13 +9,14 @@
         <meta name="description" content="Programació web">
       
       
-        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/css_bbox/">
-      
       
         <meta name="author" content="web-mgeo">
       
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/css_bbox/">
+      
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
     
     
       
@@ -25,16 +24,20 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -46,7 +49,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,46 +73,53 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Cabecera">
-    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header-nav__button md-logo" aria-label="Programació web">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-header__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Programació web
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               CSS el modelo de caja
             
           </span>
         </div>
+      </div>
+    </div>
+    <div class="md-header__options">
       
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -111,7 +127,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -121,12 +137,12 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -139,8 +155,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -148,15 +162,21 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://gss-mtig.github.io/web-mgeo/" title="Programació web" class="md-nav__button md-logo" aria-label="Programació web">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Programació web
@@ -164,10 +184,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source">
+<a href="https://github.com/gss-mtig/web-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -181,60 +201,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../introduccion_web/" title="Introducción al desarrollo Web" class="md-nav__link">
-      Introducción al desarrollo Web
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../html/" title="HTML" class="md-nav__link">
-      HTML
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../elementos_html/" title="Elementos HTML" class="md-nav__link">
-      Elementos HTML
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../css/" title="CSS" class="md-nav__link">
-      CSS
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -242,25 +217,87 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion_web/" class="md-nav__link">
+        Introducción al desarrollo Web
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elementos_html/" class="md-nav__link">
+        Elementos HTML
+      </a>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CSS el modelo de caja
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CSS el modelo de caja
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="CSS el modelo de caja" class="md-nav__link md-nav__link--active">
-      CSS el modelo de caja
-    </a>
-    
+      </a>
       
+        
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
@@ -271,7 +308,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#partes-de-una-caja" class="md-nav__link">
@@ -419,92 +456,114 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../css_diseno/" title="CSS diseño" class="md-nav__link">
-      CSS diseño
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js/" title="JS" class="md-nav__link">
-      JS
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_diseno/" class="md-nav__link">
+        CSS diseño
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_estructuras/" title="JS estructuras de control" class="md-nav__link">
-      JS estructuras de control
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_objetos/" title="JS objetos" class="md-nav__link">
-      JS objetos
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js/" class="md-nav__link">
+        JS
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../js_dom/" title="JS dom" class="md-nav__link">
-      JS dom
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../js_async/" title="JS async" class="md-nav__link">
-      JS async
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_estructuras/" class="md-nav__link">
+        JS estructuras de control
+      </a>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_objetos/" class="md-nav__link">
+        JS objetos
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../js_servidor/" title="JS en el servidor" class="md-nav__link">
-      JS en el servidor
-    </a>
-  </li>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_dom/" class="md-nav__link">
+        JS dom
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_async/" class="md-nav__link">
+        JS async
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_servidor/" class="md-nav__link">
+        JS en el servidor
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -514,7 +573,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -528,7 +588,7 @@
       <span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#partes-de-una-caja" class="md-nav__link">
@@ -681,16 +741,13 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                   <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/css_bbox.md" title="Editar esta página" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-                
-                
-                  
                 
                 
                 <h1 id="css-el-modelo-de-caja">CSS el modelo de caja</h1>
@@ -725,7 +782,6 @@
   <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
 <span class="p">}</span>  
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Soy un párrafo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item One<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -734,7 +790,6 @@
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Otro párrafo. Algunas <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;block&quot;</span><span class="p">&gt;</span>palabras<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> están contenidas en <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>elementos de tipo span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> tanto en linea como en bloque.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Hay un valor especial de <strong>display: inline-block</strong> que proporciona un punto medio entre <em>inline</em> y <em>block</em>. Esto es útil para situaciones en las que no deseas que un elemento fuerce un salto de línea, pero sí deseas que se respeten las propiedades width y height para evitar superposiciones. Esto puede ser útil cuando deseas dar a un enlace un área de impacto más grande añadiendo padding. <code>&lt;a&gt;</code> es un elemento en línea como <code>&lt;span&gt;</code>; puedes usar <em>display: inline-block</em> para configurar el área de relleno para facilitar al usuario hacer clic en el enlace.</p>
 <h2 id="partes-de-una-caja">Partes de una caja</h2>
 <ul>
@@ -755,7 +810,6 @@
   <span class="k">border</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.</p>
 <p><img alt="Modelo de cajas estándar" src="../img/standard-box-model.png" title="Modelo de cajas estándar" /></p>
 <h3 id="el-modelo-de-cajas-alternativo">El modelo de cajas alternativo</h3>
@@ -772,7 +826,6 @@
   <span class="k">border</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Si quieres que todos tus elementos usen el modelo de cajas alternativo (opción común entre los desarrolladores) debes establecer la propiedad box-sizing en el elemento <code>&lt;html&gt;</code>. Luego debes configurar todos los demás elementos para que hereden ese valor, como se ve en el fragmento de código siguiente.</p>
 <p>Ejemplo</p>
 <div class="highlight"><pre><span></span><code><span class="nt">html</span> <span class="p">{</span>
@@ -782,7 +835,6 @@
   <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="margenes-rellenos-y-bordes">Márgenes, rellenos y bordes</h2>
 <h3 id="margen">Margen</h3>
 <p>El margen es un espacio invisible que hay alrededor de la caja. Aleja el resto de elementos de la caja. Los márgenes pueden tener valores positivos o negativos. Establecer un margen negativo para un lado de tu caja puede hacer que se superponga con otros elementos de la página. Tanto si utilizas el modelo de cajas estándar como el alternativo, el margen siempre se añade después de haber calculado el tamaño de la caja que se ve.</p>
@@ -804,22 +856,20 @@
   <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#333333</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>El redondeo de esquinas en una caja se logra mediante el uso de la propiedad <strong>border-radius</strong> y otras propiedades asociadas que se relacionan con cada esquina de la caja. Como valor pueden usarse dos longitudes o porcentajes: el primer valor define el radio horizontal y el segundo el radio vertical. En muchos casos, solo se pondrá un valor, que se utilizará para ambos.</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">box</span> <span class="p">{</span> 
   <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span> 
 <span class="p">}</span>
 </code></pre></div>
-
 <ol>
 <li>
 <p>Modificar el archivo <strong>estilos.css</strong> para agregar un borde al elemento aside</p>
 <div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
-    <span class="err">--</span><span class="n">light-blue</span><span class="p">:</span> <span class="mh">#8ecae6</span><span class="n">ff</span><span class="p">;</span>
-    <span class="err">--</span><span class="n">blue-green</span><span class="p">:</span> <span class="mh">#219ebc</span><span class="n">ff</span><span class="p">;</span>
-    <span class="err">--</span><span class="n">prussian-blue</span><span class="p">:</span> <span class="mh">#023047</span><span class="n">ff</span><span class="p">;</span>
-    <span class="err">--</span><span class="n">honey-yellow</span><span class="p">:</span> <span class="mh">#ffb703</span><span class="n">ff</span><span class="p">;</span>
-    <span class="err">--</span><span class="n">orange</span><span class="p">:</span> <span class="mh">#fb8500</span><span class="n">ff</span><span class="p">;</span>
+    <span class="nv">--light-blue</span><span class="p">:</span> <span class="mh">#8ecae6</span><span class="n">ff</span><span class="p">;</span>
+    <span class="nv">--blue-green</span><span class="p">:</span> <span class="mh">#219ebc</span><span class="n">ff</span><span class="p">;</span>
+    <span class="nv">--prussian-blue</span><span class="p">:</span> <span class="mh">#023047</span><span class="n">ff</span><span class="p">;</span>
+    <span class="nv">--honey-yellow</span><span class="p">:</span> <span class="mh">#ffb703</span><span class="n">ff</span><span class="p">;</span>
+    <span class="nv">--orange</span><span class="p">:</span> <span class="mh">#fb8500</span><span class="n">ff</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">html</span> <span class="p">{</span>
@@ -827,35 +877,34 @@
 <span class="p">}</span>
 
 <span class="nt">header</span> <span class="p">{</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--light-blue</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nt">header</span> <span class="o">&gt;</span> <span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--prussian-blue</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nt">footer</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">blue</span><span class="o">-</span><span class="kc">green</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--blue-green</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="p">#</span><span class="nn">origen</span><span class="o">,</span> <span class="p">#</span><span class="nn">destino</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--orange</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="hll"><span class="nt">aside</span> <span class="p">{</span>
-</span><span class="hll">    <span class="k">border-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+</span><span class="hll">    <span class="k">border-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--prussian-blue</span><span class="p">);</span>
 </span><span class="hll"><span class="p">}</span>
 </span>
 <span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">honey</span><span class="o">-</span><span class="kc">yellow</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--honey-yellow</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="p">.</span><span class="nc">btn-tranformar</span> <span class="p">{</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">orange</span><span class="p">);</span>
-    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">prussian</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--orange</span><span class="p">);</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="nv">--prussian-blue</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>Guardar y recargar la página para ver los cambios.</p>
@@ -876,7 +925,6 @@
   <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">105</span><span class="kt">deg</span><span class="p">,</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">.2</span><span class="p">)</span> <span class="mi">39</span><span class="kt">%</span><span class="p">,</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">51</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="mi">96</span><span class="kt">%</span><span class="p">)</span> <span class="kc">center</span> <span class="kc">center</span> <span class="o">/</span> <span class="mi">400</span><span class="kt">px</span> <span class="mi">200</span><span class="kt">px</span> <span class="kc">no-repeat</span><span class="p">,</span> <span class="nb">url</span><span class="p">(</span><span class="sx">big-star.png</span><span class="p">)</span> <span class="kc">center</span> <span class="kc">no-repeat</span><span class="p">,</span> <span class="kc">rebeccapurple</span><span class="p">;</span> 
 <span class="p">}</span> 
 </code></pre></div>
-
 <p>Demos un vistazo a las diferentes cosas que puedes hacer con los fondos en CSS, a partir de observar las propiedades de fondo individuales.</p>
 <h3 id="colores-de-fondo">Colores de fondo</h3>
 <p>La propiedad <strong>background-color</strong> define el color de fondo de cualquier elemento en CSS. La propiedad admite cualquier color válido. Un color de fondo se extiende por debajo del contenido y el relleno del elemento.</p>
@@ -893,13 +941,11 @@
   <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">.5</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Titulo con color de fondo<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cambiar el <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>color<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> de fondo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h3 id="imagenes-de-fondo">Imágenes de fondo</h3>
 <p>La propiedad <strong>background-image</strong> permite visualizar una imagen de fondo en un elemento. De forma predeterminada, si la imagen es mas grande que la caja que la contiene no se reduce para ajustarse a la caja, por lo que solo vemos una parte de esta, mientras que una imagen mas pequeña que la caja que la contiene aparece repetida en forma de mosaico hasta llenar la caja.</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
@@ -915,13 +961,11 @@
   <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;wrapper&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box a&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box b&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h4 id="controlar-el-comportamiento-de-la-imagen-de-fondo">Controlar el comportamiento de la imagen de fondo</h4>
 <p>La propiedad <strong>background-repeat</strong> se usa para controlar el comportamiento de tipo mosaico de las imágenes. Los valores disponibles son:</p>
 <ul>
@@ -935,7 +979,6 @@
   <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h4 id="dimensionar-la-imagen-de-fondo">Dimensionar la imagen de fondo</h4>
 <p>La propiedad <strong>background-size</strong>, que puede tomar valores de longitud o porcentaje, para ajustar el tamaño de la imagen para que quepa dentro del fondo.</p>
 <p>También puedes utilizar palabras clave:</p>
@@ -948,7 +991,6 @@
   <span class="k">background-size</span><span class="p">:</span> <span class="kc">cover</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h4 id="posicionar-la-imagen-de-fondo">Posicionar la imagen de fondo</h4>
 <p>La propiedad <strong>background-position</strong> te permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es (0,0) valor por defecto, y la caja se coloca sobre los ejes horizontal (x) y vertical (y).</p>
 <p>Como valores puedes usar palabras clave como <em>top</em> y <em>right</em> y también longitudes y porcentajes o una combinación de ambos</p>
@@ -958,7 +1000,6 @@
   <span class="k">background-position</span><span class="p">:</span> <span class="kc">center</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Por último, también puedes usar una sintaxis de 4 valores para indicar una distancia desde ciertos bordes del cuadro: la unidad de longitud en este caso es un desplazamiento del valor que la precede. Entonces, en el CSS siguiente, colocamos el fondo a 20 px desde la parte superior y a 10 px desde la derecha</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">b</span> <span class="p">{</span>
   <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png</span><span class="p">);</span>
@@ -966,7 +1007,6 @@
   <span class="k">background-position</span><span class="p">:</span> <span class="kc">top</span> <span class="mi">20</span><span class="kt">px</span> <span class="kc">right</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h4 id="multiples-imagenes-de-fondo">Múltiples imágenes de fondo</h4>
 <p>También es posible poner múltiples imágenes de fondo: puedes especificar múltiples valores <strong>background-image</strong> para un solo atributo, separados cada uno por una coma.</p>
 <p>Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los fondos se superponen con la última imagen de fondo que hay en la parte inferior de la lista, y cada imagen anterior se apila encima de la que sigue en el código.</p>
@@ -975,7 +1015,6 @@
 <span class="nt">background-repeat</span><span class="o">:</span> <span class="nt">no-repeat</span><span class="o">,</span> <span class="nt">repeat-x</span><span class="o">,</span> <span class="nt">repeat</span><span class="o">;</span>
 <span class="nt">background-position</span><span class="o">:</span> <span class="nt">10px</span> <span class="nt">20px</span><span class="o">,</span>  <span class="nt">top</span> <span class="nt">right</span><span class="o">;</span>
 </code></pre></div>
-
 <p>Ejemplo </p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">b</span> <span class="p">{</span>
   <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png</span><span class="p">),</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://mdn.github.io/css-examples/learn/backgrounds-borders/big-star.png</span><span class="p">);</span>
@@ -983,7 +1022,6 @@
   <span class="k">background-position</span><span class="p">:</span> <span class="kc">top</span> <span class="mi">20</span><span class="kt">px</span> <span class="kc">right</span> <span class="mi">10</span><span class="kt">px</span><span class="p">,</span> <span class="kc">center</span> <span class="kc">center</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h4 id="degradados-de-fondo">Degradados de fondo</h4>
 <p>Un degradado, cuando se usa para un fondo, actúa como una imagen y también se establece usando la propiedad <strong>background-image</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">a</span> <span class="p">{</span>
@@ -995,7 +1033,6 @@
   <span class="k">background-size</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
 <hr />
@@ -1020,40 +1057,38 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
-        
-          <a href="../css/" title="CSS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        <a href="../css/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              CSS
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                CSS
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../css_diseno/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              CSS diseño
             </div>
-          </a>
-        
-        
-          <a href="../css_diseno/" title="CSS diseño" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Siguiente
-                </span>
-                CSS diseño
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1070,19 +1105,13 @@
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
       
     
   </body>
