@@ -104,6 +104,10 @@ Para ver más detalle del modelo de Grid visitar https://developer.mozilla.org/e
 
 También podéis practicar los estilos de Grid con este juego https://cssgridgarden.com/
 
+## Ejemplos de diseños (Layouts)
+
+https://1linelayouts.glitch.me/
+
 ## Maquetar nuestra calculadora usando flexbox
 
 1. Modificar el archivo **estilo.css** para agregar el modelo de flexbox

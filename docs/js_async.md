@@ -124,7 +124,7 @@ comprarTaquito(tacos, function(primeraCompra){
 
 ### Promises
 
-Una **promise** (promesa) es un aobjeto que representa el resultado de una operación asíncrona, como comentamos anteriormente las promesas se basan en *callbacks* pero mejora la sintaxis. Cuando llamamos a una función implementada con este patrón, dicha función nos retornará inmediatamente una promesa como garantía de que la operación asíncrona finalizara en algún momento, ya sea con éxito o con un fallo. 
+Una **promise** (promesa) es un objeto que representa el resultado de una operación asíncrona, como comentamos anteriormente las promesas se basan en *callbacks* pero mejora la sintaxis. Cuando llamamos a una función implementada con este patrón, dicha función nos retornará inmediatamente una promesa como garantía de que la operación asíncrona finalizara en algún momento, ya sea con éxito o con un fallo. 
 
 Una vez tenemos la promesa debemos usar un pas de callback: uno para el caso en el que todo va bien (resolución de la promesa **resolve**) y otro para el caso en el que hay un fallo (rechazo de la promesa **reject**).
 
