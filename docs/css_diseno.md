@@ -373,6 +373,13 @@ https://1linelayouts.glitch.me/
     El resultado debe ser algo como esto
     ![Calculadora con estilo](img/calculadora-css.png "Calculadora con estilo")
 
+## Recursos
+
+* https://github.com/eludadev/css-docs
+* https://layout.bradwoods.io/customize
+* https://internetingishard.netlify.app/
+
+
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout

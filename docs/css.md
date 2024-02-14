@@ -249,6 +249,8 @@ Esta regla afectaría a los elementos como los siguientes.
 
 ## Tipos de Selectores avanzados
 
+Guia visual de selectores: [CSS Selectors: A Visual Guide](https://fffuel.co/css-selectors/)
+
 ### Selector de atributo
 
 Este grupo de selectores te proporciona diferentes formas de seleccionar elementos según la presencia de un atributo determinado en un elemento. O incluso hacer una selección basada en la presencia de un atributo que tiene un valor particular asignado.
@@ -384,7 +386,7 @@ div + p {
 
 Esta regla afectaría a los elementos que aparecen marcados en amarillo.
 
-``` html hl_lines="7"
+``` html hl_lines="8"
 <p>Yo no estoy afectado hermano</p>
 <div>
     <p>No Afectado por el estilo<p>
