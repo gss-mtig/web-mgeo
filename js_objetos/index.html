@@ -14,8 +14,15 @@
       
         <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js_objetos/">
       
+      
+        <link rel="prev" href="../js_estructuras/">
+      
+      
+        <link rel="next" href="../js_dom/">
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
@@ -23,15 +30,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
-        
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -53,14 +59,11 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -80,7 +83,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="Programació web" class="md-header__button md-logo" aria-label="Programació web" data-md-component="logo">
       
@@ -89,6 +94,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -111,6 +117,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -119,12 +126,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -136,7 +146,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -148,7 +158,7 @@
         <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -178,6 +188,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Programació web" class="md-nav__button md-logo" aria-label="Programació web" data-md-component="logo">
@@ -193,7 +204,7 @@
       <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -205,14 +216,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Home
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
     </li>
   
@@ -220,14 +235,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../introduccion_web/" class="md-nav__link">
-        Introducción al desarrollo Web
+        
+  
+  <span class="md-ellipsis">
+    Introducción al desarrollo Web
+  </span>
+  
+
       </a>
     </li>
   
@@ -235,14 +254,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../html/" class="md-nav__link">
-        HTML
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
       </a>
     </li>
   
@@ -250,14 +273,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../elementos_html/" class="md-nav__link">
-        Elementos HTML
+        
+  
+  <span class="md-ellipsis">
+    Elementos HTML
+  </span>
+  
+
       </a>
     </li>
   
@@ -265,14 +292,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../css/" class="md-nav__link">
-        CSS
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
       </a>
     </li>
   
@@ -280,14 +311,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../css_bbox/" class="md-nav__link">
-        CSS el modelo de caja
+        
+  
+  <span class="md-ellipsis">
+    CSS el modelo de caja
+  </span>
+  
+
       </a>
     </li>
   
@@ -295,14 +330,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../css_diseno/" class="md-nav__link">
-        CSS diseño
+        
+  
+  <span class="md-ellipsis">
+    CSS diseño
+  </span>
+  
+
       </a>
     </li>
   
@@ -310,14 +349,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../js/" class="md-nav__link">
-        JS
+        
+  
+  <span class="md-ellipsis">
+    JS
+  </span>
+  
+
       </a>
     </li>
   
@@ -325,14 +368,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../js_estructuras/" class="md-nav__link">
-        JS estructuras de control
+        
+  
+  <span class="md-ellipsis">
+    JS estructuras de control
+  </span>
+  
+
       </a>
     </li>
   
@@ -340,8 +387,6 @@
     
       
       
-      
-
   
   
     
@@ -349,19 +394,31 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          JS objetos
+          
+  
+  <span class="md-ellipsis">
+    JS objetos
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        JS objetos
+        
+  
+  <span class="md-ellipsis">
+    JS objetos
+  </span>
+  
+
       </a>
       
         
@@ -381,35 +438,45 @@
       
         <li class="md-nav__item">
   <a href="#iniciador-de-objeto" class="md-nav__link">
-    Iniciador de objeto
+    <span class="md-ellipsis">
+      Iniciador de objeto
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#funcion-constructora" class="md-nav__link">
-    Función constructora
+    <span class="md-ellipsis">
+      Función constructora
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#acceder-a-las-propiedades" class="md-nav__link">
-    Acceder a las propiedades
+    <span class="md-ellipsis">
+      Acceder a las propiedades
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#modificar-o-crear-propiedades" class="md-nav__link">
-    Modificar o crear propiedades
+    <span class="md-ellipsis">
+      Modificar o crear propiedades
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#clases" class="md-nav__link">
-    Clases
+    <span class="md-ellipsis">
+      Clases
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Clases">
@@ -417,28 +484,36 @@
         
           <li class="md-nav__item">
   <a href="#declaracion-de-clases" class="md-nav__link">
-    Declaración de clases
+    <span class="md-ellipsis">
+      Declaración de clases
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#cuerpo-de-la-clase-y-definicion-de-metodos" class="md-nav__link">
-    Cuerpo de la clase y definición de métodos
+    <span class="md-ellipsis">
+      Cuerpo de la clase y definición de métodos
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#subclases" class="md-nav__link">
-    Subclases
+    <span class="md-ellipsis">
+      Subclases
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#superclases" class="md-nav__link">
-    Súperclases
+    <span class="md-ellipsis">
+      Súperclases
+    </span>
   </a>
   
 </li>
@@ -450,7 +525,9 @@
       
         <li class="md-nav__item">
   <a href="#trabajar-con-matrices" class="md-nav__link">
-    Trabajar con Matrices
+    <span class="md-ellipsis">
+      Trabajar con Matrices
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Trabajar con Matrices">
@@ -458,14 +535,18 @@
         
           <li class="md-nav__item">
   <a href="#agregar-y-eliminar-elementos-de-la-matriz" class="md-nav__link">
-    Agregar y eliminar elementos de la matriz
+    <span class="md-ellipsis">
+      Agregar y eliminar elementos de la matriz
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#operadores-de-matrices" class="md-nav__link">
-    Operadores de matrices
+    <span class="md-ellipsis">
+      Operadores de matrices
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Operadores de matrices">
@@ -473,28 +554,36 @@
         
           <li class="md-nav__item">
   <a href="#foreach" class="md-nav__link">
-    forEach
+    <span class="md-ellipsis">
+      forEach
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#map" class="md-nav__link">
-    map
+    <span class="md-ellipsis">
+      map
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#filter" class="md-nav__link">
-    filter
+    <span class="md-ellipsis">
+      filter
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#reduce" class="md-nav__link">
-    reduce
+    <span class="md-ellipsis">
+      reduce
+    </span>
   </a>
   
 </li>
@@ -511,7 +600,9 @@
       
         <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
-    Referencias
+    <span class="md-ellipsis">
+      Referencias
+    </span>
   </a>
   
 </li>
@@ -526,14 +617,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../js_dom/" class="md-nav__link">
-        JS dom
+        
+  
+  <span class="md-ellipsis">
+    JS dom
+  </span>
+  
+
       </a>
     </li>
   
@@ -541,14 +636,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../js_async/" class="md-nav__link">
-        JS async
+        
+  
+  <span class="md-ellipsis">
+    JS async
+  </span>
+  
+
       </a>
     </li>
   
@@ -556,14 +655,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../js_servidor/" class="md-nav__link">
-        JS en el servidor
+        
+  
+  <span class="md-ellipsis">
+    JS en el servidor
+  </span>
+  
+
       </a>
     </li>
   
@@ -597,35 +700,45 @@
       
         <li class="md-nav__item">
   <a href="#iniciador-de-objeto" class="md-nav__link">
-    Iniciador de objeto
+    <span class="md-ellipsis">
+      Iniciador de objeto
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#funcion-constructora" class="md-nav__link">
-    Función constructora
+    <span class="md-ellipsis">
+      Función constructora
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#acceder-a-las-propiedades" class="md-nav__link">
-    Acceder a las propiedades
+    <span class="md-ellipsis">
+      Acceder a las propiedades
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#modificar-o-crear-propiedades" class="md-nav__link">
-    Modificar o crear propiedades
+    <span class="md-ellipsis">
+      Modificar o crear propiedades
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#clases" class="md-nav__link">
-    Clases
+    <span class="md-ellipsis">
+      Clases
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Clases">
@@ -633,28 +746,36 @@
         
           <li class="md-nav__item">
   <a href="#declaracion-de-clases" class="md-nav__link">
-    Declaración de clases
+    <span class="md-ellipsis">
+      Declaración de clases
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#cuerpo-de-la-clase-y-definicion-de-metodos" class="md-nav__link">
-    Cuerpo de la clase y definición de métodos
+    <span class="md-ellipsis">
+      Cuerpo de la clase y definición de métodos
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#subclases" class="md-nav__link">
-    Subclases
+    <span class="md-ellipsis">
+      Subclases
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#superclases" class="md-nav__link">
-    Súperclases
+    <span class="md-ellipsis">
+      Súperclases
+    </span>
   </a>
   
 </li>
@@ -666,7 +787,9 @@
       
         <li class="md-nav__item">
   <a href="#trabajar-con-matrices" class="md-nav__link">
-    Trabajar con Matrices
+    <span class="md-ellipsis">
+      Trabajar con Matrices
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Trabajar con Matrices">
@@ -674,14 +797,18 @@
         
           <li class="md-nav__item">
   <a href="#agregar-y-eliminar-elementos-de-la-matriz" class="md-nav__link">
-    Agregar y eliminar elementos de la matriz
+    <span class="md-ellipsis">
+      Agregar y eliminar elementos de la matriz
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#operadores-de-matrices" class="md-nav__link">
-    Operadores de matrices
+    <span class="md-ellipsis">
+      Operadores de matrices
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Operadores de matrices">
@@ -689,28 +816,36 @@
         
           <li class="md-nav__item">
   <a href="#foreach" class="md-nav__link">
-    forEach
+    <span class="md-ellipsis">
+      forEach
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#map" class="md-nav__link">
-    map
+    <span class="md-ellipsis">
+      map
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#filter" class="md-nav__link">
-    filter
+    <span class="md-ellipsis">
+      filter
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#reduce" class="md-nav__link">
-    reduce
+    <span class="md-ellipsis">
+      reduce
+    </span>
   </a>
   
 </li>
@@ -727,7 +862,9 @@
       
         <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
-    Referencias
+    <span class="md-ellipsis">
+      Referencias
+    </span>
   </a>
   
 </li>
@@ -746,10 +883,8 @@
                 
                   
 
-  <a href="https://github.com/gss-mtig/web-mgeo/edit/master/docs/js_objetos.md" title="Editar esta página" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
 <h1 id="objetos-en-js">Objetos en JS</h1>
@@ -757,35 +892,35 @@
 <p>El concepto de Objetos se puede entender con objetos tangibles de la vida real. Por ejemplo una mesa es un objeto con propiedades. La mesa tiena color, un deseño, material, número de patas, etc. Otro ejemplo sería un coche. El coche tiene uan serie de propiedades como la marca, modelo, color, etc. pero también tiene una serie de métodos (funciones) como puede ser encender, girar, avanzar, etc.</p>
 <p>Debemos tener en cuenta que <em>todo</em> es un objeto en JavaScript.</p>
 <p>Por ejemplo si creamos una cadena de texto JS internamente crea un objeto de tipo String (cadena de texto).</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola mundo!&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola mundo!&quot;</span><span class="p">;</span>
 
-<span class="c1">/// para ver su longitud podemos consultar la propiedad length</span><span class="w"></span>
-<span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"></span>
-<span class="c1">/// podemos convertir todo el texto a mayúsculas usando el médoto toUpperCase</span><span class="w"></span>
-<span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span><span class="w"></span>
+<span class="c1">/// para ver su longitud podemos consultar la propiedad length</span>
+<span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="c1">/// podemos convertir todo el texto a mayúsculas usando el médoto toUpperCase</span>
+<span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
 </code></pre></div>
 <p>Para ver los métodos más usados cuando se trabajan con cadenas de texto visitar <a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods</a>. Aquí podremos ver como acceder a una subcadena de caracteres, pasar el texto a mayúsculas, etc.</p>
 <p>En JavaScript se pueden crear nuevos objetos de diferentes maneras a continuación veremos algunas.</p>
 <h2 id="iniciador-de-objeto">Iniciador de objeto</h2>
 <p>Es la forma más simple de crear un objeto. Consiste en crear una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves ({}).</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">miPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">raza</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">ladrar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;guau&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">miPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">raza</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ladrar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;guau&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">tuPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Rex&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">raza</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pastor&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">ladrar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;guau&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">tuPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Rex&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">raza</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pastor&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ladrar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;guau&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
 </code></pre></div>
 <h2 id="funcion-constructora">Función constructora</h2>
 <p>Como alternativa, puedes crear un objeto con estos dos pasos:</p>
@@ -794,17 +929,17 @@
 <li>Crear una instancia del objeto con el operador new.</li>
 </ol>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">raza</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">raza</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">raza</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ladrar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;guau&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">raza</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">raza</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">raza</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ladrar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;guau&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">tuPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Rex&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Pastor&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">tuPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Rex&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Pastor&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="acceder-a-las-propiedades">Acceder a las propiedades</h2>
 <p>Podemos acceder a las prpopiedades de los objetos de 2 formas:</p>
@@ -812,17 +947,17 @@
 <li>
 <p>Usando la notación de punto.</p>
 <p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myPerro</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">//debe retornar Hércules</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myPerro</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">//debe retornar Hércules</span>
 </code></pre></div>
 </li>
 <li>
 <p>Usando la notación de corchetes.</p>
 <p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myPerro</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">]);</span><span class="w"> </span><span class="c1">//debe retornar Hércules</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myPerro</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">]);</span><span class="w"> </span><span class="c1">//debe retornar Hércules</span>
 </code></pre></div>
 </li>
 </ol>
@@ -830,14 +965,14 @@
 <h2 id="modificar-o-crear-propiedades">Modificar o crear propiedades</h2>
 <p>Igualmente que en el caso anterior podemos usar las dos notaciones. En este caso le asignaremos un nuevo valor a la propiedad. Si la propiedad ya existe se modifica su valor y si la propiedad no existe se crea esta nueva propiedad.</p>
 <p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">myPerro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Hércules&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maltés&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
 
-<span class="c1">//modficar una propiedad</span><span class="w"></span>
-<span class="nx">myPerro</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"></span>
-<span class="nx">myPerro</span><span class="p">[</span><span class="s2">&quot;raza&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Dogo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//modficar una propiedad</span>
+<span class="nx">myPerro</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+<span class="nx">myPerro</span><span class="p">[</span><span class="s2">&quot;raza&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Dogo&quot;</span><span class="p">;</span>
 
-<span class="c1">//crear una propiedad</span><span class="w"></span>
-<span class="nx">myPerro</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Blanco&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//crear una propiedad</span>
+<span class="nx">myPerro</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Blanco&quot;</span><span class="p">;</span>
 <span class="nx">myPerro</span><span class="p">[</span><span class="s2">&quot;peso-kg&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 <h2 id="clases">Clases</h2>
@@ -845,12 +980,12 @@
 <h3 id="declaracion-de-clases">Declaración de clases</h3>
 <p>Una manera de definir una clase es mediante una declaración de clase. Para declarar una clase, se utiliza la palabra reservada <strong>class</strong> y un nombre para la clase</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -858,136 +993,136 @@
 </div>
 <p>Otra manera de definir una clase es mediante las expresiones de clase que pueden ser nombradas o anónimas.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Anonima</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Anonima</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Rectangulo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// output: &quot;Rectangulo&quot;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Rectangulo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="c1">// output: &quot;Rectangulo&quot;</span>
 
-<span class="c1">// Nombrada</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Rectangulo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// output: &quot;Rectangulo2&quot;</span><span class="w"></span>
+<span class="c1">// Nombrada</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Rectangulo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="c1">// output: &quot;Rectangulo2&quot;</span>
 </code></pre></div>
 <h3 id="cuerpo-de-la-clase-y-definicion-de-metodos">Cuerpo de la clase y definición de métodos</h3>
 <p>El contenido de una clase es la parte que se encuentra entre las llaves {}. Este es el lugar se definen los miembros de clase, como los métodos o constructores.</p>
 <p>El método constructor es un método especial para crear e inicializar un objeto creado con una clase. Solo puede haber un método especial con el nombre "constructor" en una clase. Un constructor puede usar la palabra reservada super para llamar al constructor de una superclase.</p>
 <p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="w"> </span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Getter</span><span class="w"></span>
-<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">calcArea</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Método</span><span class="w"></span>
-<span class="w">  </span><span class="nx">calcArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="w"> </span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Getter</span>
+<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">calcArea</span><span class="p">();</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Método</span>
+<span class="w">  </span><span class="nx">calcArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">cuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">.</span><span class="nx">area</span><span class="p">);</span><span class="w"> </span><span class="c1">// 100</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">.</span><span class="nx">calcArea</span><span class="p">());</span><span class="w"> </span><span class="c1">// 100</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">.</span><span class="nx">area</span><span class="p">);</span><span class="w"> </span><span class="c1">// 100</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">.</span><span class="nx">calcArea</span><span class="p">());</span><span class="w"> </span><span class="c1">// 100</span>
 </code></pre></div>
 <p>La palabra clave <strong>static</strong> define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y no pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Calcula</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Calcula</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="nx">Calcula</span><span class="p">.</span><span class="nx">suma</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="nx">Calcula</span><span class="p">.</span><span class="nx">resta</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">));</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="nx">Calcula</span><span class="p">.</span><span class="nx">suma</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="nx">Calcula</span><span class="p">.</span><span class="nx">resta</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">));</span>
 </code></pre></div>
 <h3 id="subclases">Subclases</h3>
 <p>La palabra clave <strong>extends</strong> es usada en declaraciones de clase o expresiones de clase para crear una clase hija.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; hace un ruido.&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; hace un ruido.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">class</span><span class="w"> </span><span class="nx">Perro</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ladra.&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Perro</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ladra.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Mitzie&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="nx">p</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Mitzie&#39;</span><span class="p">);</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span>
 </code></pre></div>
 <h3 id="superclases">Súperclases</h3>
 <p>La palabra clave <strong>super</strong> es usada para llamar funciones del objeto padre.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; hace un ruido.&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; hace un ruido.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">class</span><span class="w"> </span><span class="nx">Perro</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ladra.&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Perro</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ladra.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Mitzie&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="nx">p</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Mitzie&#39;</span><span class="p">);</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span>
 </code></pre></div>
 <h2 id="trabajar-con-matrices">Trabajar con Matrices</h2>
 <p>Veremos algunos métodos bastante útiles relacionados con matrices</p>
 <h3 id="agregar-y-eliminar-elementos-de-la-matriz">Agregar y eliminar elementos de la matriz</h3>
 <p>Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar <strong>push()</strong> y <strong>pop()</strong> respectivamente.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Manchester&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Liverpool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Birmingham&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leeds&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Carlisle&#39;</span><span class="p">];</span><span class="w"></span>
-<span class="c1">//agregar un elemento</span><span class="w"></span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Cardiff&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Manchester&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Liverpool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Birmingham&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leeds&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Carlisle&#39;</span><span class="p">];</span>
+<span class="c1">//agregar un elemento</span>
+<span class="nx">myArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Cardiff&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
 
-<span class="c1">//eliminar el último elemento</span><span class="w"></span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//eliminar el último elemento</span>
+<span class="nx">myArray</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
 </code></pre></div>
 <p>Los métodos <strong>unshift()</strong> y <strong>shift()</strong> funcionan exactamente igual de <em>push()</em> y <em>pop()</em>, respectivamente, excepto que funcionan al principio de la matriz, no al final.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Manchester&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Liverpool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Birmingham&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leeds&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Carlisle&#39;</span><span class="p">];</span><span class="w"></span>
-<span class="c1">//agregar un elemento</span><span class="w"></span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s1">&#39;Cardiff&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Manchester&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Liverpool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Birmingham&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leeds&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Carlisle&#39;</span><span class="p">];</span>
+<span class="c1">//agregar un elemento</span>
+<span class="nx">myArray</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s1">&#39;Cardiff&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
 
-<span class="c1">//eliminar el último elemento</span><span class="w"></span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//eliminar el último elemento</span>
+<span class="nx">myArray</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
 </code></pre></div>
 <p>Para var más metodos de agregar o eliminar elementos en una matriz ver <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#operaciones_habituales">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#operaciones_habituales</a></p>
 <h3 id="operadores-de-matrices">Operadores de matrices</h3>
@@ -995,43 +1130,43 @@
 <h4 id="foreach">forEach</h4>
 <p>El método <strong>forEach()</strong> ejecuta la función indicada una vez por cada elemento del array.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">];</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">];</span>
 
-<span class="nx">array1</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">));</span><span class="w"></span>
+<span class="nx">array1</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
 </code></pre></div>
 <h4 id="map">map</h4>
 <p>El método <strong>map()</strong> crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">];</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">doubles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">doubles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div>
 <h4 id="filter">filter</h4>
 <p>El método <strong>filter()</strong> crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">];</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">mayores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
-<span class="c1">//usando la arrow function</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">menores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mayores</span><span class="p">);</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">menores</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mayores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="c1">//usando la arrow function</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">menores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mayores</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">menores</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="reduce">reduce</h4>
 <p>El método <strong>reduce()</strong> ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.</p>
 <p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">reducer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">reducer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">;</span>
 
-<span class="c1">// 1 + 2 + 3 + 4</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">));</span><span class="w"></span>
-<span class="c1">// expected output: 10</span><span class="w"></span>
+<span class="c1">// 1 + 2 + 3 + 4</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">));</span>
+<span class="c1">// expected output: 10</span>
 
-<span class="c1">// 5 + 1 + 2 + 3 + 4</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"></span>
-<span class="c1">// expected output: 15</span><span class="w"></span>
+<span class="c1">// 5 + 1 + 2 + 3 + 4</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
+<span class="c1">// expected output: 15</span>
 </code></pre></div>
 <p>Para ver más métodos de las matrices ir a <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#m%C3%A9todos_de_instancia">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#m%C3%A9todos_de_instancia</a></p>
 <h2 id="referencias">Referencias</h2>
@@ -1062,42 +1197,6 @@
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Pie" >
-      
-        
-        <a href="../js_estructuras/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: JS estructuras de control" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              JS estructuras de control
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../js_dom/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: JS dom" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              JS dom
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1119,10 +1218,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
