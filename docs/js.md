@@ -532,6 +532,11 @@ const resta = (a, b) => a - b;
 
 const cuadrado = a => a * a;
 ```
+## Ejercicios extras
+
+[W3 Schools JS Exercises](https://www.w3schools.com/js/js_exercises.asp)
+[Exercism](https://exercism.org/tracks/javascript/exercises)
+[JS Challenger](https://www.jschallenger.com/javascript-basics)
 
 ## Referencias
 
