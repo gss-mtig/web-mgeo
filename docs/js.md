@@ -118,89 +118,93 @@ Todos los scripts con el atributo defer se cargarán en el orden en que aparecen
 * Si tus scripts se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza **async**.
 * Si tus scripts necesitan esperar a ser procesados y dependen de otros scripts y/o del DOM en su lugar, cárgalos usando **defer** y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
 
-A continuación vamos a agregar un archivo JavaScript (de momento vacío - sin código) a nuestra calculadora
+####  Ejercicios entregables
 
-1. Crear una carpeta llamada **js** dentro de la carpeta *web-mgeo*
+!!! question "Calculadora geodésica"
 
-2. Crear un archivo llamado **script.js** dentro de la carpeta *js*
+    A continuación vamos a agregar un archivo JavaScript (de momento vacío - sin código) a nuestra calculadora
 
-3. Modificar el *index.html* para agregar una JavaScript externo a nuestra calculadora
+    1. Crear una carpeta llamada **js** dentro de la carpeta *web-mgeo*
 
-    ``` html hl_lines="13"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-		<link type="text/css" href="css/estilos.css" rel="stylesheet">
-        <title>Mi calculadora geodésica</title>
-        <script src="js/script.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            <div>
-                <table>
-                    <tr>
-                        <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
-                        <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <select id="origen">
-                                <option value="EPSG:4326">EPSG:4326</option> 
-                                <option value="EPSG:3857">EPSG:3857</option>
-                                <option value="EPSG:25831">EPSG:25831</option>
-                                <option value="EPSG:23031">EPSG:23031</option>
-                            </select>
-                        </td>
-                        <td colspan="2">
-                            <select id="destino">
-                                <option value="EPSG:4326">EPSG:4326</option> 
-                                <option value="EPSG:3857">EPSG:3857</option>
-                                <option value="EPSG:25831">EPSG:25831</option>
-                                <option value="EPSG:23031">EPSG:23031</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="lat">Latitud</label></td>
-                        <td><label for="lng">Longitud</label></td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" id="lat"></td>
-                        <td><input type="text" id="lng"></td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"><button class="btn-tranformar">Transformar coordenadas</button></td>
-                    </tr>
-                </table>
-            </div>
-            <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+    2. Crear un archivo llamado **script.js** dentro de la carpeta *js*
 
-4. Guardar el archivo index.html
+    3. Modificar el *index.html* para agregar una JavaScript externo a nuestra calculadora
+
+        ``` html hl_lines="13"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+            <link type="text/css" href="css/estilos.css" rel="stylesheet">
+            <title>Mi calculadora geodésica</title>
+            <script src="js/script.js" defer></script>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                <div>
+                    <table>
+                        <tr>
+                            <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                            <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <select id="origen">
+                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:3857">EPSG:3857</option>
+                                    <option value="EPSG:25831">EPSG:25831</option>
+                                    <option value="EPSG:23031">EPSG:23031</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                <select id="destino">
+                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:3857">EPSG:3857</option>
+                                    <option value="EPSG:25831">EPSG:25831</option>
+                                    <option value="EPSG:23031">EPSG:23031</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="lat">Latitud</label></td>
+                            <td><label for="lng">Longitud</label></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="lat"></td>
+                            <td><input type="text" id="lng"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
+
+    4. Guardar el archivo index.html
 
 ## Comentarios
 
@@ -317,6 +321,12 @@ miCoche = "Seat";
     coches = ["Mercedes", "BMW"]; // da error
     ```
 
+## Reglas de nombres de variables
+
+* No pueden empezar con números
+* No pueden contener espacios ni caracteres especiales (excepto `_`y `$`)
+* Usar `camelCase` es una buena práctica (`miVariableEjemplo`)
+
 ## Tipos de datos
 
 ### Numérico
@@ -407,136 +417,86 @@ no ${2 * a + b}.`;
 
 En lineas generales es recomentable usar plantillas literales en lugar de la concatenación de cadenas de caracteres.
 
-### Matrices o Arreglos
+## Operadores
 
-Las matrices **Array** son una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada.
+Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones. [^3]
 
-Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas. Puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz.
+JavaScript tiene una serie de operadores entre los más comúnes están: operadores de asignación, de comparación, aritméticos y lógicos. Se puede ver el listado completo de los operadores en https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators 
 
-``` js
-let compra = ["pan", "leche", "queso", "hummus", "noodles"];
-let sequence = [1, 1, 2, 3, 5, 8, 13];
-let random = ["tree", 795, [0, 1, 2]];
-```
+Al igual que en las matémaaticas los operadores tiene un orden de preferencia a la hora de evaluar una expresión. [^4]
 
-#### Acceder y modificar elementos de la matriz
+### Operadores de asignación
 
-Se puede acceder a elementos individuales en la matriz mediante la notación de corchetes, indicando la posición del elemento que se quiera acceder
+Un operador de asignación asigna un valor a su operando izquierdo basándose en el valor de su operando derecho. El operador de asignación simple es igual (=), que asigna el valor de su operando derecho a su operando izquierdo. Es decir, x = y asigna el valor de y a x.
 
-!!! warning
-
-    Las posiciones dentro de las matrices se comienzan a contar desde 0. El primer elementos de la matriz tiene la posición 0. 
+Ejemplos
 
 ``` js
-let compra = ["pan", "leche", "jamón", "hummus", "noodles"];
-let pan = compra[0];
-let charcuteria = compra[2];
+var color = "rojo";
+let count = 23;
 ```
 
-Puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor.
+### Operadores de comparación
+
+Un operador de comparación compara sus operandos y devuelve un valor lógico en función de si la comparación es verdadera (true) o falsa (false).
+
+Ejemplos
 
 ``` js
-let compra = ["pan", "leche", "jamón", "hummus", "noodles"];
-compra[0] = "tomates";
+var var1 = 3;
+var var2 = 4;
+
+//igual
+3 == var1;
+"3" == var1;
+//no igual
+var1 != 4
+var2 != var1
+//estrictamente igual
+3 === var1
+//estricatamente no igual
+var1 !== "3"
+//mayor que
+var2 > var1
+//menor igual que
+var1 <= var2
 ```
 
-Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes.
+### Operadores aritméticos
+
+Un operador aritmético toma valores numéricos como sus operandos y devuelve un solo valor numérico. Los operadores aritméticos estándar son suma (+), resta (-), multiplicación (*) y división (/).
+
+Ejemplos
 
 ``` js
-let random = ["tree", 795, [0, 3, 2]];
-let tres = random[2][1];
+var var1 = 3;
+var var2 = 4;
+
+var1 + var2;
+var2 * var1;
 ```
 
-## Funciones
+### Operadores lógicos
 
-En términos generales, una función es un "subprograma" que puede ser llamado por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado cuerpo de la función. Se pueden pasar valores a una función, y la función puede devolver un valor. [^4]
+Los operadores lógicos se utilizan normalmente con valores booleanos (lógicos); cuando lo son, devuelven un valor booleano.
 
-En JavaScript, las funciones son objetos de primera clase, es decir, son objetos y se pueden manipular y transmitir al igual que cualquier otro objeto. Concretamente son objetos **Function**.
+| Operador         | Uso              | Descripción                                                                                                                                                                                                                  |
+|------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AND Lógico (&&)  | expr1 && expr2   | Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false.             |
+| OR lógico (\|\|) | expr1 \|\| expr2 | Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, \|\| devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false. |
+| NOT lógico (!)   | !expr            | Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true.                                                                                                                               |
 
-JavaScript tiene integradas varias funciones de nivel superior como por ejemplo parseInt(), decodeURI(), etc.
-
-### Declaracion de una función
-
-Una definición de función (también denominada declaración de función o expresión de función) consta de la palabra clave function, seguida de:
-
-* El nombre de la función.
-* Una lista de parámetros o argumentos de la función, entre paréntesis y separados por comas.
-* Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }.
+Ejemplos
 
 ``` js
-function suma(a, b) {
-    return a + b;
-}
+var a1 =  true && true;     // t && t devuelve true
+var a2 =  true && false;    // t && f devuelve false
+var o1 =  true || true;     // t || t devuelve true
+var o2 = false || true;     // f || t devuelve true
+var o3 = false || false;     // f || f devuelve false
+var n1 = !true;  // !t devuelve false
+var n2 = !false; // !f devuelve true
 ```
-
-En el ejemplo anterior tenemos a la función *suma* que toma 2 parámetros *a* y *b* y devuelve un valor con la suma de *a+b*. La instrucción **return** especifica el valor devuelto por la función.
-
-Las funciones también se pueden crear mediante una **expresión function**. Esta función puede ser anónima; no tiene por qué tener un nombre. Por ejemplo, la función *suma* se podría haber definido como:
-
-``` js
-const suma = function(a, b) {
-    return a + b;
-}
-```
-
-Las *expresión function* son convenientes cuando se pasa una función como argumento a otra función.
-
-### Parámetros de una función
-
-Existe una variable "especial" llamada **arguments** que es similar a una matriz. Esta variable guarda todos los argumentos de la función. 
-
-``` js
-const suma = function(a, b) {
-    let parametroB = arguments[1]; 
-}
-```
-
-Usando el objeto *arguments*, puedes llamar a una función con más argumentos de los que formalmente declara aceptar. Esto suele ser útil si no sabes de antemano cuántos argumentos se pasarán a la función.
-
-### Parámetros predeterminados
-
-En el pasado (pre ES6), la estrategia general para establecer valores predeterminados era probar los valores de los parámetros en el cuerpo de la función y asignar un valor si eran **undefined**.
-
-Con parámetros predeterminados, ya no es necesaria una verificación manual en el cuerpo de la función. Simplemente puedes poner un valor predeterminado para algún parámetro en el encabezado de la función.
-
-``` js
-const suma = function(a, b = 2) {
-    return a + b;
-}
-```
-
-### Parámetros rest
-
-La sintaxis del parámetro rest (resto de parámetros) nos permite representar un número indefinido de argumentos como una matriz. Para ello ponemos tres puntos antes del nombre del parámetro
-
-``` js
-const suma = function(a, ...masParametros) {
-    ...
-    ...
-}
-suma(1, 2, 4, 7); //en este caso ...masParametros sería igual a [2, 4, 7]
-```
-
-### Funciones flecha
-
-Dos factores influyeron en la introducción de las funciones flecha son: funciones más cortas y no vinculantes de *this*.
-
-Hasta las funciones flecha, cada nueva función definía su propio valor *this*, lo que causaba algunos problemas. Para más detalles sobre funciones flecha https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions y https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/
-
-``` js
-const suma = (a, b) => {
-    return a + b;
-}
-
-const resta = (a, b) => a - b;
-
-const cuadrado = a => a * a;
-```
-## Ejercicios extras
-
-* [W3 Schools JS Exercises](https://www.w3schools.com/js/js_exercises.asp)
-* [Exercism](https://exercism.org/tracks/javascript/exercises)
-* [JS Challenger](https://www.jschallenger.com/javascript-basics)
 
 ## Referencias
 

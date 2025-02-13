@@ -110,257 +110,261 @@ https://1linelayouts.glitch.me/
 
 ## Maquetar nuestra calculadora usando flexbox
 
-1. Modificar el archivo **estilo.css** para agregar el modelo de flexbox
+####  Ejercicios entregables
 
-    ``` css hl_lines="13 14 15 16 17 18 19 20 21 22 23"
-    :root {
-        --light-blue: #8ecae6ff;
-        --blue-green: #219ebcff;
-        --prussian-blue: #023047ff;
-        --honey-yellow: #ffb703ff;
-        --orange: #fb8500ff;
-    }
+!!! question "Calculadora geodésica"
 
-    html {
-        font-family: "Roboto", sans-serif;
-    }
+    1. Modificar el archivo **estilo.css** para agregar el modelo de flexbox
 
-    html, body {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+        ``` css hl_lines="13 14 15 16 17 18 19 20 21 22 23"
+        :root {
+            --light-blue: #8ecae6ff;
+            --blue-green: #219ebcff;
+            --prussian-blue: #023047ff;
+            --honey-yellow: #ffb703ff;
+            --orange: #fb8500ff;
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
+        html {
+            font-family: "Roboto", sans-serif;
+        }
 
-    header {
-        background-color: var(--light-blue);
-    }
+        html, body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
 
-    header > h1 {
-        color: var(--prussian-blue);
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
 
-    footer {
-        color: var(--blue-green);
-    }
+        header {
+            background-color: var(--light-blue);
+        }
 
-    #origen, #destino {
-        color: var(--orange);
-    }
+        header > h1 {
+            color: var(--prussian-blue);
+        }
 
-    aside {
-        border-left: 2px solid var(--prussian-blue);
-    }
+        footer {
+            color: var(--blue-green);
+        }
 
-    aside > ul > li {
-        color: var(--honey-yellow);
-    }
+        #origen, #destino {
+            color: var(--orange);
+        }
 
-    .btn-tranformar {
-        background-color: var(--orange);
-        color: var(--prussian-blue);
-    }
-    ```
+        aside {
+            border-left: 2px solid var(--prussian-blue);
+        }
 
-2. Modificar el estilo del elemento header para que el titulo aparezca junto a la imagen
+        aside > ul > li {
+            color: var(--honey-yellow);
+        }
 
-    ``` css hl_lines="26"
-    :root {
-        --light-blue: #8ecae6ff;
-        --blue-green: #219ebcff;
-        --prussian-blue: #023047ff;
-        --honey-yellow: #ffb703ff;
-        --orange: #fb8500ff;
-    }
+        .btn-tranformar {
+            background-color: var(--orange);
+            color: var(--prussian-blue);
+        }
+        ```
 
-    html {
-        font-family: "Roboto", sans-serif;
-    }
+    2. Modificar el estilo del elemento header para que el titulo aparezca junto a la imagen
 
-    html, body {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+        ``` css hl_lines="26"
+        :root {
+            --light-blue: #8ecae6ff;
+            --blue-green: #219ebcff;
+            --prussian-blue: #023047ff;
+            --honey-yellow: #ffb703ff;
+            --orange: #fb8500ff;
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
+        html {
+            font-family: "Roboto", sans-serif;
+        }
 
-    header {
-        display: flex;
-        background-color: var(--light-blue);
-    }
+        html, body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
 
-    header > h1 {
-        color: var(--prussian-blue);
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
 
-    footer {
-        color: var(--blue-green);
-    }
+        header {
+            display: flex;
+            background-color: var(--light-blue);
+        }
 
-    #origen, #destino {
-        color: var(--orange);
-    }
+        header > h1 {
+            color: var(--prussian-blue);
+        }
 
-    aside {
-        border-left: 2px solid var(--prussian-blue);
-    }
+        footer {
+            color: var(--blue-green);
+        }
 
-    aside > ul > li {
-        color: var(--honey-yellow);
-    }
+        #origen, #destino {
+            color: var(--orange);
+        }
 
-    .btn-tranformar {
-        background-color: var(--orange);
-        color: var(--prussian-blue);
-    }
-    ```
+        aside {
+            border-left: 2px solid var(--prussian-blue);
+        }
 
-3. Agregar el estilo al elemento main
+        aside > ul > li {
+            color: var(--honey-yellow);
+        }
 
-    ``` css hl_lines="38 39 40 41 42 43 44 45"
-    :root {
-        --light-blue: #8ecae6ff;
-        --blue-green: #219ebcff;
-        --prussian-blue: #023047ff;
-        --honey-yellow: #ffb703ff;
-        --orange: #fb8500ff;
-    }
+        .btn-tranformar {
+            background-color: var(--orange);
+            color: var(--prussian-blue);
+        }
+        ```
 
-    html {
-        font-family: "Roboto", sans-serif;
-    }
+    3. Agregar el estilo al elemento main
 
-    html, body {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+        ``` css hl_lines="38 39 40 41 42 43 44 45"
+        :root {
+            --light-blue: #8ecae6ff;
+            --blue-green: #219ebcff;
+            --prussian-blue: #023047ff;
+            --honey-yellow: #ffb703ff;
+            --orange: #fb8500ff;
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
+        html {
+            font-family: "Roboto", sans-serif;
+        }
 
-    header {
-        display: flex;
-        background-color: var(--light-blue);
-    }
+        html, body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
 
-    header > h1 {
-        color: var(--prussian-blue);
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
 
-    footer {
-        color: var(--blue-green);
-    }
+        header {
+            display: flex;
+            background-color: var(--light-blue);
+        }
 
-    main {
-        display: flex;
-        flex: auto;
-    }
+        header > h1 {
+            color: var(--prussian-blue);
+        }
 
-    main > div {
-        flex: auto;
-    }
+        footer {
+            color: var(--blue-green);
+        }
 
-    #origen, #destino {
-        color: var(--orange);
-    }
+        main {
+            display: flex;
+            flex: auto;
+        }
 
-    aside {
-        border-left: 2px solid var(--prussian-blue);
-    }
+        main > div {
+            flex: auto;
+        }
 
-    aside > ul > li {
-        color: var(--honey-yellow);
-    }
+        #origen, #destino {
+            color: var(--orange);
+        }
 
-    .btn-tranformar {
-        background-color: var(--orange);
-        color: var(--prussian-blue);
-    }
-    ```
+        aside {
+            border-left: 2px solid var(--prussian-blue);
+        }
 
-4. Modificar el elemento aside para que aparezca junto al main
+        aside > ul > li {
+            color: var(--honey-yellow);
+        }
 
-    ``` css hl_lines="52 53"
-    :root {
-        --light-blue: #8ecae6ff;
-        --blue-green: #219ebcff;
-        --prussian-blue: #023047ff;
-        --honey-yellow: #ffb703ff;
-        --orange: #fb8500ff;
-    }
+        .btn-tranformar {
+            background-color: var(--orange);
+            color: var(--prussian-blue);
+        }
+        ```
 
-    html {
-        font-family: "Roboto", sans-serif;
-    }
+    4. Modificar el elemento aside para que aparezca junto al main
 
-    html, body {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+        ``` css hl_lines="52 53"
+        :root {
+            --light-blue: #8ecae6ff;
+            --blue-green: #219ebcff;
+            --prussian-blue: #023047ff;
+            --honey-yellow: #ffb703ff;
+            --orange: #fb8500ff;
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
+        html {
+            font-family: "Roboto", sans-serif;
+        }
 
-    header {
-        display: flex;
-        background-color: var(--light-blue);
-    }
+        html, body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
 
-    header > h1 {
-        color: var(--prussian-blue);
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
 
-    footer {
-        color: var(--blue-green);
-    }
+        header {
+            display: flex;
+            background-color: var(--light-blue);
+        }
 
-    main {
-        display: flex;
-        flex: auto;
-    }
+        header > h1 {
+            color: var(--prussian-blue);
+        }
 
-    main > div {
-        flex: auto;
-    }
+        footer {
+            color: var(--blue-green);
+        }
 
-    #origen, #destino {
-        color: var(--orange);
-    }
+        main {
+            display: flex;
+            flex: auto;
+        }
 
-    aside {
-        min-width: 150px;
-        flex: 1;
-        border-left: 2px solid var(--prussian-blue);
-    }
+        main > div {
+            flex: auto;
+        }
 
-    aside > ul > li {
-        color: var(--honey-yellow);
-    }
+        #origen, #destino {
+            color: var(--orange);
+        }
 
-    .btn-tranformar {
-        background-color: var(--orange);
-        color: var(--prussian-blue);
-    }
-    ```
-5. Guardar y recargar la página para ver los cambios.
+        aside {
+            min-width: 150px;
+            flex: 1;
+            border-left: 2px solid var(--prussian-blue);
+        }
+
+        aside > ul > li {
+            color: var(--honey-yellow);
+        }
+
+        .btn-tranformar {
+            background-color: var(--orange);
+            color: var(--prussian-blue);
+        }
+        ```
+    5. Guardar y recargar la página para ver los cambios.
 
 !!! question "Ejercicio 3 pt"
     1. Agregar un class al botón *Enviar resultado* creado en el ejercicio anterior y dar estilo al botón. **0.5 pt**.

@@ -1,9 +1,51 @@
 # HTML - HyperText Markup Language - Lenguaje de Marcas de Hipertexto
 
-**HTML** es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas. [^1]
+**HTML** es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas[^1].  Permite definir elementos como títulos, párrafos, imágenes, enlaces y más.
+
+Características principales:
+
+* Lenguaje de marcado: HTML utiliza etiquetas para estructurar la información.
+* No es un lenguaje de programación: No incluye lógica como condiciones o bucles, solo define la estructura.
+* Indispensable en la web: Es el estándar para crear documentos que los navegadores interpretan.
 
 El HTML se escribe en forma de **etiquetas**, rodeadas por corchetes angulares (<,>,/). Ejemplo si escribimos `<h1>Hola Mundo!</h1>` en nuestra página veremos
 <h1>Hola Mundo!</h1>
+
+## Anatomía de un HTML
+
+### Estructura básica de un HTML
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi página de prueba</title>
+  </head>
+  <body>
+    <p>Esta es mi página</p>
+  </body>
+</html>
+```
+
+1. `<!DOCTYPE html>`: anteriormente servía para establecer el conjunto de reglas que la página debía seguir para que fuera considerado un buen HTML. En la actualidad se considera un legado histórico que hay que incluir para que todo funcione correctamente.
+2. `<html></html>`: este elemento envuelve todo el contenido de la página y se le conoce como elemento raiz.
+3. `<head></head>`: es la **cabecera** y actua como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más.
+4. `<meta charset="utf-8">`: estable la codificación de caracteres que usará la página. Ayuda a evitar problemas de caracteres especiales como los acentos
+5. `<title></title>`: establece el título de la página, que es lo que aparece en la pestaña del navegador.
+6. `<body></body>`: contiene todo el contenido que se quiere mostrar en la página
+
+#### Ejercicios Prácticos
+
+!!! example "DragonBall: (5 minutos)"
+
+    1. Crear una carpeta llamada **dragonball**
+    
+    2. Crear un archivo llamado **index.html** dentro de la carpeta *dragonball*
+    
+    3. Crea un archivo HTML desde cero y escribe el mensaje *Personajes de DragonBall* en un elemento `<h1>`
+    
+    4. Cambia el título de la página visible en la pestaña del navegador por Personajes de DragonBall
 
 ## Elementos
 
@@ -65,30 +107,6 @@ También se puede escribir de manera abreviada
 <input type="text" disabled>
 ```
 
-## Anatomía de un HTML
-
-### Estructura básica de un HTML
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mi página de prueba</title>
-  </head>
-  <body>
-    <p>Esta es mi página</p>
-  </body>
-</html>
-```
-
-1. `<!DOCTYPE html>`: anteriormente servía para establecer el conjunto de reglas que la página debía seguir para que fuera considerado un buen HTML. En la actualidad se considera un legado histórico que hay que incluir para que todo funcione correctamente.
-2. `<html></html>`: este elemento envuelve todo el contenido de la página y se le conoce como elemento raiz.
-3. `<head></head>`: es la **cabecera** y actua como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más.
-4. `<meta charset="utf-8">`: estable la codificación de caracteres que usará la página. Ayuda a evitar problemas de caracteres especiales como los acentos
-5. `<title></title>`: establece el título de la página, que es lo que aparece en la pestaña del navegador.
-6. `<body></body>`: contiene todo el contenido que se quiere mostrar en la página
-
 ### Espacios en blanco en HTML
 
 No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de espacio como saltos de línea) el intérprete de HTML reduce cada secuencia de espacio en blanco a un único espacio al interpretar el código. Entonces, ¿por qué utilizar espacios en blanco? La respuesta está en la legibilidad.
@@ -145,56 +163,30 @@ También puedes establecer que las subsecciones de tu documento se reconozcan en
 <p>Ejemplo Japonés: <span lang="ja">ご飯が熱い。</span>.</p>
 ```
 
-### Elementos de bloque vs elementos de línea
+## Ejercicios entregables
 
-Un elemento de *línea* es aquel que ocupa el espacio mínimo necesario en horizontal, y permite que otro elemento se coloque a su lado. En cambio un elemento de *bloque*, ocupa todo el ancho disponible y no permite que otro elemento se coloque a su lado (aunque tenga lugar suficiente).
+!!! question "Calculadora geodésica"
 
-Ejemplo de elementos de linea
+    1. Crear una carpeta llamada **web-mgeo**
 
-```html
-<span>hola </span>
-<span>estamos</span>
-<span>en línea</span>
-```
+    2. Crear un archivo llamado **index.html** dentro de la carpeta *web-mgeo*
 
-Produce la siguiente salida
+    3. Abrir el archivo con el editor de texto y escribir lo siguiente
 
-<span>hola </span>
-<span>estamos</span>
-<span>en línea</span>
+        ``` html
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            Mi calculadora geodésica
+        </body>
+        </html>
+        ```
 
-Ejemplo de elementos de bloque
-
-```html
-<div>hola </div><div>no estamos</div><div>en línea</div>
-```
-
-Produce la siguiente salida
-
-<div>hola </div><div>no estamos</div><div>en línea</div>
-
-## Mi primera página
-
-1. Crear una carpeta llamada **web-mgeo**
-
-2. Crear un archivo llamado **index.html** dentro de la carpeta *web-mgeo*
-
-3. Abrir el archivo con el editor de texto y escribir lo siguiente
-
-``` html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Mi calculadora geodésica</title>
-</head>
-<body>
-    Mi calculadora geodésica
-</body>
-</html>
-```
-
-4. Guardar el archivo y abrir la página en el navegador para ver el resultado
+    4. Guardar el archivo y abrir la página en el navegador para ver el resultado
 
 ## Referencias
 

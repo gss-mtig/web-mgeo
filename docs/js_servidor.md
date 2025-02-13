@@ -161,7 +161,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 
 12. Reiniciar el servidor de Node.js y luego volverlo a arrancarlo para que los cambios hechos tengan efecto
 
-    Ctrl+c
+    Reiniciar el servidor `Ctrl+c`.
     
     ```
     node app.js
@@ -170,7 +170,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 13. Probar nuestra API. Para las peticiones GET podemos probarlas directamente desde nuestro navegador. Podemos escribir http://localhost:3000/api/transformaciones/24 o http://localhost:3000/api/transformaciones y debemos ver la respuesta correspondiente.
 
 
-14. Para probar la peticiones POST podemos abrir un navegador he ir a https://www.apirequest.io/. En el selector seleccionar la opción de POST y en el campo para la URL poner http://localhost:3000/api/transformaciones. Luego agregar el header "Content-Type"=application/json y en el Request Body copiar 
+14. Para probar la peticiones POST podemos abrir un navegador he ir a https://hoppscotch.io/ o https://www.apirequest.io/. En el selector seleccionar la opción de POST y en el campo para la URL poner http://localhost:3000/api/transformaciones. Luego agregar el header "Content-Type"=application/json y en el Request Body copiar 
 
     ``` js
     {
@@ -271,135 +271,140 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 
 ## Modificar la calculadora
 
-1. Modificar nuestra aplicación para llamar a la API. Modificar nuestro archivo **index.html** que se encuentra en la carpeta *web-mgeo* y agregar un nuevo boton en el area de la respuesta. 
 
-    ``` html hl_lines="59"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link type="text/css" href="css/estilos.css" rel="stylesheet">
-        <title>Mi calculadora geodésica</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.3/proj4.min.js" integrity="sha512-TzmbpBIqcR0TyAdg+zJJfpbTeKVj24n+U3vvlP3yBDTOs26ELhrzA+TacRmMAuflTY8tU3zVwbCyfvM3QH58lA==" crossorigin="anonymous"></script>
-        <script src="js/script.js" defer></script>
-        
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            <div>
-                <table>
-                    <tr>
-                        <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
-                        <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <select id="origen">
-                                <option value="EPSG:4326">EPSG:4326</option> 
-                                <option value="EPSG:3857">EPSG:3857</option>
-                                <option value="EPSG:25831">EPSG:25831</option>
-                                <option value="EPSG:23031">EPSG:23031</option>
-                            </select>
-                        </td>
-                        <td colspan="2">
-                            <select id="destino">
-                                <option value="EPSG:4326">EPSG:4326</option> 
-                                <option value="EPSG:3857">EPSG:3857</option>
-                                <option value="EPSG:25831">EPSG:25831</option>
-                                <option value="EPSG:23031">EPSG:23031</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="lat">Latitud</label></td>
-                        <td><label for="lng">Longitud</label></td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" id="lat"></td>
-                        <td><input type="text" id="lng"></td>
-                        <td colspan="2"><div id="respuesta"></div></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><button class="btn-tranformar">Transformar coordenadas</button></td>
-                        <td colspan="2"><button class="btn-guardar">Guardar transformación</button></td>
-                    </tr>
-                </table>
-            </div>
-            <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+####  Ejercicios entregables
 
-2. Modificar el archivo **script.js** para hacer la llamada POST a nuestra API.
+!!! question "Calculadora geodésica"
 
-    ``` js hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46"
-    proj4.defs("EPSG:25831","+proj=utm +zone=31 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
+    1. Modificar nuestra aplicación para llamar a la API. Modificar nuestro archivo **index.html** que se encuentra en la carpeta *web-mgeo* y agregar un nuevo boton en el area de la respuesta. 
 
-    const btnTransformar = document.querySelector(".btn-tranformar");
+        ``` html hl_lines="59"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+            <link type="text/css" href="css/estilos.css" rel="stylesheet">
+            <title>Mi calculadora geodésica</title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.3/proj4.min.js" integrity="sha512-TzmbpBIqcR0TyAdg+zJJfpbTeKVj24n+U3vvlP3yBDTOs26ELhrzA+TacRmMAuflTY8tU3zVwbCyfvM3QH58lA==" crossorigin="anonymous"></script>
+            <script src="js/script.js" defer></script>
+            
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                <div>
+                    <table>
+                        <tr>
+                            <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                            <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <select id="origen">
+                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:3857">EPSG:3857</option>
+                                    <option value="EPSG:25831">EPSG:25831</option>
+                                    <option value="EPSG:23031">EPSG:23031</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                <select id="destino">
+                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:3857">EPSG:3857</option>
+                                    <option value="EPSG:25831">EPSG:25831</option>
+                                    <option value="EPSG:23031">EPSG:23031</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="lat">Latitud</label></td>
+                            <td><label for="lng">Longitud</label></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="lat"></td>
+                            <td><input type="text" id="lng"></td>
+                            <td colspan="2"><div id="respuesta"></div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                            <td colspan="2"><button class="btn-guardar">Guardar transformación</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-    btnTransformar.addEventListener("click", (evt) => {
-        console.log("Transformar coordenadas");
-        const srs_origen = document.getElementById("origen").value;
-        const coordTransformada = transformarCoordenadas(41.5, 2, srs_origen, "EPSG:3857");
-        document.getElementById("respuesta").innerHTML = coordTransformada;
-    });
+    2. Modificar el archivo **script.js** para hacer la llamada POST a nuestra API.
 
-    const transformarCoordenadas = (lat, lon, epsg_in, epsg_out) => {
+        ``` js hl_lines="12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46"
+        proj4.defs("EPSG:25831","+proj=utm +zone=31 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
 
-        const coordTransformada = proj4(epsg_in, epsg_out, [lon, lat])
+        const btnTransformar = document.querySelector(".btn-tranformar");
 
-        return coordTransformada;
-
-    }
-
-    const btnGuardar = document.querySelector(".btn-guardar");
-    btnGuardar.addEventListener("click", async (evt) => {
-        console.log("Guardar coordenadas");
-        const srs_origen = document.getElementById("origen").value;
-        const coordTransformada = transformarCoordenadas(41.5, 2, srs_origen, "EPSG:3857");
-
-        const codi_epsg_origen = srs_origen.replace("EPSG:","");
-        const response = await fetch("http://localhost:3000/api/transformaciones/", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                srs_origen: codi_epsg_origen,
-                x_origen: 2,
-                y_origen: 41.5,
-                srs_destino: "3857",
-                x_destino: coordTransformada[0],
-                y_destino: coordTransformada[1]
-            }),
-            cache: 'no-cache'
+        btnTransformar.addEventListener("click", (evt) => {
+            console.log("Transformar coordenadas");
+            const srs_origen = document.getElementById("origen").value;
+            const coordTransformada = transformarCoordenadas(41.5, 2, srs_origen, "EPSG:3857");
+            document.getElementById("respuesta").innerHTML = coordTransformada;
         });
 
-        const data = await response.json();
+        const transformarCoordenadas = (lat, lon, epsg_in, epsg_out) => {
 
-        console.log(data);
-    });
-    ```
+            const coordTransformada = proj4(epsg_in, epsg_out, [lon, lat])
+
+            return coordTransformada;
+
+        }
+
+        const btnGuardar = document.querySelector(".btn-guardar");
+        btnGuardar.addEventListener("click", async (evt) => {
+            console.log("Guardar coordenadas");
+            const srs_origen = document.getElementById("origen").value;
+            const coordTransformada = transformarCoordenadas(41.5, 2, srs_origen, "EPSG:3857");
+
+            const codi_epsg_origen = srs_origen.replace("EPSG:","");
+            const response = await fetch("http://localhost:3000/api/transformaciones/", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    srs_origen: codi_epsg_origen,
+                    x_origen: 2,
+                    y_origen: 41.5,
+                    srs_destino: "3857",
+                    x_destino: coordTransformada[0],
+                    y_destino: coordTransformada[1]
+                }),
+                cache: 'no-cache'
+            });
+
+            const data = await response.json();
+
+            console.log(data);
+        });
+        ```
 
 !!! question "Ejercicio 2 pt"
     1. Agregar a la calculadora un botón para recuperar todas las transformaciones que están en la base de datos y agregar un elemento para mostrar los registros de la base de datos. **0.5 pt**

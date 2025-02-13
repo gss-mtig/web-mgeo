@@ -19,6 +19,8 @@ texto.toUpperCase();
 
 Para ver los métodos más usados cuando se trabajan con cadenas de texto visitar https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods. Aquí podremos ver como acceder a una subcadena de caracteres, pasar el texto a mayúsculas, etc.
 
+Pero normalmente cuando hablamos de **objetos** en JavaScript, nos referimos a estructuras de datos que almacenan información en pares **clave-valor**.
+
 En JavaScript se pueden crear nuevos objetos de diferentes maneras a continuación veremos algunas.
 
 ## Iniciador de objeto
@@ -114,268 +116,158 @@ myPerro.color = "Blanco";
 myPerro["peso-kg"] = 64; 
 ```
 
-## Clases
+## Eliminar propiedades
 
-Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia. Las clases son "funciones especiales".
-
-### Declaración de clases
-
-Una manera de definir una clase es mediante una declaración de clase. Para declarar una clase, se utiliza la palabra reservada **class** y un nombre para la clase
-
-Ejemplo
+`delete` elimina una propiedad de un objeto.
 
 ``` js
-class Rectangulo {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
-  }
-}
+delete myPerro.edad;
+console.log(myPerro);
 ```
 
-!!! warning
+## Objetos con métodos (funciones dentro de objetos)
 
-    Una importante diferencia entre las declaraciones de funciones y las declaraciones de clases es que las declaraciones de funciones son alojadas y las declaraciones de clases no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el código arrojará un error.
-
-Otra manera de definir una clase es mediante las expresiones de clase que pueden ser nombradas o anónimas.
-
-Ejemplo
+Los métodos son funciones dentro de un objeto. Se llaman con `objeto.metodo()`.
 
 ``` js
-// Anonima
-let Rectangulo = class {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
-  }
+let coche = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    arrancar: function () {
+        console.log("El coche ha arrancado.");
+    }
 };
 
-console.log(Rectangulo.name);
-// output: "Rectangulo"
+coche.arrancar(); // "El coche ha arrancado."
+```
 
-// Nombrada
-let Rectangulo = class Rectangulo2 {
-  constructor(alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
-  }
+#### Ejercicios Prácticos
+
+!!! example "Crear un objeto persona"
+
+    1. Crea un objeto persona que tenga las siguientes propiedades:
+        * nombre (string),
+        * edad (número),
+        * ocupacion (string).
+
+    2. Además, agrega un método dentro del objeto que imprima un mensaje con el nombre y la ocupación de la persona.
+
+!!! example "Modificar un objeto"
+
+    Tienes un objeto libro con las propiedades:
+      * titulo (string)
+      * autor (string),
+      * año (número).
+
+    1. Modifica el titulo y el ano del libro para actualizar la información. Luego, muestra los cambios en consola.
+
+!!! example "Añadir un nuevo método a un objeto"
+
+    1. Crea un objeto vehiculo con las propiedades:
+        * marca (string),
+        * modelo (string),
+        * año (número),
+        * kilometraje (número).
+    2. Agrega un método que aumente el kilometraje cada vez que se "realice un viaje". Cada vez que se llame a este método, el kilometraje aumentará en una cantidad que pases como parámetro.
+
+!!! example "Comparar dos objetos"
+
+    1. Crea dos objetos producto1 y producto2 con las propiedades:
+        * nombre (string),
+        * precio (número).
+    2. Escribe una función que compare ambos productos y determine si tienen el mismo precio y nombre. La función debe devolver un mensaje indicando si son iguales o no.
+
+!!! example "Gestión de Inventario de Productos"
+
+    Imagina que tienes un inventario de productos en una tienda, donde cada producto tiene las siguientes propiedades:
+
+    * nombre: El nombre del producto.
+    * precio: El precio del producto.
+    * cantidad: Cuántos productos hay en stock.
+
+    Crea un sistema que permita realizar las siguientes tareas:
+
+    1. Agregar un producto al inventario (con nombre, precio y cantidad).
+    2. Eliminar un producto del inventario por su nombre.
+    3. Actualizar el stock de un producto (aumentar o disminuir la cantidad disponible).
+    4. Mostrar todos los productos en inventario con su nombre, precio y cantidad.
+    5. Filtrar productos que tengan un precio mayor a un valor dado.
+    6. Ordenar el inventario por el precio de los productos de menor a mayor.
+    7. Calcular el valor total del inventario, multiplicando el precio de cada producto por su cantidad disponible. 
+
+    ``` js
+    const inventario = [
+        { nombre: "Camiseta", precio: 20, cantidad: 50 },
+        { nombre: "Pantalón", precio: 40, cantidad: 30 },
+        { nombre: "Zapatos", precio: 60, cantidad: 15 },
+        { nombre: "Gorra", precio: 15, cantidad: 100 }
+    ]
+
+    // Pruebas de ejemplo:
+    agregarProducto("Chaqueta", 80, 10);
+    eliminarProducto("Gorra");
+    actualizarStock("Zapatos", 5);
+    mostrarInventario();
+    console.log(filtrarPorPrecio(30));  // Productos con precio mayor a 30
+    ordenarPorPrecio();
+    mostrarInventario();
+    console.log("Valor total del inventario: $", calcularValorInventario());
+    ```
+
+## Manipulación de Datos con JSON
+
+JSON (JavaScript Object Notation) es el formato más usado para intercambiar datos.
+
+Ejemplo de un Objeto en JSON
+
+``` js
+let usuario = {
+    nombre: "Ana",
+    edad: 25,
+    ciudad: "Madrid"
 };
-console.log(Rectangulo.name);
-// output: "Rectangulo2"
 ```
 
-### Cuerpo de la clase y definición de métodos
-
-El contenido de una clase es la parte que se encuentra entre las llaves {}. Este es el lugar se definen los miembros de clase, como los métodos o constructores.
-
-El método constructor es un método especial para crear e inicializar un objeto creado con una clase. Solo puede haber un método especial con el nombre "constructor" en una clase. Un constructor puede usar la palabra reservada super para llamar al constructor de una superclase.
-
-Ejemplo 
+### Convertir un Objeto en JSON (`JSON.stringify()`)
 
 ``` js
-class Rectangulo {
-  constructor (alto, ancho) {
-    this.alto = alto;
-    this.ancho = ancho;
-  }
-  // Getter
-  get area() {
-     return this.calcArea();
-   }
-  // Método
-  calcArea () {
-    return this.alto * this.ancho;
-  }
+let usuarioJSON = JSON.stringify(usuario);
+console.log(usuarioJSON); // '{"nombre":"Ana","edad":25,"ciudad":"Madrid"}'
+```
+
+### Convertir un JSON a Objeto (`JSON.parse()`)
+
+``` js
+let datos = localStorage.getItem("datosUsuario");
+let usuarioObjeto = JSON.parse(datos);
+console.log(usuarioObjeto.nombre); // "Ana"
+```
+
+## Recorrer propiedades de un objeto
+
+### for...in
+
+Un bucle **for...in** itera sobre las propiedades de un objeto en un orden arbitrario
+
+La sintaxis es la siguiente
+
+``` js
+for (variable in objeto) { 
+   	//sentencias a ejecutar en cada iteración 
 }
-
-const cuadrado = new Rectangulo(10, 10);
-
-console.log(cuadrado.area); // 100
-console.log(cuadrado.calcArea()); // 100
 ```
 
-La palabra clave **static** define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y no pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
-
 Ejemplo
-
 ``` js
-class Calcula {
+const object = { a: 1, b: 2, c: 3 };
 
-    static suma (a, b) {
-        return a + b;
-    }
-
-    static resta (a, b) {
-        return a - b;
-    }
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
 }
-
-console.log (Calcula.suma(2, 3));
-console.log (Calcula.resta(20, 7));
 ```
-
-### Subclases
-
-La palabra clave **extends** es usada en declaraciones de clase o expresiones de clase para crear una clase hija.
-
-Ejemplo
-
-``` js
-class Animal {
-  constructor(nombre) {
-    this.nombre = nombre;
-  }
-
-  hablar() {
-    console.log(this.nombre + ' hace un ruido.');
-  }
-}
-
-class Perro extends Animal {
-  hablar() {
-    console.log(this.nombre + ' ladra.');
-  }
-}
-
-const p = new Perro('Mitzie');
-p.hablar();
-```
-
-### Súperclases
-
-La palabra clave **super** es usada para llamar funciones del objeto padre.
-
-Ejemplo
-
-``` js
-class Animal {
-  constructor(nombre) {
-    this.nombre = nombre;
-  }
-
-  hablar() {
-    console.log(this.nombre + ' hace un ruido.');
-  }
-}
-
-class Perro extends Animal {
-  hablar() {
-    super.hablar();
-    console.log(this.nombre + ' ladra.');
-  }
-}
-
-const p = new Perro('Mitzie');
-p.hablar();
-```
-
-## Trabajar con Matrices
-
-Veremos algunos métodos bastante útiles relacionados con matrices
-
-### Agregar y eliminar elementos de la matriz
-
-Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar **push()** y **pop()** respectivamente.
-
-Ejemplo
-
-``` js
-let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
-//agregar un elemento
-myArray.push('Cardiff');
-console.log(myArray);
-
-//eliminar el último elemento
-myArray.pop();
-console.log(myArray);
-```
-
-Los métodos **unshift()** y **shift()** funcionan exactamente igual de *push()* y *pop()*, respectivamente, excepto que funcionan al principio de la matriz, no al final.
-
-Ejemplo
-
-``` js
-let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
-//agregar un elemento
-myArray.unshift('Cardiff');
-console.log(myArray);
-
-//eliminar el último elemento
-myArray.shift();
-console.log(myArray);
-```
-
-Para var más metodos de agregar o eliminar elementos en una matriz ver https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#operaciones_habituales
-
-### Operadores de matrices
-
-A menudo, nos encontramos en la necesidad de tomar un array y modificar cada elemento de la misma manera o filtrar los elementos de un array, etc. Para eso tenemos los siguientes métodos. [^2]
-
-#### forEach
-
-El método **forEach()** ejecuta la función indicada una vez por cada elemento del array.
-
-Ejemplo
-
-``` js
-const array1 = ['a', 'b', 'c'];
-
-array1.forEach(element => console.log(element));
-```
-
-#### map
-
-El método **map()** crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
-
-Ejemplo
-
-``` js
-const numbers = [1, 5, 10, 15];
-const doubles = numbers.map(function(x) {
-   return x * 2;
-});
-```
-
-#### filter
-
-El método **filter()** crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
-
-Ejemplo
-
-``` js
-const numbers = [1, 5, 10, 15];
-const mayores = numbers.filter(function(x) {
-   return x >= 10;
-});
-//usando la arrow function
-const menores = numbers.filter(x => x < 10);
-console.log(mayores);
-console.log(menores);
-```
-
-#### reduce
-
-El método **reduce()** ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.
-
-Ejemplo
-
-``` js
-const array1 = [1, 2, 3, 4];
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-// 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer));
-// expected output: 10
-
-// 5 + 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer, 5));
-// expected output: 15
-```
-
-Para ver más métodos de las matrices ir a https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#m%C3%A9todos_de_instancia
 
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos
-[^2]: https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209
+
 

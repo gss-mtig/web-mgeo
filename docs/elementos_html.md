@@ -190,145 +190,125 @@ Se usa frecuentemente para dar estilo a un texto dentro de una línea. Por ejemp
 
 En el cápitulo anterior crearmos una página web sencilla con la estructura mínima donde solo aparecía el texto "Mi calculadora geodésica". Modificaremos la página y le daremos una mejor estructura.
 
-1. Abrir en el editor de texto el archivo **index.html** que se encuentra en la carpeta *web-mgeo*
+####  Ejercicios entregables
 
-2. Agregar el autor y la descripción en el **head**. Para ello escribir lo siguiente
+!!! question "Calculadora geodésica"
 
-    ``` html hl_lines="5 6"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        Mi calculadora geodésica
-    </body>
-    </html>
-    ```
+    1. Abrir en el editor de texto el archivo **index.html** que se encuentra en la carpeta *web-mgeo*
 
-3. Agregar el viewport para que la página sea "*responsive*". 
+    2. Agregar el autor y la descripción en el **head**. Para ello escribir lo siguiente
 
-    ``` html hl_lines="7"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        Mi calculadora geodésica
-    </body>
-    </html>
-    ```
+        ``` html hl_lines="5 6"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+            <h1>Mi calculadora geodésica</h1>
+        </body>
+        </html>
+        ```
 
-4. Agregar el favicon de la página
+    3. Agregar el viewport para que la página sea "*responsive*". 
 
-    ``` html hl_lines="8"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        Mi calculadora geodésica
-    </body>
-    </html>
-    ```
+        ``` html hl_lines="7"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+            <h1>Mi calculadora geodésica</h1>
+        </body>
+        </html>
+        ```
 
-5. Guardar y recargar la página, veremos que aprece nuestro favicon en la pestaña del navegador pero que el resto de nuestra página sigue igual. Esto es debido a que como ya hemos mencionado los metadatos de la página no son visibles.
+    4. Agregar el favicon de la página
 
-6. Agregar el header y footer a la pagina. Para ello escribimos lo siguiente en nuestro archivo *index.html*
+        ``` html hl_lines="8"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+            <h1>Mi calculadora geodésica</h1>
+        </body>
+        </html>
+        ```
 
-    ``` html hl_lines="12 13"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>Mi calculadora geodésica</header>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+    5. Guardar y recargar la página, veremos que aprece nuestro favicon en la pestaña del navegador pero que el resto de nuestra página sigue igual. Esto es debido a que como ya hemos mencionado los metadatos de la página no son visibles.
 
-7. Guardar y recargar la página, veremos que nuestro texto no ha cambiado y que aparece el texto del *footer*. Esto es debido a que los elementos header y footer dan contexto semántico pero no aplicán ningún estilo. 
+    6. Agregar el header y footer a la pagina. Para ello escribimos lo siguiente en nuestro archivo *index.html*
 
-8. Crear el elemento principal de la página
+        ``` html hl_lines="12-16"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-    ``` html hl_lines="13 14 15"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>Mi calculadora geodésica</header>
-        <main>
-            Aqui irá mi calculadora
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+    7. Guardar y recargar la página, veremos que nuestro texto no ha cambiado y que aparece el texto del *footer*. Esto es debido a que los elementos header y footer dan contexto semántico pero no aplicán ningún estilo. 
 
-9. Guardar y recargar la página para ver el contenido del elemento principal
+    8. Crear el elemento principal de la página
+
+        ``` html hl_lines="16-18"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                Aqui irá mi calculadora
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
+
+    9. Guardar y recargar la página para ver el contenido del elemento principal
 
 ## Otros elementos importantes
-
-### Encabezado o título `<h[X]>`
-
-Hay seis elementos de encabezado: `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` y `<h6>`. Se usan para establecer los niveles de contenido de la página. Por ejemplo el `<h1>` representa el título principal, `<h2>` sería un subtítulo y así sucesivamente. 
-
-Preferiblemente se debe usar un solo `<h1>` por página. Y se debe procuarar no usar más de tres niveles por página.
-
-El uso de los encabezados favorece al **SEO** de las páginas. Los motores de búsqueda que indexan tu página consideran el contenido de los títulos como palabras clave importantes e influyen en la puntuación de búsqueda de la página.
-
-1. Modificar el *index.html* para agregar el titulo
-
-    ``` html hl_lines="12"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header><h1>Mi calculadora geodésica</h1></header>
-        <main>
-            Aqui irá mi calculadora
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
-
-2. Guardar y recargar la página para ver como ha cambiado el estilo del título de la página
 
 ### Listas
 
@@ -388,179 +368,81 @@ Ejemplo de lista no ordenada con lista ordenada anidada
   <li>pan</li>
 </ul>
 
-1. Modificar el *index.html* para agregar un listado (no ordenado) de sistemas de referencia. Este listado lo crearemos en un barra lateral `<aside>`. 
+####  Ejercicios entregables
 
-    ``` html hl_lines="15 16 17 18 19 20 21 22"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header><h1>Mi calculadora geodésica</h1></header>
-        <main>
-            Aqui irá mi calculadora
-             <aside>
-                <ul>
-                    <li>EPSG:4326</li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+!!! question "Calculadora geodésica"
 
-2. Guardar y recargar la página para observar que aparece nuestro listado de sistemas de referencia.
+    1. Modificar el *index.html* para agregar un listado (no ordenado) de sistemas de referencia. Este listado lo crearemos en un barra lateral `<aside>`. 
 
-### Énfasis, Cursiva, negrita, subrayado...
+        ``` html hl_lines="18-25"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                Aqui irá mi calculadora
+                <aside>
+                    <ul>
+                        <li>EPSG:4326</li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-En el lenguaje humano, a menudo enfatizamos ciertas palabras para alterar el significado de una frase, y a menudo queremos destacar ciertas palabras como importantes o diferentes en algún sentido. HTML nos dota de diversos elementos semánticos que nos permiten destacar contenido textual con tales efectos, y en esta sección veremos los más comunes.
+    2. Guardar y recargar la página para observar que aparece nuestro listado de sistemas de referencia.
 
-#### Negrita
+    3. Modificar el *index.html* para agregar enlaces al listado de sistemas de referencia
 
-Para el texto en negrita, use las etiquetas `<strong>` o `<b>`. La diferencia es semántica, `<strong>` se utiliza para indicar que el texto es fundamental o semánticamente importante para el texto circundante, mientras que `<b>` no indica tal importancia y simplemente representa texto que debe estar en negrita.
+        ``` html hl_lines="20"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB" style="height: 100px;">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                Aqui irá mi calculadora
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-#### Cursiva
-
-Para poner el texto en cursiva, use las etiquetas `<em>` o `<i>`. Al igual que en las negritas la diferencia es semántica. `<em>` se utiliza para indicar que el texto debe tener un énfasis adicional que se debe resaltar, mientras que `<i>` simplemente representa el texto que se debe diferenciar del texto normal que lo rodea. 
-
-#### Subrayado
-
-El elemento `<u>` se usa para representar una anotación no textual no articulada (No es un hipervínculo). Se usa para transmitir el significado que tradicionalmente conlleva el subrayado: nombres propios, errores ortográficos...
-
-### Hipervínculos o enlaces
-
-Los enlaces `<a>` son elementos verdaderamente importantes son los que hacen que la web sea **web**.
-
-Un enlace se crea incluyendo el texto o cualquier otro contenido que queramos convertir en un enlace usando un elemento `<a>`. Donde le daremos un atributo **href** que contendrá la dirección web hacia dónde queremos que apunte el enlace.
-
-Ejemplo
-
-``` html
-<a href="https://www.mozilla.org/es-ES/">la página de inicio de Mozilla</a>
-```
-<a href="https://www.mozilla.org/es-ES/">la página de inicio de Mozilla</a>
-
-Otro atributo que es recomendable agregar a los enlaces es el *title*. El título contiene información adicional sobre el enlace. El título se mostrará al pasar el ratón sobre el texto del enlace.
-
-El atributo **target** es muy útil ya que en donde desplegar la URL enlazada. Por defecto si no se especifica los enlaces se abren en la ventana o pestaña actual. Los valores mas usados para este atributo son:
-
-* **_self**: Carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.
-* **_blank**: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.
-* **_parent**: Carga la URL en el contexto de navegación padre (parent) del actual. Si no existe el padre, este se comporta del mismo modo que *_self*.
-
-!!! note
-    Cuando se utiliza **target**, considera agregar rel="noopener noreferrer" para evitar el uso de la API window.opener.
-
-Ejemplo
-
-``` html
-<a href="https://www.mozilla.org/es-ES/" title="El mejor lugar para encontrar más información acerca de la misión de Mozilla y cómo contribuir" target="_blank" rel="noopener noreferrer">la página de inicio de Mozilla</a>
-```
-<a href="https://www.mozilla.org/es-ES/" title="El mejor lugar para encontrar más información acerca de la misión de Mozilla y cómo contribuir"  target="_blank" rel="noopener noreferrer">la página de inicio de Mozilla</a>
-
-1. Modificar el *index.html* para agregar enlaces al listado de sistemas de referencia
-
-    ``` html hl_lines="17"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header><h1>Mi calculadora geodésica</h1></header>
-        <main>
-            Aqui irá mi calculadora
-             <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-     </html>
-    ```
-
-2. Guardar y recargar la página para observar que aparece un enlace en el primer elemento del listado de sistemas de referencia.
-
-### Imagenes y multimedia
-
-HTML soporta varios recursos multimedia como imágenes, audio, y video. En nuestro caso explicaremos únicamente las imágenes ya que son el elemento multimedia más utilizado.
-
-El elemento de imagen `<img>` representa una imagen en el documento.
-
-Una imagen se crea usando un elemento `<img>`. Donde le daremos un atributo **src** que contendrá la dirección web donde está ubicada la imagen.
-
-Ejemplo 
-
-``` html
-<img src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
-```
-<img src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
-
-Un atributo que es recomendable agregar a las imágenes es el *alt*. Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.
-
-Otros atributos comunes son el *height* (altura) y el *width* (ancho) para definir las dimensiones de la imagen.
-
-``` html
-<img alt="Proyecciones geográficas" width="200" height="100" src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
-```
-
-<img alt="Proyecciones geográficas" width="200" height="100" src="https://sites.google.com/site/siggeografico/_/rsrc/1308667090074/helpdesk-reps/proyecciones.jpg" />
-
-1. Modificar el *index.html* para agregar una imagen en el header de nuestra página.
-
-    ``` html hl_lines="12 13 14 15"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/servlet/BlobServer?blobtable=Imatge&blobcol=urlimg&blobheader=image/png&blobkey=id&blobwhere=1345709314986&blobnocache=true" alt="UAB" style="height: 100px;">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            Aqui irá mi calculadora
-             <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-     </html>
-    ```
-
-2. Guardar y recargar la página para ver que aparece la imagen del logo de la UAB en nuestra página.
+    4. Guardar y recargar la página para observar que aparece un enlace en el primer elemento del listado de sistemas de referencia.
 
 ### Formularios
 
@@ -705,377 +587,249 @@ Ejemplos
 
 <label>Click me <input type="text" id="Name" name="Name" /></label>
 
-1. Modificar el *index.html* para agregar un formulario en nuestra página. Primero crear un par de controles `<select>` para seleccionar el sistema de referencia
+####  Ejercicios entregables
 
-    ``` html hl_lines="17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            <div>
-                <label for="origen">Sistema de referencia de origen</label>
-                <select id="origen">
-                    <option value="EPSG:4326">EPSG:4326</option> 
-                    <option value="EPSG:3857">EPSG:3857</option>
-                    <option value="EPSG:25831">EPSG:25831</option>
-                    <option value="EPSG:23031">EPSG:23031</option>
-                </select>
+!!! question "Calculadora geodésica"
 
-                <label for="destino">Sistema de referencia de destino</label>
-                <select id="destino">
-                    <option value="EPSG:4326">EPSG:4326</option> 
-                    <option value="EPSG:3857">EPSG:3857</option>
-                    <option value="EPSG:25831">EPSG:25831</option>
-                    <option value="EPSG:23031">EPSG:23031</option>
-                </select>
-            </div>
-            <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-     </html>
-    ```
+    1. Modificar el *index.html* para agregar un formulario en nuestra página. Primero crear un par de controles `<select>` para seleccionar el sistema de referencia
 
-2. Crear un par de campos para introducir las coordenadas de origen
+        ``` html hl_lines="17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                <div>
+                    <label for="origen">Sistema de referencia de origen</label>
+                    <select id="origen">
+                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:3857">EPSG:3857</option>
+                        <option value="EPSG:25831">EPSG:25831</option>
+                        <option value="EPSG:23031">EPSG:23031</option>
+                    </select>
 
-    ``` html hl_lines="33 34 35 36 37 38"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            <div>
-                <label for="origen">Sistema de referencia de origen</label>
-                <select id="origen">
-                    <option value="EPSG:4326">EPSG:4326</option> 
-                    <option value="EPSG:3857">EPSG:3857</option>
-                    <option value="EPSG:25831">EPSG:25831</option>
-                    <option value="EPSG:23031">EPSG:23031</option>
-                </select>
+                    <label for="destino">Sistema de referencia de destino</label>
+                    <select id="destino">
+                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:3857">EPSG:3857</option>
+                        <option value="EPSG:25831">EPSG:25831</option>
+                        <option value="EPSG:23031">EPSG:23031</option>
+                    </select>
+                </div>
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-                <label for="destino">Sistema de referencia de destino</label>
-                <select id="destino">
-                    <option value="EPSG:4326">EPSG:4326</option> 
-                    <option value="EPSG:3857">EPSG:3857</option>
-                    <option value="EPSG:25831">EPSG:25831</option>
-                    <option value="EPSG:23031">EPSG:23031</option>
-                </select>
-                
-                <label for="lat">Latitud</label>
-                <input type="text" id="lat">
+    2. Crear un par de campos para introducir las coordenadas de origen
 
-                <label for="lng">Longitud</label>
-                <input type="text" id="lng">
-            </div>
-            <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+        ``` html hl_lines="33 34 35 36 37 38"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                <div>
+                    <label for="origen">Sistema de referencia de origen</label>
+                    <select id="origen">
+                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:3857">EPSG:3857</option>
+                        <option value="EPSG:25831">EPSG:25831</option>
+                        <option value="EPSG:23031">EPSG:23031</option>
+                    </select>
 
-3. Crear un botón para hacer la transformación
-    
-    ``` html hl_lines="39 40"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            <div>
-                <label for="origen">Sistema de referencia de origen</label>
-                <select id="origen">
-                    <option value="EPSG:4326">EPSG:4326</option> 
-                    <option value="EPSG:3857">EPSG:3857</option>
-                    <option value="EPSG:25831">EPSG:25831</option>
-                    <option value="EPSG:23031">EPSG:23031</option>
-                </select>
+                    <label for="destino">Sistema de referencia de destino</label>
+                    <select id="destino">
+                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:3857">EPSG:3857</option>
+                        <option value="EPSG:25831">EPSG:25831</option>
+                        <option value="EPSG:23031">EPSG:23031</option>
+                    </select>
+                    
+                    <label for="lat">Latitud</label>
+                    <input type="text" id="lat">
 
-                <label for="destino">Sistema de referencia de destino</label>
-                <select id="destino">
-                    <option value="EPSG:4326">EPSG:4326</option> 
-                    <option value="EPSG:3857">EPSG:3857</option>
-                    <option value="EPSG:25831">EPSG:25831</option>
-                    <option value="EPSG:23031">EPSG:23031</option>
-                </select>
-                
-                <label for="lat">Latitud</label>
-                <input type="text" id="lat">
+                    <label for="lng">Longitud</label>
+                    <input type="text" id="lng">
+                </div>
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-                <label for="lng">Longitud</label>
-                <input type="text" id="lng">
-                
-                <button>Transformar coordenadas</button>
-            </div>
-            <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
+    3. Crear un botón para hacer la transformación
+        
+        ``` html hl_lines="39 40"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                <div>
+                    <label for="origen">Sistema de referencia de origen</label>
+                    <select id="origen">
+                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:3857">EPSG:3857</option>
+                        <option value="EPSG:25831">EPSG:25831</option>
+                        <option value="EPSG:23031">EPSG:23031</option>
+                    </select>
 
-4. Guardar y recargar la página para ver que aparece el formulario.
+                    <label for="destino">Sistema de referencia de destino</label>
+                    <select id="destino">
+                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:3857">EPSG:3857</option>
+                        <option value="EPSG:25831">EPSG:25831</option>
+                        <option value="EPSG:23031">EPSG:23031</option>
+                    </select>
+                    
+                    <label for="lat">Latitud</label>
+                    <input type="text" id="lat">
 
-### Tablas
+                    <label for="lng">Longitud</label>
+                    <input type="text" id="lng">
+                    
+                    <button>Transformar coordenadas</button>
+                </div>
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-El elemento `<table>` se usa para representar datos en dos o mas dimensiones. Permite organizar los datos en filas y columnas.  
+    4. Guardar y recargar la página para ver que aparece el formulario.
 
-En documentos HTML una tabla puede ser considerada, como un grupo de filas donde cada una contiene a un grupo de celdas.
+    5. Modificar el *index.html* para agregar una tabla para ordenar los campos del formulario en nuestra página.
 
-Como muchas otras estructuras de HTML, las tablas son construidas utilizando elementos. En particular, una tabla básica puede ser declarada usando tres elementos, `<table>` (el contenedor principal), `<tr>` (representando a las filas contenedoras de las celdas) y `<td>` (representando a las celdas) [^4]
+        ``` html hl_lines="18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54"
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="author" content="[VUESTRO NOMBRE]">
+            <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <title>Mi calculadora geodésica</title>
+        </head>
+        <body>
+            <header>
+                <img src="https://www.uab.cat/Xcelerate/WAI/img/UAB-2linies-verd.svg" alt="UAB">
+                <h1>Mi calculadora geodésica</h1>
+            </header>
+            <main>
+                <div>
+                    <table>
+                        <tr>
+                            <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                            <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <select id="origen">
+                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:3857">EPSG:3857</option>
+                                    <option value="EPSG:25831">EPSG:25831</option>
+                                    <option value="EPSG:23031">EPSG:23031</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                <select id="destino">
+                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:3857">EPSG:3857</option>
+                                    <option value="EPSG:25831">EPSG:25831</option>
+                                    <option value="EPSG:23031">EPSG:23031</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="lat">Latitud</label></td>
+                            <td><label for="lng">Longitud</label></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="lat"></td>
+                            <td><input type="text" id="lng"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><button>Transformar coordenadas</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <ul>
+                        <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                        <li>EPSG:3857</li>
+                        <li>EPSG:25831</li>
+                        <li>EPSG:23031</li>
+                    </ul>
+                </aside>
+            </main>
+            <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+        </body>
+        </html>
+        ```
 
-Ejemplo
-
-``` html
-<table>
-  <tr>
-    <td>Celda 1</td>
-    <td>Celda 2</td>
-    <td>Celda 3</td>
-  </tr>
-  <tr>
-    <td>Celda 4</td>
-    <td>Celda 5</td>
-    <td>Celda 6</td>
-  </tr>
-</table>
-```
-
-<table>
-  <tr>
-    <td>Celda 1</td>
-    <td>Celda 2</td>
-    <td>Celda 3</td>
-  </tr>
-  <tr>
-    <td>Celda 4</td>
-    <td>Celda 5</td>
-    <td>Celda 6</td>
-  </tr>
-</table>
-
-Conjuntamente con los elementos básicos de la tabla existen otros tipos de elementos que permiten hacer tablas más avanzadas. A continuación veremos algunos de ellos.
-
-* El elemento `<th>` es un tipo especial de celda y se usa para los encabezados.
-* El elemento `<caption>` de ser insertado justo después de la etiquete de apertura de la tabla y antes que todos los demás elementos. Se usa para definir el título de la tabla.
-
-
-Ejemplo
-
-``` html
-<table>
-  <caption>Titulo de la tabla</caption>
-  <tr>
-    <th>Encabezado 1</th>
-    <th>Encabezado 2</th>
-    <th>Encabezado 3</th>
-  </tr>
-  <tr>
-    <td>Celda 1</td>
-    <td>Celda 2</td>
-    <td>Celda 3</td>
-  </tr>
-  <tr>
-    <td>Celda 4</td>
-    <td>Celda 5</td>
-    <td>Celda 6</td>
-  </tr>
-</table>
-```
-
-<table>
-  <caption>Titulo de la tabla</caption>
-  <tr>
-    <th>Encabezado 1</th>
-    <th>Encabezado 2</th>
-    <th>Encabezado 3</th>
-  </tr>
-  <tr>
-    <td>Celda 1</td>
-    <td>Celda 2</td>
-    <td>Celda 3</td>
-  </tr>
-  <tr>
-    <td>Celda 4</td>
-    <td>Celda 5</td>
-    <td>Celda 6</td>
-  </tr>
-</table>
-
-La unificación de celdas es un mecanismo mediante el cual se pueden combinar o fusionar dos o más celdas adyacentes en una tabla. Este efecto puede lograrse utilizando los atributos **colspan**, para unificación horizontal, y **rowspan**, para unificación vertical. Estos atributos pueden tomar un valor entero mayor a cero, que representa el número de celdas que participarán en la unificación.
-
-Ejemplo
-
-``` html
-<table>
-  <caption>Titulo de la tabla</caption>
-  <tr>
-    <th>Encabezado 1</th>
-    <th>Encabezado 2</th>
-    <th>Encabezado 3</th>
-  </tr>
-  <tr>
-    <td>Celda 1</td>
-    <td colspan="2">Celda 2 y 3</td>
-  </tr>
-  <tr>
-    <td>Celda 4</td>
-    <td>Celda 5</td>
-    <td>Celda 6</td>
-  </tr>
-</table>
-```
-
-<table>
-  <caption>Titulo de la tabla</caption>
-  <tr>
-    <th>Encabezado 1</th>
-    <th>Encabezado 2</th>
-    <th>Encabezado 3</th>
-  </tr>
-  <tr>
-    <td>Celda 1</td>
-    <td colspan="2">Celda 2 y 3</td>
-  </tr>
-  <tr>
-    <td>Celda 4</td>
-    <td>Celda 5</td>
-    <td>Celda 6</td>
-  </tr>
-</table>
-
-También existen 3 elementos que pueden ayudar a organizar la información presentada en una tabla permitiendo una agrupación semántica de filas. Éstos son: `<thead>` para agrupar las filas que presentan infromación de encabezado; `<tfoot>` para contener a las filas que representan un pie o resumen; y `<tbody>` para representar un bloque de filas que consiste en un cuerpo de datos. Estos grupos temáticos son meramente semánticos, y se debe evitar su uso para temas de estilo.
-
-De igual forma existe un elemento `<colgroup>` para hacer agrupaciones semánticas de columnas.
-
-1. Modificar el *index.html* para agregar una tabla para ordenar los campos del formulario en nuestra página.
-
-    ``` html hl_lines="18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54"
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="[VUESTRO NOMBRE]">
-        <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-        <title>Mi calculadora geodésica</title>
-    </head>
-    <body>
-        <header>
-            <img src="https://www.uab.cat/Imatge/635/883/logop.gif" alt="UAB">
-            <h1>Mi calculadora geodésica</h1>
-        </header>
-        <main>
-            <div>
-                <table>
-                    <tr>
-                        <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
-                        <th colspan="2"><label for="destino">Sistema de referencia de destino</label></th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <select id="origen">
-                                <option value="EPSG:4326">EPSG:4326</option> 
-                                <option value="EPSG:3857">EPSG:3857</option>
-                                <option value="EPSG:25831">EPSG:25831</option>
-                                <option value="EPSG:23031">EPSG:23031</option>
-                            </select>
-                        </td>
-                        <td colspan="2">
-                            <select id="destino">
-                                <option value="EPSG:4326">EPSG:4326</option> 
-                                <option value="EPSG:3857">EPSG:3857</option>
-                                <option value="EPSG:25831">EPSG:25831</option>
-                                <option value="EPSG:23031">EPSG:23031</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="lat">Latitud</label></td>
-                        <td><label for="lng">Longitud</label></td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" id="lat"></td>
-                        <td><input type="text" id="lng"></td>
-                        <td colspan="2"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"><button>Transformar coordenadas</button></td>
-                    </tr>
-                </table>
-            </div>
-            <aside>
-                <ul>
-                    <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
-                    <li>EPSG:3857</li>
-                    <li>EPSG:25831</li>
-                    <li>EPSG:23031</li>
-                </ul>
-            </aside>
-        </main>
-        <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
-    </body>
-    </html>
-    ```
-
-2. Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.
+    6. Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.
 
 !!! question "Ejercicio 2.5 pt"
     1. Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente **0.5 pt**.

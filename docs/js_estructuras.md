@@ -61,9 +61,9 @@ if (condición1) {
 }
 ```
 
-#### Operador if
+#### Operador Ternario
 
-Es una forma más esquemática de realizar algunos **if** sencillos. No sólo realiza una comparación de valores, además asigna un valor a una variable. Lo que hace es evaluar la condición (colocada entre paréntesis) y si es positiva asigna el valor1 a la variable y en caso contrario le asigna el valor2
+Es una forma más esquemática de realizar algunos **if-else** sencillos. No sólo realiza una comparación de valores, además asigna un valor a una variable. Lo que hace es evaluar la condición (colocada entre paréntesis) y si es positiva asigna el valor1 a la variable y en caso contrario le asigna el valor2
 
 La sintaxis es la siguiente
 
@@ -79,7 +79,7 @@ momento = (hora_actual < 12) ? "Antes del mediodía" : "Después del mediodía"
 
 ### switch
 
-**switch** es una estructura un poco más compleja que permite hacer múltiples operaciones dependiendo del estado de una variable. Sirve para tomar decisiones en función de distintos estados de las variables. Esta expresión se utiliza cuando tenemos múltiples posibilidades como resultado de la evaluación de una sentencia.
+**switch** es una estructura un poco más compleja que permite hacer múltiples operaciones dependiendo del estado de una variable. Sirve para tomar decisiones en función de distintos estados de las variables. Esta expresión se utiliza cuando tenemos múltiples posibilidades como resultado de la evaluación de una sentencia. Es una alternativa a múltiples `if-else`.
 
 La declaración **switch** evalúa una expresión, comparando el valor de esa expresión con una instancia *case*, y ejecuta declaraciones asociadas a ese *case*, así como las declaraciones en los *case* que siguen.
 
@@ -134,32 +134,6 @@ switch (dia_de_la_semana) {
 }
 ```
 
-### TRY ... CATCH
-
-La declaración **try...catch** señala un bloque de instrucciones a intentar (*try*), y especifica una respuesta si se produce una excepción (*catch*).
-
-La sentencia try consiste en un bloque try que contiene una o más sentencias. Las llaves {} se deben utilizar siempre, incluso para una bloques de una sola sentencia. Al menos un bloque catch o un bloque finally debe estar presente. Esto nos da tres formas posibles para la sentencia try:
-
-    try...catch
-    try...finally
-    try...catch...finally
-
-Un bloque catch contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque try. Si cualquier sentencia dentro del bloque try (o en una funcion llamada desde dentro del bloque try) lanza una excepción, el control cambia inmediatamente al bloque catch . Si no se lanza ninguna excepcion en el bloque try, el bloque catch se omite.
-
-La bloque finally se ejecuta despues del bloque try y el/los bloque(s) catch hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada
-
-Ejemplo
-
-``` js
-try {
-   throw "myException"; // genera una excepción
-}
-catch (e) {
-   // sentencias para manejar cualquier excepción
-   logMyErrors(e); // pasa el objeto de la excepción al manejador de errores
-}
-```
-
 ## Bucles - iteraciones
 
 Los bucles se utilizan para realizar ciertas acciones repetidamente. Son muy utilizados a todos los niveles en la programación. Con un bucle podemos por ejemplo imprimir en una página los números del 1 al 100 sin necesidad de escribir cien veces el la instrucción imprimir.
@@ -203,48 +177,6 @@ var i
 for (i=500; i<=1000; i+=2) { 
    	document.write(i)
    	document.write("<br>") 
-}
-```
-
-#### for...in
-
-Un bucle **for...in** itera sobre las propiedades de un objeto en un orden arbitrario
-
-La sintaxis es la siguiente
-
-``` js
-for (variable in objeto) { 
-   	//sentencias a ejecutar en cada iteración 
-}
-```
-
-Ejemplo
-``` js
-const object = { a: 1, b: 2, c: 3 };
-
-for (const property in object) {
-  console.log(`${property}: ${object[property]}`);
-}
-```
-
-#### for...of
-
-La sentencia **for...of** ejecuta un bloque de código para cada elemento de un objeto iterable, como lo son: String, Array, TypedArray, Map, Set e iterables definidos por el usuario. La sintaxis de  **for...of** es específica para las colecciones, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección. [^2]
-
-La sintaxis es la siguiente
-
-``` js
-for (variable of objeto) { 
-   	//sentencias a ejecutar en cada iteración 
-}
-```
-
-Ejemplo
-``` js
-const iterable = [10, 20, 30];
-
-for (const value of iterable) {
-  console.log(value);
 }
 ```
 
@@ -301,87 +233,123 @@ do {
 } while (color != "rojo")
 ```
 
-## Operadores
+## Funciones
 
-Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones. [^3]
+En términos generales, una función es un "subprograma" que puede ser llamado por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado cuerpo de la función. Se pueden pasar valores a una función, y la función puede devolver un valor. [^4]
 
-JavaScript tiene una serie de operadores entre los más comúnes están: operadores de asignación, de comparación, aritméticos y lógicos. Se puede ver el listado completo de los operadores en https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators 
+Las funciones permiten reutilizar código y organizarlo mejor.
 
-Al igual que en las matémaaticas los operadores tiene un orden de preferencia a la hora de evaluar una expresión. [^4]
+En JavaScript, las funciones son objetos de primera clase, es decir, son objetos y se pueden manipular y transmitir al igual que cualquier otro objeto. Concretamente son objetos **Function**.
 
-### Operadores de asignación
+JavaScript tiene integradas varias funciones de nivel superior como por ejemplo parseInt(), decodeURI(), etc.
 
-Un operador de asignación asigna un valor a su operando izquierdo basándose en el valor de su operando derecho. El operador de asignación simple es igual (=), que asigna el valor de su operando derecho a su operando izquierdo. Es decir, x = y asigna el valor de y a x.
+### Declaracion de una función
 
-Ejemplos
+Una definición de función (también denominada declaración de función o expresión de función) consta de la palabra clave `function`, seguida de:
 
-``` js
-var color = "rojo";
-let count = 23;
-const frutas = [];
+* El nombre de la función.
+* Una lista de parámetros o argumentos de la función, entre paréntesis y separados por comas.
+* Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }.
+
+Se ejecuta llamándola con su nombre y pasando valores.
+
+```js
+function saludar(nombre) {
+    console.log("Hola, " + nombre);
+}
+
+saludar("Carlos"); // Llama a la función
 ```
 
-### Operadores de comparación
-
-Un operador de comparación compara sus operandos y devuelve un valor lógico en función de si la comparación es verdadera (true) o falsa (false).
-
-Ejemplos
+### Funciones con retorno (`return`)
 
 ``` js
-var var1 = 3;
-var var2 = 4;
+function suma(a, b) {
+    return a + b;
+}
 
-//igual
-3 == var1;
-"3" == var1;
-//no igual
-var1 != 4
-var2 != var1
-//estrictamente igual
-3 === var1
-//estricatamente no igual
-var1 !== "3"
-//mayor que
-var2 > var1
-//menor igual que
-var1 <= var2
+const resultado = suma(4,5); //Llama a la función y guardar el resultado en una variable
+console.log(resultado); // 9
 ```
 
-### Operadores aritméticos
+En el ejemplo anterior tenemos a la función *suma* que toma 2 parámetros *a* y *b* y devuelve un valor con la suma de *a+b*. La instrucción **return** especifica el valor devuelto por la función.
 
-Un operador aritmético toma valores numéricos como sus operandos y devuelve un solo valor numérico. Los operadores aritméticos estándar son suma (+), resta (-), multiplicación (*) y división (/).
+### Funciones anónimas
 
-Ejemplos
+Las funciones también se pueden crear mediante una **expresión function**. Esta función puede ser anónima; no tiene por qué tener un nombre. Por ejemplo, la función *suma* se podría haber definido como:
 
 ``` js
-var var1 = 3;
-var var2 = 4;
-
-var1 + var2;
-var2 * var1;
+const suma = function(a, b) {
+    return a + b;
+}
 ```
 
-### Operadores lógicos
+Las *expresión function* son convenientes cuando se pasa una función como argumento a otra función.
 
-Los operadores lógicos se utilizan normalmente con valores booleanos (lógicos); cuando lo son, devuelven un valor booleano.
+### Parámetros de una función
 
-| Operador         | Uso              | Descripción                                                                                                                                                                                                                  |
-|------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AND Lógico (&&)  | expr1 && expr2   | Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false.             |
-| OR lógico (\|\|) | expr1 \|\| expr2 | Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, \|\| devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false. |
-| NOT lógico (!)   | !expr            | Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true.                                                                                                                               |
-
-Ejemplos
+Existe una variable "especial" llamada **arguments** que es similar a una matriz. Esta variable guarda todos los argumentos de la función. 
 
 ``` js
-var a1 =  true && true;     // t && t devuelve true
-var a2 =  true && false;    // t && f devuelve false
-var o1 =  true || true;     // t || t devuelve true
-var o2 = false || true;     // f || t devuelve true
-var o3 = false || false;     // f || f devuelve false
-var n1 = !true;  // !t devuelve false
-var n2 = !false; // !f devuelve true
+const suma = function(a, b) {
+    let parametroB = arguments[1]; 
+}
 ```
+
+Usando el objeto *arguments*, puedes llamar a una función con más argumentos de los que formalmente declara aceptar. Esto suele ser útil si no sabes de antemano cuántos argumentos se pasarán a la función.
+
+### Parámetros predeterminados
+
+En el pasado (pre ES6), la estrategia general para establecer valores predeterminados era probar los valores de los parámetros en el cuerpo de la función y asignar un valor si eran **undefined**.
+
+Con parámetros predeterminados, ya no es necesaria una verificación manual en el cuerpo de la función. Simplemente puedes poner un valor predeterminado para algún parámetro en el encabezado de la función.
+
+``` js
+const suma = function(a, b = 2) {
+    return a + b;
+}
+```
+
+### Parámetros rest
+
+La sintaxis del parámetro rest (resto de parámetros) nos permite representar un número indefinido de argumentos como una matriz. Para ello ponemos tres puntos antes del nombre del parámetro
+
+``` js
+const suma = function(a, ...masParametros) {
+    ...
+    ...
+}
+suma(1, 2, 4, 7); //en este caso ...masParametros sería igual a [2, 4, 7]
+```
+
+### Funciones flecha
+
+Dos factores influyeron en la introducción de las funciones flecha son: funciones más cortas y no vinculantes de *this*.
+
+Hasta las funciones flecha, cada nueva función definía su propio valor *this*, lo que causaba algunos problemas. Para más detalles sobre funciones flecha https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions y https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/
+
+``` js
+const suma = (a, b) => a + b;
+
+const resta = (a, b) => { //Si tiene varias líneas de código, necesita {} y return
+    let resultado = a - b;
+    return resultado;
+};
+
+const cuadrado = a => a * a; //Si tiene un solo parámetro, no necesita paréntesis 
+```
+
+#### Ejercicios Prácticos
+
+!!! example "Dónde estoy? (15 minutos)"
+
+    1. Crear una función que reciba como parametros la latitud y la longitud y devuelva en que hemisferio está (norte o sur) y si es al este u oeste del meridiano 0 (oriental u occidental).
+
+## Ejercicios extras
+
+* [W3 Schools JS Exercises](https://www.w3schools.com/js/js_exercises.asp)
+* [Exercism](https://exercism.org/tracks/javascript/exercises)
+* [JS Challenger](https://www.jschallenger.com/javascript-basics)
 
 ## Referencias
 

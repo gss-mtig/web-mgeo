@@ -12,6 +12,7 @@ markdown_extensions:
       linenums: True
   - admonition
   - pymdownx.magiclink
+  - pymdownx.details
   - pymdownx.superfences
   - footnotes
 repo_url: "https://github.com/gss-mtig/web-mgeo"
@@ -20,16 +21,22 @@ nav:
 - Home: index.md
 - Introducción al desarrollo Web: introduccion_web.md
 - HTML: html.md
+- HTML - Estructura y Etiquetas Básicas: html_etiquetas_basicas.md
+- HTML - Imágenes y Tablas: html_imagenes_tablas.md
 - Elementos HTML: elementos_html.md
 - CSS: css.md
 - CSS el modelo de caja: css_bbox.md
 - CSS diseño: css_diseno.md
+- CSS avanzado: css_avanzado.md
 - JS: js.md
 - JS estructuras de control: js_estructuras.md
+- JS Arrays: js_arrays.md
 - JS objetos: js_objetos.md
 - JS dom: js_dom.md
 - JS async: js_async.md
 - JS en el servidor: js_servidor.md
+- JS alamcenamiento: js_almacenamiento.md
+- JS clases: js_clases.md
 
 plugins:
     - search

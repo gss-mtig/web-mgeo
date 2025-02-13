@@ -2,7 +2,7 @@
 
 Normalmente, el código de un programa determinado se ejecuta directamente, y solo sucede una cosa a la vez. Si una función se basa en el resultado de otra función, tiene que esperar a que la otra función termine y regrese, y hasta que eso suceda, todo el programa se detiene esencialmente desde la perspectiva del usuario. 
 
-Cuando una app web se ejeucta en el navegador y ejecuta un gran bloque de código sin retornar el control al navegador, este mismo puede parecer que se congela. Esto es llamado blocking; el navegador es bloqueado para que el usuario no pueda seguir interactuando y realizando otras tareas hasta que la app web retorne el control sobre el procesador. [^1]
+Cuando una app web se ejecuta en el navegador y ejecuta un gran bloque de código sin retornar el control al navegador, este mismo puede parecer que se congela. Esto es llamado blocking; el navegador es bloqueado para que el usuario no pueda seguir interactuando y realizando otras tareas hasta que la app web retorne el control sobre el procesador. [^1]
 
 JavaScript es tradicionalmente single-threaded. Aún con múltiples procesadores, solo se puede ejecutar tareas en un solo hilo, llamado el hilo principal (main thread). Actualmente existen herramientas de JavaScript como los **[Web workers](https://developer.mozilla.org/es/docs/Web/API/Web_Workers_API)** que permiten enviar parte del procesamiento a un hilo separado.
 
@@ -284,33 +284,6 @@ checkServerWithSugar(document.URL.toString())
   .then(result => console.log(result));
 ```
 
-#### Manejo de errores
-
-Si una promesa gestionada por await es rechazada o un error se dispara dentro de la función declarada como async, la promesa que automáticamente devuelve la función async también será rechazada. En este caso, podemos encadenar un .catch() para notificar el error
-
-``` js
-checkServerWithSugar(document.URL.toString())
-  .then(result => console.log(result))
-  .catch(e => console.log(`Error Capturado Fuera de la función async: ${e}`));
-```
-
-Pero si necesitáramos gestionar estos erroes internamente, en la propia función async, deberemos envolver nuestro código con un try / catch del siguiente modo
-
-``` js
-const checkServerWithSugar = async (url) => {
-  try {
-    const response = await fetch(url);
-    return `Estado del servidor: ${response.status === 200 ? "OK" : "NOT OK"}`;
-  } catch (e) {
-    throw `Manejo intero del error. Error original: ${e}`;
-  }
-}
-
-checkServerWithSugar(document.URL.toString())
-  .then(result => console.log(result))
-  .catch(e => console.log(`Error Capturado Fuera de la función async: ${e}`));
-```
-
 #### Multiples awaits
 
 Presta mucha atención cuando trabajes con múltiples promesas con el operador await. La mayoría de las veces querrás evitar apilar sentencias await, a menos que una dependa de la otra. Apilar múltiples await es equivalente a lanzar una promesa cuando la anterior haya sido resuelta. Es decir, ejecutar las promesas encadenadamente, de forma secuencial. Y esto no siempre es lo deseable.
@@ -371,7 +344,60 @@ contarEnTexto().then(result => console.log(result));
 
 Podemos ver un ejemplo de como usarlo en una clase https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Async_await#asyncawait_class_methods
 
-### fetch
+## Manejo de errores
+
+### TRY ... CATCH
+
+La declaración **try...catch** señala un bloque de instrucciones a intentar (*try*), y especifica una respuesta si se produce una excepción (*catch*).
+
+La sentencia try consiste en un bloque try que contiene una o más sentencias. Las llaves {} se deben utilizar siempre, incluso para una bloques de una sola sentencia. Al menos un bloque catch o un bloque finally debe estar presente. Esto nos da tres formas posibles para la sentencia try:
+
+    try...catch
+    try...finally
+    try...catch...finally
+
+Un bloque catch contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque try. Si cualquier sentencia dentro del bloque try (o en una funcion llamada desde dentro del bloque try) lanza una excepción, el control cambia inmediatamente al bloque catch . Si no se lanza ninguna excepcion en el bloque try, el bloque catch se omite.
+
+La bloque finally se ejecuta despues del bloque try y el/los bloque(s) catch hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada
+
+Ejemplo
+
+``` js
+try {
+   throw "myException"; // genera una excepción
+}
+catch (e) {
+   // sentencias para manejar cualquier excepción
+   logMyErrors(e); // pasa el objeto de la excepción al manejador de errores
+}
+```
+
+Si una promesa gestionada por await es rechazada o un error se dispara dentro de la función declarada como async, la promesa que automáticamente devuelve la función async también será rechazada. En este caso, podemos encadenar un .catch() para notificar el error
+
+``` js
+checkServerWithSugar(document.URL.toString())
+  .then(result => console.log(result))
+  .catch(e => console.log(`Error Capturado Fuera de la función async: ${e}`));
+```
+
+Pero si necesitáramos gestionar estos erroes internamente, en la propia función async, deberemos envolver nuestro código con un try / catch del siguiente modo
+
+``` js
+const checkServerWithSugar = async (url) => {
+  try {
+    const response = await fetch(url);
+    return `Estado del servidor: ${response.status === 200 ? "OK" : "NOT OK"}`;
+  } catch (e) {
+    throw `Manejo intero del error. Error original: ${e}`;
+  }
+}
+
+checkServerWithSugar(document.URL.toString())
+  .then(result => console.log(result))
+  .catch(e => console.log(`Error Capturado Fuera de la función async: ${e}`));
+```
+
+## fetch
 
 En algunos ejemplos anteriores hemos usado la función fetch. Ahora veremos con más detalles para que se usa y su funcionamiento.
 
@@ -399,7 +425,7 @@ fetch('https://httpbin.org/ip')
     });
 ```
 
-#### Opciones de la petición
+### Opciones de la petición
 
 A la función *fetch(url, options)* se le pasa por parámetro la url de la petición y, de forma opcional, un objeto options con opciones de la petición HTTP. En este objeto de opciones podemos definir varios detalles:
 
@@ -441,7 +467,7 @@ fetch('https://httpbin.org/post',{
     });
 ```
 
-#### Propieadades de la respuesta
+### Propieadades de la respuesta
 
 En la función que pasamos a then() vamos a recibir un objeto **Response**. Este objeto contiene la respuesta que hace el servidor y dispone de una serie de propiedades con los valores de esa respuesta y métodos que pueden resultarnos útiles al implementar nuestro código.
 
@@ -524,6 +550,38 @@ request('https://httpbin.org/ip').then(data => {
 	console.error(err);
 });
 ```
+
+#### Ejercicios Prácticos
+
+!!! example "Obtener datos de una API con `fetch`"
+
+    1. Usa fetch para obtener información de la API pública JSONPlaceholder y mostrar los títulos de los primeros 5 posts.
+
+        URL de la API `https://jsonplaceholder.typicode.com/posts`. Usar fetch dentro de async/await.
+
+        Aqui teneis muchas APIs gratuitas para practicar https://publicapis.dev/
+
+!!! example "Simulación de compra en línea"
+
+    Crea una función realizarCompra() que reciba un producto y un precio, y simule una compra en línea con los siguientes pasos:
+
+    1. Esperar 2 segundos simulando el procesamiento del pago.
+    2. Si el precio es mayor a 1000, rechazar la compra con un mensaje de error.
+    3. Si el pago es exitoso, mostrar "Compra de [producto] realizada por $[precio]".
+
+    ``` js
+    // Pruebas
+    realizarCompra("Laptop", 1200);  // Error: El precio supera el límite permitido.
+    realizarCompra("Teclado", 50);    // Compra de Teclado realizada por $50
+    ```
+
+!!! example "DragonBall"
+
+    1. Crea una funcion que llame a la API de DragonBall para obtener el listado de personajes. Documentacion de la API. https://web.dragonball-api.com/documentation
+    2. Modifica tu pagina web para que muestre el listado de personajes.
+        
+        Ejemplo: (mantener el estilo creado en el ejercicio de CSS) 
+        ![Ejemplo listado personajes de DragonBall](./img/lista-personajes-dragonball.png)
 
 ## Referencias
 

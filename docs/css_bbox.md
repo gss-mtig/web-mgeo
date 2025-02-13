@@ -156,52 +156,56 @@ El redondeo de esquinas en una caja se logra mediante el uso de la propiedad **b
 }
 ```
 
-1. Modificar el archivo **estilos.css** para agregar un borde al elemento aside
+####  Ejercicios entregables
 
-    ``` css hl_lines="29 30 31"
-    :root {
-        --light-blue: #8ecae6ff;
-        --blue-green: #219ebcff;
-        --prussian-blue: #023047ff;
-        --honey-yellow: #ffb703ff;
-        --orange: #fb8500ff;
-    }
+!!! question "Calculadora geodésica"
 
-    html {
-        font-family: "Roboto", sans-serif;
-    }
+    1. Modificar el archivo **estilos.css** para agregar un borde al elemento aside
 
-    header {
-        background-color: var(--light-blue);
-    }
+        ``` css hl_lines="29 30 31"
+        :root {
+            --light-blue: #8ecae6ff;
+            --blue-green: #219ebcff;
+            --prussian-blue: #023047ff;
+            --honey-yellow: #ffb703ff;
+            --orange: #fb8500ff;
+        }
 
-    header > h1 {
-        color: var(--prussian-blue);
-    }
+        html {
+            font-family: "Roboto", sans-serif;
+        }
 
-    footer {
-        color: var(--blue-green);
-    }
+        header {
+            background-color: var(--light-blue);
+        }
 
-    #origen, #destino {
-        color: var(--orange);
-    }
+        header > h1 {
+            color: var(--prussian-blue);
+        }
 
-    aside {
-        border-left: 2px solid var(--prussian-blue);
-    }
+        footer {
+            color: var(--blue-green);
+        }
 
-    aside > ul > li {
-        color: var(--honey-yellow);
-    }
+        #origen, #destino {
+            color: var(--orange);
+        }
 
-    .btn-tranformar {
-        background-color: var(--orange);
-        color: var(--prussian-blue);
-    }
-    ```
+        aside {
+            border-left: 2px solid var(--prussian-blue);
+        }
 
-2. Guardar y recargar la página para ver los cambios.
+        aside > ul > li {
+            color: var(--honey-yellow);
+        }
+
+        .btn-tranformar {
+            background-color: var(--orange);
+            color: var(--prussian-blue);
+        }
+        ```
+
+    2. Guardar y recargar la página para ver los cambios.
 
 ### Relleno
 
