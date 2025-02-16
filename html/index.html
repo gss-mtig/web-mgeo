@@ -18,11 +18,11 @@
         <link rel="prev" href="../introduccion_web/">
       
       
-        <link rel="next" href="../elementos_html/">
+        <link rel="next" href="../html_etiquetas_basicas/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
       
       
 
@@ -49,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,9 +61,6 @@
   
     <body dir="ltr">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -90,12 +87,12 @@
     <a href=".." title="Programació web" class="md-header__button md-logo" aria-label="Programació web" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -115,10 +112,13 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -127,21 +127,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando búsqueda
@@ -158,7 +158,7 @@
         <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -194,7 +194,7 @@
     <a href=".." title="Programació web" class="md-nav__button md-logo" aria-label="Programació web" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Programació web
@@ -204,7 +204,7 @@
       <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -216,6 +216,7 @@
     
       
       
+  
   
   
   
@@ -238,6 +239,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../introduccion_web/" class="md-nav__link">
         
@@ -257,6 +259,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -304,6 +307,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#anatomia-de-un-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomía de un HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomía de un HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura básica de un HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura básica de un HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Prácticos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#elementos" class="md-nav__link">
     <span class="md-ellipsis">
       Elementos
@@ -349,30 +391,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anatomia-de-un-html" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anatomía de un HTML
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Anatomía de un HTML">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#estructura-basica-de-un-html" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estructura básica de un HTML
-    </span>
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#espacios-en-blanco-en-html" class="md-nav__link">
     <span class="md-ellipsis">
@@ -409,24 +427,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#elementos-de-bloque-vs-elementos-de-linea" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elementos de bloque vs elementos de línea
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mi-primera-pagina" class="md-nav__link">
+  <a href="#ejercicios-entregables" class="md-nav__link">
     <span class="md-ellipsis">
-      Mi primera página
+      Ejercicios entregables
     </span>
   </a>
   
@@ -454,6 +463,47 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../html_etiquetas_basicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML - Estructura y Etiquetas Básicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html_imagenes_tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML - Imágenes y Tablas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../elementos_html/" class="md-nav__link">
         
@@ -470,6 +520,7 @@
     
       
       
+  
   
   
   
@@ -492,6 +543,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css_bbox/" class="md-nav__link">
         
@@ -508,6 +560,7 @@
     
       
       
+  
   
   
   
@@ -530,6 +583,27 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../css_avanzado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS avanzado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../js/" class="md-nav__link">
         
@@ -546,6 +620,7 @@
     
       
       
+  
   
   
   
@@ -568,6 +643,27 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../js_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../js_objetos/" class="md-nav__link">
         
@@ -584,6 +680,7 @@
     
       
       
+  
   
   
   
@@ -606,6 +703,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_async/" class="md-nav__link">
         
@@ -625,12 +723,53 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_servidor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     JS en el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS alamcenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS clases
   </span>
   
 
@@ -666,6 +805,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#anatomia-de-un-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomía de un HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomía de un HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura básica de un HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura básica de un HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Prácticos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#elementos" class="md-nav__link">
     <span class="md-ellipsis">
       Elementos
@@ -711,30 +889,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anatomia-de-un-html" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anatomía de un HTML
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Anatomía de un HTML">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#estructura-basica-de-un-html" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estructura básica de un HTML
-    </span>
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#espacios-en-blanco-en-html" class="md-nav__link">
     <span class="md-ellipsis">
@@ -771,24 +925,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#elementos-de-bloque-vs-elementos-de-linea" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elementos de bloque vs elementos de línea
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mi-primera-pagina" class="md-nav__link">
+  <a href="#ejercicios-entregables" class="md-nav__link">
     <span class="md-ellipsis">
-      Mi primera página
+      Ejercicios entregables
     </span>
   </a>
   
@@ -822,10 +967,55 @@
 
 
 <h1 id="html-hypertext-markup-language-lenguaje-de-marcas-de-hipertexto">HTML - HyperText Markup Language - Lenguaje de Marcas de Hipertexto</h1>
-<p><strong>HTML</strong> es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p><strong>HTML</strong> es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.  Permite definir elementos como títulos, párrafos, imágenes, enlaces y más.</p>
+<p>Características principales:</p>
+<ul>
+<li>Lenguaje de marcado: HTML utiliza etiquetas para estructurar la información.</li>
+<li>No es un lenguaje de programación: No incluye lógica como condiciones o bucles, solo define la estructura.</li>
+<li>Indispensable en la web: Es el estándar para crear documentos que los navegadores interpretan.</li>
+</ul>
 <p>El HTML se escribe en forma de <strong>etiquetas</strong>, rodeadas por corchetes angulares (&lt;,&gt;,/). Ejemplo si escribimos <code>&lt;h1&gt;Hola Mundo!&lt;/h1&gt;</code> en nuestra página veremos</p>
 <h1>Hola Mundo!</h1>
 
+<h2 id="anatomia-de-un-html">Anatomía de un HTML</h2>
+<h3 id="estructura-basica-de-un-html">Estructura básica de un HTML</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página de prueba<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Esta es mi página<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<ol>
+<li><code>&lt;!DOCTYPE html&gt;</code>: anteriormente servía para establecer el conjunto de reglas que la página debía seguir para que fuera considerado un buen HTML. En la actualidad se considera un legado histórico que hay que incluir para que todo funcione correctamente.</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code>: este elemento envuelve todo el contenido de la página y se le conoce como elemento raiz.</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code>: es la <strong>cabecera</strong> y actua como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más.</li>
+<li><code>&lt;meta charset="utf-8"&gt;</code>: estable la codificación de caracteres que usará la página. Ayuda a evitar problemas de caracteres especiales como los acentos</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code>: establece el título de la página, que es lo que aparece en la pestaña del navegador.</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code>: contiene todo el contenido que se quiere mostrar en la página</li>
+</ol>
+<h4 id="ejercicios-practicos">Ejercicios Prácticos</h4>
+<div class="admonition example">
+<p class="admonition-title">DragonBall: (5 minutos)</p>
+<ol>
+<li>
+<p>Crear una carpeta llamada <strong>dragonball</strong></p>
+</li>
+<li>
+<p>Crear un archivo llamado <strong>index.html</strong> dentro de la carpeta <em>dragonball</em></p>
+</li>
+<li>
+<p>Crea un archivo HTML desde cero y escribe el mensaje <em>Personajes de DragonBall</em> en un elemento <code>&lt;h1&gt;</code></p>
+</li>
+<li>
+<p>Cambia el título de la página visible en la pestaña del navegador por Personajes de DragonBall</p>
+</li>
+</ol>
+</div>
 <h2 id="elementos">Elementos</h2>
 <p>Los elementos son la estructura básica de HTML. Los elementos tienen dos propiedades básicas: atributos y contenido. Cada atributo y contenido tiene ciertas restricciones para que se considere válido al documento HTML. Un elemento generalmente tiene una etiqueta de inicio (por ejemplo, <code>&lt;nombre-de-elemento&gt;</code>) y una etiqueta de cierre (por ejemplo, <code>&lt;/nombre-de-elemento&gt;</code>). Los atributos del elemento están contenidos en la etiqueta de inicio y el contenido está ubicado entre las dos etiquetas (por ejemplo, <code>&lt;nombre-de-elemento atributo="valor"&gt;Contenido&lt;/nombre-de-elemento&gt;</code>). Algunos elementos, tales como <code>&lt;br&gt;</code>, no tienen contenido ni llevan una etiqueta de cierre</p>
 <p>Una página que siempre hay que tener como referencia a la hora de consultar los elementos HTML es <a href="https://developer.mozilla.org/es/docs/Web/HTML">https://developer.mozilla.org/es/docs/Web/HTML</a></p>
@@ -861,27 +1051,6 @@ Ejemplo <code>&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;
 <p>También se puede escribir de manera abreviada</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">disabled</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="anatomia-de-un-html">Anatomía de un HTML</h2>
-<h3 id="estructura-basica-de-un-html">Estructura básica de un HTML</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi página de prueba<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Esta es mi página<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<ol>
-<li><code>&lt;!DOCTYPE html&gt;</code>: anteriormente servía para establecer el conjunto de reglas que la página debía seguir para que fuera considerado un buen HTML. En la actualidad se considera un legado histórico que hay que incluir para que todo funcione correctamente.</li>
-<li><code>&lt;html&gt;&lt;/html&gt;</code>: este elemento envuelve todo el contenido de la página y se le conoce como elemento raiz.</li>
-<li><code>&lt;head&gt;&lt;/head&gt;</code>: es la <strong>cabecera</strong> y actua como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más.</li>
-<li><code>&lt;meta charset="utf-8"&gt;</code>: estable la codificación de caracteres que usará la página. Ayuda a evitar problemas de caracteres especiales como los acentos</li>
-<li><code>&lt;title&gt;&lt;/title&gt;</code>: establece el título de la página, que es lo que aparece en la pestaña del navegador.</li>
-<li><code>&lt;body&gt;&lt;/body&gt;</code>: contiene todo el contenido que se quiere mostrar en la página</li>
-</ol>
 <h3 id="espacios-en-blanco-en-html">Espacios en blanco en HTML</h3>
 <p>No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de espacio como saltos de línea) el intérprete de HTML reduce cada secuencia de espacio en blanco a un único espacio al interpretar el código. Entonces, ¿por qué utilizar espacios en blanco? La respuesta está en la legibilidad.</p>
 <p>Los dos siguientes fragmentos de código son equivalentes:</p>
@@ -939,26 +1108,9 @@ Ejemplo <code>&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;
 <p>También puedes establecer que las subsecciones de tu documento se reconozcan en diferentes idiomas. Por ejemplo, podemos establecer que nuestra sección de japonés se reconozca como japonés, de la siguiente manera:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ejemplo Japonés: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;ja&quot;</span><span class="p">&gt;</span>ご飯が熱い。<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="elementos-de-bloque-vs-elementos-de-linea">Elementos de bloque vs elementos de línea</h3>
-<p>Un elemento de <em>línea</em> es aquel que ocupa el espacio mínimo necesario en horizontal, y permite que otro elemento se coloque a su lado. En cambio un elemento de <em>bloque</em>, ocupa todo el ancho disponible y no permite que otro elemento se coloque a su lado (aunque tenga lugar suficiente).</p>
-<p>Ejemplo de elementos de linea</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>hola <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>estamos<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>en línea<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Produce la siguiente salida</p>
-<p><span>hola </span>
-<span>estamos</span>
-<span>en línea</span></p>
-<p>Ejemplo de elementos de bloque</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>hola <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">div</span><span class="p">&gt;</span>no estamos<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">div</span><span class="p">&gt;</span>en línea<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Produce la siguiente salida</p>
-<div>hola </div>
-<div>no estamos</div>
-<div>en línea</div>
-
-<h2 id="mi-primera-pagina">Mi primera página</h2>
+<h2 id="ejercicios-entregables">Ejercicios entregables</h2>
+<div class="admonition question">
+<p class="admonition-title">Calculadora geodésica</p>
 <ol>
 <li>
 <p>Crear una carpeta llamada <strong>web-mgeo</strong></p>
@@ -968,8 +1120,6 @@ Ejemplo <code>&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;
 </li>
 <li>
 <p>Abrir el archivo con el editor de texto y escribir lo siguiente</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -981,9 +1131,12 @@ Ejemplo <code>&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<ol>
-<li>Guardar el archivo y abrir la página en el navegador para ver el resultado</li>
+</li>
+<li>
+<p>Guardar el archivo y abrir la página en el navegador para ver el resultado</p>
+</li>
 </ol>
+</div>
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
 <hr />
@@ -998,11 +1151,19 @@ Ejemplo <code>&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -1031,10 +1192,10 @@ Ejemplo <code>&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
       
     
   </body>

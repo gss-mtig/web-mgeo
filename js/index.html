@@ -15,14 +15,14 @@
         <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js/">
       
       
-        <link rel="prev" href="../css_diseno/">
+        <link rel="prev" href="../css_avanzado/">
       
       
         <link rel="next" href="../js_estructuras/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
       
       
 
@@ -49,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,9 +61,6 @@
   
     <body dir="ltr">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -90,12 +87,12 @@
     <a href=".." title="Programació web" class="md-header__button md-logo" aria-label="Programació web" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -115,10 +112,13 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -127,21 +127,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando búsqueda
@@ -158,7 +158,7 @@
         <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -194,7 +194,7 @@
     <a href=".." title="Programació web" class="md-nav__button md-logo" aria-label="Programació web" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Programació web
@@ -204,7 +204,7 @@
       <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -216,6 +216,7 @@
     
       
       
+  
   
   
   
@@ -238,6 +239,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../introduccion_web/" class="md-nav__link">
         
@@ -254,6 +256,7 @@
     
       
       
+  
   
   
   
@@ -276,6 +279,47 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../html_etiquetas_basicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML - Estructura y Etiquetas Básicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html_imagenes_tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML - Imágenes y Tablas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../elementos_html/" class="md-nav__link">
         
@@ -292,6 +336,7 @@
     
       
       
+  
   
   
   
@@ -314,6 +359,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css_bbox/" class="md-nav__link">
         
@@ -330,6 +376,7 @@
     
       
       
+  
   
   
   
@@ -351,7 +398,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../css_avanzado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS avanzado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
+      
+      
+  
+  
+    
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -442,6 +510,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Estategias para la carga de scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios entregables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -519,6 +602,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reglas-de-nombres-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas de nombres de variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipos-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Tipos de datos
@@ -588,85 +680,52 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#matrices-o-arreglos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Matrices o Arreglos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Matrices o Arreglos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#acceder-y-modificar-elementos-de-la-matriz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acceder y modificar elementos de la matriz
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funciones" class="md-nav__link">
+  <a href="#operadores" class="md-nav__link">
     <span class="md-ellipsis">
-      Funciones
+      Operadores
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Funciones">
+    <nav class="md-nav" aria-label="Operadores">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#declaracion-de-una-funcion" class="md-nav__link">
+  <a href="#operadores-de-asignacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Declaracion de una función
+      Operadores de asignación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parametros-de-una-funcion" class="md-nav__link">
+  <a href="#operadores-de-comparacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Parámetros de una función
+      Operadores de comparación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parametros-predeterminados" class="md-nav__link">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
     <span class="md-ellipsis">
-      Parámetros predeterminados
+      Operadores aritméticos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parametros-rest" class="md-nav__link">
+  <a href="#operadores-logicos" class="md-nav__link">
     <span class="md-ellipsis">
-      Parámetros rest
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#funciones-flecha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Funciones flecha
+      Operadores lógicos
     </span>
   </a>
   
@@ -674,15 +733,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicios-extras" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicios extras
-    </span>
-  </a>
   
 </li>
       
@@ -708,6 +758,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_estructuras/" class="md-nav__link">
         
@@ -724,6 +775,27 @@
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
   
   
   
@@ -746,6 +818,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_dom/" class="md-nav__link">
         
@@ -762,6 +835,7 @@
     
       
       
+  
   
   
   
@@ -784,12 +858,53 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_servidor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     JS en el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS alamcenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS clases
   </span>
   
 
@@ -868,6 +983,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Estategias para la carga de scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios entregables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -945,6 +1075,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reglas-de-nombres-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas de nombres de variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipos-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Tipos de datos
@@ -1014,85 +1153,52 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#matrices-o-arreglos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Matrices o Arreglos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Matrices o Arreglos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#acceder-y-modificar-elementos-de-la-matriz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acceder y modificar elementos de la matriz
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funciones" class="md-nav__link">
+  <a href="#operadores" class="md-nav__link">
     <span class="md-ellipsis">
-      Funciones
+      Operadores
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Funciones">
+    <nav class="md-nav" aria-label="Operadores">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#declaracion-de-una-funcion" class="md-nav__link">
+  <a href="#operadores-de-asignacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Declaracion de una función
+      Operadores de asignación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parametros-de-una-funcion" class="md-nav__link">
+  <a href="#operadores-de-comparacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Parámetros de una función
+      Operadores de comparación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parametros-predeterminados" class="md-nav__link">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
     <span class="md-ellipsis">
-      Parámetros predeterminados
+      Operadores aritméticos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parametros-rest" class="md-nav__link">
+  <a href="#operadores-logicos" class="md-nav__link">
     <span class="md-ellipsis">
-      Parámetros rest
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#funciones-flecha" class="md-nav__link">
-    <span class="md-ellipsis">
-      Funciones flecha
+      Operadores lógicos
     </span>
   </a>
   
@@ -1100,15 +1206,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicios-extras" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicios extras
-    </span>
-  </a>
   
 </li>
       
@@ -1229,6 +1326,9 @@
 <li>Si tus scripts se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza <strong>async</strong>.</li>
 <li>Si tus scripts necesitan esperar a ser procesados y dependen de otros scripts y/o del DOM en su lugar, cárgalos usando <strong>defer</strong> y coloca tus elementos <code>&lt;script&gt;</code> correspondientes en el orden que desees que el navegador los ejecute.</li>
 </ul>
+<h4 id="ejercicios-entregables">Ejercicios entregables</h4>
+<div class="admonition question">
+<p class="admonition-title">Calculadora geodésica</p>
 <p>A continuación vamos a agregar un archivo JavaScript (de momento vacío - sin código) a nuestra calculadora</p>
 <ol>
 <li>
@@ -1316,6 +1416,7 @@
 <p>Guardar el archivo index.html</p>
 </li>
 </ol>
+</div>
 <h2 id="comentarios">Comentarios</h2>
 <p>Al igual que con HTML y CSS, es posible escribir comentarios en tu código JavaScript que el navegador ignorará y que existen simplemente para proporcionar instrucciones a tus compañeros desarrolladores sobre cómo funciona el código (y a ti, si regresas a tu código después de seis meses y no puedes recordar lo que hiciste). Los comentarios son muy útiles y deberías utilizarlos con frecuencia, especialmente para aplicaciones grandes. Hay dos tipos:</p>
 <ul>
@@ -1391,6 +1492,12 @@
 <span class="nx">coches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Mercedes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;BMW&quot;</span><span class="p">];</span><span class="w"> </span><span class="c1">// da error</span>
 </code></pre></div>
 </div>
+<h2 id="reglas-de-nombres-de-variables">Reglas de nombres de variables</h2>
+<ul>
+<li>No pueden empezar con números</li>
+<li>No pueden contener espacios ni caracteres especiales (excepto <code>_</code>y <code>$</code>)</li>
+<li>Usar <code>camelCase</code> es una buena práctica (<code>miVariableEjemplo</code>)</li>
+</ul>
 <h2 id="tipos-de-datos">Tipos de datos</h2>
 <h3 id="numerico">Numérico</h3>
 <p>Sólo existe un tipo de datos numérico, al contrario que ocurre en la mayoría de los lenguajes más conocidos. Todos los números son por tanto del tipo numérico, independientemente de la precisión que tengan o si son números reales o enteros.</p>
@@ -1443,92 +1550,83 @@
 <span class="sb">no </span><span class="si">${</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
 </code></pre></div>
 <p>En lineas generales es recomentable usar plantillas literales en lugar de la concatenación de cadenas de caracteres.</p>
-<h3 id="matrices-o-arreglos">Matrices o Arreglos</h3>
-<p>Las matrices <strong>Array</strong> son una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada.</p>
-<p>Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas. Puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">compra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;leche&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;queso&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hummus&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noodles&quot;</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">sequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;tree&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">795</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">]];</span>
+<h2 id="operadores">Operadores</h2>
+<p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones. <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>JavaScript tiene una serie de operadores entre los más comúnes están: operadores de asignación, de comparación, aritméticos y lógicos. Se puede ver el listado completo de los operadores en <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators</a> </p>
+<p>Al igual que en las matémaaticas los operadores tiene un orden de preferencia a la hora de evaluar una expresión. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<h3 id="operadores-de-asignacion">Operadores de asignación</h3>
+<p>Un operador de asignación asigna un valor a su operando izquierdo basándose en el valor de su operando derecho. El operador de asignación simple es igual (=), que asigna el valor de su operando derecho a su operando izquierdo. Es decir, x = y asigna el valor de y a x.</p>
+<p>Ejemplos</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;rojo&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="acceder-y-modificar-elementos-de-la-matriz">Acceder y modificar elementos de la matriz</h4>
-<p>Se puede acceder a elementos individuales en la matriz mediante la notación de corchetes, indicando la posición del elemento que se quiera acceder</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Las posiciones dentro de las matrices se comienzan a contar desde 0. El primer elementos de la matriz tiene la posición 0. </p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">compra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;leche&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;jamón&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hummus&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noodles&quot;</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">pan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">compra</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">charcuteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">compra</span><span class="p">[</span><span class="mf">2</span><span class="p">];</span>
-</code></pre></div>
-<p>Puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">compra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;leche&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;jamón&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hummus&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noodles&quot;</span><span class="p">];</span>
-<span class="nx">compra</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tomates&quot;</span><span class="p">;</span>
-</code></pre></div>
-<p>Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;tree&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">795</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">]];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">tres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">random</span><span class="p">[</span><span class="mf">2</span><span class="p">][</span><span class="mf">1</span><span class="p">];</span>
-</code></pre></div>
-<h2 id="funciones">Funciones</h2>
-<p>En términos generales, una función es un "subprograma" que puede ser llamado por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado cuerpo de la función. Se pueden pasar valores a una función, y la función puede devolver un valor. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
-<p>En JavaScript, las funciones son objetos de primera clase, es decir, son objetos y se pueden manipular y transmitir al igual que cualquier otro objeto. Concretamente son objetos <strong>Function</strong>.</p>
-<p>JavaScript tiene integradas varias funciones de nivel superior como por ejemplo parseInt(), decodeURI(), etc.</p>
-<h3 id="declaracion-de-una-funcion">Declaracion de una función</h3>
-<p>Una definición de función (también denominada declaración de función o expresión de función) consta de la palabra clave function, seguida de:</p>
-<ul>
-<li>El nombre de la función.</li>
-<li>Una lista de parámetros o argumentos de la función, entre paréntesis y separados por comas.</li>
-<li>Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">suma</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>En el ejemplo anterior tenemos a la función <em>suma</em> que toma 2 parámetros <em>a</em> y <em>b</em> y devuelve un valor con la suma de <em>a+b</em>. La instrucción <strong>return</strong> especifica el valor devuelto por la función.</p>
-<p>Las funciones también se pueden crear mediante una <strong>expresión function</strong>. Esta función puede ser anónima; no tiene por qué tener un nombre. Por ejemplo, la función <em>suma</em> se podría haber definido como:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Las <em>expresión function</em> son convenientes cuando se pasa una función como argumento a otra función.</p>
-<h3 id="parametros-de-una-funcion">Parámetros de una función</h3>
-<p>Existe una variable "especial" llamada <strong>arguments</strong> que es similar a una matriz. Esta variable guarda todos los argumentos de la función. </p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">parametroB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arguments</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Usando el objeto <em>arguments</em>, puedes llamar a una función con más argumentos de los que formalmente declara aceptar. Esto suele ser útil si no sabes de antemano cuántos argumentos se pasarán a la función.</p>
-<h3 id="parametros-predeterminados">Parámetros predeterminados</h3>
-<p>En el pasado (pre ES6), la estrategia general para establecer valores predeterminados era probar los valores de los parámetros en el cuerpo de la función y asignar un valor si eran <strong>undefined</strong>.</p>
-<p>Con parámetros predeterminados, ya no es necesaria una verificación manual en el cuerpo de la función. Simplemente puedes poner un valor predeterminado para algún parámetro en el encabezado de la función.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="parametros-rest">Parámetros rest</h3>
-<p>La sintaxis del parámetro rest (resto de parámetros) nos permite representar un número indefinido de argumentos como una matriz. Para ello ponemos tres puntos antes del nombre del parámetro</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">masParametros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">...</span>
-<span class="w">    </span><span class="p">...</span>
-<span class="p">}</span>
-<span class="nx">suma</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">);</span><span class="w"> </span><span class="c1">//en este caso ...masParametros sería igual a [2, 4, 7]</span>
-</code></pre></div>
-<h3 id="funciones-flecha">Funciones flecha</h3>
-<p>Dos factores influyeron en la introducción de las funciones flecha son: funciones más cortas y no vinculantes de <em>this</em>.</p>
-<p>Hasta las funciones flecha, cada nueva función definía su propio valor <em>this</em>, lo que causaba algunos problemas. Para más detalles sobre funciones flecha <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions</a> y <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/</a></p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
+<h3 id="operadores-de-comparacion">Operadores de comparación</h3>
+<p>Un operador de comparación compara sus operandos y devuelve un valor lógico en función de si la comparación es verdadera (true) o falsa (false).</p>
+<p>Ejemplos</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">cuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">a</span><span class="p">;</span>
+<span class="c1">//igual</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">var1</span><span class="p">;</span>
+<span class="s2">&quot;3&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">var1</span><span class="p">;</span>
+<span class="c1">//no igual</span>
+<span class="nx">var1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">4</span>
+<span class="nx">var2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">var1</span>
+<span class="c1">//estrictamente igual</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">var1</span>
+<span class="c1">//estricatamente no igual</span>
+<span class="nx">var1</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
+<span class="c1">//mayor que</span>
+<span class="nx">var2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">var1</span>
+<span class="c1">//menor igual que</span>
+<span class="nx">var1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">var2</span>
 </code></pre></div>
-<h2 id="ejercicios-extras">Ejercicios extras</h2>
-<ul>
-<li><a href="https://www.w3schools.com/js/js_exercises.asp">W3 Schools JS Exercises</a></li>
-<li><a href="https://exercism.org/tracks/javascript/exercises">Exercism</a></li>
-<li><a href="https://www.jschallenger.com/javascript-basics">JS Challenger</a></li>
-</ul>
+<h3 id="operadores-aritmeticos">Operadores aritméticos</h3>
+<p>Un operador aritmético toma valores numéricos como sus operandos y devuelve un solo valor numérico. Los operadores aritméticos estándar son suma (+), resta (-), multiplicación (*) y división (/).</p>
+<p>Ejemplos</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+
+<span class="nx">var1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">var2</span><span class="p">;</span>
+<span class="nx">var2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">var1</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="operadores-logicos">Operadores lógicos</h3>
+<p>Los operadores lógicos se utilizan normalmente con valores booleanos (lógicos); cuando lo son, devuelven un valor booleano.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND Lógico (&amp;&amp;)</td>
+<td>expr1 &amp;&amp; expr2</td>
+<td>Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, &amp;&amp; devuelve true si ambos operandos son true; de lo contrario, devuelve false.</td>
+</tr>
+<tr>
+<td>OR lógico (||)</td>
+<td>expr1 || expr2</td>
+<td>Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false.</td>
+</tr>
+<tr>
+<td>NOT lógico (!)</td>
+<td>!expr</td>
+<td>Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplos</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">a1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">     </span><span class="c1">// t &amp;&amp; t devuelve true</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">a2</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">    </span><span class="c1">// t &amp;&amp; f devuelve false</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">o1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">     </span><span class="c1">// t || t devuelve true</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">o2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">     </span><span class="c1">// f || t devuelve true</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">o3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">     </span><span class="c1">// f || f devuelve false</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// !t devuelve false</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// !f devuelve true</span>
+</code></pre></div>
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
 <hr />
@@ -1540,7 +1638,7 @@
 <p><a href="https://desarrolloweb.com/articulos/507.php">https://desarrolloweb.com/articulos/507.php</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
 <p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
@@ -1552,11 +1650,19 @@
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -1585,10 +1691,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
       
     
   </body>

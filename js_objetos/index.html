@@ -15,14 +15,14 @@
         <link rel="canonical" href="https://gss-mtig.github.io/web-mgeo/js_objetos/">
       
       
-        <link rel="prev" href="../js_estructuras/">
+        <link rel="prev" href="../js_arrays/">
       
       
         <link rel="next" href="../js_dom/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
       
       
 
@@ -49,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,9 +61,6 @@
   
     <body dir="ltr">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -90,12 +87,12 @@
     <a href=".." title="Programació web" class="md-header__button md-logo" aria-label="Programació web" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -115,10 +112,13 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -127,21 +127,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando búsqueda
@@ -158,7 +158,7 @@
         <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -194,7 +194,7 @@
     <a href=".." title="Programació web" class="md-nav__button md-logo" aria-label="Programació web" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Programació web
@@ -204,7 +204,7 @@
       <a href="https://github.com/gss-mtig/web-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -216,6 +216,7 @@
     
       
       
+  
   
   
   
@@ -238,6 +239,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../introduccion_web/" class="md-nav__link">
         
@@ -254,6 +256,7 @@
     
       
       
+  
   
   
   
@@ -276,6 +279,47 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../html_etiquetas_basicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML - Estructura y Etiquetas Básicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html_imagenes_tablas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML - Imágenes y Tablas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../elementos_html/" class="md-nav__link">
         
@@ -292,6 +336,7 @@
     
       
       
+  
   
   
   
@@ -314,6 +359,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../css_bbox/" class="md-nav__link">
         
@@ -330,6 +376,7 @@
     
       
       
+  
   
   
   
@@ -352,6 +399,27 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../css_avanzado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS avanzado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../js/" class="md-nav__link">
         
@@ -368,6 +436,7 @@
     
       
       
+  
   
   
   
@@ -389,7 +458,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
+      
+      
+  
+  
+    
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -473,46 +563,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases" class="md-nav__link">
+  <a href="#eliminar-propiedades" class="md-nav__link">
     <span class="md-ellipsis">
-      Clases
+      Eliminar propiedades
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clases">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos-con-metodos-funciones-dentro-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetos con métodos (funciones dentro de objetos)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetos con métodos (funciones dentro de objetos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#declaracion-de-clases" class="md-nav__link">
+  <a href="#ejercicios-practicos" class="md-nav__link">
     <span class="md-ellipsis">
-      Declaración de clases
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cuerpo-de-la-clase-y-definicion-de-metodos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la clase y definición de métodos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subclases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subclases
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#superclases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Súperclases
+      Ejercicios Prácticos
     </span>
   </a>
   
@@ -524,65 +596,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trabajar-con-matrices" class="md-nav__link">
+  <a href="#manipulacion-de-datos-con-json" class="md-nav__link">
     <span class="md-ellipsis">
-      Trabajar con Matrices
+      Manipulación de Datos con JSON
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Trabajar con Matrices">
+    <nav class="md-nav" aria-label="Manipulación de Datos con JSON">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#agregar-y-eliminar-elementos-de-la-matriz" class="md-nav__link">
+  <a href="#convertir-un-objeto-en-json-jsonstringify" class="md-nav__link">
     <span class="md-ellipsis">
-      Agregar y eliminar elementos de la matriz
+      Convertir un Objeto en JSON (JSON.stringify())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#operadores-de-matrices" class="md-nav__link">
+  <a href="#convertir-un-json-a-objeto-jsonparse" class="md-nav__link">
     <span class="md-ellipsis">
-      Operadores de matrices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Operadores de matrices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#foreach" class="md-nav__link">
-    <span class="md-ellipsis">
-      forEach
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    <span class="md-ellipsis">
-      map
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduce" class="md-nav__link">
-    <span class="md-ellipsis">
-      reduce
+      Convertir un JSON a Objeto (JSON.parse())
     </span>
   </a>
   
@@ -590,6 +625,25 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recorrer-propiedades-de-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorrer propiedades de un objeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recorrer propiedades de un objeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forin" class="md-nav__link">
+    <span class="md-ellipsis">
+      for...in
+    </span>
+  </a>
   
 </li>
         
@@ -620,6 +674,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_dom/" class="md-nav__link">
         
@@ -636,6 +691,7 @@
     
       
       
+  
   
   
   
@@ -658,12 +714,53 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../js_servidor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     JS en el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS alamcenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js_clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS clases
   </span>
   
 
@@ -735,46 +832,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clases" class="md-nav__link">
+  <a href="#eliminar-propiedades" class="md-nav__link">
     <span class="md-ellipsis">
-      Clases
+      Eliminar propiedades
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Clases">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos-con-metodos-funciones-dentro-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetos con métodos (funciones dentro de objetos)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetos con métodos (funciones dentro de objetos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#declaracion-de-clases" class="md-nav__link">
+  <a href="#ejercicios-practicos" class="md-nav__link">
     <span class="md-ellipsis">
-      Declaración de clases
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cuerpo-de-la-clase-y-definicion-de-metodos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la clase y definición de métodos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subclases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subclases
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#superclases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Súperclases
+      Ejercicios Prácticos
     </span>
   </a>
   
@@ -786,65 +865,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trabajar-con-matrices" class="md-nav__link">
+  <a href="#manipulacion-de-datos-con-json" class="md-nav__link">
     <span class="md-ellipsis">
-      Trabajar con Matrices
+      Manipulación de Datos con JSON
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Trabajar con Matrices">
+    <nav class="md-nav" aria-label="Manipulación de Datos con JSON">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#agregar-y-eliminar-elementos-de-la-matriz" class="md-nav__link">
+  <a href="#convertir-un-objeto-en-json-jsonstringify" class="md-nav__link">
     <span class="md-ellipsis">
-      Agregar y eliminar elementos de la matriz
+      Convertir un Objeto en JSON (JSON.stringify())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#operadores-de-matrices" class="md-nav__link">
+  <a href="#convertir-un-json-a-objeto-jsonparse" class="md-nav__link">
     <span class="md-ellipsis">
-      Operadores de matrices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Operadores de matrices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#foreach" class="md-nav__link">
-    <span class="md-ellipsis">
-      forEach
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    <span class="md-ellipsis">
-      map
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduce" class="md-nav__link">
-    <span class="md-ellipsis">
-      reduce
+      Convertir un JSON a Objeto (JSON.parse())
     </span>
   </a>
   
@@ -852,6 +894,25 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recorrer-propiedades-de-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorrer propiedades de un objeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recorrer propiedades de un objeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forin" class="md-nav__link">
+    <span class="md-ellipsis">
+      for...in
+    </span>
+  </a>
   
 </li>
         
@@ -900,6 +961,7 @@
 <span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
 </code></pre></div>
 <p>Para ver los métodos más usados cuando se trabajan con cadenas de texto visitar <a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods</a>. Aquí podremos ver como acceder a una subcadena de caracteres, pasar el texto a mayúsculas, etc.</p>
+<p>Pero normalmente cuando hablamos de <strong>objetos</strong> en JavaScript, nos referimos a estructuras de datos que almacenan información en pares <strong>clave-valor</strong>.</p>
 <p>En JavaScript se pueden crear nuevos objetos de diferentes maneras a continuación veremos algunas.</p>
 <h2 id="iniciador-de-objeto">Iniciador de objeto</h2>
 <p>Es la forma más simple de crear un objeto. Consiste en crear una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves ({}).</p>
@@ -975,200 +1037,143 @@
 <span class="nx">myPerro</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Blanco&quot;</span><span class="p">;</span>
 <span class="nx">myPerro</span><span class="p">[</span><span class="s2">&quot;peso-kg&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">64</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
-<h2 id="clases">Clases</h2>
-<p>Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia. Las clases son "funciones especiales".</p>
-<h3 id="declaracion-de-clases">Declaración de clases</h3>
-<p>Una manera de definir una clase es mediante una declaración de clase. Para declarar una clase, se utiliza la palabra reservada <strong>class</strong> y un nombre para la clase</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<h2 id="eliminar-propiedades">Eliminar propiedades</h2>
+<p><code>delete</code> elimina una propiedad de un objeto.</p>
+<div class="highlight"><pre><span></span><code><span class="ow">delete</span><span class="w"> </span><span class="nx">myPerro</span><span class="p">.</span><span class="nx">edad</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myPerro</span><span class="p">);</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Una importante diferencia entre las declaraciones de funciones y las declaraciones de clases es que las declaraciones de funciones son alojadas y las declaraciones de clases no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el código arrojará un error.</p>
+<h2 id="objetos-con-metodos-funciones-dentro-de-objetos">Objetos con métodos (funciones dentro de objetos)</h2>
+<p>Los métodos son funciones dentro de un objeto. Se llaman con <code>objeto.metodo()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">coche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">marca</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Toyota&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">modelo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Corolla&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">arrancar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El coche ha arrancado.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">coche</span><span class="p">.</span><span class="nx">arrancar</span><span class="p">();</span><span class="w"> </span><span class="c1">// &quot;El coche ha arrancado.&quot;</span>
+</code></pre></div>
+<h4 id="ejercicios-practicos">Ejercicios Prácticos</h4>
+<div class="admonition example">
+<p class="admonition-title">Crear un objeto persona</p>
+<ol>
+<li>
+<p>Crea un objeto persona que tenga las siguientes propiedades:</p>
+<ul>
+<li>nombre (string),</li>
+<li>edad (número),</li>
+<li>ocupacion (string).</li>
+</ul>
+</li>
+<li>
+<p>Además, agrega un método dentro del objeto que imprima un mensaje con el nombre y la ocupación de la persona.</p>
+</li>
+</ol>
 </div>
-<p>Otra manera de definir una clase es mediante las expresiones de clase que pueden ser nombradas o anónimas.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Anonima</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
+<div class="admonition example">
+<p class="admonition-title">Modificar un objeto</p>
+<p>Tienes un objeto libro con las propiedades:
+  * titulo (string)
+  * autor (string),
+  * año (número).</p>
+<ol>
+<li>Modifica el titulo y el ano del libro para actualizar la información. Luego, muestra los cambios en consola.</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Añadir un nuevo método a un objeto</p>
+<ol>
+<li>Crea un objeto vehiculo con las propiedades:<ul>
+<li>marca (string),</li>
+<li>modelo (string),</li>
+<li>año (número),</li>
+<li>kilometraje (número).</li>
+</ul>
+</li>
+<li>Agrega un método que aumente el kilometraje cada vez que se "realice un viaje". Cada vez que se llame a este método, el kilometraje aumentará en una cantidad que pases como parámetro.</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Comparar dos objetos</p>
+<ol>
+<li>Crea dos objetos producto1 y producto2 con las propiedades:<ul>
+<li>nombre (string),</li>
+<li>precio (número).</li>
+</ul>
+</li>
+<li>Escribe una función que compare ambos productos y determine si tienen el mismo precio y nombre. La función debe devolver un mensaje indicando si son iguales o no.</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Gestión de Inventario de Productos</p>
+<p>Imagina que tienes un inventario de productos en una tienda, donde cada producto tiene las siguientes propiedades:</p>
+<ul>
+<li>nombre: El nombre del producto.</li>
+<li>precio: El precio del producto.</li>
+<li>cantidad: Cuántos productos hay en stock.</li>
+</ul>
+<p>Crea un sistema que permita realizar las siguientes tareas:</p>
+<ol>
+<li>Agregar un producto al inventario (con nombre, precio y cantidad).</li>
+<li>Eliminar un producto del inventario por su nombre.</li>
+<li>Actualizar el stock de un producto (aumentar o disminuir la cantidad disponible).</li>
+<li>Mostrar todos los productos en inventario con su nombre, precio y cantidad.</li>
+<li>Filtrar productos que tengan un precio mayor a un valor dado.</li>
+<li>Ordenar el inventario por el precio de los productos de menor a mayor.</li>
+<li>Calcular el valor total del inventario, multiplicando el precio de cada producto por su cantidad disponible. </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">inventario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Camiseta&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">cantidad</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Pantalón&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="nx">cantidad</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Zapatos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="nx">cantidad</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Gorra&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="nx">cantidad</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1">// Pruebas de ejemplo:</span>
+<span class="nx">agregarProducto</span><span class="p">(</span><span class="s2">&quot;Chaqueta&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="nx">eliminarProducto</span><span class="p">(</span><span class="s2">&quot;Gorra&quot;</span><span class="p">);</span>
+<span class="nx">actualizarStock</span><span class="p">(</span><span class="s2">&quot;Zapatos&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">mostrarInventario</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filtrarPorPrecio</span><span class="p">(</span><span class="mf">30</span><span class="p">));</span><span class="w">  </span><span class="c1">// Productos con precio mayor a 30</span>
+<span class="nx">ordenarPorPrecio</span><span class="p">();</span>
+<span class="nx">mostrarInventario</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor total del inventario: $&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">calcularValorInventario</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<h2 id="manipulacion-de-datos-con-json">Manipulación de Datos con JSON</h2>
+<p>JSON (JavaScript Object Notation) es el formato más usado para intercambiar datos.</p>
+<p>Ejemplo de un Objeto en JSON</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ciudad</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span>
 <span class="p">};</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Rectangulo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-<span class="c1">// output: &quot;Rectangulo&quot;</span>
-
-<span class="c1">// Nombrada</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo2</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">};</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Rectangulo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-<span class="c1">// output: &quot;Rectangulo2&quot;</span>
 </code></pre></div>
-<h3 id="cuerpo-de-la-clase-y-definicion-de-metodos">Cuerpo de la clase y definición de métodos</h3>
-<p>El contenido de una clase es la parte que se encuentra entre las llaves {}. Este es el lugar se definen los miembros de clase, como los métodos o constructores.</p>
-<p>El método constructor es un método especial para crear e inicializar un objeto creado con una clase. Solo puede haber un método especial con el nombre "constructor" en una clase. Un constructor puede usar la palabra reservada super para llamar al constructor de una superclase.</p>
-<p>Ejemplo </p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="w"> </span><span class="p">(</span><span class="nx">alto</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="c1">// Getter</span>
-<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">calcArea</span><span class="p">();</span>
-<span class="w">   </span><span class="p">}</span>
-<span class="w">  </span><span class="c1">// Método</span>
-<span class="w">  </span><span class="nx">calcArea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
+<h3 id="convertir-un-objeto-en-json-jsonstringify">Convertir un Objeto en JSON (<code>JSON.stringify()</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">usuarioJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">usuario</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">usuarioJSON</span><span class="p">);</span><span class="w"> </span><span class="c1">// &#39;{&quot;nombre&quot;:&quot;Ana&quot;,&quot;edad&quot;:25,&quot;ciudad&quot;:&quot;Madrid&quot;}&#39;</span>
+</code></pre></div>
+<h3 id="convertir-un-json-a-objeto-jsonparse">Convertir un JSON a Objeto (<code>JSON.parse()</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&quot;datosUsuario&quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">usuarioObjeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">datos</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">usuarioObjeto</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Ana&quot;</span>
+</code></pre></div>
+<h2 id="recorrer-propiedades-de-un-objeto">Recorrer propiedades de un objeto</h2>
+<h3 id="forin">for...in</h3>
+<p>Un bucle <strong>for...in</strong> itera sobre las propiedades de un objeto en un orden arbitrario</p>
+<p>La sintaxis es la siguiente</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">variable</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">objeto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="c1">//sentencias a ejecutar en cada iteración </span>
 <span class="p">}</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">cuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">.</span><span class="nx">area</span><span class="p">);</span><span class="w"> </span><span class="c1">// 100</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">.</span><span class="nx">calcArea</span><span class="p">());</span><span class="w"> </span><span class="c1">// 100</span>
 </code></pre></div>
-<p>La palabra clave <strong>static</strong> define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y no pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Calcula</span><span class="w"> </span><span class="p">{</span>
+<p>Ejemplo
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">};</span>
 
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">property</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">object</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">property</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">object</span><span class="p">[</span><span class="nx">property</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="nx">Calcula</span><span class="p">.</span><span class="nx">suma</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="nx">Calcula</span><span class="p">.</span><span class="nx">resta</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">));</span>
-</code></pre></div>
-<h3 id="subclases">Subclases</h3>
-<p>La palabra clave <strong>extends</strong> es usada en declaraciones de clase o expresiones de clase para crear una clase hija.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; hace un ruido.&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span><span class="w"> </span><span class="nx">Perro</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ladra.&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Mitzie&#39;</span><span class="p">);</span>
-<span class="nx">p</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span>
-</code></pre></div>
-<h3 id="superclases">Súperclases</h3>
-<p>La palabra clave <strong>super</strong> es usada para llamar funciones del objeto padre.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; hace un ruido.&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span><span class="w"> </span><span class="nx">Perro</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">hablar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; ladra.&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Perro</span><span class="p">(</span><span class="s1">&#39;Mitzie&#39;</span><span class="p">);</span>
-<span class="nx">p</span><span class="p">.</span><span class="nx">hablar</span><span class="p">();</span>
-</code></pre></div>
-<h2 id="trabajar-con-matrices">Trabajar con Matrices</h2>
-<p>Veremos algunos métodos bastante útiles relacionados con matrices</p>
-<h3 id="agregar-y-eliminar-elementos-de-la-matriz">Agregar y eliminar elementos de la matriz</h3>
-<p>Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar <strong>push()</strong> y <strong>pop()</strong> respectivamente.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Manchester&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Liverpool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Birmingham&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leeds&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Carlisle&#39;</span><span class="p">];</span>
-<span class="c1">//agregar un elemento</span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Cardiff&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
-
-<span class="c1">//eliminar el último elemento</span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
-</code></pre></div>
-<p>Los métodos <strong>unshift()</strong> y <strong>shift()</strong> funcionan exactamente igual de <em>push()</em> y <em>pop()</em>, respectivamente, excepto que funcionan al principio de la matriz, no al final.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Manchester&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Liverpool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Birmingham&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leeds&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Carlisle&#39;</span><span class="p">];</span>
-<span class="c1">//agregar un elemento</span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s1">&#39;Cardiff&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
-
-<span class="c1">//eliminar el último elemento</span>
-<span class="nx">myArray</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myArray</span><span class="p">);</span>
-</code></pre></div>
-<p>Para var más metodos de agregar o eliminar elementos en una matriz ver <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#operaciones_habituales">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#operaciones_habituales</a></p>
-<h3 id="operadores-de-matrices">Operadores de matrices</h3>
-<p>A menudo, nos encontramos en la necesidad de tomar un array y modificar cada elemento de la misma manera o filtrar los elementos de un array, etc. Para eso tenemos los siguientes métodos. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<h4 id="foreach">forEach</h4>
-<p>El método <strong>forEach()</strong> ejecuta la función indicada una vez por cada elemento del array.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">];</span>
-
-<span class="nx">array1</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
-</code></pre></div>
-<h4 id="map">map</h4>
-<p>El método <strong>map()</strong> crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">];</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">doubles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="p">});</span>
-</code></pre></div>
-<h4 id="filter">filter</h4>
-<p>El método <strong>filter()</strong> crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="p">];</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">mayores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<span class="p">});</span>
-<span class="c1">//usando la arrow function</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">menores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mayores</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">menores</span><span class="p">);</span>
-</code></pre></div>
-<h4 id="reduce">reduce</h4>
-<p>El método <strong>reduce()</strong> ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">reducer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">;</span>
-
-<span class="c1">// 1 + 2 + 3 + 4</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">));</span>
-<span class="c1">// expected output: 10</span>
-
-<span class="c1">// 5 + 1 + 2 + 3 + 4</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
-<span class="c1">// expected output: 15</span>
-</code></pre></div>
-<p>Para ver más métodos de las matrices ir a <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#m%C3%A9todos_de_instancia">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array#m%C3%A9todos_de_instancia</a></p>
+</code></pre></div></p>
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
 <hr />
@@ -1176,11 +1181,15 @@
 <li id="fn:1">
 <p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:2">
-<p><a href="https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209">https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
 </ol>
 </div>
+
+
+
+
+
+
+
 
 
 
@@ -1191,6 +1200,7 @@
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -1219,10 +1229,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
       
     
   </body>
