@@ -551,6 +551,71 @@ request('https://httpbin.org/ip').then(data => {
 });
 ```
 
+### Ejemplo práctico. Mostrar Usuarios de una API
+
+Objetivos:
+
+* Consumir datos desde la API [Random User Generato](https://randomuser.me/)
+* Mostrar los usuarios en la página con template literals (string con backticks)
+* Renderizar los datos dinámicamente en HTML
+
+``` html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios de API</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #usuarios {
+      display: flex;
+    }
+    .usuario { 
+      border: 1px solid #ddd; 
+      padding: 10px; 
+      margin: 10px; 
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Usuarios</h1>
+  <button id="cargar">Cargar Usuarios</button>
+  <div id="usuarios"></div>
+
+  <script>
+  document.getElementById("cargar").addEventListener("click", cargarUsuarios);
+
+  async function cargarUsuarios() {
+    let respuesta = await fetch("https://randomuser.me/api/?results=5");
+    let datos = await respuesta.json();
+    mostrarUsuarios(datos);
+  }
+
+  function mostrarUsuarios(usuarios) {
+    let contenedor = document.getElementById("usuarios");
+    contenedor.innerHTML = ""; // Limpiar contenido anterior
+
+    usuarios.results.forEach(usuario => {
+      let htmlUsuario = `
+        <div style="border: 1px solid #ddd; padding: 10px; width: 250px; text-align: center;">
+          <img src="${usuario.picture.large}" alt="Foto de ${usuario.name.first}" style="border-radius: 50%; width: 100px;">
+          <h3>${usuario.name.first} ${usuario.name.last}</h3>
+          <p><strong>Edad:</strong> ${usuario.dob.age}</p>
+          <p><strong>Email:</strong> ${usuario.email}</p>
+          <p><strong>País:</strong> ${usuario.location.country}</p>
+        </div>
+      `;
+      contenedor.innerHTML += htmlUsuario; // Agregar cada usuario al contenedor
+    });
+  }
+  </script>
+</body>
+</html>
+```
+
 #### Ejercicios Prácticos
 
 !!! example "Obtener datos de una API con `fetch`"
