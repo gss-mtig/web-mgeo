@@ -2,10 +2,10 @@
 
 Dentro del desarrollo web, el backend se encarga de todos los procesos necesarios para que la web funcione de forma correcta. Estos procesos o funciones no son visibles, pero tienen mucha importancia en el buen funcionamiento de un sitio web. Algunas de estas acciones que controla el backend son la conexión con la base de datos o la comunicación con el servidor de hosting.
 
-El desarrollo del backend se puede hacer usando diferentes lenguajes de programación como PHP, Java, .Net, Python, Node.js, etc. En nuestro caso usaremos Node.js[^1] ya que es un entorno de ejecución multiplataforma basado en JavaScript. 
+El desarrollo del backend se puede hacer usando diferentes lenguajes de programación como PHP, Java, .Net, Python, Node.js, etc. En nuestro caso usaremos Node.js[^1] ya que es un entorno de ejecución multiplataforma basado en JavaScript.
 
 !!! warning
-    Este **NO** es un curso de Node.js. únicamente explicaremos un ejemplo de cómo montar un servidor con Node.js que permita leer y escribir datos en una Base de datos con PostgreSQL. Tampoco es un curso de base de datos y se asume que ya se tienen conocimientos previos de trabajar con PostgreSQL.
+Este **NO** es un curso de Node.js. únicamente explicaremos un ejemplo de cómo montar un servidor con Node.js que permita leer y escribir datos en una Base de datos con PostgreSQL. Tampoco es un curso de base de datos y se asume que ya se tienen conocimientos previos de trabajar con PostgreSQL.
 
 ## Servidor Node.js
 
@@ -15,91 +15,91 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 
 2. Abrir un terminal dentro de esa carpeta y ejecutar el siguiente comando
 
-    ```
-    npm init -y
-    ```
+   ```
+   npm init -y
+   ```
 
-3. A continuación, instale *Express* en el directorio y guárdelo en la lista de dependencias.
+3. A continuación, instale _Express_ en el directorio y guárdelo en la lista de dependencias.
 
-    ```
-    npm i express
-    ```
+   ```
+   npm i express
+   ```
 
-4. En el directorio *servidor* crear un archivo llamado app.js y copie el sigueinte código:
+4. En el directorio _servidor_ crear un archivo llamado app.js y copie el sigueinte código:
 
-    ``` js
-    const express = require('express');
-    const app = express();
-    const port = 3000;
+   ```js
+   const express = require("express");
+   const app = express();
+   const port = 3000;
 
-    app.get('/', (req, res) => {
-    res.send('Hello World!')
-    });
+   app.get("/", (req, res) => {
+     res.send("Hello World!");
+   });
 
-    app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-    });
-    ```
+   app.listen(port, () => {
+     console.log(`Example app listening at http://localhost:${port}`);
+   });
+   ```
 
 5. Guarde el archivo y abrir la pagina http://localhost:3000/ en el navegador para ver que el servidor está funcionando.
 
 6. Crear la base de datos, en PostgreSQL crear una nueva base de datos llamada **node_ejemplo** (o usar una existente). Dentro de esa base de datos crear una tabla llamada **tranformacion**. Esta tabla debe contener 6 columnas: srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino. Las columnas de srs deben ser de tipo texto y el resto de tipo numérico
 
-    ``` sql
-    CREATE SEQUENCE transformacion_id_seq;
+   ```sql
+   CREATE SEQUENCE transformacion_id_seq;
 
-    CREATE TABLE public.transformacion
-    (
-        srs_origen character varying(5) COLLATE pg_catalog."default" NOT NULL,
-        x_origen numeric NOT NULL,
-        y_origen numeric NOT NULL,
-        srs_destino character varying(5) COLLATE pg_catalog."default" NOT NULL,
-        x_destino numeric NOT NULL,
-        y_destino numeric NOT NULL,
-        id integer NOT NULL DEFAULT nextval('transformacion_id_seq'::regclass),
-        CONSTRAINT transformacion_pkey PRIMARY KEY (id)
-    );
+   CREATE TABLE public.transformacion
+   (
+       srs_origen character varying(5) COLLATE pg_catalog."default" NOT NULL,
+       x_origen numeric NOT NULL,
+       y_origen numeric NOT NULL,
+       srs_destino character varying(5) COLLATE pg_catalog."default" NOT NULL,
+       x_destino numeric NOT NULL,
+       y_destino numeric NOT NULL,
+       id integer NOT NULL DEFAULT nextval('transformacion_id_seq'::regclass),
+       CONSTRAINT transformacion_pkey PRIMARY KEY (id)
+   );
 
-    ALTER SEQUENCE transformacion_id_seq
-    OWNED BY transformacion.id;
-    ```
+   ALTER SEQUENCE transformacion_id_seq
+   OWNED BY transformacion.id;
+   ```
 
 7. Instalar el node-postgres una librería de Node.js que nos permite conectar con bases de datos de PostgreSQL
 
-    ```
-    npm i pg
-    ```
+   ```
+   npm i pg
+   ```
 
-8. Crear el archivo de configuración para conectar con la BD desde Node. Dentro de la carpeta *servidor* crear una nueva carpeta llamada **db**. Dentro de esta carpeta crear un archivo llamado **db.js** y copiar el siguiente código
+8. Crear el archivo de configuración para conectar con la BD desde Node. Dentro de la carpeta _servidor_ crear una nueva carpeta llamada **db**. Dentro de esta carpeta crear un archivo llamado **db.js** y copiar el siguiente código
 
-    ``` js
-    const { Pool } = require("pg");
+   ```js
+   const { Pool } = require("pg");
 
-    const config = {    
-        user: 'TU_USUARIO',
-        host: 'localhost',
-        database: 'node_ejemplo',
-        password: 'TU_CONTRASEÑA',
-        port: 5432,
-    };
+   const config = {
+     user: "TU_USUARIO",
+     host: "localhost",
+     database: "node_ejemplo",
+     password: "TU_CONTRASEÑA",
+     port: 5432,
+   };
 
-    const pool = new Pool(config);
+   const pool = new Pool(config);
 
-    module.exports = {
-        query: (text, params) => pool.query(text, params),
-    };
-    ```
+   module.exports = {
+     query: (text, params) => pool.query(text, params),
+   };
+   ```
 
 9. Instalar otras dependencias
 
-    ```
-    npm i cors body-parser
-    ```
+   ```
+   npm i cors body-parser
+   ```
 
 10. Modificar el servidor para cargar el archivo de configuración de la Bd y crear la ruta de la API. Modificar el archivo app.js y escribir lo siguiente
 
-    ``` js hl_lines="2 3 4 9 10 11 12 14 15 16 18"
-    const express = require('express');
+    ```js hl_lines="2 3 4 9 10 11 12 14 15 16 18"
+    const express = require("express");
     const bodyParser = require("body-parser");
     const cors = require("cors");
     const apiRoutes = require("./routes/api");
@@ -112,67 +112,64 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
     app.use(bodyParser.raw());
     app.use(cors());
 
-    app.get('/', (request, response) => {
-        response.json({ info: 'Node.js, Express, and Postgres API' })
+    app.get("/", (request, response) => {
+      response.json({ info: "Node.js, Express, and Postgres API" });
     });
 
     app.use("/api/", apiRoutes());
 
     app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+      console.log(`Example app listening at http://localhost:${port}`);
     });
     ```
 
-11. Crear el router para procesar las peticiones. Crear una carpeta llamada **routes** dentro de la carpeta *servidor*. Dentro de la carpeta *routes* crear un archivo llamado **api.js** y escribir lo siguiente:
+11. Crear el router para procesar las peticiones. Crear una carpeta llamada **routes** dentro de la carpeta _servidor_. Dentro de la carpeta _routes_ crear un archivo llamado **api.js** y escribir lo siguiente:
 
-    ``` js
+    ```js
     const Router = require("express").Router;
 
     module.exports = () => {
+      const api = new Router();
 
-        const api = new Router();
-
-        api.get("/transformaciones", async (req, res) => {
-
-            res.json({repuesta: `se debe retornar el listado de todas las transformaciones`});
-
-        })
-
-        api.get("/transformaciones/:id", async (req, res) => {
-
-            const { id } = req.params;
-            res.json({repuesta: `se debe retornar la transformación con id = ${id}`});
-
+      api.get("/transformaciones", async (req, res) => {
+        res.json({
+          repuesta: `se debe retornar el listado de todas las transformaciones`,
         });
+      });
 
-        api.post("/transformaciones", async (req, res) => {
-
-            console.log(req.body);
-            const { srs_origen, x_origen, y_origen } = req.body;
-
-            res.json({repuesta: `llamada post para insertar nuevas transformaciones con origen ${srs_origen} y coordenadas lat: ${y_origen}, lon: ${x_origen}`});
-
+      api.get("/transformaciones/:id", async (req, res) => {
+        const { id } = req.params;
+        res.json({
+          repuesta: `se debe retornar la transformación con id = ${id}`,
         });
+      });
 
-        return api;
+      api.post("/transformaciones", async (req, res) => {
+        console.log(req.body);
+        const { srs_origen, x_origen, y_origen } = req.body;
 
+        res.json({
+          repuesta: `llamada post para insertar nuevas transformaciones con origen ${srs_origen} y coordenadas lat: ${y_origen}, lon: ${x_origen}`,
+        });
+      });
+
+      return api;
     };
     ```
 
 12. Reiniciar el servidor de Node.js y luego volverlo a arrancarlo para que los cambios hechos tengan efecto
 
     Reiniciar el servidor `Ctrl+c`.
-    
+
     ```
     node app.js
     ```
 
 13. Probar nuestra API. Para las peticiones GET podemos probarlas directamente desde nuestro navegador. Podemos escribir http://localhost:3000/api/transformaciones/24 o http://localhost:3000/api/transformaciones y debemos ver la respuesta correspondiente.
 
+14. Para probar la peticiones POST podemos abrir un navegador he ir a https://hoppscotch.io/ o https://www.apirequest.io/. En el selector seleccionar la opción de POST y en el campo para la URL poner http://localhost:3000/api/transformaciones. Luego agregar el header "Content-Type"=application/json y en el Request Body copiar
 
-14. Para probar la peticiones POST podemos abrir un navegador he ir a https://hoppscotch.io/ o https://www.apirequest.io/. En el selector seleccionar la opción de POST y en el campo para la URL poner http://localhost:3000/api/transformaciones. Luego agregar el header "Content-Type"=application/json y en el Request Body copiar 
-
-    ``` js
+    ```js
     {
         "srs_origen": "4326",
         "x_origen": 2,
@@ -184,99 +181,112 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
     ```
 
     ![Llamada POST](img/llamada_post.png "LLamada POST")
- 
-15. Crear las funciones que realizan las querys a nuestra base de datos. Crear una nueva carpeta llamada **services** dentro de la carpeta *servidor*. Dentro de la nueva carpeta crear un archivo llamado **transformaciones.js** y copiar lo siguiente dentro del archivo
 
-    ``` js
+15. Crear las funciones que realizan las querys a nuestra base de datos. Crear una nueva carpeta llamada **services** dentro de la carpeta _servidor_. Dentro de la nueva carpeta crear un archivo llamado **transformaciones.js** y copiar lo siguiente dentro del archivo
+
+    ```js
     const db = require("../db/db");
 
     class TransformacionesService {
+      static async getTransformaciones() {
+        const SQL = "SELECT * FROM public.transformacion";
 
-        static async getTransformaciones() {
+        const { rows } = await db.query(SQL);
 
-            const SQL = "SELECT * FROM public.transformacion";
+        return rows;
+      }
 
-            const {rows} = await db.query(SQL);
+      static async getTransformacionById(id) {
+        const SQL = "SELECT * FROM public.transformacion WHERE id = $1";
 
-            return rows;
+        const { rows } = await db.query(SQL, [id]);
 
-        }
-        
-        static async getTransformacionById(id) {
+        return rows;
+      }
 
-            const SQL = "SELECT * FROM public.transformacion WHERE id = $1";
+      static async createTransformacion(
+        srs_origen,
+        x_origen,
+        y_origen,
+        srs_destino,
+        x_destino,
+        y_destino,
+      ) {
+        const SQL =
+          "INSERT INTO public.transformacion (srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *";
 
-            const {rows} = await db.query(SQL, [id]);
+        const { rows } = await db.query(SQL, [
+          srs_origen,
+          x_origen,
+          y_origen,
+          srs_destino,
+          x_destino,
+          y_destino,
+        ]);
 
-            return rows;
-
-        }
-
-
-        static async createTransformacion(srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino) {
-
-            const SQL = "INSERT INTO public.transformacion (srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *";
-
-            const {rows} = await db.query(SQL, [srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino]);
-
-            return rows;
-
-        }
-
+        return rows;
+      }
     }
 
     module.exports = TransformacionesService;
     ```
 
-16. Conectar nuestra API con la base de datos. Modificar el archivo *api.js* 
+16. Conectar nuestra API con la base de datos. Modificar el archivo _api.js_
 
-    ``` js hl_lines="3 11 18 25"
+    ```js hl_lines="3 11 18 25"
     const Router = require("express").Router;
 
     const TransformacionesService = require("../services/transformaciones");
 
     module.exports = () => {
+      const api = new Router();
 
-        const api = new Router();
+      api.get("/transformaciones", async (req, res) => {
+        res.json(await TransformacionesService.getTransformaciones());
+      });
 
-        api.get("/transformaciones", async (req, res) => {
+      api.get("/transformaciones/:id", async (req, res) => {
+        const { id } = req.params;
+        res.json(await TransformacionesService.getTransformacionById(id));
+      });
 
-            res.json(await TransformacionesService.getTransformaciones());
+      api.post("/transformaciones", async (req, res) => {
+        const {
+          srs_origen,
+          x_origen,
+          y_origen,
+          srs_destino,
+          x_destino,
+          y_destino,
+        } = req.body;
+        res.json(
+          await TransformacionesService.createTransformacion(
+            srs_origen,
+            x_origen,
+            y_origen,
+            srs_destino,
+            x_destino,
+            y_destino,
+          ),
+        );
+      });
 
-        })
-
-        api.get("/transformaciones/:id", async (req, res) => {
-
-            const { id } = req.params;
-            res.json(await TransformacionesService.getTransformacionById(id));
-
-        });
-
-        api.post("/transformaciones", async (req, res) => {
-
-            const { srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino } = req.body;
-            res.json(await TransformacionesService.createTransformacion(srs_origen, x_origen, y_origen, srs_destino, x_destino, y_destino));
-
-        });
-
-        return api;
-
+      return api;
     };
     ```
 
 17. Probar nuestra API. Parar y arrancar el servidor de Node.js y volver a hacer la llamada POST desde el navegador. Se debería crear un nuevo registro en la base de datos. Para consultar el registro podemos abrir http://localhost:3000/api/transformaciones o http://localhost:3000/api/transformaciones/1
 
 !!! note
-    Este servidor es un demostrador de la funcionalidad básica de la implementación de una API. En el mismo no se hace control de errores, ni validación de valores de entrada, etc. **NO es un servidor para producción**
+Este servidor es un demostrador de la funcionalidad básica de la implementación de una API. En el mismo no se hace control de errores, ni validación de valores de entrada, etc. **NO es un servidor para producción**
 
 ## Modificar la calculadora
 
-
-####  Ejercicios entregables
+#### Ejercicios entregables
 
 !!! question "Calculadora geodésica"
 
-    1. Modificar nuestra aplicación para llamar a la API. Modificar nuestro archivo **index.html** que se encuentra en la carpeta *web-mgeo* y agregar un nuevo boton en el area de la respuesta. 
+    1. Modificar nuestra aplicación para llamar a la API. Modificar nuestro archivo **index.html** que se encuentra en la carpeta *web-mgeo* y agregar un nuevo boton en el area de la respuesta.
 
         ``` html hl_lines="59"
         <!DOCTYPE html>
@@ -293,7 +303,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
             <title>Mi calculadora geodésica</title>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.3/proj4.min.js" integrity="sha512-TzmbpBIqcR0TyAdg+zJJfpbTeKVj24n+U3vvlP3yBDTOs26ELhrzA+TacRmMAuflTY8tU3zVwbCyfvM3QH58lA==" crossorigin="anonymous"></script>
             <script src="js/script.js" defer></script>
-            
+
         </head>
         <body>
             <header>
@@ -310,7 +320,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
                         <tr>
                             <td colspan="2">
                                 <select id="origen">
-                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:4326">EPSG:4326</option>
                                     <option value="EPSG:3857">EPSG:3857</option>
                                     <option value="EPSG:25831">EPSG:25831</option>
                                     <option value="EPSG:23031">EPSG:23031</option>
@@ -318,7 +328,7 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
                             </td>
                             <td colspan="2">
                                 <select id="destino">
-                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:4326">EPSG:4326</option>
                                     <option value="EPSG:3857">EPSG:3857</option>
                                     <option value="EPSG:25831">EPSG:25831</option>
                                     <option value="EPSG:23031">EPSG:23031</option>
@@ -406,10 +416,8 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
         });
         ```
 
-!!! question "Ejercicio 2 pt"
-    1. Agregar a la calculadora un botón para recuperar todas las transformaciones que están en la base de datos y agregar un elemento para mostrar los registros de la base de datos. **0.5 pt**
-    2. Agregar un campo donde el usuarios pueda poner un id y recuperar el registro de la base de datos con dicho id. Agregar un elemento para mostrar el registro obtenido. **0.25 pt**   
-    3. Implementar algunas mejoras a la calculadora, ya sean tanto de estilo, como de funcionalidad **1.25 pt**
+!!! question "Ejercicio 2 pt" 1. Agregar a la calculadora un botón para recuperar todas las transformaciones que están en la base de datos y agregar un elemento para mostrar los registros de la base de datos. **0.5 pt** 2. Agregar un campo donde el usuarios pueda poner un id y recuperar el registro de la base de datos con dicho id. Agregar un elemento para mostrar el registro obtenido. **0.25 pt**  
+ 3. Implementar algunas mejoras a la calculadora, ya sean tanto de estilo, como de funcionalidad **1.25 pt**
 
     El resultado debe ser algo como esto
     ![Calculadora resultado servidor](img/calculadora-servidor.png "Calculadora resultado servidor")
@@ -417,5 +425,5 @@ Para crear nuestro servidor con Node.js usaremos Express[^2]. **Express** es una
 ## Referencias
 
 [^1]: https://nodejs.org/
+
 [^2]: https://expressjs.com/es/
-[^3]: https://blog.logrocket.com/nodejs-expressjs-postgresql-crud-rest-api-example/

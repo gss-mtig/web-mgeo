@@ -6,7 +6,7 @@ El elemento HTML **`<head>`** provee información general (metadatos) acerca del
 
 Es la **cabecera** y actua como contenedor para todos los parámetros que quieras incluir en el documento HTML que no serán visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más.
 
-Algunos elementos que deberían estar presentes en la cabecera 
+Algunos elementos que deberían estar presentes en la cabecera
 
 ### title
 
@@ -20,12 +20,12 @@ A continuación veremos algunos de los `<meta>` más usados
 
 #### Codificación de caracteres
 
-Especifica especifica la codificación de caracteres del documento, esto quiere decir el conjuto de carácteres que se pueden usar en la página. Esto es muy útil e importante para representar correctamente caracteres especiales como los acentos u caracteres de otros idioma. Por ejemplo japonés 
+Especifica especifica la codificación de caracteres del documento, esto quiere decir el conjuto de carácteres que se pueden usar en la página. Esto es muy útil e importante para representar correctamente caracteres especiales como los acentos u caracteres de otros idioma. Por ejemplo japonés
 
 Ejemplo
 
-``` html
-<meta charset="utf-8">
+```html
+<meta charset="utf-8" />
 ```
 
 #### Autor
@@ -34,8 +34,8 @@ Especificar un autor resulta ventajoso por diversos motivos: es útil saber qui�
 
 Ejemplo
 
-``` html
-<meta name="author" content="Pepe Perez">
+```html
+<meta name="author" content="Pepe Perez" />
 ```
 
 #### Descripción
@@ -46,10 +46,13 @@ Especificar una descripción que incluya palabras clave relacionadas con el cont
 
 Ejemplo
 
-``` html
-<meta name="description" content="El área de aprendizaje de MDN pretende
+```html
+<meta
+  name="description"
+  content="El área de aprendizaje de MDN pretende
 proporcionar a los recién llegados a la web todo lo que deben
-saber para empezar a desarrollar páginas web y aplicaciones web.">
+saber para empezar a desarrollar páginas web y aplicaciones web."
+/>
 ```
 
 #### Viewport
@@ -60,16 +63,16 @@ Dispositivos con pantallas angostas (p.e. móviles) muestran la página en una v
 
 Esto se hace porque muchas páginas no están optimizadas para dispositivos móviles y se quiebran (o, al menos, se ven mal) cuando son procesadas a un ancho de viewport pequeño. El viewport virtual es una forma de resolver el problema de sitios no optimizados para móviles, logrando que se vean mejor. [^3]
 
-El uso del viewport fácilita el diseño *responsive* de las páginas. 
+El uso del viewport fácilita el diseño _responsive_ de las páginas.
 
-La propiedad **width** controla el tamaño del viewport. Puede definirse con un número en pixeles como *width=600* o con un valor especial **device-width** que es el equivalente al ancho de la pantalla en píxeles CSS en una escala de 100%. 
+La propiedad **width** controla el tamaño del viewport. Puede definirse con un número en pixeles como _width=600_ o con un valor especial **device-width** que es el equivalente al ancho de la pantalla en píxeles CSS en una escala de 100%.
 
 La propiedad **initial-scale** controla el nivel de zoom cuando la página se carga por primera vez.
 
 Ejemplo
 
-``` html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
 #### Redes sociales
@@ -78,32 +81,38 @@ Ejemplo
 
 Ejemplo
 
-``` html
-<meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-<meta property="og:description" content="The Mozilla Developer Network (MDN) proporciona información
+```html
+<meta
+  property="og:image"
+  content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"
+/>
+<meta
+  property="og:description"
+  content="The Mozilla Developer Network (MDN) proporciona información
 sobre tecnologías Open Web, incluidas HTML, CSS y APIs para ambos sitios web
-y aplicaciones HTML5. También documenta productos Mozilla, como el sistema operativo Firefox.">
-<meta property="og:title" content="Mozilla Developer Network">
+y aplicaciones HTML5. También documenta productos Mozilla, como el sistema operativo Firefox."
+/>
+<meta property="og:title" content="Mozilla Developer Network" />
 ```
 
 Twitter también tiene sus metadatos propios, las [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards), que tienen un efecto similar cuando la URL del sitio se muestra en twitter.com.
 
 Ejemplo
 
-``` html
-<meta name="twitter:title" content="Mozilla Developer Network">
+```html
+<meta name="twitter:title" content="Mozilla Developer Network" />
 ```
 
 ### favicon
 
-Para enriquecer un poco más el diseño de tu sitio puedes añadir en tus metadatos referencias a iconos personalizados, que se mostrarán en determinados contextos. El más común de ellos es el **favicon** (abreviatura de *favorite icon* —icono favorito, referido al uso que se le da en las listas de favoritos o de marcadores (bookmarks).
+Para enriquecer un poco más el diseño de tu sitio puedes añadir en tus metadatos referencias a iconos personalizados, que se mostrarán en determinados contextos. El más común de ellos es el **favicon** (abreviatura de _favorite icon_ —icono favorito, referido al uso que se le da en las listas de favoritos o de marcadores (bookmarks).
 
 El humilde favicon ha existido durante muchos años. Es el primer icono de este tipo: un icono cuadrado de 16 píxeles que se utiliza en varios lugares. Es posible que veas (según el navegador) favicons que se muestran en la pestaña del navegador que contiene cada página abierta y junto a las páginas marcadas en el panel de marcadores.
 
 Ejemplo
 
-``` html
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+```html
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 ```
 
 ### Carga de CSS y JavaScript
@@ -114,25 +123,25 @@ El elemento `<link>` siempre debe ir dentro del `<head>` de tu documento. Este t
 
 Ejemplo
 
-``` html
-<link rel="stylesheet" href="my-css-file.css">
+```html
+<link rel="stylesheet" href="my-css-file.css" />
 ```
 
-El elemento `<script>` también debería ir en el head, y debería incluir un atributo *src* con la ruta al JavaScript que quieres cargar, y *defer*, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página por ejemplo poner el elemento `<script>` al final del body.
+El elemento `<script>` también debería ir en el head, y debería incluir un atributo _src_ con la ruta al JavaScript que quieres cargar, y _defer_, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página por ejemplo poner el elemento `<script>` al final del body.
 
 Ejemplo
 
-``` html
+```html
 <script src="my-js-file.js" defer></script>
 ```
 
 ## Elementos de "estructura", "contenedores" o "envolturas"
 
-Si bien la mayoría de los elementos del html se pueden anidar, exisiten algunos elementos que se usan para estructurar las distintas áereas de la página. Existen alungunos elementos que tienen un significado semántico basado en su funcionalidad como por ejemplo `<footer>` que presentan sin ambigüedad los diferentes contenidos y otros elementos no-semánticos que tienen un uso generalista como por ejemplo `<div>`  
+Si bien la mayoría de los elementos del html se pueden anidar, exisiten algunos elementos que se usan para estructurar las distintas áereas de la página. Existen alungunos elementos que tienen un significado semántico basado en su funcionalidad como por ejemplo `<footer>` que presentan sin ambigüedad los diferentes contenidos y otros elementos no-semánticos que tienen un uso generalista como por ejemplo `<div>`
 
 ### Elementos semánticos
 
-El contenído semántico permite que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como *encontrar el menú de navegación*, o *encontrar el contenido principal*. 
+El contenído semántico permite que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como _encontrar el menú de navegación_, o _encontrar el contenido principal_.
 
 #### body
 
@@ -140,22 +149,22 @@ El elemento `<body>` contiene todo el contenido que se quiere mostrar en la pág
 
 #### header
 
-El elemento `<header>` representa un contenido introductorio del contenedor en el que se aloja. Si este es *hijo* de un elemento `<body>`, se convertirá en el encabezado principal del sitio web, pero si es hijo de un elemento `<article>` o un elemento `<section>`, entonces simplemente será el encabezado particular de cada sección.
+El elemento `<header>` representa un contenido introductorio del contenedor en el que se aloja. Si este es _hijo_ de un elemento `<body>`, se convertirá en el encabezado principal del sitio web, pero si es hijo de un elemento `<article>` o un elemento `<section>`, entonces simplemente será el encabezado particular de cada sección.
 
-Al igual que ocurre con el *footer*, se suelen utilizar únicamente como la cabecera y pie de una página (*body*) pero no se les da un uso habitual y debido en los *article* o *section*.
+Al igual que ocurre con el _footer_, se suelen utilizar únicamente como la cabecera y pie de una página (_body_) pero no se les da un uso habitual y debido en los _article_ o _section_.
 
 !!! warning
-    No confundir con el elemento `<head>` ni con títulos y encabezados
+No confundir con el elemento `<head>` ni con títulos y encabezados
 
-#### footer 
+#### footer
 
-El elemento `<footer>` representa el contenido al pie de su elemento superior. Generalmente se usa como pie de página. 
+El elemento `<footer>` representa el contenido al pie de su elemento superior. Generalmente se usa como pie de página.
 
 En general el footer incluye información del autor, enlaces a documentos relacionados, contacto, copyright y similares.
 
 #### nav
 
-El elemento `<nav>` o menú de navegación contiene la funcionalidad de navegación principal de la página. Contiene enlaces a otras páginas o zonas de la página. 
+El elemento `<nav>` o menú de navegación contiene la funcionalidad de navegación principal de la página. Contiene enlaces a otras páginas o zonas de la página.
 
 Hay que tener en cuenta que no debería ser un listado de elementos, sino una zona de navegación. Esto significa que no todos los enlaces de una página han de encontrarse dentro de este elemento.
 
@@ -163,7 +172,7 @@ Hay que tener en cuenta que no debería ser un listado de elementos, sino una zo
 
 El elemento `<main>` representa el contenido principal de la página. Utilizaremos `<main>` solamente una vez para cada página y lo situaremos directamente dentro del elemento `<body>`. Es mejor que no lo anidemos en otros elementos.
 
-Dentro del *main* encontraremos varias subsecciones (además de la barra lateral `<aside>`) representadas por los elementos `<article>`, `<section>`, y `<div>`.
+Dentro del _main_ encontraremos varias subsecciones (además de la barra lateral `<aside>`) representadas por los elementos `<article>`, `<section>`, y `<div>`.
 
 #### aside
 
@@ -177,20 +186,24 @@ El elemento `<div>` es un elemento de bloque y que se utiliza cuando no se tenem
 
 #### span
 
-El elemento `<span>` es un elemento de linea (que se utiliza en el interior de una línea) y que al igual que el **div* se utiliza cuando no se tenemos un elementos semántico en el que indicar el contenido o en el caso de que no se quiera dar ningún significado específico.
+El elemento `<span>` es un elemento de linea (que se utiliza en el interior de una línea) y que al igual que el \*_div_ se utiliza cuando no se tenemos un elementos semántico en el que indicar el contenido o en el caso de que no se quiera dar ningún significado específico.
 
 Se usa frecuentemente para dar estilo a un texto dentro de una línea. Por ejemplo
 
-``` html
-<p>Tengo un perro <span style="color:green">verde</span> que tiene los ojos <span style="color:blue">azules</span></p> 
+```html
+<p>
+  Tengo un perro <span style="color:green">verde</span> que tiene los ojos
+  <span style="color:blue">azules</span>
+</p>
 ```
-<p>Tengo un perro <span style="color:green">verde</span> que tiene los ojos <span style="color:blue">azules</span></p> 
+
+<p>Tengo un perro <span style="color:green">verde</span> que tiene los ojos <span style="color:blue">azules</span></p>
 
 ### Dar estructura a nuestra página
 
 En el cápitulo anterior crearmos una página web sencilla con la estructura mínima donde solo aparecía el texto "Mi calculadora geodésica". Modificaremos la página y le daremos una mejor estructura.
 
-####  Ejercicios entregables
+#### Ejercicios entregables
 
 !!! question "Calculadora geodésica"
 
@@ -214,7 +227,7 @@ En el cápitulo anterior crearmos una página web sencilla con la estructura mí
         </html>
         ```
 
-    3. Agregar el viewport para que la página sea "*responsive*". 
+    3. Agregar el viewport para que la página sea "*responsive*".
 
         ``` html hl_lines="7"
         <!DOCTYPE html>
@@ -278,7 +291,7 @@ En el cápitulo anterior crearmos una página web sencilla con la estructura mí
         </html>
         ```
 
-    7. Guardar y recargar la página, veremos que nuestro texto no ha cambiado y que aparece el texto del *footer*. Esto es debido a que los elementos header y footer dan contexto semántico pero no aplicán ningún estilo. 
+    7. Guardar y recargar la página, veremos que nuestro texto no ha cambiado y que aparece el texto del *footer*. Esto es debido a que los elementos header y footer dan contexto semántico pero no aplicán ningún estilo.
 
     8. Crear el elemento principal de la página
 
@@ -322,7 +335,7 @@ Se pueden crear listas anidadas, para tener subelementos. En las listas anidadas
 
 Ejemplo de lista ordenada
 
-``` html
+```html
 <ol>
   <li>Conduce hasta el final de la calle</li>
   <li>Gira a la derecha</li>
@@ -340,16 +353,16 @@ Ejemplo de lista ordenada
   <li>El colegio está a tu derecha, 300 metros más adelante</li>
 </ol>
 
-Ejemplo de lista no ordenada con lista ordenada anidada 
+Ejemplo de lista no ordenada con lista ordenada anidada
 
-``` html
+```html
 <ul>
   <li>leche</li>
   <li>hummus</li>
   <ol>
-      <li>ajo</li>
-      <li>limón</li>
-      <li>pimiento</li>
+    <li>ajo</li>
+    <li>limón</li>
+    <li>pimiento</li>
   </ol>
   <li>huevos</li>
   <li>pan</li>
@@ -368,11 +381,11 @@ Ejemplo de lista no ordenada con lista ordenada anidada
   <li>pan</li>
 </ul>
 
-####  Ejercicios entregables
+#### Ejercicios entregables
 
 !!! question "Calculadora geodésica"
 
-    1. Modificar el *index.html* para agregar un listado (no ordenado) de sistemas de referencia. Este listado lo crearemos en un barra lateral `<aside>`. 
+    1. Modificar el *index.html* para agregar un listado (no ordenado) de sistemas de referencia. Este listado lo crearemos en un barra lateral `<aside>`.
 
         ``` html hl_lines="18-25"
         <!DOCTYPE html>
@@ -452,13 +465,13 @@ El elemento form `<form>` representa una sección de un documento que contiene u
 
 Sus principales atributos son:
 
-* **action**: la URL a donde se va a enviar la información del formulario
-* **metod**: el método que el navegador usa para enviar el formulario. Sus valores posible son:
-    * *post*: los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
-    * *get*: los datos del formulario son adjuntados a la URI del atributo *action* , con un '?' como separador, y la URI resultante es enviada al servidor.
-* **enctype**: cuando el valor del atributo **method** es *post*, este atributo es el tipo MIME del contenido que es usado para enviar el formulario al servidor. Sus valores más usados son:
-    * *application/x-www-form-urlencoded*: El valor por defecto si un atributo no está especificado.
-    * *multipart/form-data*: Usar este valor si se está enviando un archivo dentro del formulario
+- **action**: la URL a donde se va a enviar la información del formulario
+- **metod**: el método que el navegador usa para enviar el formulario. Sus valores posible son:
+  - _post_: los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
+  - _get_: los datos del formulario son adjuntados a la URI del atributo _action_ , con un '?' como separador, y la URI resultante es enviada al servidor.
+- **enctype**: cuando el valor del atributo **method** es _post_, este atributo es el tipo MIME del contenido que es usado para enviar el formulario al servidor. Sus valores más usados son:
+  - _application/x-www-form-urlencoded_: El valor por defecto si un atributo no está especificado.
+  - _multipart/form-data_: Usar este valor si se está enviando un archivo dentro del formulario
 
 A continuación veremos algunos de los elementos (o campos) más usados en los formularios
 
@@ -468,36 +481,36 @@ El elemento `<input>` se usa para crear controles interactivos para formularios 
 
 Los principales atributos de este elemento son:
 
-* **type**: define el tipo de control a mostrar. Su valor predeterminado es *text*, si no se especifica este atributo. Los valores más frecuentes son:
-    * *checkbox*: Casilla de selección. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado.
-    * *color*: Control para espicificar un color.
-    * *date*: Control para introducir una fecha (año, mes y día, sin tiempo).
-    * *datetime-local*: Control para introducir fecha y hora, sin zona horaria específica.
-    * *email*: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse.
-    * *file*: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo accept para definir los tipos de archivo que el control podrá seleccionar
-    * *hidden*: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
-    * *number*: Control para introducir un número
-    * *password*: Control cuyo valor permanece oculto.
-    * *radio*: Botón radio. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo name están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez
-    * *submit*: Botón que envía el formulario.
-    * *text*: Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.
-    * *url*: Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse
-* **disabled**: indica que el control no está disponible para interacción
-* **name**: indica el nombre del control, el cual es enviado con los datos del formulario
-* **placeholder** indica una pista para el usuario sobre lo que puede introducir en el control.
-* **value**: indica el valor inicial del control
+- **type**: define el tipo de control a mostrar. Su valor predeterminado es _text_, si no se especifica este atributo. Los valores más frecuentes son:
+  - _checkbox_: Casilla de selección. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado.
+  - _color_: Control para espicificar un color.
+  - _date_: Control para introducir una fecha (año, mes y día, sin tiempo).
+  - _datetime-local_: Control para introducir fecha y hora, sin zona horaria específica.
+  - _email_: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse.
+  - _file_: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo accept para definir los tipos de archivo que el control podrá seleccionar
+  - _hidden_: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
+  - _number_: Control para introducir un número
+  - _password_: Control cuyo valor permanece oculto.
+  - _radio_: Botón radio. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo name están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez
+  - _submit_: Botón que envía el formulario.
+  - _text_: Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.
+  - _url_: Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse
+- **disabled**: indica que el control no está disponible para interacción
+- **name**: indica el nombre del control, el cual es enviado con los datos del formulario
+- **placeholder** indica una pista para el usuario sobre lo que puede introducir en el control.
+- **value**: indica el valor inicial del control
 
 Ejemplos de algunos controles
 
-``` html
+```html
 <form action="">
-    <input type="text" name="nombre">
-    <input type="email" name="correo" placeholder="introduce tu email">
-    <input type="hidden" name="oculto">
-    <input type="password" name="clave" placeholder="introduce tu contraseña">
-    <input type="radio" name="sexo" value="M">
-    <input type="radio" name="sexo" value="F">
-    <input type="checkbox" name="condiciones">
+  <input type="text" name="nombre" />
+  <input type="email" name="correo" placeholder="introduce tu email" />
+  <input type="hidden" name="oculto" />
+  <input type="password" name="clave" placeholder="introduce tu contraseña" />
+  <input type="radio" name="sexo" value="M" />
+  <input type="radio" name="sexo" value="F" />
+  <input type="checkbox" name="condiciones" />
 </form>
 ```
 
@@ -517,19 +530,19 @@ El elemento `<textarea>` representa un control para la edición mutilínea de te
 
 Sus principales atributos son:
 
-* **cols**: indica la anchura visible del control de texto, en caracteres de anchura media. Si está definido debe ser positivo. Si no, por defecto, el valor es 20.
-* **rows**: indica el número de líneas visibles en el control
-* **maxlength**: indica el número máximo de caracteres que el usuario puede insertar. Si no está especificado entonces el usuario puede insertar un número ilimitado de caracteres.
-* **disabled**: indica que el control no está disponible para interacción
-* **name**: indica el nombre del control, el cual es enviado con los datos del formulario
-* **placeholder** indica una pista para el usuario sobre lo que puede introducir en el control.
+- **cols**: indica la anchura visible del control de texto, en caracteres de anchura media. Si está definido debe ser positivo. Si no, por defecto, el valor es 20.
+- **rows**: indica el número de líneas visibles en el control
+- **maxlength**: indica el número máximo de caracteres que el usuario puede insertar. Si no está especificado entonces el usuario puede insertar un número ilimitado de caracteres.
+- **disabled**: indica que el control no está disponible para interacción
+- **name**: indica el nombre del control, el cual es enviado con los datos del formulario
+- **placeholder** indica una pista para el usuario sobre lo que puede introducir en el control.
 
 !!! note
-    Este campo no tiene un atributo value
+Este campo no tiene un atributo value
 
 Ejemplo
 
-``` html
+```html
 <textarea name="textarea" rows="10" cols="50">Escribe algo largo aquí</textarea>
 ```
 
@@ -541,9 +554,9 @@ El elemento select `<select>` representa un control que muestra un menú de opci
 
 Ejemplo
 
-``` html
+```html
 <select name="select">
-  <option value="value1">Value 1</option> 
+  <option value="value1">Value 1</option>
   <option value="value2" selected>Value 2</option>
   <option value="value3">Value 3</option>
 </select>
@@ -559,21 +572,21 @@ Ejemplo
 
 La etiqueta `<button>` representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar.
 
-El atributo **type** se puede usar para indicar el tipo de botón. Esto se usa principalmente cuando se utiliza dentro de un formulario. Sus valores pueden ser: *button*, *submit* o *reset*
+El atributo **type** se puede usar para indicar el tipo de botón. Esto se usa principalmente cuando se utiliza dentro de un formulario. Sus valores pueden ser: _button_, _submit_ o _reset_
 
 Ejemplo
 
-``` html
+```html
 <button name="button">Click me</button>
 ```
 
 #### label
 
-El elemento `<label>` representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo *for*, o ubicando el control dentro del elemento label.
+El elemento `<label>` representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo _for_, o ubicando el control dentro del elemento label.
 
 Ejemplos
 
-``` html
+```html
 <!-- Un simple ejemplo de un label con el atributo for -->
 <label for="Name">Click me</label>
 <input type="text" id="Name" name="Name" />
@@ -587,7 +600,7 @@ Ejemplos
 
 <label>Click me <input type="text" id="Name" name="Name" /></label>
 
-####  Ejercicios entregables
+#### Ejercicios entregables
 
 !!! question "Calculadora geodésica"
 
@@ -613,7 +626,7 @@ Ejemplos
                 <div>
                     <label for="origen">Sistema de referencia de origen</label>
                     <select id="origen">
-                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:4326">EPSG:4326</option>
                         <option value="EPSG:3857">EPSG:3857</option>
                         <option value="EPSG:25831">EPSG:25831</option>
                         <option value="EPSG:23031">EPSG:23031</option>
@@ -621,7 +634,7 @@ Ejemplos
 
                     <label for="destino">Sistema de referencia de destino</label>
                     <select id="destino">
-                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:4326">EPSG:4326</option>
                         <option value="EPSG:3857">EPSG:3857</option>
                         <option value="EPSG:25831">EPSG:25831</option>
                         <option value="EPSG:23031">EPSG:23031</option>
@@ -663,7 +676,7 @@ Ejemplos
                 <div>
                     <label for="origen">Sistema de referencia de origen</label>
                     <select id="origen">
-                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:4326">EPSG:4326</option>
                         <option value="EPSG:3857">EPSG:3857</option>
                         <option value="EPSG:25831">EPSG:25831</option>
                         <option value="EPSG:23031">EPSG:23031</option>
@@ -671,12 +684,12 @@ Ejemplos
 
                     <label for="destino">Sistema de referencia de destino</label>
                     <select id="destino">
-                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:4326">EPSG:4326</option>
                         <option value="EPSG:3857">EPSG:3857</option>
                         <option value="EPSG:25831">EPSG:25831</option>
                         <option value="EPSG:23031">EPSG:23031</option>
                     </select>
-                    
+
                     <label for="lat">Latitud</label>
                     <input type="text" id="lat">
 
@@ -698,7 +711,7 @@ Ejemplos
         ```
 
     3. Crear un botón para hacer la transformación
-        
+
         ``` html hl_lines="39 40"
         <!DOCTYPE html>
         <html lang="es">
@@ -719,7 +732,7 @@ Ejemplos
                 <div>
                     <label for="origen">Sistema de referencia de origen</label>
                     <select id="origen">
-                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:4326">EPSG:4326</option>
                         <option value="EPSG:3857">EPSG:3857</option>
                         <option value="EPSG:25831">EPSG:25831</option>
                         <option value="EPSG:23031">EPSG:23031</option>
@@ -727,18 +740,18 @@ Ejemplos
 
                     <label for="destino">Sistema de referencia de destino</label>
                     <select id="destino">
-                        <option value="EPSG:4326">EPSG:4326</option> 
+                        <option value="EPSG:4326">EPSG:4326</option>
                         <option value="EPSG:3857">EPSG:3857</option>
                         <option value="EPSG:25831">EPSG:25831</option>
                         <option value="EPSG:23031">EPSG:23031</option>
                     </select>
-                    
+
                     <label for="lat">Latitud</label>
                     <input type="text" id="lat">
 
                     <label for="lng">Longitud</label>
                     <input type="text" id="lng">
-                    
+
                     <button>Transformar coordenadas</button>
                 </div>
                 <aside>
@@ -785,7 +798,7 @@ Ejemplos
                         <tr>
                             <td colspan="2">
                                 <select id="origen">
-                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:4326">EPSG:4326</option>
                                     <option value="EPSG:3857">EPSG:3857</option>
                                     <option value="EPSG:25831">EPSG:25831</option>
                                     <option value="EPSG:23031">EPSG:23031</option>
@@ -793,7 +806,7 @@ Ejemplos
                             </td>
                             <td colspan="2">
                                 <select id="destino">
-                                    <option value="EPSG:4326">EPSG:4326</option> 
+                                    <option value="EPSG:4326">EPSG:4326</option>
                                     <option value="EPSG:3857">EPSG:3857</option>
                                     <option value="EPSG:25831">EPSG:25831</option>
                                     <option value="EPSG:23031">EPSG:23031</option>
@@ -831,12 +844,7 @@ Ejemplos
 
     6. Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.
 
-!!! question "Ejercicio 2.5 pt"
-    1. Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente **0.5 pt**.
-    2. Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web https://www.uab.cat/es/ y que se abra en una pestaña/ventana nueva. **0.5 pt**.
-    3. Agregar un elemento `<label>` con el texto **Respuesta** en la celda que está junto a las celdas con las etiquetas *Latitud* y *Longiud* **0.5 pt**.
-    4. Agregar un elemento `<textarea>` en la celda que está junto a las celdas de los input de *lat* y *lng* **0.5 pt**.
-    5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de *transformar coordenadas* **0,5 pt**.
+!!! question "Ejercicio 2.5 pt" 1. Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente **0.5 pt**. 2. Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web https://www.uab.cat/es/ y que se abra en una pestaña/ventana nueva. **0.5 pt**. 3. Agregar un elemento `<label>` con el texto **Respuesta** en la celda que está junto a las celdas con las etiquetas _Latitud_ y _Longiud_ **0.5 pt**. 4. Agregar un elemento `<textarea>` en la celda que está junto a las celdas de los input de _lat_ y _lng_ **0.5 pt**. 5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de _transformar coordenadas_ **0,5 pt**.
 
     El resultado debe ser algo como esto
     ![Calculadora sin estilo](img/calculadora_html.png "Calculadora sin estilo")
@@ -844,6 +852,7 @@ Ejemplos
 ## Referencias
 
 [^1]: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/head
+
 [^2]: https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en
+
 [^3]: https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag
-[^4]: https://www.htmlquick.com/es/tutorials/tables.html
