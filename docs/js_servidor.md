@@ -416,8 +416,11 @@ Este servidor es un demostrador de la funcionalidad básica de la implementació
         });
         ```
 
-!!! question "Ejercicio 2 pt" 1. Agregar a la calculadora un botón para recuperar todas las transformaciones que están en la base de datos y agregar un elemento para mostrar los registros de la base de datos. **0.5 pt** 2. Agregar un campo donde el usuarios pueda poner un id y recuperar el registro de la base de datos con dicho id. Agregar un elemento para mostrar el registro obtenido. **0.25 pt**  
- 3. Implementar algunas mejoras a la calculadora, ya sean tanto de estilo, como de funcionalidad **1.25 pt**
+!!! question "Ejercicio 2 pt"
+
+    1. Agregar a la calculadora un botón para recuperar todas las transformaciones que están en la base de datos y agregar un elemento para mostrar los registros de la base de datos. **0.5 pt**
+    2. Agregar un campo donde el usuarios pueda poner un id y recuperar el registro de la base de datos con dicho id. Agregar un elemento para mostrar el registro obtenido. **0.25 pt**
+    3. Implementar algunas mejoras a la calculadora, ya sean tanto de estilo, como de funcionalidad **1.25 pt**
 
     El resultado debe ser algo como esto
     ![Calculadora resultado servidor](img/calculadora-servidor.png "Calculadora resultado servidor")

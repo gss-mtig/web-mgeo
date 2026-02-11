@@ -844,7 +844,13 @@ Ejemplos
 
     6. Guardar y recargar la página para ver que aparece el formulario ordenado dentro de la tabla.
 
-!!! question "Ejercicio 2.5 pt" 1. Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente **0.5 pt**. 2. Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web https://www.uab.cat/es/ y que se abra en una pestaña/ventana nueva. **0.5 pt**. 3. Agregar un elemento `<label>` con el texto **Respuesta** en la celda que está junto a las celdas con las etiquetas _Latitud_ y _Longiud_ **0.5 pt**. 4. Agregar un elemento `<textarea>` en la celda que está junto a las celdas de los input de _lat_ y _lng_ **0.5 pt**. 5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de _transformar coordenadas_ **0,5 pt**.
+!!! question "Ejercicio 2.5 pt"
+
+    1. Cambiar el resto de elementos del listado de sistemas de referencia por el enlace correspondiente **0.5 pt**.
+    2. Hacer que la imagen del logo de la UAB sea un enlace que lleve a la web https://www.uab.cat/es/ y que se abra en una pestaña/ventana nueva. **0.5 pt**.
+    3. Agregar un elemento `<label>` con el texto **Respuesta** en la celda que está junto a las celdas con las etiquetas _Latitud_ y _Longiud_ **0.5 pt**.
+    4. Agregar un elemento `<textarea>` en la celda que está junto a las celdas de los input de _lat_ y _lng_ **0.5 pt**.
+    5. Modificar la estructura de la última fila de la tabla para agregar un botón con el texto "Enviar resultado" junto al botón de _transformar coordenadas_ **0,5 pt**.
 
     El resultado debe ser algo como esto
     ![Calculadora sin estilo](img/calculadora_html.png "Calculadora sin estilo")
